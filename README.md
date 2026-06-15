@@ -9,7 +9,7 @@ Semester-long IT startup MVP project for ICT105 Fundamental Technology Entrepren
 - **Project Type:** 14-Labs Continuous IT Startup MVP Development
 
 ## Team Name
-[Insert your official Team Name here]
+[Lemon]
 
 ## Team Members and Roles
 | Name | Role | Responsibility |
