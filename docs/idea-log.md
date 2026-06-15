@@ -60,3 +60,37 @@ Web application dashboard, data search filtering components, simple match notifi
 
 ### Why This Is Suitable
 Excellent for practicing UI/UX layouts and basic database filtering operations using mock data components.
+
+---
+
+## Idea 4: Campus Navigation
+### Problem Area
+New and current students at Rangsit University often struggle to navigate the large campus efficiently. Finding buildings, classrooms, offices, or facilities (e.g., cafeterias, libraries, parking areas) can be confusing—especially for first-year students or visitors.
+
+### Target Users
+- Rangsit University students
+- Visitors and parents
+- Staff and lecturers needing quick navigation
+
+### Current Alternative
+- Static campus maps
+- Asking for directions from others
+
+### Proposed IT Solution
+A web-based campus navigation dashboard for Rangsit University where users can:
+
+- Search for buildings, classrooms, or facilities
+- View interactive campus maps
+- Get directions between locations
+- Filter locations by categories (academic, food, services, parking)
+- Receive real-time guidance or simple route suggestions
+
+### Possible Technology
+- Web Application (Frontend): HTML, CSS, JavaScript (or React)
+- Map Integration: Google Maps API or custom campus map system
+- Backend: Basic database (Firebase / MySQL) for storing location data
+
+### Why This Is Suitable
+- Perfect for practicing UI/UX design (map layout, user-friendly search)
+- Uses basic database operations (store & retrieve locations)
+- Applies API integration skills (maps)
