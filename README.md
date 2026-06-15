@@ -15,7 +15,7 @@ Semester-long IT startup MVP project for ICT105 Fundamental Technology Entrepren
 | Name | Role | Responsibility |
 |---|---|---|
 | [Student 1 Name] | Product Lead | Define problem, target users, and value proposition |
-| [Student 2 Name] | Technical Lead | Manage repository and prototype feasibility |
+| [Phollapat Rodchue (Ice)] | Technical Lead | Manage repository and prototype feasibility |
 | [Tin May Lin] | UX/UI Lead + Documentation Lead | Design interface and maintain documentation |
 
 ## Initial Problem Area
