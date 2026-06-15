@@ -7,14 +7,14 @@
 | Student ID | Name | Role | Main Responsibility |
 |---|---|---|---|
 | 6509953 | Student A | Product Lead | Define problem and target users |
-| 6812346 | Student B | Technical Lead | Manage prototype and repository |
+| 6807558 | Phollapat Rodchue (Ice) | Technical Lead | Manage prototype and repository |
 | 6509953 | Student C | UX/UI Lead + Documentation Lead | Design interface and maintain documents |
 
 ## Team Skills Inventory
 | Member | Technical Skills | Design Skills | Business/Communication Skills |
 |---|---|---|---|
 | Student A | Basic HTML | Canva | Presentation |
-| Student B | JavaScript beginner | Figma beginner | Team coordination |
+| Ice | JavaScript beginner | Figma beginner | Team coordination |
 | Student C | Spreadsheet | UI layout | Interview questions |
 
 ## Team Working Agreement
