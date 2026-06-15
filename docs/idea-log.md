@@ -21,24 +21,24 @@ The system can be prototyped using web development, database design, UI/UX desig
 
 ---
 
-## Idea 2: Local Neighborhood Micro-Delivery App
+## Idea 2: Digital Notice Board
 ### Problem Area
-Small street food vendors cannot afford high commission rates of mainstream food delivery applications, missing out on local community sales.
+Scattered events informations within university.
 
 ### Target Users
-Local food vendors, neighborhood residents.
+Students
 
 ### Current Alternative
-Ordering via phone calls, direct walking, or messaging apps with no active tracking.
+Line Chats in university.
 
 ### Proposed IT Solution
-A simple, zero-commission community web app mapping local vendors with nearby volunteer student/resident couriers.
+A simple, zero-commission community web or mobile based app informing what events are happening in university and can register within deadline.
 
 ### Possible Technology
-Web application with location services, simple catalog display, and SMS alerting API.
+Web application with simple catalog display, and SMS alerting API.
 
 ### Why This Is Suitable
-Enables fundamental UX validation mapping user routes, basic frontend design, and a manageable local scope for 14 weeks.
+Convinent for students and event organizer.
 
 ---
 
