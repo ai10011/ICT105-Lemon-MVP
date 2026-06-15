@@ -8,14 +8,14 @@
 |---|---|---|---|
 | 6509953 | Student A | Product Lead | Define problem and target users |
 | 6807558 | Phollapat Rodchue (Ice) | Technical Lead | Manage prototype and repository |
-| 6509953 | Student C | UX/UI Lead + Documentation Lead | Design interface and maintain documents |
+| 6509953 | Tin May Lin | UX/UI Lead + Documentation Lead | Design interface and maintain documents |
 
 ## Team Skills Inventory
 | Member | Technical Skills | Design Skills | Business/Communication Skills |
 |---|---|---|---|
-| Student A | Basic HTML | Canva | Presentation |
+| Tin May Lin | Basic HTML | Canva | Presentation |
 | Ice | JavaScript beginner | Figma beginner | Team coordination |
-| Student C | Spreadsheet | UI layout | Interview questions |
+| student | Spreadsheet | UI layout | Interview questions |
 
 ## Team Working Agreement
 1. Meeting schedule: After every class
