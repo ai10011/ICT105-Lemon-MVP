@@ -15,7 +15,7 @@
 |---|---|---|---|
 | Tin May Lin | Basic HTML | Canva | Presentation |
 | Ice | JavaScript beginner | Figma beginner | Team coordination |
-| student | Spreadsheet | UI layout | Interview questions |
+| Mr. Kyaw Ye Lin | Spreadsheet | UI layout | Interview questions |
 
 ## Team Working Agreement
 1. Meeting schedule: After every class
