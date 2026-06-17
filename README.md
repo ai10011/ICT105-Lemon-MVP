@@ -46,7 +46,8 @@ Our team selected a campus lost-and-found reporting system. The target users are
 ## Weekly Progress Log
 | Lab | Main Activity | Output | Status |
 |---|---|---|---|
-| Lab 1 | Lab setup and idea log | Repository setup, team profile tracking, initial three-idea logbook | In progress |
+| Lab 1 | Lab setup and idea log | Repository setup, team profile tracking, initial three-idea logbook | Completed |
+| Lab 2 | Opportunity scanning & selection | Evaluated 6 diverse opportunity pipelines, executed NUF scoring matrix, and selected Campus Lost-and-Found System | In Progress |
 
 ## Current Status
 In Lab 02, our team evaluated six diverse web opportunity pipelines across different local environments, executed a robust NUF scoring qualification matrix, and successfully isolated our singular production startup pathway.
