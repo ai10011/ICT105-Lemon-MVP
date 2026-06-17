@@ -20,13 +20,14 @@ Semester-long IT startup MVP project for ICT105 Fundamental Technology Entrepren
 | Phoochit Jantakam | Documentation Lead | Maintain documentation |
 
 ## Initial Problem Area
-Our team is evaluating multiple friction areas across student-life logistics, campus tracking operations, and neighborhood community micro-economies.
+Our team is focusing on resolving operational friction points within student logistics and campus tracking infrastructure. We are specifically targeting the fragmented nature of lost item reporting within high-density student facilities.
 
 ## Target Users
-University students, administrative workers, small community vendors, and campus security personnel.
+- Undergraduate university students who frequently lose baseline items.
+- Campus security staff and facility processing clerks managing incoming inventory items.
 
-## Initial IT Venture Direction
-We are targeting lightweight, responsive web app platforms incorporating real-time database inputs, modular sorting algorithms, and interface dashboards to resolve manual tracking issues.
+## Selected IT Venture Direction
+Our team selected a campus lost-and-found reporting system. The target users are university students who lose personal items and currently search through unstructured chat groups or ask security staff manually. We selected this idea because it is highly useful, structurally feasible, and can be prototyped as an automated web-based indexing and discovery portal completely without physical IoT hardware, sensors, or complex infrastructure protection networks.
 
 ## Technology Possibility
 - Web application interface
@@ -47,22 +48,8 @@ We are targeting lightweight, responsive web app platforms incorporating real-ti
 |---|---|---|---|
 | Lab 1 | Lab setup and idea log | Repository setup, team profile tracking, initial three-idea logbook | In progress |
 
-## Initial Problem Area
-Our team is focusing on resolving operational friction points within student logistics and campus tracking infrastructure. We are specifically targeting the fragmented nature of lost item reporting within high-density student facilities.
-
-## Target Users
-- Undergraduate university students who frequently lose baseline items.
-- Campus security staff and facility processing clerks managing incoming inventory items.
-
-## Selected IT Venture Direction
-Our team selected a campus lost-and-found reporting system. The target users are university students who lose personal items and currently search through unstructured chat groups or ask security staff manually. We selected this idea because it is highly useful, structurally feasible, and can be prototyped as an automated web-based indexing and discovery portal completely without physical IoT hardware, sensors, or complex infrastructure protection networks.
-
 ## Current Status
 In Lab 02, our team evaluated six diverse web opportunity pipelines across different local environments, executed a robust NUF scoring qualification matrix, and successfully isolated our singular production startup pathway.
 
 ## Next Step
 In Lab 03, we will deploy our formal customer discovery workflows, launch structured user problem interviews, and collect foundational user evidence from target campus respondents.
-## Current Status
-In Lab 02, we reviewed six possible IT opportunities, scored them using NUF, and selected one semester project idea.
-## Next Step
-In Lab 03, we will prepare customer discovery questions and collect evidence from target users.
