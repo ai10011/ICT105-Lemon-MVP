@@ -52,7 +52,7 @@ We explicitly rejected the *Clinic Queue Booking Portal Prototype*. While highly
 - Opportunity scan file: `/docs/opportunity-scan.md`
 - NUF scoring file: Documented within `/data/opportunity-scoring.xlsx`
 - Selected opportunity file: `/docs/selected-opportunity.md`
-- GitHub issue tracking profile: [Verified under your Repository Issues Hub]
+- GitHub issue tracking profile: Under my Issues
 
 ### Plan for Lab 03
 Our team will build and format 15 targeted customer interviews inside `/docs/customer-discovery-questions.md` to run empirical validation checks with students on-campus.
