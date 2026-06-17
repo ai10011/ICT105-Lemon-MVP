@@ -46,8 +46,13 @@ We are targeting lightweight, responsive web app platforms incorporating real-ti
 |---|---|---|---|
 | Lab 1 | Lab setup and idea log | Repository setup, team profile tracking, initial three-idea logbook | In progress |
 
-## Current Status
-In Lab 1, our team successfully set up a shared workspace repository mapping out our core technical domains. We assigned specific roles covering technical, UX, product, and documentation requirements. Furthermore, we structured three initial business concepts using the problem-user-solution matrix to kickstart validation.
+## Selected IT Venture Direction
+Our team selected a campus lost-and-found reporting system. The target users are university students who lose personal items and currently
 
+search through chat groups or ask security staff manually. We selected this idea because it is useful, feasible, and can be prototyped as a web-
+based reporting and search system without hardware devices.
+
+## Current Status
+In Lab 02, we reviewed six possible IT opportunities, scored them using NUF, and selected one semester project idea.
 ## Next Step
-In Lab 2, we will initiate opportunity scanning processes to vet our current business concepts against real-world user metrics and lock down a single production path.
+In Lab 03, we will prepare customer discovery questions and collect evidence from target users.
