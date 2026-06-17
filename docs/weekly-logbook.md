@@ -50,7 +50,7 @@ We explicitly rejected the *Clinic Queue Booking Portal Prototype*. While highly
 
 ### Evidence of Work
 - Opportunity scan file: `/docs/opportunity-scan.md`
-- NUF scoring file: Documented within `/docs/opportunity-scan.md#nuf-scoring-matrix`
+- NUF scoring file: Documented within `/data/opportunity-scoring.xlsx`
 - Selected opportunity file: `/docs/selected-opportunity.md`
 - GitHub issue tracking profile: [Verified under your Repository Issues Hub]
 
