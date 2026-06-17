@@ -8,3 +8,12 @@
 | **Idea 2: Digital Notice Board** | Scattered event information across the university. | University students. | Line Chats in the university. | Web or mobile app with a simple catalog display and an SMS alerting API. |
 | **Idea 3: Student Skill-Share & Project Matchmaker** | Students struggle to find peers outside their friend circles with complementary skills for startup teams or assignments. | University students looking for project collaborators. | Random assignments by professors or posting on massive, unstructured social media forums. | Web dashboard with data search filtering components and a simple match notification system. |
 | **Idea 4: Campus Navigation** | New and current students or visitors struggle to navigate the large Rangsit University campus efficiently. | Rangsit University students, staff, lecturers, visitors, and parents. | Static campus maps or asking for directions from others. | Web application (HTML/CSS/JS or React), Google Maps API (or custom map system), and a Firebase/MySQL backend. |
+
+## Opportunity Discovery Table
+| No. | Observed Problem | Target User | Current Alternative | Possible IT Solution | Feasible Technology |
+|---|---|---|---|---|---|
+
+## Technology Feasibility Mapping
+| Idea | Prototype Type | Tools Needed | Data Needed | Difficulty | Feasible? |
+|---|---|---|---|---|---|
+
