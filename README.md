@@ -46,12 +46,21 @@ We are targeting lightweight, responsive web app platforms incorporating real-ti
 |---|---|---|---|
 | Lab 1 | Lab setup and idea log | Repository setup, team profile tracking, initial three-idea logbook | In progress |
 
+## Initial Problem Area
+Our team is focusing on resolving operational friction points within student logistics and campus tracking infrastructure. We are specifically targeting the fragmented nature of lost item reporting within high-density student facilities.
+
+## Target Users
+- Undergraduate university students who frequently lose baseline items.
+- Campus security staff and facility processing clerks managing incoming inventory items.
+
 ## Selected IT Venture Direction
-Our team selected a campus lost-and-found reporting system. The target users are university students who lose personal items and currently
+Our team selected a campus lost-and-found reporting system. The target users are university students who lose personal items and currently search through unstructured chat groups or ask security staff manually. We selected this idea because it is highly useful, structurally feasible, and can be prototyped as an automated web-based indexing and discovery portal completely without physical IoT hardware, sensors, or complex infrastructure protection networks.
 
-search through chat groups or ask security staff manually. We selected this idea because it is useful, feasible, and can be prototyped as a web-
-based reporting and search system without hardware devices.
+## Current Status
+In Lab 02, our team evaluated six diverse web opportunity pipelines across different local environments, executed a robust NUF scoring qualification matrix, and successfully isolated our singular production startup pathway.
 
+## Next Step
+In Lab 03, we will deploy our formal customer discovery workflows, launch structured user problem interviews, and collect foundational user evidence from target campus respondents.
 ## Current Status
 In Lab 02, we reviewed six possible IT opportunities, scored them using NUF, and selected one semester project idea.
 ## Next Step
