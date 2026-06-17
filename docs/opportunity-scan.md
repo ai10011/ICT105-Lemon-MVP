@@ -24,9 +24,9 @@
 
 | Idea | Prototype Type | Tools Needed | Data Needed | Difficulty | Feasible? |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Idea 1: Lost & Found** | Functional Web Prototype | HTML/JS or Flutter Web, Firebase Auth, Firestore. | Mock list of items (description, category, date, image URL, contact info). | **Medium** (requires handling file uploads for photos). | **Yes** |
-| **Idea 2: Digital Board** | Frontend-focused Dashboard | Web app or Flutter, basic database, notification services. | Event details (title, organizer, date, venue, registration links). | **Low to Medium** (SMS APIs require configuration, but core catalog is easy). | **Yes** |
-| **Idea 3: Matchmaker** | Data-driven Web UI | React/Vue or Flutter, MySQL/Firebase, Skill tag libraries. | Student profiles (name, skills, interests) and project listings (roles needed). | **Medium** (requires dynamic data filtering and relational structures). | **Yes** |
-| **Idea 4: Campus Nav** | Interactive Map App | Web App, Google Maps API / Leaflet.js, Firebase. | Geolocation coordinates of RSU buildings, room indexes, and building photos. | **High** (mapping coordinate logic and routing requires precision engineering). | **Yes** |
-| **Idea 5: Deadline Board** | Direct Calendar Widget | Vue/React or Flutter Frontend, Moment.js or date-fns utils. | Course codes, assignments titles, cutoff times, and color-coded tags. | **Low** (relies primarily on clean state management and scheduling layout elements). | **Yes** |
-| **Idea 6: Complaint Web** | CRUD Ticketing App | HTML/CSS/JS or Bootstrap, Node.js/Express, or Firebase. | Facility locations, category catalogs (IT, Utilities, Furniture), tracking tickets. | **Medium** (requires an administrative view separate from the student reporter layout). | **Yes** |
+| **Idea 1: Lost & Found** | Functional Web Prototype | HTML/JS or Flutter Web, Firebase Auth, Firestore. | Mock list of items (description, category, date, image URL, contact info). | **Medium** | **Yes** |
+| **Idea 2: Digital Board** | Frontend-focused Dashboard | Web app or Flutter, basic database, notification services. | Event details (title, organizer, date, venue, registration links). | **Medium** | **Yes** |
+| **Idea 3: Matchmaker** | Data-driven Web UI | React/Vue or Flutter, MySQL/Firebase, Skill tag libraries. | Student profiles (name, skills, interests) and project listings (roles needed). | **Medium** | **Yes** |
+| **Idea 4: Campus Nav** | Interactive Map App | Web App, Google Maps API / Leaflet.js, Firebase. | Geolocation coordinates of RSU buildings, room indexes, and building photos. | **High** | **Yes** |
+| **Idea 5: Deadline Board** | Direct Calendar Widget | Vue/React or Flutter Frontend, Moment.js or date-fns utils. | Course codes, assignments titles, cutoff times, and color-coded tags. | **Low** | **Yes** |
+| **Idea 6: Complaint Web** | CRUD Ticketing App | HTML/CSS/JS or Bootstrap, Node.js/Express, or Firebase. | Facility locations, category catalogs (IT, Utilities, Furniture), tracking tickets. | **Medium** | **Yes** |
