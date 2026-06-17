@@ -14,9 +14,10 @@ Semester-long IT startup MVP project for ICT105 Fundamental Technology Entrepren
 ## Team Members and Roles
 | Name | Role | Responsibility |
 |---|---|---|
-| [Mr. Kyaw Ye Lin] | Product Lead | Define problem, target users, and value proposition |
-| [Phollapat Rodchue] | Technical Lead | Manage repository and prototype feasibility |
-| [Tin May Lin] | UX/UI Lead + Documentation Lead | Design interface and maintain documentation |
+| Crystal | Product Lead | Define problem, target users, and value proposition |
+| Phollapat Rodchue | Technical Lead | Manage repository and prototype feasibility |
+| Tin May Lin | UX/UI Lead  | Design interface |
+| Phoochit Jantakam | Documentation Lead | Maintain documentation |
 
 ## Initial Problem Area
 Our team is evaluating multiple friction areas across student-life logistics, campus tracking operations, and neighborhood community micro-economies.
