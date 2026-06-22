@@ -89,7 +89,7 @@ Our team will build and format 15 targeted customer interviews inside `/docs/cus
 - **Customer questions file:** `/docs/customer-questions.md`
 - **Raw responses file:** `/data/raw-responses.xlsx`
 - **Assumption-evidence table:** `/docs/assumption-evidence-table.md`
-- **Commit link:** `https://github.com/[your-org]/[your-repo]/commit/[commit-hash]`
+- **Commit link:** `https://github.com/ai10011/ICT105-Lemon-MVP/commits/main/`
 
 ### Plan for Lab 04
 In Lab 04, the team will synthesize the collected empirical evidence to systematically define our target customer segment. We will narrow down broad demographics into an analytical user persona reflecting genuine user behaviors, constraints, and pain points uncovered during discovery. Following this, we will write agile user stories mapped directly to these verified user struggles, anchoring our forthcoming MVP development entirely around validated evidence rather than personal assumptions[cite: 1].
