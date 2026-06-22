@@ -23,7 +23,7 @@ The purpose of this interview is to:
 
 **Research Type:** Customer Discovery Interview
 
-**Target Participants:** University Students
+**Target Participants:** Undergraduate university students and Campus security staff and facility processing clerks
 
 **Interview Format:** Semi-structured interview
 
