@@ -38,7 +38,7 @@ Conduct opportunity scanning, evaluate our initial three ideas, and pin down the
 SmartCampus Centralized Lost-and-Found Tracking System
 
 ### Why We Selected It
-The system scored a 14/15 on our NUF matrix. It targets a clear, repetitive user pain point easily verified by a student cohort, and can be built completely using scalable web forms and relational database components.
+The system scored a 15/15 on our NUF matrix. It targets a clear, repetitive user pain point easily verified by a student cohort, and can be built completely using scalable web forms and relational database components.
 
 ### What We Rejected
 We explicitly rejected the *Clinic Queue Booking Portal Prototype*. While highly useful, simulating live dynamic queue synchronization and real-time algorithmic delays presented elevated engineering risks that fell outside our baseline frontend scope.
