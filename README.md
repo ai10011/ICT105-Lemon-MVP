@@ -50,7 +50,10 @@ Our team selected a campus lost-and-found reporting system. The target users are
 | Lab 2 | Opportunity scanning & selection | Evaluated 6 diverse opportunity pipelines, executed NUF scoring matrix, and selected Campus Lost-and-Found System | In Progress |
 
 ## Current Status
-In Lab 02, our team evaluated six diverse web opportunity pipelines across different local environments, executed a robust NUF scoring qualification matrix, and successfully isolated our singular production startup pathway.
+We have just completed our formal customer discovery workflows. We conducted structured user problem interviews and surveys, collecting foundational user evidence. 
+* We validated that current chat-group workarounds are failing.
+* We revised our physical drop-off assumption to a digital-pinning feature.
+* We revised our communication assumption to protect respondent privacy.
 
 ## Next Step
 In Lab 03, we will deploy our formal customer discovery workflows, launch structured user problem interviews, and collect foundational user evidence from target campus respondents.
@@ -73,12 +76,6 @@ Lemon MVP is an automated, web-based indexing and discovery portal. Based on our
 2. **Privacy-First Communication:** Since students are uncomfortable sharing personal phone numbers on a public campus platform, we facilitate connection through an anonymized, masked in-app chat.
 
 This provides a highly useful, structurally feasible system completely without physical IoT hardware, sensors, or complex infrastructure networks.
-
-## Current Status (Lab 03 & 04)
-We have just completed our formal customer discovery workflows. We conducted structured user problem interviews and surveys, collecting foundational user evidence. 
-* We validated that current chat-group workarounds are failing.
-* We revised our physical drop-off assumption to a digital-pinning feature.
-* We revised our communication assumption to protect respondent privacy.
 
 ## Repository Structure
 * `/docs/`: Contains all project documentation, customer interview questions, problem notes, and our Assumption-Evidence decisions.
