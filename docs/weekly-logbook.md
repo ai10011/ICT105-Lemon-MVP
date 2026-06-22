@@ -57,8 +57,6 @@ We explicitly rejected the *Clinic Queue Booking Portal Prototype*. While highly
 ### Plan for Lab 03
 Our team will build and format 15 targeted customer interviews inside `/docs/customer-discovery-questions.md` to run empirical validation checks with students on-campus.
 
-# Weekly Venture Logbook
-
 ## Lab 03: Customer Problem Discovery
 
 ### What We Completed
