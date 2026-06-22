@@ -85,7 +85,7 @@ Our team will build and format 15 targeted customer interviews inside `/docs/cus
 2. **Scheduling Coordination:** Aligning target respondent schedules with team availability within the strict constraints of the lab timeline required tight logistics and task re-assignments.
 
 ### Evidence of Work
-- **GitHub repository link:** `https://github.com/[your-org]/[your-repo]` *(Replace with group repository URL)*[cite: 1]
+- **GitHub repository link:** `https://github.com/ai10011/ICT105-Lemon-MVP`
 - **Customer questions file:** `/docs/customer-questions.md`
 - **Raw responses file:** `/data/raw-responses.xlsx`
 - **Assumption-evidence table:** `/docs/assumption-evidence-table.md`
