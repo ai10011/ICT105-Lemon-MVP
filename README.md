@@ -54,3 +54,31 @@ In Lab 02, our team evaluated six diverse web opportunity pipelines across diffe
 
 ## Next Step
 In Lab 03, we will deploy our formal customer discovery workflows, launch structured user problem interviews, and collect foundational user evidence from target campus respondents.
+
+# Lemon MVP: Campus Lost-and-Found System 🍋
+
+**About**
+Semester-long IT startup MVP project for ICT105 Fundamental Technology Entrepreneurship.
+
+## The Problem
+University students who lose personal items on campus currently have to search through disorganized, unstructured Line/WhatsApp groups or manually visit the campus security office. Our customer discovery data shows that because these workarounds are too scattered, 65% of students abandon their search for lost items within 24 hours.
+
+## Our Target Segment
+University students who frequently commute across campus, use shared facilities (like the main library or lecture halls), and have recently lost or found personal items. 
+
+## The Solution & Value Proposition (Updated after Customer Discovery)
+Lemon MVP is an automated, web-based indexing and discovery portal. Based on our user validation in Lab 03, we have pivoted our solution to ensure **Problem-Solution Fit**:
+1. **Digital Location Pinning:** Instead of forcing finders to walk out of their way to drop an item at security (which our evidence showed they won't do), our app allows finders to quickly take a photo and "pin" the item's location digitally.
+2. **Privacy-First Communication:** Since students are uncomfortable sharing personal phone numbers on a public campus platform, we facilitate connection through an anonymized, masked in-app chat.
+
+This provides a highly useful, structurally feasible system completely without physical IoT hardware, sensors, or complex infrastructure networks.
+
+## Current Status (Lab 03 & 04)
+We have just completed our formal customer discovery workflows. We conducted structured user problem interviews and surveys, collecting foundational user evidence. 
+* We validated that current chat-group workarounds are failing.
+* We revised our physical drop-off assumption to a digital-pinning feature.
+* We revised our communication assumption to protect respondent privacy.
+
+## Repository Structure
+* `/docs/`: Contains all project documentation, customer interview questions, problem notes, and our Assumption-Evidence decisions.
+* `/data/`: Contains our raw survey and interview responses.
