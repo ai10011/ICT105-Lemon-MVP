@@ -55,7 +55,8 @@ In Lab 02, our team evaluated six diverse web opportunity pipelines across diffe
 ## Next Step
 In Lab 03, we will deploy our formal customer discovery workflows, launch structured user problem interviews, and collect foundational user evidence from target campus respondents.
 
-# Lemon MVP: Campus Lost-and-Found System 🍋
+#Lecture 4 22June2026 Monday 
+# Lemon MVP: Campus Lost-and-Found System 
 
 **About**
 Semester-long IT startup MVP project for ICT105 Fundamental Technology Entrepreneurship.
