@@ -1,7 +1,7 @@
 # Customer Discovery Summary
 
 ## Project Title
-Campus Centralized Lost & Found Platform
+Campus Lost-and-Found System
 
 ## Target Users Studied
 * **Students:** Primary users who frequently lose or find items on campus.
