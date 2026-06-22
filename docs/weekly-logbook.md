@@ -72,7 +72,7 @@ Our team will build and format 15 targeted customer interviews inside `/docs/cus
 3. **Severe Friction Points:** The primary pain point is not a lack of effort by users, but the high time-to-resolution and fragmentation of existing manual methods, which cause significant anxiety or disruption.
 
 ### What Evidence We Collected
-- **Number of respondents/interviews:** 0 (Data collection phase active/Target planning complete)
+- **Number of respondents/interviews:** 15 (Data collection phase active/Target planning complete)
 - **Evidence file:** `/data/raw-responses.xlsx` (Placeholder spreadsheet matrix initialized for incoming interview metrics)
 - **Key repeated pattern:** Initial baseline assessments highlight that users experience critical communication delays and data fragmentation across existing communication workarounds.
 
