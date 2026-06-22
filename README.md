@@ -47,7 +47,8 @@ Our team selected a campus lost-and-found reporting system. The target users are
 | Lab | Main Activity | Output | Status |
 |---|---|---|---|
 | Lab 1 | Lab setup and idea log | Repository setup, team profile tracking, initial three-idea logbook | Completed |
-| Lab 2 | Opportunity scanning & selection | Evaluated 6 diverse opportunity pipelines, executed NUF scoring matrix, and selected Campus Lost-and-Found System | In Progress |
+| Lab 2 | Opportunity scanning & selection | Evaluated 6 diverse opportunity pipelines, executed NUF scoring matrix, and selected Campus Lost-and-Found System | Completed |
+| Lab 3 | Customer Discovery Workflows | Conducted user problem interviews/surveys, built assumption-evidence table | Completed |
 
 ## Current Status
 We have just completed our formal customer discovery workflows. We conducted structured user problem interviews and surveys, collecting foundational user evidence. 
@@ -55,28 +56,25 @@ We have just completed our formal customer discovery workflows. We conducted str
 * We revised our physical drop-off assumption to a digital-pinning feature.
 * We revised our communication assumption to protect respondent privacy.
 
-## Next Step
-In Lab 03, we will deploy our formal customer discovery workflows, launch structured user problem interviews, and collect foundational user evidence from target campus respondents.
+## Customer Problem Discovery Summary
+In Lab 03, our team collected early problem evidence from target users. The purpose was to confirm whether our selected problem from Lab 02 is real and important. 
 
-#Lecture 4 22June2026 Monday 
-# Lemon MVP: Campus Lost-and-Found System 
+Through this workflow, we successfully validated key problem signals, identified the breaking points of current student workarounds, and actively used the evidence to adjust our product design—shifting from physical drop-off mechanics to digital location pinning, and introducing privacy-first communication features.
 
-**About**
-Semester-long IT startup MVP project for ICT105 Fundamental Technology Entrepreneurship.
+## Target Respondents
+Our team gathered customer discovery evidence from a structured sample size of campus respondents, specifically focusing on:
+* **Undergraduate university students** who frequently commute across high-density campus facilities (such as the main library or lecture halls) and have recently lost or found personal baseline items.
+* **Campus security staff and facility processing clerks** who are responsible for managing incoming inventory items and handling manual inquiries.
 
-## The Problem
-University students who lose personal items on campus currently have to search through disorganized, unstructured Line/WhatsApp groups or manually visit the campus security office. Our customer discovery data shows that because these workarounds are too scattered, 65% of students abandon their search for lost items within 24 hours.
+## Main Evidence Found
+Through our structured problem interviews and surveys, we uncovered several critical insights:
+* **Failure of Current Workarounds:** Students are actively using unstructured Line/WhatsApp chat groups or manually checking with security offices. Our customer discovery data proves that these scattered workarounds are failing.
+* **High Abandonment Rates:** Because current channels are completely disorganized and fragmented, **65% of students abandon their search** for lost items within 24 hours.
+* **Friction in Physical Drop-offs:** Evidence showed that finders are highly unlikely to walk out of their way to physically hand over an item to a security checkpoint.
+* **Privacy Concerns:** Students expressed explicit discomfort with sharing personal phone numbers or contact details on public campus channels.
 
-## Our Target Segment
-University students who frequently commute across campus, use shared facilities (like the main library or lecture halls), and have recently lost or found personal items. 
+## Updated Problem Statement
+University students who lose personal items on campus currently have to search through disorganized, unstructured Line/WhatsApp groups or manually visit the campus security office. Because these existing workarounds are scattered and inefficient, 65% of students abandon their search for lost items within 24 hours, leading to a high rate of permanently unrecovered personal property in high-density student facilities.
 
-## The Solution & Value Proposition (Updated after Customer Discovery)
-Lemon MVP is an automated, web-based indexing and discovery portal. Based on our user validation in Lab 03, we have pivoted our solution to ensure **Problem-Solution Fit**:
-1. **Digital Location Pinning:** Instead of forcing finders to walk out of their way to drop an item at security (which our evidence showed they won't do), our app allows finders to quickly take a photo and "pin" the item's location digitally.
-2. **Privacy-First Communication:** Since students are uncomfortable sharing personal phone numbers on a public campus platform, we facilitate connection through an anonymized, masked in-app chat.
-
-This provides a highly useful, structurally feasible system completely without physical IoT hardware, sensors, or complex infrastructure networks.
-
-## Repository Structure
-* `/docs/`: Contains all project documentation, customer interview questions, problem notes, and our Assumption-Evidence decisions.
-* `/data/`: Contains our raw survey and interview responses.
+## Decision for Next Step
+The team has decided to **Proceed with an Evidenced-Based Pivot (Problem-Solution Fit)**. 
