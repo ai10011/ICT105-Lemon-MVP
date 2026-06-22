@@ -68,10 +68,10 @@ Our team gathered customer discovery evidence from a structured sample size of c
 
 ## Main Evidence Found
 Through our structured problem interviews and surveys, we uncovered several critical insights:
-* **Scattered Lost-Item Information:** Multiple user responses explicitly confirmed that information is heavily fragmented, citing group chats, asking friends, manually visiting the security office, and relying on handwritten manual logbooks as entirely separate, disconnected channels.
-* **Demand for a Central Platform:** Several respondents verified a clear desire for a central reporting system, stating they specifically want one official place equipped with item categories, date filters, photo verification, and clear proof of ownership.
-* **Urgency Stratification by Item Value:** Our assumption that all lost items are equally urgent was disproven; users indicate low-value items have much lower urgency, whereas critical items containing personal or academic data are treated as much more serious.
-* **System Adoption Constraints:** We discovered that students will not automatically use the system for every single lost item; some respondents explicitly noted they wouldn't log small items, while others emphasized that the platform's overall usefulness depends entirely on widespread campus participation.
+* **Lost information is too spread out:** Students confirmed they have to look in too many places. They check group chats, ask friends, visit the security office, or look at paper notebooks.
+* **Students want one central tool:** Many people said they want one official website. They want to search by item types, look at dates, see photos, and prove they own the item.
+* **Some items are more important than others:** Our idea that all lost items are the same was wrong. Small things like water bottles are not urgent. Important things like ID cards, calculators, and USB drives are a big deal.
+* **People will not use it for everything:** Students will not log every tiny item they lose. They also noted that the app will only w
 
 ## Updated Problem Statement
 University students who lose personal items on campus currently have to search through disorganized, unstructured Line/WhatsApp groups or manually visit the campus security office. Because these existing workarounds are scattered and inefficient, 65% of students abandon their search for lost items within 24 hours, leading to a high rate of permanently unrecovered personal property in high-density student facilities.
