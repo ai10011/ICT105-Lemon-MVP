@@ -1,15 +1,15 @@
 # Customer Discovery Questions
 
-## Project Title
+## Campus Lost and Found Experience Survey
 
-## Target Respondent
+## Target Respondent: University Students
 
 ## Consent and Context
 1. May we ask you a few questions for our ICT105 course project?
 2. Your participation is voluntary. We will not collect unnecessary personal data. Is it okay if we take notes?
 
 ## Recent Experience
-3. Tell us about the last time you experienced this problem.
+3. Tell us about the last time you experienced the diffuculty in finding lost items.
 4. What were you trying to do at that time?
 5. What happened from start to finish?
 
