@@ -74,7 +74,7 @@ Through our structured problem interviews and surveys, we uncovered several crit
 * **People will not use it for everything:** Students will not log every tiny item they lose. They also noted that the app will only w
 
 ## Updated Problem Statement
-University students who lose personal items on campus currently have to search through disorganized, unstructured Line/WhatsApp groups or manually visit the campus security office. Because these existing workarounds are scattered and inefficient, 65% of students abandon their search for lost items within 24 hours, leading to a high rate of permanently unrecovered personal property in high-density student facilities.
+University students who lose personal items on campus currently have to search through disorganized, unstructured Line/Discord groups or manually visit the campus security office. Because these existing workarounds are scattered and inefficient, 65% of students abandon their search for lost items within 24 hours, leading to a high rate of permanently unrecovered personal property in high-density student facilities.
 
 ## Decision for Next Step
 The team has decided to **Proceed with an Evidenced-Based Pivot (Problem-Solution Fit)**. 
