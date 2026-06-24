@@ -91,3 +91,39 @@ Our team will build and format 15 targeted customer interviews inside `/docs/cus
 
 ### Plan for Lab 04
 In Lab 04, the team will synthesize the collected empirical evidence to systematically define our target customer segment. We will narrow down broad demographics into an analytical user persona reflecting genuine user behaviors, constraints, and pain points uncovered during discovery. Following this, we will write agile user stories mapped directly to these verified user struggles, anchoring our forthcoming MVP development entirely around validated evidence rather than personal assumptions.
+
+# Lab 04 - Weekly Logbook
+
+## Group Information
+- Course: ICT105 Fundamental Technology Entrepreneurship
+- Lab: Lab 04 - User Persona, Requirements, and User Stories
+- Group Name:
+- Repository Link:
+- Date:
+
+## 1. Work Completed Today
+| Member Name | Contribution | GitHub Evidence (Commit/Issue/PR Link) |
+|---|---|---|
+| | | |
+
+## 2. Main Decisions
+- Primary target user:
+- Main persona:
+- Most important problem:
+- Must-have requirements:
+- Features included in MVP:
+- Features postponed:
+
+## 3. Requirement Changes / Clarifications
+Record any decision that may affect the final prototype.
+
+## 4. Problems Encountered
+- Technical problem:
+- Team coordination problem:
+- Evidence/requirement problem:
+
+## 5. Next Actions Before Lab 05
+| Task | Owner | Deadline | GitHub Issue |
+|---|---|---|---|
+| | | | |
+
