@@ -78,3 +78,33 @@ University students who lose personal items on campus currently have to search t
 
 ## Decision for Next Step
 The team has decided to **Proceed with an Evidenced-Based Pivot (Problem-Solution Fit)**. 
+
+## Lab 04: User Persona, Requirements, and User Stories
+
+### Primary Target User
+Briefly describe the main user of your system/app/platform.
+
+### Persona Summary
+- Persona name:
+- User type:
+- Main goal:
+- Main pain point:
+- Current workaround:
+
+### Key Requirements
+| Req ID | Requirement | Priority | Related Evidence |
+|---|---|---|---|
+| FR-01 | | Must | |
+| NFR-01 | | Must | |
+
+### MVP Feature Scope
+| Feature | Priority | Included in Final Prototype? |
+|---|---|---|
+| | | |
+
+### Diagram Links
+- User flow diagram:
+- Use case diagram:
+
+### GitHub Contribution Evidence
+All members contributed to this repository through commits, issues, or pull requests.
