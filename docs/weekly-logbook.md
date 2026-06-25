@@ -97,9 +97,9 @@ In Lab 04, the team will synthesize the collected empirical evidence to systemat
 ### Group Information
 - Course: ICT105 Fundamental Technology Entrepreneurship
 - Lab: Lab 04 - User Persona, Requirements, and User Stories
-- Group Name:
-- Repository Link:
-- Date:
+- Group Name: Lemon
+- Repository Link: https://github.com/ai10011/ICT105-Lemon-MVP
+- Date: 24/06/2026
 
 ### 1. Work Completed Today
 | Member Name | Contribution | GitHub Evidence (Commit/Issue/PR Link) |
@@ -107,7 +107,7 @@ In Lab 04, the team will synthesize the collected empirical evidence to systemat
 | | | |
 
 ### 2. Main Decisions
-- Primary target user:
+- Primary target user: Student and Staff at Rangist University
 - Main persona:
 - Most important problem:
 - Must-have requirements:
