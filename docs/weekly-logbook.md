@@ -17,7 +17,7 @@
 2. Sorting out individual roles took continuous negotiation over varying student skill capabilities.
 
 ### Evidence of Work
-- GitHub repository link: [Insert your repository URL here]
+- GitHub repository link: `https://github.com/ai10011/ICT105-Lemon-MVP`
 - File created: docs/team-profile.md, docs/idea-log.md, docs/weekly-logbook.md
 
 ### Decision Made This Week
@@ -98,13 +98,16 @@ In Lab 04, the team will synthesize the collected empirical evidence to systemat
 - Course: ICT105 Fundamental Technology Entrepreneurship
 - Lab: Lab 04 - User Persona, Requirements, and User Stories
 - Group Name: Lemon
-- Repository Link: https://github.com/ai10011/ICT105-Lemon-MVP
+- Repository Link: `https://github.com/ai10011/ICT105-Lemon-MVP`
 - Date: 24/06/2026
 
 ### 1. Work Completed Today
 | Member Name | Contribution | GitHub Evidence (Commit/Issue/PR Link) |
 |---|---|---|
-| | | |
+| Crystal |  |  |
+| Phollapat Rodchue |  |  |
+| Tin May Lin |   |  |
+| Phoochit Jantakam |  |  |
 
 ### 2. Main Decisions
 - Primary target user: Student and Staff at Rangist University
