@@ -19,14 +19,12 @@ Student who frequently loses or finds personal items on campus.
 
 ## 5. Pain Points from Lab 03 Evidence
 
-| Pain Point | Evidence ID / Respondent | Explanation |
-|---|---|---|
-| Information scattered across multiple channels | R2, R5, R8, R11 | Students reported checking several platforms before finding information. |
-| Time-consuming search process | R1, R4, R7, R10 | Respondents said searching for lost items took too much time. |
-| Unclear reporting procedure | R3, R6, R9 | Respondents were unsure where to report lost items. |
-| No centralized tracking system | R12, S1 | Student and security staff confirmed there is no shared tracking system. |
-| Low visibility of reports | R5, R13 | Social media posts were easily buried among other posts. |
-
+| Main Pain Point | Evidence ID/ Respondent| Explanation |
+|-----------------|----------|-------------|
+| **Fragmented Information Management** | R1, R6, R8, R10 | Lost-and-found information is spread across multiple platforms, departments, and communication channels. This makes it difficult for users to access accurate, complete, and up-to-date information from a single source. |
+| **Inefficient Search and Recovery Process** | R3, R5, R7 | Users spend considerable time searching for lost items because there is no centralized search or tracking system. As a result, recovering lost items often depends on chance rather than a structured process. |
+| **Unclear Reporting Process** | R2, R4, R9, R12, R13 | Users are uncertain about where, when, and how to report lost items due to the absence of standardized procedures and clear guidance. This leads to confusion, inconsistent reporting, and delays in item recovery. |
+| **Limited User Support and Engagement** | R15, R11, R14| The current process lacks effective communication and user support. Users cannot easily notify owners or receive updates, while uncertainty, anxiety, and low motivation reduce participation in the lost-and-found process. |
 ## 6. Current Alternatives / Workarounds
 
 | Current Alternative | Weakness / Limitation | Evidence |
