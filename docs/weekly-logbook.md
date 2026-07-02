@@ -104,29 +104,29 @@ In Lab 04, the team will synthesize the collected empirical evidence to systemat
 ### 1. Work Completed Today
 | Member Name | Contribution | GitHub Evidence (Commit/Issue/PR Link) |
 |---|---|---|
-| Crystal |  |  |
-| Phollapat Rodchue |  |  |
-| Tin May Lin |   |  |
-| Phoochit Jantakam |  |  |
+| Crystal (Kyaw Ye Lin) | Created the user persona and wrote the user stories. | (Add link here) |
+| Phollapat Rodchue | Prioritized the MVP feature list, defined system requirements, updated the weekly logbook, and updated the README. | (Add link here) |
+| Tin May Lin | | |
+| Phoochit Jantakam | | |
 
 ### 2. Main Decisions
-- Primary target user: Student and Staff at Rangist University
-- Main persona:
-- Most important problem:
-- Must-have requirements:
-- Features included in MVP:
-- Features postponed:
+- **Primary target user:** University students who frequently lose or find personal items on campus.
+- **Main persona:** Justin, First-Year University Student.
+- **Most important problem:** Lost-and-found information is highly fragmented across disconnected channels (LINE, Facebook, etc.), causing a time-consuming search process and high abandonment rates.
+- **Must-have requirements:** F01 (Report Lost Item), F02 (Report Found Item), F03 (Search and Filter), F04 (Item Status Updates).
+- **Features included in MVP:** Core reporting forms (lost/found), database search and filtering, and item status tracking.
+- **Features postponed:** In-App Messaging (US-08), Automated Notifications (US-07), AI Image Matching, and Reward Systems.
 
 ### 3. Requirement Changes / Clarifications
-Record any decision that may affect the final prototype.
+- We decided to prioritize high-frequency, high-impact campus essentials (Student IDs, access cards, USB drives, calculators) over low-value items.
+- Based on privacy concerns found in Lab 03, we clarified that users will not share personal phone numbers publicly; the communication approach will rely on secure methods like anonymized in-app messaging (postponed to a later phase).
 
 ### 4. Problems Encountered
-- Technical problem:
-- Team coordination problem:
-- Evidence/requirement problem:
+- **Technical problem:** Have not yet designed the user flow and use case diagrams. 
+- **Team coordination problem:** Only two members contributed to this week's lab tasks.
+- **Evidence/requirement problem:** Needed to make sure that our user stories (US-01 to US-06) were strictly traceable back to the pain points discovered in our Lab 03 interviews.
 
 ### 5. Next Actions Before Lab 05
 | Task | Owner | Deadline | GitHub Issue |
 |---|---|---|---|
-| | | | |
 
