@@ -82,29 +82,33 @@ The team has decided to **Proceed with an Evidenced-Based Pivot (Problem-Solutio
 ## Lab 04: User Persona, Requirements, and User Stories
 
 ### Primary Target User
-Briefly describe the main user of your system/app/platform.
+The primary target users are university students who frequently lose or find personal items on campus and need a centralized way to report and track them.
 
 ### Persona Summary
-- Persona name:
-- User type:
-- Main goal:
-- Main pain point:
-- Current workaround:
+- **Persona name:** Justin
+- **User type:** First-Year University Student
+- **Main goal:** To easily report, search for, and track the status of lost and found items in one place.
+- **Main pain point:** Lost-and-found information is highly fragmented across disconnected channels, causing a time-consuming search process and high abandonment rates.
+- **Current workaround:** Searching manually through disconnected social media channels like LINE and Facebook.
 
 ### Key Requirements
 | Req ID | Requirement | Priority | Related Evidence |
 |---|---|---|---|
-| FR-01 | | Must | |
-| NFR-01 | | Must | |
+| FR-01 | The system must provide core reporting forms for users to log lost or found items. | Must | Lab 03 user interviews highlighting the difficulty of fragmented reporting channels. |
+| NFR-01 | The system must protect user privacy by not publicly displaying personal phone numbers. | Must | Lab 03 privacy concerns regarding public data sharing. |
 
 ### MVP Feature Scope
 | Feature | Priority | Included in Final Prototype? |
 |---|---|---|
-| | | |
+| Core reporting forms (lost/found) | Must | Yes |
+| Database search and filtering | Must | Yes |
+| Item status tracking | Must | Yes |
+| In-App Messaging (US-08) | Postponed | No |
+| Automated Notifications (US-07) | Postponed | No |
 
 ### Diagram Links
-- User flow diagram:
-- Use case diagram:
+- **User flow diagram:
+- **Use case diagram:
 
 ### GitHub Contribution Evidence
 All members contributed to this repository through commits, issues, or pull requests.
