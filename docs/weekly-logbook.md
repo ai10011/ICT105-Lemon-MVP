@@ -104,8 +104,8 @@ In Lab 04, the team will synthesize the collected empirical evidence to systemat
 ### 1. Work Completed Today
 | Member Name | Contribution | GitHub Evidence (Commit/Issue/PR Link) |
 |---|---|---|
-| Crystal (Kyaw Ye Lin) | Created the user persona and wrote the user stories. | (Add link here) |
-| Phollapat Rodchue | Prioritized the MVP feature list, defined system requirements, updated the weekly logbook, and updated the README. | (Add link here) |
+| Crystal (Kyaw Ye Lin) | Created the user persona and wrote the user stories. | https://github.com/ai10011/ICT105-Lemon-MVP/commits/main/ |
+| Phollapat Rodchue | Prioritized the MVP feature list, defined system requirements, updated the weekly logbook, and updated the README. | https://github.com/ai10011/ICT105-Lemon-MVP/commits/main/ |
 | Tin May Lin | | |
 | Phoochit Jantakam | | |
 
