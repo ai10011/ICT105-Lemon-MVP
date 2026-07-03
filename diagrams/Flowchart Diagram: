@@ -1,0 +1,58 @@
+[ Start: Item Found on Campus ]
+               |
+               v
+     ( Is Finder a Student? ) 
+       /                \
+    [Yes]               [No, Campus Security/Staff]
+     /                    \
+    v                      v
+[Take picture of item]   [Log item into Admin backend]
+    |                              |
+    v                              v
+[Open Lemon MVP App/Portal] [System assigns Tracking ID]
+    |                              |
+    v                              |
+[Fill Form: Category,          |
+ Location, Time, Image]            |
+    |                              |
+    v                              |
+[Submit Found Report]              |
+    |                              |
+    +---------------> + <----------+
+                      |
+                      v
+       [ Automated Indexing Engine ] 
+         (Checks existing Lost Reports)
+                      |
+            ( Is there a Match? )
+             /               \
+          [Yes]              [No]
+           /                   \
+          v                     v
+[Send notification email/sms] [Store in 'Unclaimed' log]
+[to potential item owner]       [Wait for Search Query]
+          |                             |
+          +------------> + <------------+
+                         |
+                         v
+           [ Loser arrives to claim item ]
+                         |
+                         v
+           [ Security verifies ownership ]
+            (e.g., matching item traits)
+                         |
+                ( Match Valid? )
+                 /            \
+              [Yes]           [No]
+               /                \
+              v                  v
+    [Hand over item]     [Deny request]
+              |                  |
+              v                  v
+    [Update system status] [Keep in storage]
+    [to "Resolved"]              |
+              |                  |
+              +--------> + <-----+
+                         |
+                         v
+                     [ End ]
