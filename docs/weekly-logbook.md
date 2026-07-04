@@ -92,41 +92,44 @@ Our team will build and format 15 targeted customer interviews inside `/docs/cus
 ### Plan for Lab 04
 In Lab 04, the team will synthesize the collected empirical evidence to systematically define our target customer segment. We will narrow down broad demographics into an analytical user persona reflecting genuine user behaviors, constraints, and pain points uncovered during discovery. Following this, we will write agile user stories mapped directly to these verified user struggles, anchoring our forthcoming MVP development entirely around validated evidence rather than personal assumptions.
 
-## Lab 04 - Weekly Logbook
+## Lab 04 - User Persona, Requirements, and User Stories
 
 ### Group Information
-- Course: ICT105 Fundamental Technology Entrepreneurship
-- Lab: Lab 04 - User Persona, Requirements, and User Stories
-- Group Name: Lemon
-- Repository Link: `https://github.com/ai10011/ICT105-Lemon-MVP`
-- Date: 24/06/2026
+* **Course:** ICT105 Fundamental Technology Entrepreneurship
+* **Lab:** Lab 04 - User Persona, Requirements, and User Stories
+* **Group Name:** Lemon
+* **Repository Link:** `https://github.com/ai10011/ICT105-Lemon-MVP`
+* **Date:** 24/06/2026
 
 ### 1. Work Completed Today
 | Member Name | Contribution | GitHub Evidence (Commit/Issue/PR Link) |
-|---|---|---|
-| Crystal (Kyaw Ye Lin) | Created the user persona and wrote the user stories. | https://github.com/ai10011/ICT105-Lemon-MVP/commits/main/ |
-| Phollapat Rodchue | Prioritized the MVP feature list, defined system requirements, updated the weekly logbook, and updated the README. | https://github.com/ai10011/ICT105-Lemon-MVP/commits/main/ |
-| Tin May Lin | | |
-| Phoochit Jantakam | | |
+| :--- | :--- | :--- |
+| **Crystal (Kyaw Ye Lin)** | Created the user persona and wrote the user stories. | `https://github.com/ai10011/ICT105-Lemon-MVP/commits/main/` |
+| **Phollapat Rodchue** | Prioritized the MVP feature list, defined system requirements, updated the weekly logbook, and updated the README. | `https://github.com/ai10011/ICT105-Lemon-MVP/commits/main/` |
+| **Tin May Lin** | Designed the user flow and use case diagrams based on the system requirements. | `https://github.com/ai10011/ICT105-Lemon-MVP/commits/main/` |
+| **Phoochit Jantakam** |  |  |
 
 ### 2. Main Decisions
-- **Primary target user:** University students who frequently lose or find personal items on campus.
-- **Main persona:** Justin, First-Year University Student.
-- **Most important problem:** Lost-and-found information is highly fragmented across disconnected channels (LINE, Facebook, etc.), causing a time-consuming search process and high abandonment rates.
-- **Must-have requirements:** F01 (Report Lost Item), F02 (Report Found Item), F03 (Search and Filter), F04 (Item Status Updates).
-- **Features included in MVP:** Core reporting forms (lost/found), database search and filtering, and item status tracking.
-- **Features postponed:** In-App Messaging (US-08), Automated Notifications (US-07), AI Image Matching, and Reward Systems.
+* **Primary target user:** University students who frequently lose or find personal items on campus.
+* **Main persona:** Justin, First-Year University Student.
+* **Most important problem:** Lost-and-found information is highly fragmented across disconnected channels (LINE, Facebook, etc.), causing a time-consuming search process and high abandonment rates.
+* **Must-have requirements:** F01 (Report Lost Item), F02 (Report Found Item), F03 (Search and Filter), F04 (Item Status Updates).
+* **Features included in MVP:** Core reporting forms (lost/found), database search and filtering, and item status tracking.
+* **Features postponed:** In-App Messaging (US-08), Automated Notifications (US-07), AI Image Matching, and Reward Systems.
 
 ### 3. Requirement Changes / Clarifications
-- We decided to prioritize high-frequency, high-impact campus essentials (Student IDs, access cards, USB drives, calculators) over low-value items.
-- Based on privacy concerns found in Lab 03, we clarified that users will not share personal phone numbers publicly; the communication approach will rely on secure methods like anonymized in-app messaging (postponed to a later phase).
+* We decided to prioritize high-frequency, high-impact campus essentials (Student IDs, access cards, USB drives, calculators) over low-value items.
+* Based on privacy concerns found in Lab 03, we clarified that users will not share personal phone numbers publicly; the communication approach will rely on secure methods like anonymized in-app messaging (postponed to a later phase).
 
 ### 4. Problems Encountered
-- **Technical problem:** Have not yet designed the user flow and use case diagrams. 
-- **Team coordination problem:** Only two members contributed to this week's lab tasks.
-- **Evidence/requirement problem:** Needed to make sure that our user stories (US-01 to US-06) were strictly traceable back to the pain points discovered in our Lab 03 interviews.
+* **Technical problem:** Initially lacked proper visual mapping of user interactions, but this was resolved once Tin May Lin successfully drafted the user flow and use case diagrams. 
+* **Team coordination problem:** Managing evenly distributed workloads required some real-time adjustments during this week's lab tasks.
+* **Evidence/requirement problem:** Needed to make sure that our user stories (US-01 to US-06) were strictly traceable back to the pain points discovered in our Lab 03 interviews without feature-creep.
 
 ### 5. Next Actions Before Lab 05
 | Task | Owner | Deadline | GitHub Issue |
-|---|---|---|---|
-
+| :--- | :--- | :--- | :--- |
+| Finish up MVP feature list and review system requirements | Phollapat Rodchue | 05/07/2026 | [Issues Board](https://github.com/ai10011/ICT105-Lemon-MVP/issues) |
+| Finish up user stories and user persona | Crystal (Kyaw Ye Lin) | 05/07/2026 | [Issues Board](https://github.com/ai10011/ICT105-Lemon-MVP/issues) |
+| Finish up use case diagram and flowchart | Tin May Lin | 05/07/2026 | [Issues Board](https://github.com/ai10011/ICT105-Lemon-MVP/issues) |
+| Finish up weekly logbook and README | Phoochit Jantakam | 05/07/2026 | [Issues Board](https://github.com/ai10011/ICT105-Lemon-MVP/issues) |
