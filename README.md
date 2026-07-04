@@ -107,8 +107,8 @@ The primary target users are university students who frequently lose or find per
 | Automated Notifications (US-07) | Postponed | No |
 
 ### Diagram Links
-- User flow diagram: diagrams/user-flow.png
-- Use case diagram: diagrams/use-case-diagram.png
+- **User flow diagram:** `diagrams/user-flow.png`
+- **Use case diagram:** `diagrams/use-case-diagram.png`
 
 ### GitHub Contribution Evidence
 All members contributed to this repository through commits, issues, or pull requests.
