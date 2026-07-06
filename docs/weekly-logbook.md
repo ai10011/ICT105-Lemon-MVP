@@ -133,3 +133,29 @@ In Lab 04, the team will synthesize the collected empirical evidence to systemat
 | Finish up user stories and user persona | Crystal (Kyaw Ye Lin) | 05/07/2026 | [Issues Board](https://github.com/ai10011/ICT105-Lemon-MVP/issues) |
 | Finish up use case diagram and flowchart | Tin May Lin | 05/07/2026 | [Issues Board](https://github.com/ai10011/ICT105-Lemon-MVP/issues) |
 | Finish up weekly logbook and README | Phoochit Jantakam | 05/07/2026 | [Issues Board](https://github.com/ai10011/ICT105-Lemon-MVP/issues) |
+
+## Lab 05 Focus
+Product Concept and UI/UX Wireframe
+
+## What We Completed Today
+- [ ] Reviewed Lab 04 requirements
+- [ ] Defined product concept
+- [ ] Mapped features to requirements
+- [ ] Created required wireframe screens
+- [ ] Created user flow diagram
+- [ ] Built clickable prototype draft or screen navigation plan
+- [ ] Updated GitHub repository
+
+## Member Contributions
+| Member Name | Contribution | Evidence / Commit Link |
+|---|---|---|
+| | | |
+
+## Decisions Made
+| Decision | Reason | Related Requirement |
+|---|---|---|
+| | | |
+
+## Problems Found
+
+## Next Steps Before Lab 06
