@@ -112,3 +112,26 @@ The primary target users are university students who frequently lose or find per
 
 ### GitHub Contribution Evidence
 All members contributed to this repository through commits, issues, or pull requests.
+
+## Lab 05: Product Concept and UI/UX Wireframe
+
+### Product Concept
+Briefly explain what your product is, who it is for, and what problem it solves.
+
+### Requirement-Driven Screens
+List your required screens and related requirement IDs.
+
+| Screen | Related Requirement IDs | Wireframe File |
+|---|---|---|
+| Homepage / Landing | FR-01, FR-02 | `/wireframes/homepage.png`|
+| Input / Submission Form | FR-03, FR-10, FR-11 | `/wireframes/input-form.png` |
+| Records / Information List | FR-05, FR-06 | `/wireframes/record-list.png` |
+| Record Detail View | FR-07, FR-08 | `/wireframes/detail-view.png` |
+| Dashboard / Summary | FR-12 | `/wireframes/dashboard.png` |
+| Admin / Manager View | FR-09, FR-08 | `/wireframes/admin-view.png` |
+
+### User Flow
+Add a short explanation and link to `/diagrams/user-flow.png`.
+
+### Team Contribution
+All members contributed to the same GitHub repository.
