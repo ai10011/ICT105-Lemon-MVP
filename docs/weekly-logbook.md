@@ -139,8 +139,8 @@ Product Concept and UI/UX Wireframe
 
 ## What We Completed Today
 - [x] Reviewed Lab 04 requirements
-- [x] Defined product concept
-- [x] Mapped features to requirements
+- [] Defined product concept
+- [] Mapped features to requirements
 - [x] Created required wireframe screens
 - [x] Created user flow diagram
 - [x] Built clickable prototype draft or screen navigation plan
@@ -174,9 +174,15 @@ Product Concept and UI/UX Wireframe
 
 ## Group Name
 
+Lemon
+
 ## Project Title
 
+Smart Campus Lost-and-Found System
+
 ## Date
+
+08/07/2026
 
 ## Member Contributions
 
@@ -196,6 +202,13 @@ Product Concept and UI/UX Wireframe
 
 ## Problems or Risks Found
 
+- The technical stack choice presents a risk as the team is still learning HTML coding fundamentals, which might slow down the initial implementation of the frontend data flow.
+- Managing git merge conflicts is a risk this week since multiple members are simultaneously uploading separate documentation and diagram files to the repository.
+
 ## Next Actions Before Lab 07
+
+*   Discuss and finalize the UX/UI design.
+*   Discuss and clarify the core features to be included on the website.
+*   Learn HTML coding fundamentals to prepare for front-end development.
 
 ## Lecturer / TA Notes
