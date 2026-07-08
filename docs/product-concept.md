@@ -1,27 +1,56 @@
 # Product Concept
 
 ## 1. Project Title
-Smart Campus Lost-and-Found System
+**Campus Lost & Found Portal**
 
-## 2. Target User
-Primary user: students who lost or found items on campus.
-Secondary user: campus staff/admin who verifies reports and updates item status.
+## 2. Target Users
+
+### Primary Users
+University students who need to report lost belongings or return items they have found on campus.
+
+### Secondary Users
+Campus administrators or designated staff responsible for reviewing reports, managing records, and updating the status of lost-and-found cases.
 
 ## 3. Problem Statement
-Students need a clearer way to report, search, and track lost or found items because the current process is scattered across chat groups, informal messages, and manual office visits.
+
+The current lost-and-found process on campus relies on multiple communication channels, such as social media groups, messaging applications, and campus offices. As a result, students often have difficulty reporting lost items, finding recovered belongings, and tracking updates efficiently.
 
 ## 4. Proposed IT Product
-A web-based lost-and-found system that helps users submit lost/found reports, browse and search item records, view details, check item status, and allow an admin to update the status of each report.
+
+A web-based campus lost-and-found platform that provides a centralized place for users to:
+
+- Submit lost item reports
+- Submit found item reports
+- Search and filter existing reports
+- View detailed item information
+- Track the status of reported items
+
+Administrators can review reports and update their status to ensure information remains accurate and up to date.
 
 ## 5. Core Value Proposition
-The system reduces confusion and makes lost-and-found information searchable, trackable, and easier to manage.
+
+The system provides a single platform for managing lost-and-found information, making it easier for students and staff to report, search for, and monitor lost items while reducing confusion caused by scattered communication channels.
 
 ## 6. MVP Scope
-The MVP will focus on item reporting, item listing, search/filter, item detail view, status tracking, admin status update, and dashboard summary.
+
+The first version of the system will include:
+
+- Report lost items
+- Report found items
+- Search and filter reports
+- View item details
+- Track report status
+- Admin status updates
+- Dashboard summary
 
 ## 7. Out of Scope for Current Semester
-- Real identity verification system
-- Payment features
+
+The following features will **not** be included in the MVP:
+
+- University identity verification integration
+- Payment or reward features
 - Advanced security implementation
-- Native mobile app deployment
-- Automated item matching using AI
+- Native mobile application
+- AI-based lost-and-found item matching
+- Real-time messaging
+- Push notifications
