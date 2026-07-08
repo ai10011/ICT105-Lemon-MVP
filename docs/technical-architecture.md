@@ -14,11 +14,11 @@ This platform is highly suitable for our current scope and skills because it all
 | Component | Description | Tool / Technology | Related Requirement |
 |---|---|---|---|
 | User Interface | The overall layout, navigation, and distinct views for Finder, Loser, and Admin roles. | HTML5, CSS3, JavaScript | Role-based UI access and responsive design |
-| Data Input Form | Forms capturing detailed information (category, location, description) for lost or found items. | HTML Forms, JS DOM Manipulation | 1.0 Submit Item Report |
+| Data Input Form | Forms capturing detailed information (category, location, description) for lost or found items. | HTML Forms, JS DOM Manipulation | Submit Item Report |
 | Data Storage | Local persistence of item records and simulated user sessions. | JSON, browser `localStorage` | Data persistence and state management |
-| Record List | A searchable and filterable display of all unresolved lost and found records. | JavaScript (Array methods, DOM rendering) | 3.0 Query & Search Index |
+| Record List | A searchable and filterable display of all unresolved lost and found records. | JavaScript (Array methods, DOM rendering) | Query & Search Index |
 | Detail View | An expanded view showing comprehensive details of a specific item for verification purposes. | HTML, JavaScript | View Item Information |
-| Admin Function | A portal for desk staff to verify claims and update record statuses (e.g., to "Claimed" or "Returned"). | JavaScript (State updates) | 4.0 Manage Claim Verification |
+| Admin Function | A portal for desk staff to verify claims and update record statuses (e.g., to "Claimed" or "Returned"). | JavaScript (State updates) | Manage Claim Verification |
 | Dashboard / Summary | A high-level overview showing system statistics and recent activity for administrators. | HTML, CSS, JavaScript | Admin Portal Dashboard |
 
 ## 4. What Will Be Fully Implemented?
