@@ -197,7 +197,7 @@ Smart Campus Lost-and-Found System
 
 1. Business model decision:
 2. Technical architecture decision:
-3. Data structure decision:
+3. Data structure decision: `docs/data-structure.md`
 4. Diagram decision:
 
 ## Problems or Risks Found
