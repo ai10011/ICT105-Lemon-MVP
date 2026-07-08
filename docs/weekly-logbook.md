@@ -138,18 +138,21 @@ In Lab 04, the team will synthesize the collected empirical evidence to systemat
 Product Concept and UI/UX Wireframe
 
 ## What We Completed Today
-- [ ] Reviewed Lab 04 requirements
+- [x] Reviewed Lab 04 requirements
 - [ ] Defined product concept
 - [ ] Mapped features to requirements
-- [ ] Created required wireframe screens
-- [ ] Created user flow diagram
-- [ ] Built clickable prototype draft or screen navigation plan
-- [ ] Updated GitHub repository
+- [x] Created required wireframe screens
+- [x] Created user flow diagram
+- [x] Built clickable prototype draft or screen navigation plan
+- [x] Updated GitHub repository
 
 ## Member Contributions
 | Member Name | Contribution | Evidence / Commit Link |
 |---|---|---|
-| | | |
+| **Crystal (Kyaw Ye Lin)** | Worked on `/docs/product-concept.md` and `/docs/feature-requirement-mapping.md` | `https://github.com/ai10011/ICT105-Lemon-MVP/commits/main/` |
+| **Phollapat Rodchue** | Worked on Wireframes and dataset | `https://github.com/ai10011/ICT105-Lemon-MVP/commits/main/` |
+| **Tin May Lin** | Worked on `/docs/weekly-logbook.md` and `README.md` | `https://github.com/ai10011/ICT105-Lemon-MVP/commits/main/` |
+| **Phoochit Jantakam** | Worked on `/docs/wireframe-specification.md` and `/docs/wireframe-usability-checklist.md` | `https://github.com/ai10011/ICT105-Lemon-MVP/commits/main/` |
 
 ## Decisions Made
 | Decision | Reason | Related Requirement |
