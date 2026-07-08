@@ -147,8 +147,8 @@ In Lab 06, our group connected our product concept, requirements, user stories, 
 - [Feature-Value Mapping](docs/feature-value-mapping.md)
 - [Technical Architecture](docs/technical-architecture.md)
 - [Data Structure](docs/data-structure.md)
-- [System Architecture Diagram](diagrams/system-architecture.png)
-- [Data Flow Diagram](diagrams/data-flow.png)
+- [System Architecture Diagram](diagrams/system-architecture.mmd)
+- [Data Flow Diagram](diagrams/data-flow.mmd)
 - [Weekly Logbook](docs/weekly-logbook.md)
 
 ## Technical Direction
