@@ -1,7 +1,7 @@
 # Product Concept
 
 ## 1. Project Title
-**Campus Lost & Found Portal**
+**Smart Campus Lost-and-Found System**
 
 ## 2. Target Users
 
