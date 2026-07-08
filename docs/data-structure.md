@@ -10,38 +10,23 @@
 
 | Entity / Table | Purpose | Example Records |
 |---|---|---|
-| Users | Store information about students, staff, and administrators | U001 (Student), U002 (Staff), A001 (Admin) |
-| Reports | Store lost and found item reports | R001, R002, R003 |
-| Items | Store item details | Laptop, Wallet, Student ID Card |
-| Claims | Record ownership claims for found items | C001, C002 |
-| Feedback | Store user feedback and suggestions | F001, F002 |
+| Lost and Found Records | Store information about lost and found items reported on campus. | LF-001, LF-002, LF-003 |
 
 ---
 
 ## 2. Field Definition
 
-| Entity | Field Name | Data Type | Required? | Example Value | Validation Rule | Used For Search/Filter? |
-|---|---|---|---|---|---|---|
-| Users | user_id | Text/ID | Yes | U001 | Unique value | Yes |
-| Users | full_name | Text | Yes | John Smith | 2–100 characters | Yes |
-| Users | email | Email | Yes | student@university.edu | Valid email format | Yes |
-| Users | role | List | Yes | Student | Student / Staff / Admin | Yes |
-| Reports | report_id | Text/ID | Yes | R001 | Unique value | Yes |
-| Reports | report_type | List | Yes | Lost | Lost / Found | Yes |
-| Reports | item_name | Text | Yes | Black Backpack | 2–100 characters | Yes |
-| Reports | category | List | Yes | Electronics | Predefined categories | Yes |
-| Reports | description | Text | No | Black Lenovo backpack | Maximum 500 characters | No |
-| Reports | location | Text | Yes | Library Building | Cannot be empty | Yes |
-| Reports | report_date | Date | Yes | 2026-07-08 | Valid date | Yes |
-| Reports | status | List | Yes | Pending | Pending / In Progress / Completed / Closed | Yes |
-| Claims | claim_id | Text/ID | Yes | C001 | Unique value | Yes |
-| Claims | report_id | Text/ID | Yes | R001 | Must exist in Reports | Yes |
-| Claims | claimant_id | Text/ID | Yes | U005 | Must exist in Users | Yes |
-| Claims | verification_status | List | Yes | Verified | Pending / Verified / Rejected | Yes |
-| Feedback | feedback_id | Text/ID | Yes | F001 | Unique value | Yes |
-| Feedback | user_id | Text/ID | Yes | U001 | Must exist in Users | Yes |
-| Feedback | rating | Number | Yes | 5 | 1–5 | Yes |
-| Feedback | comments | Text | No | Easy to use | Maximum 500 characters | No |
+| Field Name | Data Type | Required? | Example Value | Validation Rule | Used For Search/Filter? |
+|---|---|---|---|---|---|
+| ItemID | Text | Yes | LF-001 | Unique value | Yes |
+| ReportType | List | Yes | Lost | Lost / Found | Yes |
+| ItemCategory | Text | Yes | Student ID | Cannot be empty | Yes |
+| ItemName | Text | Yes | Blue RSU Student ID | Cannot be empty | Yes |
+| Location | Text | Yes | Library | Cannot be empty | Yes |
+| DateReported | Date | Yes | 6/1/2026 | Valid date | Yes |
+| ReporterRole | List | Yes | Student | Student / Staff / Security | Yes |
+| Status | List | Yes | Pending | Pending / Available / In Review / Claimed / Closed | Yes |
+| Description | Text | No | Card lost after group study session. | Maximum 500 characters | Yes |
 
 ---
 
@@ -49,35 +34,37 @@
 
 | Status | Meaning | Who Can Update? |
 |---|---|---|
-| Pending | Report has been submitted and is waiting for review | User, Admin |
-| In Progress | Admin is verifying or processing the report | Admin |
-| Completed | Item has been successfully returned to its owner | Admin |
-| Closed | Report is closed because the issue has been resolved or cancelled | Admin |
+| Pending | Lost item report has been submitted. | Student, Staff |
+| Available | Found item is available for collection. | Staff, Security |
+| In Review | Item report is being verified. | Staff |
+| Claimed | Item has been returned to its owner. | Staff |
+| Closed | Report is finished or no further action is required. | Staff |
 
 ---
 
 ## 4. Sample Records
 
-Sample dataset location:
+Dataset location:
 
 ```
-/data/lost_found_sample_records.csv
+/data/lost-and-found-sample-records.xlsx
 ```
 
 Example records:
 
-| Report ID | Type | Item Name | Location | Status |
+| ItemID | ReportType | ItemName | Location | Status |
 |---|---|---|---|---|
-| R001 | Lost | Student ID Card | Library | Pending |
-| R002 | Found | Black Wallet | Cafeteria | In Progress |
-| R003 | Lost | Laptop | Engineering Building | Completed |
+| LF-001 | Lost | Blue RSU Student ID | Library | Pending |
+| LF-002 | Found | Black Phone Charger | ICT Lab | Available |
+| LF-003 | Lost | Silver Water Bottle | Cafeteria | In Review |
+| LF-004 | Found | Green Notebook | Building 6 | Claimed |
+| LF-005 | Lost | Small Black Umbrella | Bus Stop | Pending |
+| LF-006 | Found | Brown Wallet | Sports Area | Available |
+| LF-007 | Lost | Wireless Earbuds | Classroom | Closed |
+| LF-008 | Found | Room Key | Parking Area | Available |
 
 ---
 
 ## 5. Data Privacy Note
 
-The system does **not collect sensitive personal information** such as passwords, financial information, national ID numbers, or medical records.
-
-Sample data uses **fictional names, randomly generated IDs, and anonymized email addresses** to protect privacy.
-
-Only the minimum information required to report, search, and claim lost items is stored. Administrative functions are restricted to authorized administrators.
+This prototype only stores information needed to report and search for lost and found items. No passwords, financial information, national identification numbers, or other sensitive personal data are collected. Sample records are fictional and are used only for demonstration purposes.
