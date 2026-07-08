@@ -139,8 +139,8 @@ Product Concept and UI/UX Wireframe
 
 ## What We Completed Today
 - [x] Reviewed Lab 04 requirements
-- [ ] Defined product concept
-- [ ] Mapped features to requirements
+- [x] Defined product concept
+- [x] Mapped features to requirements
 - [x] Created required wireframe screens
 - [x] Created user flow diagram
 - [x] Built clickable prototype draft or screen navigation plan
@@ -149,10 +149,10 @@ Product Concept and UI/UX Wireframe
 ## Member Contributions
 | Member Name | Contribution | Evidence / Commit Link |
 |---|---|---|
-| **Crystal (Kyaw Ye Lin)** | Worked on `/docs/product-concept.md` and `/docs/feature-requirement-mapping.md` | `https://github.com/ai10011/ICT105-Lemon-MVP/commits/main/` |
-| **Phollapat Rodchue** | Worked on Wireframes and dataset | `https://github.com/ai10011/ICT105-Lemon-MVP/commits/main/` |
-| **Tin May Lin** | Worked on `/docs/weekly-logbook.md` and `README.md` | `https://github.com/ai10011/ICT105-Lemon-MVP/commits/main/` |
-| **Phoochit Jantakam** | Worked on `/docs/wireframe-specification.md` and `/docs/wireframe-usability-checklist.md` | `https://github.com/ai10011/ICT105-Lemon-MVP/commits/main/` |
+| **Crystal (Kyaw Ye Lin)** | Worked on `/docs/product-concept.md` and `/docs/feature-requirement-mapping.md` | `https://github.com/ai10011/ICT105-Lemon-MVP/blob/main/docs/product-concept.md` |
+| **Phollapat Rodchue** | Worked on Wireframes and dataset | `https://github.com/ai10011/ICT105-Lemon-MVP/tree/main/wireframes` |
+| **Tin May Lin** | Worked on `/docs/weekly-logbook.md` and `README.md` | `https://github.com/ai10011/ICT105-Lemon-MVP/blob/main/docs/weekly-logbook.md` |
+| **Phoochit Jantakam** | Worked on `/docs/wireframe-specification.md` and `/docs/wireframe-usability-checklist.md` | `https://github.com/ai10011/ICT105-Lemon-MVP/blob/main/docs/wireframe-specification.md` |
 
 ## Decisions Made
 | Decision | Reason | Related Requirement |
@@ -169,7 +169,7 @@ Product Concept and UI/UX Wireframe
 - Review the `wireframe-usability-checklist.md` to ensure all screens meet UX standards.
 - Finalize the mock dataset in `lost-and-found-sample-records.csv` to prepare for database planning.
 - Begin outlining the Business Model Canvas and identifying technical architecture needs for Lab 06.
-
+  
 # Weekly Logbook - Lab 06
 
 ## Group Name
@@ -210,5 +210,7 @@ Smart Campus Lost-and-Found System
 *   Discuss and finalize the UX/UI design.
 *   Discuss and clarify the core features to be included on the website.
 *   Learn HTML coding fundamentals to prepare for front-end development.
+
+  
 
 ## Lecturer / TA Notes
