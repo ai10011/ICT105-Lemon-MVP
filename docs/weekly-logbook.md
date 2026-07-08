@@ -194,10 +194,10 @@ Smart Campus Lost-and-Found System
 
 ## Decisions Made Today
 
-1. Business model decision:
-2. Technical architecture decision:
+1. Business model decision: `docs/business-model-canvas.md`
+2. Technical architecture decision: `docs/technical-architecture.md`
 3. Data structure decision: `docs/data-structure.md`
-4. Diagram decision:
+4. Diagram decision: `diagrams/data-flow.mmd` and `diagrams/system-architecture.mmd`
 
 ## Problems or Risks Found
 
