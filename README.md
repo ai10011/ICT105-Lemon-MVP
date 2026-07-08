@@ -165,7 +165,7 @@ Lemon MVP is an automated web-based indexing and discovery portal designed to so
 
 ---
 
-## 🚀 Lab 5 Deliverables & Navigation Guide
+##  Lab 5 Deliverables & Navigation Guide
 We have expanded our repository to include full UX/UI specifications, wireframes, and interactive screen layouts for our application. Use the links below to navigate our submission:
 
 ### 1. Product Concept & Requirement Mapping
@@ -188,6 +188,6 @@ Our team designed the 6 mandatory screen layouts populated with realistic sample
 * *Note: Use the clickable draft link to simulate active screen sequences and core button interactions.*
 
 ---
-## 📈 Project Status & Continuity
+##  Project Status & Continuity
 * [Weekly Logbook](docs/weekly-logbook.md) - Tracks our sprint reflections, team task alignment, and explicit design pivots made during Lab 5.
 
