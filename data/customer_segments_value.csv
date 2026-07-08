@@ -1,0 +1,4 @@
+segment_id,segment_name,need,value_expected,possible_channel
+CS01,Student who lost an item,Report and search quickly,Higher chance of finding lost item,QR code / website link
+CS02,Student or staff who found an item,Submit found item information,Simple reporting and responsible return process,Web form
+CS03,Admin or security staff,Verify records and update status,Organized item management and tracking,Admin panel
