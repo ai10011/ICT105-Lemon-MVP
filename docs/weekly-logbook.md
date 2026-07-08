@@ -139,8 +139,8 @@ Product Concept and UI/UX Wireframe
 
 ## What We Completed Today
 - [x] Reviewed Lab 04 requirements
-- [ ] Defined product concept
-- [ ] Mapped features to requirements
+- [x] Defined product concept
+- [x] Mapped features to requirements
 - [x] Created required wireframe screens
 - [x] Created user flow diagram
 - [x] Built clickable prototype draft or screen navigation plan
@@ -157,11 +157,18 @@ Product Concept and UI/UX Wireframe
 ## Decisions Made
 | Decision | Reason | Related Requirement |
 |---|---|---|
-| | | |
+| Built the clickable prototype using HTML (`admin.html`, `dashboard.html`, `form.html`, etc.) | To provide a more realistic interaction experience and easily transition into front-end development later. | Clickable Prototype Draft |
+| Included distinct wireframe views for `admin`, `dashboard`, `record-list`, and `input-form` | To ensure the UI covers the core user flows for submitting and managing the lost-and-found records. | Wireframe Screens |
+| Used `lost-and-found-sample-records.csv` to structure the data inputs | To guarantee the form fields in the UI match the actual data we plan to collect. | Product Concept |
 
 ## Problems Found
+- Aligning the exact fields in the `input-form` wireframe with the data structure defined in our sample records CSV.
+- Ensuring smooth navigation between the `index`, `dashboard`, and `detail` views in the HTML prototype so it feels intuitive for the user.
 
 ## Next Steps Before Lab 06
+- Review the `wireframe-usability-checklist.md` to ensure all screens meet UX standards.
+- Finalize the mock dataset in `lost-and-found-sample-records.csv` to prepare for database planning.
+- Begin outlining the Business Model Canvas and identifying technical architecture needs for Lab 06.
 
 # Weekly Logbook - Lab 06
 
