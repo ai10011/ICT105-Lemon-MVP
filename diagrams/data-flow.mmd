@@ -1,0 +1,29 @@
+graph LR
+    %% Entities
+    Finder[Finder Student]
+    Loser[Loser Student]
+    Admin[Admin Desk Staff]
+
+    %% Data Store
+    DB[((Lemon MVP Database))]
+
+    %% Processes
+    P1[1.0 Submit Item Report]
+    P2[2.0 Index & Match Records]
+    P3[3.0 Query & Search Index]
+    P4[4.0 Manage Claim Verification]
+
+    %% Flow Streams
+    Finder -->|Found Item Details Form| P1
+    P1 -->|Insert New Record Data| DB
+    
+    DB -->|Read Unresolved Records| P2
+    P2 -->|Trigger Potential Match Notification| Loser
+    
+    Loser -->|Search Keywords / Filters| P3
+    P3 -->|Query Matching Records| DB
+    DB -->|Display Search Results / Item Details| P3
+    P3 -->|View Item Information| Loser
+
+    Admin -->|Verification & Claims Updates| P4
+    P4 -->|Update Status to Claimed/Returned| DB
