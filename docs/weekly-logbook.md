@@ -171,13 +171,14 @@ Product Concept and UI/UX Wireframe
 
 ## Date
 
-## Members Present
+## Member Contributions
 
-| Member Name | Contribution Today | GitHub Evidence / Commit / File Updated |
+| Member Name | Contribution | Evidence / Commit Link |
 |---|---|---|
-| | | |
-| | | |
-| | | |
+| **Crystal (Kyaw Ye Lin)** | Worked on `/docs/business-model-canvas.md` and `/docs/feature-value-mapping.md` | `https://github.com/ai10011/ICT105-Lemon-MVP/commits/main/` |
+| **Phollapat Rodchue** | Worked on `/docs/weekly-logbook.md` and `README.md` | `https://github.com/ai10011/ICT105-Lemon-MVP/commits/main/` |
+| **Tin May Lin** | Worked on `/diagrams/system-architecture.png` (and/or `.mmd`) and `/diagrams/data-flow.png` (and/or `.mmd`) | `https://github.com/ai10011/ICT105-Lemon-MVP/commits/main/` |
+| **Phoochit Jantakam** | Worked on `/docs/technical-architecture.md` and `/docs/data-structure.md` | `https://github.com/ai10011/ICT105-Lemon-MVP/commits/main/` |
 
 ## Decisions Made Today
 
