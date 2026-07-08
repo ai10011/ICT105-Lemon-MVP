@@ -134,8 +134,7 @@ In Lab 04, the team will synthesize the collected empirical evidence to systemat
 | Finish up use case diagram and flowchart | Tin May Lin | 05/07/2026 | [Issues Board](https://github.com/ai10011/ICT105-Lemon-MVP/issues) |
 | Finish up weekly logbook and README | Phoochit Jantakam | 05/07/2026 | [Issues Board](https://github.com/ai10011/ICT105-Lemon-MVP/issues) |
 
-## Lab 05 Focus
-Product Concept and UI/UX Wireframe
+# Weekly Logbook - Lab 5 Reflection
 
 ## What We Completed Today
 - [x] Reviewed Lab 04 requirements
@@ -149,26 +148,26 @@ Product Concept and UI/UX Wireframe
 ## Member Contributions
 | Member Name | Contribution | Evidence / Commit Link |
 |---|---|---|
-| **Crystal (Kyaw Ye Lin)** | Worked on `/docs/product-concept.md` and `/docs/feature-requirement-mapping.md` | `https://github.com/ai10011/ICT105-Lemon-MVP/blob/main/docs/product-concept.md` |
-| **Phollapat Rodchue** | Worked on Wireframes and dataset | `https://github.com/ai10011/ICT105-Lemon-MVP/tree/main/wireframes` |
-| **Tin May Lin** | Worked on `/docs/weekly-logbook.md` and `README.md` | `https://github.com/ai10011/ICT105-Lemon-MVP/blob/main/docs/weekly-logbook.md` |
-| **Phoochit Jantakam** | Worked on `/docs/wireframe-specification.md` and `/docs/wireframe-usability-checklist.md` | `https://github.com/ai10011/ICT105-Lemon-MVP/blob/main/docs/wireframe-specification.md` |
+| **Crystal (Kyaw Ye Lin)** | Worked on `/docs/product-concept.md` and `/docs/feature-requirement-mapping.md` | [product-concept.md Link](../docs/product-concept.md) |
+| **Phollapat Rodchue** | Worked on Wireframes and dataset mapping structures | [wireframes/ Link](../wireframes/) |
+| **Tin May Lin** | Worked on `/docs/weekly-logbook.md` and primary root `README.md` updates | [weekly-logbook.md Link](../docs/weekly-logbook.md) |
+| **Phoochit Jantakam** | Worked on `/docs/wireframe-specification.md` and `/docs/wireframe-usability-checklist.md` | [wireframe-specification.md Link](../docs/wireframe-specification.md) |
 
 ## Decisions Made
 | Decision | Reason | Related Requirement |
 |---|---|---|
-| Built the clickable prototype using HTML (`admin.html`, `dashboard.html`, `form.html`, etc.) | To provide a more realistic interaction experience and easily transition into front-end development later. | Clickable Prototype Draft |
-| Included distinct wireframe views for `admin`, `dashboard`, `record-list`, and `input-form` | To ensure the UI covers the core user flows for submitting and managing the lost-and-found records. | Wireframe Screens |
-| Used `lost-and-found-sample-records.csv` to structure the data inputs | To guarantee the form fields in the UI match the actual data we plan to collect. | Product Concept |
+| Built the clickable prototype using clean HTML structure (`index.html`, `form.html`, `admin.html`, etc.) | To provide a more realistic interaction experience, ensure cross-device consistency, and allow seamless transition into front-end build pipelines. | Clickable Prototype Draft |
+| Included distinct wireframe views for `admin`, `dashboard`, `record-list`, `detail`, and `input-form` | To ensure the user interface covers 100% of the mandatory functional steps required to safely report and claim records without manual bottlenecks. | Wireframe Screens |
+| Utilized a structured data layer via `lost-and-found-sample-records.csv` to format view parameters | To guarantee that the placeholders and user text fields present on the interface precisely represent real-world data shapes we track. | Product Concept |
 
 ## Problems Found
-- Aligning the exact fields in the `input-form` wireframe with the data structure defined in our sample records CSV.
-- Ensuring smooth navigation between the `index`, `dashboard`, and `detail` views in the HTML prototype so it feels intuitive for the user.
+* **Field Alignment Discrepancies:** Aligning the exact input tags in the `input-form` wireframe logic with the storage columns outlined inside our sample records CSV caused initial inconsistencies. We solved this by standardizing the forms to match the CSV's explicit key parameters.
+* **Navigation Flow Optimization:** Ensuring transparent routing states between the `index`, `dashboard`, and item `detail` views in the HTML layout so that users never get stuck in dead-end loops.
 
 ## Next Steps Before Lab 06
-- Review the `wireframe-usability-checklist.md` to ensure all screens meet UX standards.
-- Finalize the mock dataset in `lost-and-found-sample-records.csv` to prepare for database planning.
-- Begin outlining the Business Model Canvas and identifying technical architecture needs for Lab 06.
+* Review the `wireframe-usability-checklist.md` to guarantee every template strictly adheres to established human-interface guidelines.
+* Finalize item attributes in `lost-and-found-sample-records.csv` to establish a clean relational mockup baseline.
+* Begin mapping our Business Model Canvas (BMC) and documenting core infrastructure plans to prepare for the Lab 06 architectural review.
   
 # Weekly Logbook - Lab 06
 
