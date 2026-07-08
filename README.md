@@ -152,7 +152,9 @@ In Lab 06, our group connected our product concept, requirements, user stories, 
 - [Weekly Logbook](docs/weekly-logbook.md)
 
 ## Technical Direction
-State whether your prototype will use frontend-only, frontend + localStorage/JSON, Google Sheets, no-code/low-code, database-backed, or backend-based architecture.
+For this prototype, we will use a frontend-only architecture combined with localStorage and JSON.
+
+We will not be using a live backend server or a traditional relational database. Instead, the application will handle all logic (authentication simulation, CRUD operations, and the matching engine) on the client side. Data persistence will be managed by serializing Javascript objects into JSON format and saving them directly to the browser's localStorage. This approach allows us to rapidly test the user interface and core system logic without the overhead of backend deployment.
 
 ## Final Prototype Connection
 Explain how this Lab 06 work will guide your final prototype development.
