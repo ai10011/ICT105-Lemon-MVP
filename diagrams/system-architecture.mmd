@@ -24,8 +24,7 @@ graph TD
 
     %% Storage Layer (Database)
     subgraph Data_Layer [Storage Layer]
-        DB[(Relational DB<br/>PostgreSQL / SQLite)]:::storage
-        CSVFile[(lost-and-found-sample-records.csv)]:::storage
+        JSONFile(JSON Data Store<br/>data.json):::storage
     end
 
     %% Connections
@@ -37,7 +36,6 @@ graph TD
     HTTPS --> RecordService
     HTTPS --> MatchingEngine
 
-    AuthService --> DB
-    RecordService --> DB
-    MatchingEngine --> DB
-    RecordService -.-> CSVFile
+    AuthService --> JSONFile
+    RecordService --> JSONFile
+    MatchingEngine --> JSONFile
