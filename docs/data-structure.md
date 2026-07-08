@@ -47,7 +47,7 @@
 Dataset location:
 
 ```
-/data/lost-and-found-sample-records.xlsx
+data/lost-and-found-sample-records.csv
 ```
 
 Example records:
