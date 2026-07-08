@@ -136,32 +136,24 @@ Add a short explanation and link to `/diagrams/user-flow.png`.
 ### Team Contribution
 All members contributed to the same GitHub repository.
 
-# Weekly Logbook - Lab 06
+# Lab 06 Update - Business Model Canvas and Technical Architecture
 
-## Group Name
+## Lab 06 Summary
+In Lab 06, our group connected our product concept, requirements, user stories, and wireframes into business logic and technical structure.
 
-## Project Title
+## Files Added or Updated
 
-## Date
+- [Business Model Canvas](docs/business-model-canvas.md)
+- [Feature-Value Mapping](docs/feature-value-mapping.md)
+- [Technical Architecture](docs/technical-architecture.md)
+- [Data Structure](docs/data-structure.md)
+- [System Architecture Diagram](diagrams/system-architecture.png)
+- [Data Flow Diagram](diagrams/data-flow.png)
+- [Weekly Logbook](docs/weekly-logbook.md)
 
-## Members Present
+## Technical Direction
+State whether your prototype will use frontend-only, frontend + localStorage/JSON, Google Sheets, no-code/low-code, database-backed, or backend-based architecture.
 
-| Member Name | Contribution Today | GitHub Evidence / Commit / File Updated |
-|---|---|---|
-| | | |
-| | | |
-| | | |
-
-## Decisions Made Today
-
-1. Business model decision:
-2. Technical architecture decision:
-3. Data structure decision:
-4. Diagram decision:
-
-## Problems or Risks Found
-
-## Next Actions Before Lab 07
-
-## Lecturer / TA Notes
+## Final Prototype Connection
+Explain how this Lab 06 work will guide your final prototype development.
 
