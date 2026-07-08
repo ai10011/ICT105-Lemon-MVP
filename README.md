@@ -157,3 +157,37 @@ State whether your prototype will use frontend-only, frontend + localStorage/JSO
 ## Final Prototype Connection
 Explain how this Lab 06 work will guide your final prototype development.
 
+# Lemon MVP: Campus Lost-and-Found System
+> A semester-long IT startup MVP project for ICT105 Fundamental Technology Entrepreneurship.
+
+## Project Overview
+Lemon MVP is an automated web-based indexing and discovery portal designed to solve the problem of scattered, unstructured lost-and-found communication on university campuses. Instead of relying on random social media group chats or manual physical tracking, Lemon MVP provides an organized platform where students (Losers and Finders) and campus security/admin staff can report, verify, and track lost personal items seamlessly.
+
+---
+
+## 🚀 Lab 5 Deliverables & Navigation Guide
+We have expanded our repository to include full UX/UI specifications, wireframes, and interactive screen layouts for our application. Use the links below to navigate our submission:
+
+### 1. Product Concept & Requirement Mapping
+* [Product Concept (`product-concept.md`)](docs/product-concept.md) - Explains our formal core system concept and tech framework.
+* [Feature-Requirement Mapping](docs/feature-requirement-mapping.md) - Maps our initial problem assumptions into explicit system feature baselines.
+
+### 2. Wireframe Specifications & Usability Checklist
+* [Wireframe Specification Manual](docs/wireframe-specification.md) - Deep-dive details explaining the components of each designed screen.
+* [Usability Verification Checklist](docs/usability-checklist.md) - A completed checklist ensuring standard UX compliance.
+
+### 3. User Flow Diagrams
+* [User Flow Diagram File](diagrams/user-flow.mmd) - Mermaid configuration / image tracking paths for Losers, Finders, and Admins.
+
+### 4. Wireframe Screens
+Our team designed the 6 mandatory screen layouts populated with realistic sample content. The raw exports can be inspected here:
+* [/wireframes/](/wireframes/) - Contains individual PNG layouts of the Homepage, Input Form, List View, Detail View, Dashboard, and Manager Console.
+
+### 5. Interactive Clickable Draft
+* **Prototype Link:** [Insert Figma/Miro/InVision link shared by your team design lead here]
+* *Note: Use the clickable draft link to simulate active screen sequences and core button interactions.*
+
+---
+## 📈 Project Status & Continuity
+* [Weekly Logbook](docs/weekly-logbook.md) - Tracks our sprint reflections, team task alignment, and explicit design pivots made during Lab 5.
+
