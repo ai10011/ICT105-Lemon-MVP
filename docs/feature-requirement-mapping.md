@@ -10,7 +10,3 @@ Use this file to prove that your wireframe and final prototype are not random sc
 | F-04 | Item Details Screen | FR-07, FR-08 | US-04 | Display detailed information about an item along with its current status. | /wireframes/detail-view.png | /prototype/item-detail.html |
 | F-05 | Admin Status Management Screen | FR-09, FR-08 | US-05 | Allow administrators to manage and update the status of item reports. | /wireframes/admin-view.png | /prototype/admin.html |
 | F-06 | Dashboard Overview | FR-12 | US-06 | Display a summary of item reports and their current statuses. | /wireframes/dashboard.png | /prototype/dashboard.html |
-
-## Group Case Mapping
-
-Replace the example above with your own group case. Do not remove requirement traceability.
