@@ -135,3 +135,33 @@ Add a short explanation and link to `/diagrams/user-flow.png`.
 
 ### Team Contribution
 All members contributed to the same GitHub repository.
+
+# Weekly Logbook - Lab 06
+
+## Group Name
+
+## Project Title
+
+## Date
+
+## Members Present
+
+| Member Name | Contribution Today | GitHub Evidence / Commit / File Updated |
+|---|---|---|
+| | | |
+| | | |
+| | | |
+
+## Decisions Made Today
+
+1. Business model decision:
+2. Technical architecture decision:
+3. Data structure decision:
+4. Diagram decision:
+
+## Problems or Risks Found
+
+## Next Actions Before Lab 07
+
+## Lecturer / TA Notes
+
