@@ -1,0 +1,43 @@
+graph TD
+    %% Styling Configuration
+    classDef client fill:#f9f,stroke:#333,stroke-width:2px;
+    classDef gateway fill:#bbf,stroke:#333,stroke-width:2px;
+    classDef backend fill:#f96,stroke:#333,stroke-width:2px;
+    classDef storage fill:#9f9,stroke:#333,stroke-width:2px;
+
+    %% Presentation Layer (Frontend Clients)
+    subgraph Client_Layer [Presentation Layer]
+        LoserClient[Student Loser UI<br/>Web/Mobile Browser]:::client
+        FinderClient[Student Finder UI<br/>Web/Mobile Browser]:::client
+        AdminClient[Desk Staff/Security Console<br/>Admin Portal Dashboard]:::client
+    end
+
+    %% Network Gateway
+    HTTPS[HTTPS Protocol / API Router]:::gateway
+
+    %% Logic Layer (Application Backend APIs)
+    subgraph Application_Layer [Logic Layer]
+        AuthService[Authentication Service<br/>User Sessions & Roles]:::backend
+        RecordService[Lost & Found Engine<br/>CRUD Operations]:::backend
+        MatchingEngine[Auto-Match Engine<br/>Fuzzy Matching Filter]:::backend
+    end
+
+    %% Storage Layer (Database)
+    subgraph Data_Layer [Storage Layer]
+        DB[(Relational DB<br/>PostgreSQL / SQLite)]:::storage
+        CSVFile[(lost-and-found-sample-records.csv)]:::storage
+    end
+
+    %% Connections
+    LoserClient --> HTTPS
+    FinderClient --> HTTPS
+    AdminClient --> HTTPS
+
+    HTTPS --> AuthService
+    HTTPS --> RecordService
+    HTTPS --> MatchingEngine
+
+    AuthService --> DB
+    RecordService --> DB
+    MatchingEngine --> DB
+    RecordService -.-> CSVFile
