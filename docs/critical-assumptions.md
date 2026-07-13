@@ -1,7 +1,5 @@
 # Critical Assumptions
 
-## Instruction
-Identify assumptions that could cause your final prototype to fail if they are wrong.
 
 | Assumption ID | Category | Assumption | Related Requirement/User Story | Risk Level | Current Evidence | How to Test |
 |---|---|---|---|---|---|---|
@@ -11,12 +9,6 @@ Identify assumptions that could cause your final prototype to fail if they are w
 | A-04 | Technical feasibility | The prototype can successfully store and display lost-item information without errors. | FR-04 / System Functions | Medium | Prototype implementation | Test data entry, storage, and retrieval with multiple sample records. |
 | A-05 | Business logic | The item status (Lost, Found, Claimed, Returned) accurately reflects the real process and is easy to follow. | FR-05 / US-04 Track Item Status | High | Based on proposed workflow | Ask users to interpret item statuses and identify the next action. |
 | A-06 | Data handling | Users are willing to provide accurate item descriptions and contact information when submitting reports. | FR-01 / Report Lost Item | Medium | No evidence yet | Monitor form completion, missing fields, and collect user feedback during testing. |
+| A-07 | Value proposition | Campus staff will find the dashboard summaries helpful for managing overall inventory. | FR-12 / Dashboard | Medium | No evidence yet | Ask staff testers to interpret dashboard metrics and gather feedback on usefulness. |
+| A-08 | Usability | Campus staff can easily identify items and update their statuses correctly in the admin view. | FR-08, FR-09 / Admin View | High | No evidence yet | Observe staff testers updating item statuses using the admin panel. |
 
-## Categories
-Use these categories:
-- User problem
-- Value proposition
-- Usability
-- Technical feasibility
-- Business logic
-- Data handling

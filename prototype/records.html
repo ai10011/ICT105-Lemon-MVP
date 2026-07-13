@@ -181,18 +181,18 @@
 </head>
 
 <body class="bg-background text-on-background min-h-screen flex flex-col pt-[80px]">
-    <!-- TopAppBar -->
     <header
         class="bg-surface-container-lowest border-b border-outline-variant fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-md">
         <div class="flex items-center gap-lg">
-            <div class="font-display-lg text-display-lg text-primary tracking-tighter">Lemon</div>
+            <a href="index.html"
+                class="font-display-lg text-display-lg text-primary tracking-tighter hover:opacity-80 transition-opacity">Lemon</a>
             <nav class="hidden md:flex gap-lg ml-xl">
                 <a class="text-primary font-body-bold border-b-2 border-primary pb-1 transition-colors"
-                    href="#">Browse</a>
+                    href="records.html">Browse</a>
                 <a class="text-on-surface-variant font-body-base hover:text-primary transition-colors"
-                    href="#">Report</a>
+                    href="form.html">Report</a>
                 <a class="text-on-surface-variant font-body-base hover:text-primary transition-colors"
-                    href="#">Dashboard</a>
+                    href="dashboard.html">Dashboard</a>
             </nav>
         </div>
         <div class="flex items-center gap-md">
@@ -205,12 +205,10 @@
         </div>
     </header>
     <main class="flex-grow w-full max-w-max-width mx-auto px-margin-desktop py-xl flex flex-col md:flex-row gap-gutter">
-        <!-- Sidebar Filters -->
         <aside class="w-full md:w-64 flex-shrink-0 space-y-lg">
             <div class="bg-surface-container-lowest p-lg rounded-xl border border-outline-variant shadow-sm space-y-md">
                 <h2 class="font-subheading-sm text-subheading-sm text-on-surface mb-md">Filters</h2>
                 <div class="space-y-md">
-                    <!-- Status -->
                     <div>
                         <h3 class="font-body-bold text-body-bold text-on-surface-variant mb-sm">Status</h3>
                         <div class="flex flex-col gap-sm">
@@ -229,7 +227,6 @@
                         </div>
                     </div>
                     <hr class="border-outline-variant">
-                    <!-- Item Type -->
                     <div>
                         <h3 class="font-body-bold text-body-bold text-on-surface-variant mb-sm">Item Type</h3>
                         <select
@@ -242,7 +239,6 @@
                         </select>
                     </div>
                     <hr class="border-outline-variant">
-                    <!-- Location -->
                     <div>
                         <h3 class="font-body-bold text-body-bold text-on-surface-variant mb-sm">Location</h3>
                         <select
@@ -261,9 +257,7 @@
                 </div>
             </div>
         </aside>
-        <!-- Item List -->
         <div class="flex-grow flex flex-col gap-lg">
-            <!-- Mobile Search (Visible only on mobile) -->
             <div
                 class="md:hidden flex items-center bg-surface-container-lowest border border-outline-variant rounded-full px-md h-12 shadow-sm">
                 <span class="material-symbols-outlined text-on-surface-variant"
@@ -271,20 +265,19 @@
                 <input class="bg-transparent border-none focus:ring-0 text-body-base w-full ml-sm"
                     placeholder="Search items..." type="text">
             </div>
-            <!-- Header -->
             <div class="flex justify-between items-center mb-sm">
                 <h1 class="font-headline-md text-headline-md text-on-surface">Browse Items</h1>
                 <span class="text-on-surface-variant font-body-base">Showing 24 results</span>
             </div>
-            <!-- Grid -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-lg">
-                <!-- Card 1 -->
                 <div
                     class="bg-surface-container-lowest rounded-xl border border-outline-variant shadow-sm overflow-hidden flex flex-col hover:shadow-md transition-shadow relative">
                     <span
                         class="absolute top-sm left-sm bg-error text-on-error font-label-caps text-label-caps px-sm py-xs rounded-full z-10">LOST</span>
                     <div class="h-48 bg-surface-container-highest relative">
-                        <div class="w-full h-full flex items-center justify-center bg-surface-variant border-2 border-dashed border-outline-variant text-on-surface-variant"><span class="material-symbols-outlined text-4xl opacity-50">image</span></div>
+                        <div
+                            class="w-full h-full flex items-center justify-center bg-surface-variant border-2 border-dashed border-outline-variant text-on-surface-variant">
+                            <span class="material-symbols-outlined text-4xl opacity-50">image</span></div>
                     </div>
                     <div class="p-md flex-grow flex flex-col">
                         <h3 class="font-body-bold text-body-bold text-on-surface mb-xs line-clamp-1">iPhone 13 Pro -
@@ -294,13 +287,12 @@
                         </p>
                         <div class="mt-auto">
                             <p class="text-on-surface-variant text-xs mb-sm">Reported 2 hours ago</p>
-                            <button
+                            <button onclick="window.location.href='detail.html'"
                                 class="w-full h-10 border border-outline-variant text-on-surface font-body-bold rounded-lg hover:bg-surface-container-low transition-colors">View
                                 Details</button>
                         </div>
                     </div>
                 </div>
-                <!-- Card 2 -->
                 <div
                     class="bg-surface-container-lowest rounded-xl border border-outline-variant shadow-sm overflow-hidden flex flex-col hover:shadow-md transition-shadow relative">
                     <span
@@ -323,7 +315,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Card 3 -->
                 <div
                     class="bg-surface-container-lowest rounded-xl border border-outline-variant shadow-sm overflow-hidden flex flex-col hover:shadow-md transition-shadow relative">
                     <span
@@ -346,13 +337,14 @@
                         </div>
                     </div>
                 </div>
-                <!-- Card 4 -->
                 <div
                     class="bg-surface-container-lowest rounded-xl border border-outline-variant shadow-sm overflow-hidden flex flex-col hover:shadow-md transition-shadow relative">
                     <span
                         class="absolute top-sm left-sm bg-primary text-on-primary font-label-caps text-label-caps px-sm py-xs rounded-full z-10">FOUND</span>
                     <div class="h-48 bg-surface-container-highest relative">
-                        <div class="w-full h-full flex items-center justify-center bg-surface-variant border-2 border-dashed border-outline-variant text-on-surface-variant"><span class="material-symbols-outlined text-4xl opacity-50">image</span></div>
+                        <div
+                            class="w-full h-full flex items-center justify-center bg-surface-variant border-2 border-dashed border-outline-variant text-on-surface-variant">
+                            <span class="material-symbols-outlined text-4xl opacity-50">image</span></div>
                     </div>
                     <div class="p-md flex-grow flex flex-col">
                         <h3 class="font-body-bold text-body-bold text-on-surface mb-xs line-clamp-1">Hydroflask Silver
@@ -369,7 +361,6 @@
                     </div>
                 </div>
             </div>
-            <!-- Load More -->
             <div class="flex justify-center mt-lg">
                 <button
                     class="h-12 px-xl bg-primary-fixed text-on-primary-fixed font-body-bold rounded-full hover:shadow-md transition-all">
@@ -378,7 +369,6 @@
             </div>
         </div>
     </main>
-    <!-- Footer -->
     <footer
         class="bg-surface-container-low w-full py-xxl px-margin-mobile md:px-margin-desktop mt-xxl flex flex-col md:flex-row justify-between items-center max-w-max-width mx-auto">
         <div class="mb-lg md:mb-0">

@@ -128,18 +128,17 @@
 </head>
 
 <body class="bg-background text-on-background min-h-screen flex flex-col pt-[80px]">
-    <!-- TopAppBar -->
     <header
         class="bg-surface-container-lowest border-b border-outline-variant fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-md">
         <div class="flex items-center gap-lg">
-            <div class="font-display-lg text-display-lg text-primary tracking-tighter">Lemon</div>
+            <a href="index.html" class="font-display-lg text-display-lg text-primary tracking-tighter hover:opacity-80 transition-opacity">Lemon</a>
             <nav class="hidden md:flex gap-lg ml-xl">
+                <a class="text-on-surface-variant font-body-base hover:text-primary transition-colors"
+                    href="records.html">Browse</a>
                 <a class="text-primary font-body-bold border-b-2 border-primary pb-1 transition-colors"
-                    href="#">Browse</a>
+                    href="form.html">Report</a>
                 <a class="text-on-surface-variant font-body-base hover:text-primary transition-colors"
-                    href="#">Report</a>
-                <a class="text-on-surface-variant font-body-base hover:text-primary transition-colors"
-                    href="#">Dashboard</a>
+                    href="dashboard.html">Dashboard</a>
             </nav>
         </div>
         <div class="flex items-center gap-md">
@@ -151,7 +150,6 @@
             </button>
         </div>
     </header>
-    <!-- Main Content -->
     <main class="flex-grow w-full max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-xxl">
         <div class="mb-lg">
             <h1 class="font-display-lg text-display-lg text-on-background">Report an Item</h1>
@@ -159,9 +157,7 @@
                 owners. Please provide as much detail as possible.</p>
         </div>
         <form class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
-            <!-- Left Column: Details -->
             <div class="col-span-1 lg:col-span-8 flex flex-col gap-lg">
-                <!-- Type Selection -->
                 <div class="bg-surface-container-lowest p-lg border border-slate shadow-soft rounded-lg">
                     <h2 class="font-subheading-sm text-subheading-sm text-on-background mb-md">Report Type</h2>
                     <div class="flex gap-4">
@@ -181,7 +177,6 @@
                         </label>
                     </div>
                 </div>
-                <!-- Item Info -->
                 <div
                     class="bg-surface-container-lowest p-lg border border-slate shadow-soft flex flex-col gap-md rounded-lg">
                     <h2 class="font-subheading-sm text-subheading-sm text-on-background mb-xs">Item Details</h2>
@@ -222,7 +217,6 @@
                             placeholder="Any distinguishing marks, colors, or specific details?" rows="4"></textarea>
                     </div>
                 </div>
-                <!-- Location -->
                 <div class="bg-surface-container-lowest p-lg border border-slate shadow-soft rounded-lg">
                     <h2 class="font-subheading-sm text-subheading-sm text-on-background mb-md">Location</h2>
                     <div class="h-64 bg-surface-container-low rounded-lg border border-slate relative overflow-hidden flex items-center justify-center cursor-pointer group"
@@ -238,9 +232,7 @@
                     </div>
                 </div>
             </div>
-            <!-- Right Column: Media & Submit -->
             <div class="col-span-1 lg:col-span-4 flex flex-col gap-lg">
-                <!-- Image Upload -->
                 <div class="bg-surface-container-lowest p-lg border border-slate shadow-soft rounded-lg">
                     <h2 class="font-subheading-sm text-subheading-sm text-on-background mb-md">Photo</h2>
                     <div
@@ -250,7 +242,6 @@
                         <p class="font-body-base text-on-surface-variant text-sm mt-1">JPG, PNG up to 5MB</p>
                     </div>
                 </div>
-                <!-- Privacy & Submit -->
                 <div
                     class="bg-surface-container-lowest p-lg border border-slate shadow-soft flex flex-col gap-md rounded-lg">
                     <div class="flex gap-3 items-start p-4 bg-secondary-container rounded-lg">
@@ -276,7 +267,6 @@
             </div>
         </form>
     </main>
-    <!-- Footer -->
     <footer
         class="bg-surface-container-low w-full py-xxl px-margin-mobile md:px-margin-desktop mt-xxl flex flex-col md:flex-row justify-between items-center max-w-max-width mx-auto">
         <div class="mb-lg md:mb-0">

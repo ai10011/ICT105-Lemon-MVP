@@ -123,9 +123,7 @@
 </head>
 
 <body class="bg-background text-on-background flex h-screen overflow-hidden">
-    <!-- SideNavBar -->
     <aside class="hidden md:flex flex-col h-full w-64 shadow-md p-md space-y-sm z-20 shrink-0 bg-on-surface">
-        <!-- Header -->
         <div class="mb-xl flex items-center space-x-md">
             <div class="w-12 h-12 rounded-full overflow-hidden shrink-0 border-2 border-primary-container">
                 <img alt="Admin Avatar" class="w-full h-full object-cover"
@@ -137,9 +135,7 @@
                 <p class="font-label-caps text-label-caps text-secondary-fixed-dim uppercase">University Station</p>
             </div>
         </div>
-        <!-- Navigation Tabs -->
         <nav class="flex-1 space-y-sm overflow-y-auto">
-            <!-- Active Tab: Dashboard -->
             <a class="flex items-center space-x-md px-md py-sm bg-primary-container text-on-primary-container rounded-lg font-bold transition-all duration-200 ease-in-out group"
                 href="#">
                 <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
@@ -169,13 +165,11 @@
                 <span class="font-subheading-sm text-subheading-sm">Settings</span>
             </a>
         </nav>
-        <!-- CTA -->
         <button
             class="w-full mt-xl py-sm px-md bg-primary-container text-on-primary-container font-body-bold text-body-bold rounded-lg hover:bg-primary-fixed-dim active:scale-95 transition-all duration-150 shadow-sm flex items-center justify-center space-x-sm font-bold">
             <span class="material-symbols-outlined">add_circle</span>
             <span class="">Report Found Item</span>
         </button>
-        <!-- Footer Tabs -->
         <div class="mt-lg pt-lg border-t border-secondary-fixed/20 space-y-sm">
             <a class="flex items-center space-x-md px-md py-sm text-secondary-fixed-dim hover:text-secondary-fixed hover:bg-on-surface-variant/10 rounded-lg transition-all duration-200 ease-in-out"
                 href="#">
@@ -189,25 +183,19 @@
             </a>
         </div>
     </aside>
-    <!-- Main Content Area -->
     <main class="flex-1 flex flex-col h-full overflow-hidden bg-background">
-        <!-- TopNavBar -->
         <header class="bg-primary-container shadow-sm z-10 shrink-0 border-b border-outline-variant h-16">
             <div
                 class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-full w-full max-w-max-width mx-auto">
-                <!-- Mobile Menu Button (Visible on mobile) -->
                 <button
                     class="md:hidden p-sm text-primary active:scale-95 duration-150 rounded-full hover:bg-surface-container transition-colors">
                     <span class="material-symbols-outlined">menu</span>
                 </button>
-                <!-- Brand Logo -->
                 <div class="flex items-center space-x-sm"><span
                         class="font-display-lg text-headline-md font-black tracking-tight text-on-primary-container">Lemon</span><span
                         class="hidden sm:inline-block font-label-caps text-label-caps text-on-surface-variant ml-sm px-sm py-xs bg-surface-container-high rounded-full uppercase tracking-wider font-bold">Security
                         Hub</span></div>
-                <!-- Search & Actions -->
                 <div class="flex items-center space-x-lg">
-                    <!-- Search Widget -->
                     <div
                         class="hidden lg:flex items-center border border-outline-variant rounded-full h-12 px-md focus-within:border-primary-container focus-within:ring-2 focus-within:ring-primary-container/20 transition-all shadow-sm bg-surface-container-low">
                         <span class="material-symbols-outlined text-secondary">search</span>
@@ -222,7 +210,6 @@
                             <option>Student Union</option>
                         </select>
                     </div>
-                    <!-- Mobile Search Icon -->
                     <button
                         class="lg:hidden p-sm text-on-surface-variant hover:bg-surface-container rounded-full transition-colors active:scale-95 duration-150">
                         <span class="material-symbols-outlined">search</span>
@@ -242,18 +229,14 @@
                 </div>
             </div>
         </header>
-        <!-- Dashboard Content Canvas -->
         <div class="flex-1 overflow-y-auto p-margin-mobile md:p-margin-desktop lg:p-xxl">
             <div class="max-w-max-width mx-auto space-y-xxl">
-                <!-- Page Header -->
                 <div>
                     <h2 class="font-display-lg text-display-lg text-on-surface mb-sm font-bold">Overview Dashboard</h2>
                     <p class="font-body-base text-body-base text-on-surface-variant">Real-time campus security and lost
                         property metrics.</p>
                 </div>
-                <!-- Metrics Bento Grid -->
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
-                    <!-- Total Items Secured -->
                     <div
                         class="rounded-xl p-lg shadow-sm border border-outline-variant flex flex-col justify-between relative overflow-hidden group bg-on-surface">
                         <div
@@ -275,7 +258,6 @@
                             <span class="">+12% from last month</span>
                         </div>
                     </div>
-                    <!-- Pending Claims -->
                     <div
                         class="bg-surface-container-lowest rounded-xl p-lg shadow-sm border border-outline-variant flex flex-col justify-between">
                         <div class="flex justify-between items-start mb-lg">
@@ -294,7 +276,6 @@
                             <span class="">5 require urgent review</span>
                         </div>
                     </div>
-                    <!-- Claim Success Rate -->
                     <div
                         class="bg-surface-container-lowest rounded-xl p-lg shadow-sm border border-outline-variant flex flex-col justify-between">
                         <div class="flex justify-between items-start mb-lg">
@@ -313,7 +294,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Recent Reports Table Section -->
                 <div
                     class="bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant overflow-hidden">
                     <div
@@ -337,7 +317,6 @@
                                 </tr>
                             </thead>
                             <tbody class="font-body-base text-body-base divide-y divide-outline-variant">
-                                <!-- Row 1 -->
                                 <tr class="hover:bg-surface-bright transition-colors group">
                                     <td class="p-md flex items-center space-x-md">
                                         <div
@@ -367,7 +346,6 @@
                                         </button>
                                     </td>
                                 </tr>
-                                <!-- Row 2 -->
                                 <tr class="hover:bg-surface-bright transition-colors group">
                                     <td class="p-md flex items-center space-x-md">
                                         <div
@@ -398,7 +376,6 @@
                                         </button>
                                     </td>
                                 </tr>
-                                <!-- Row 3 -->
                                 <tr class="hover:bg-surface-bright transition-colors group">
                                     <td class="p-md flex items-center space-x-md">
                                         <div

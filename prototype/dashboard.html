@@ -124,18 +124,17 @@
 </head>
 
 <body class="bg-background text-on-background min-h-screen flex flex-col pt-[80px]">
-    <!-- TopAppBar -->
     <header
         class="bg-surface-container-lowest border-b border-outline-variant fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-md">
         <div class="flex items-center gap-lg">
-            <div class="font-display-lg text-display-lg text-primary tracking-tighter">Lemon</div>
+            <a href="index.html" class="font-display-lg text-display-lg text-primary tracking-tighter hover:opacity-80 transition-opacity">Lemon</a>
             <nav class="hidden md:flex gap-lg ml-xl">
+                <a class="text-on-surface-variant font-body-base hover:text-primary transition-colors"
+                    href="records.html">Browse</a>
+                <a class="text-on-surface-variant font-body-base hover:text-primary transition-colors"
+                    href="form.html">Report</a>
                 <a class="text-primary font-body-bold border-b-2 border-primary pb-1 transition-colors"
-                    href="#">Browse</a>
-                <a class="text-on-surface-variant font-body-base hover:text-primary transition-colors"
-                    href="#">Report</a>
-                <a class="text-on-surface-variant font-body-base hover:text-primary transition-colors"
-                    href="#">Dashboard</a>
+                    href="dashboard.html">Dashboard</a>
             </nav>
         </div>
         <div class="flex items-center gap-md">
@@ -147,16 +146,12 @@
             </button>
         </div>
     </header>
-    <!-- Main Content -->
     <main
         class="flex-grow w-full max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-xl mt-xxl grid grid-cols-1 md:grid-cols-12 gap-gutter">
-        <!-- Welcome Header -->
         <div class="col-span-1 md:col-span-12 mb-lg">
             <h2 class="font-headline-md md:font-display-lg text-on-surface">Welcome back, Justin!</h2>
             <p class="text-on-surface-variant mt-sm">Here is the latest status on your lost and found items.</p>
         </div>
-        <!-- Bento Grid Layout -->
-        <!-- Profile Summary (Sidebar on Desktop) -->
         <aside
             class="col-span-1 md:col-span-4 bg-surface-container-lowest rounded-xl border border-outline-variant shadow-sm p-lg flex flex-col gap-md h-fit">
             <div class="flex items-center gap-md border-b border-outline-variant pb-md">
@@ -188,22 +183,19 @@
                 Edit Profile
             </button>
         </aside>
-        <!-- Main Dashboard Area -->
         <div class="col-span-1 md:col-span-8 flex flex-col gap-xl">
-            <!-- Quick Actions -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-md">
-                <button
+                <button onclick="window.location.href='form.html'"
                     class="bg-on-surface text-primary-fixed hover:bg-black transition-all h-12 rounded-lg font-body-bold shadow-sm flex items-center justify-center gap-sm">
                     <span class="material-symbols-outlined">add_circle</span>
                     Report Lost Item
                 </button>
-                <button
+                <button onclick="window.location.href='form.html'"
                     class="bg-primary-container text-on-primary-container hover:opacity-90 transition-all h-12 rounded-lg font-body-bold shadow-sm flex items-center justify-center gap-sm">
                     <span class="material-symbols-outlined">volunteer_activism</span>
                     I Found Something!
                 </button>
             </div>
-            <!-- Notifications Panel (Urgent Alerts) -->
             <section
                 class="bg-primary-container text-on-primary-container rounded-xl p-lg border border-primary shadow-sm flex items-start gap-md">
                 <span class="material-symbols-outlined text-primary mt-xs">info</span>
@@ -216,13 +208,11 @@
                         Match</button>
                 </div>
             </section>
-            <!-- Your Reports -->
             <section class="flex flex-col gap-md">
                 <div class="flex justify-between items-end border-b border-outline-variant pb-xs">
                     <h3 class="font-headline-md text-on-surface">Your Reports</h3>
-                    <a class="text-primary font-body-bold text-sm hover:underline" href="#">View All</a>
+                    <a class="text-primary font-body-bold text-sm hover:underline" href="records.html">View All</a>
                 </div>
-                <!-- Report Card 1: Searching -->
                 <article
                     class="bg-surface-container-lowest rounded-xl border border-outline-variant shadow-sm overflow-hidden flex flex-col md:flex-row relative">
                     <div
@@ -248,7 +238,6 @@
                         </div>
                     </div>
                 </article>
-                <!-- Report Card 2: Returned -->
                 <article
                     class="bg-surface-container-lowest rounded-xl border border-outline-variant shadow-sm overflow-hidden flex flex-col md:flex-row relative opacity-75">
                     <div
@@ -268,7 +257,7 @@
                                 Office. Thank you!</p>
                         </div>
                         <div class="mt-md flex justify-end">
-                            <button
+                            <button onclick="window.location.href='detail.html'"
                                 class="text-on-surface-variant hover:text-on-surface px-md py-sm rounded-lg font-body-bold transition-colors text-sm">View
                                 Details</button>
                         </div>
@@ -277,7 +266,6 @@
             </section>
         </div>
     </main>
-    <!-- Footer -->
     <footer
         class="bg-surface-container-low w-full py-xxl px-margin-mobile md:px-margin-desktop mt-xxl flex flex-col md:flex-row justify-between items-center max-w-max-width mx-auto">
         <div class="mb-lg md:mb-0">

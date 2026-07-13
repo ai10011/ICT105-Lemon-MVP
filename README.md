@@ -71,7 +71,7 @@ Through our structured problem interviews and surveys, we uncovered several crit
 * **Lost information is too spread out:** Students confirmed they have to look in too many places. They check group chats, ask friends, visit the security office, or look at paper notebooks.
 * **Students want one central tool:** Many people said they want one official website. They want to search by item types, look at dates, see photos, and prove they own the item.
 * **Some items are more important than others:** Our idea that all lost items are the same was wrong. Small things like water bottles are not urgent. Important things like ID cards, calculators, and USB drives are a big deal.
-* **People will not use it for everything:** Students will not log every tiny item they lose. They also noted that the app will only w
+* **People will not use it for everything:** Students will not log every tiny item they lose. They also noted that the app will only work effectively if both finders and losers actively use the platform.
 
 ## Updated Problem Statement
 University students who lose personal items on campus currently have to search through disorganized, unstructured Line/Discord groups or manually visit the campus security office. Because these existing workarounds are scattered and inefficient, 65% of students abandon their search for lost items within 24 hours, leading to a high rate of permanently unrecovered personal property in high-density student facilities.
@@ -176,7 +176,9 @@ Briefly explain what the team wants to test before deeper implementation.
 List the top 3 assumptions.
 
 ### MVP Experiment Type
-State the selected experiment type and why it fits the project.
+**Selected Experiment Type:** Simple Web Prototype
+
+**Reason for selection:** We have built a frontend-only web application utilizing `localStorage`. This allows us to rapidly simulate the core logic and real user interactions for reporting and tracking items without deploying a full backend database.
 
 ### Success Metrics
 List measurable success metrics.

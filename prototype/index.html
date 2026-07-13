@@ -191,18 +191,18 @@
 </head>
 
 <body class="bg-background text-on-background min-h-screen flex flex-col pt-[80px]">
-    <!-- TopAppBar -->
     <header
         class="bg-surface-container-lowest border-b border-outline-variant fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-md">
         <div class="flex items-center gap-lg">
-            <div class="font-display-lg text-display-lg text-primary tracking-tighter">Lemon</div>
+            <a href="index.html"
+                class="font-display-lg text-display-lg text-primary tracking-tighter hover:opacity-80 transition-opacity">Lemon</a>
             <nav class="hidden md:flex gap-lg ml-xl">
-                <a class="text-primary font-body-bold border-b-2 border-primary pb-1 transition-colors"
-                    href="#">Browse</a>
                 <a class="text-on-surface-variant font-body-base hover:text-primary transition-colors"
-                    href="#">Report</a>
+                    href="records.html">Browse</a>
                 <a class="text-on-surface-variant font-body-base hover:text-primary transition-colors"
-                    href="#">Dashboard</a>
+                    href="form.html">Report</a>
+                <a class="text-on-surface-variant font-body-base hover:text-primary transition-colors"
+                    href="dashboard.html">Dashboard</a>
             </nav>
         </div>
         <div class="flex items-center gap-md">
@@ -215,7 +215,6 @@
         </div>
     </header>
     <main class="flex-grow w-full max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
-        <!-- Hero Section -->
         <section class="py-xxl text-center mt-xl relative">
             <div class="absolute inset-0 z-[-1] opacity-20 pointer-events-none"
                 style="background-image: radial-gradient(circle at center, #fee336 0%, transparent 70%);"></div>
@@ -225,7 +224,6 @@
             <p class="font-subheading-sm text-subheading-sm text-on-surface-variant mb-xl max-w-2xl mx-auto">The fastest
                 way to recover your personal property on campus. Search the database or report a found item instantly.
             </p>
-            <!-- Search Widget -->
             <div
                 class="max-w-2xl mx-auto bg-surface-container-lowest rounded-[16px] shadow-sm border border-outline-variant flex items-center p-xs mb-xl h-[64px]">
                 <div class="flex items-center px-md text-on-surface-variant">
@@ -246,28 +244,29 @@
                     class="bg-primary-container text-on-primary-container h-full px-lg rounded-[12px] font-body-bold hover:opacity-90 transition-opacity ml-xs text-body-bold">Search</button>
             </div>
             <div class="flex justify-center gap-md">
-                <button
+                <button onclick="window.location.href='form.html'"
                     class="bg-on-background text-primary-fixed h-[48px] px-xl rounded-lg font-body-bold hover:bg-black transition-colors shadow-sm flex items-center gap-sm">
                     <span class="material-symbols-outlined text-sm">add_circle</span>
                     Report an Item
                 </button>
             </div>
         </section>
-        <!-- Recent Finds (Bento Grid) -->
         <section class="py-xxl">
             <div class="flex justify-between items-end mb-lg">
                 <h2 class="font-headline-md text-headline-md text-on-background">Recent Finds</h2>
-                <a class="font-body-bold text-body-bold text-primary hover:underline" href="#">View All</a>
+                <a class="font-body-bold text-body-bold text-primary hover:underline" href="records.html">View All</a>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
-                <!-- Card 1 -->
                 <div
                     class="bg-surface-container-lowest rounded-[12px] border border-outline-variant overflow-hidden hover:shadow-md transition-shadow relative group">
                     <div
                         class="absolute top-sm left-sm bg-primary text-on-primary px-sm py-xs rounded-full font-label-caps text-label-caps z-10 shadow-sm">
                         FOUND</div>
                     <div class="h-48 bg-surface-variant relative">
-                        <div class="w-full h-full flex items-center justify-center bg-surface-variant border-2 border-dashed border-outline-variant text-on-surface-variant"><span class="material-symbols-outlined text-4xl opacity-50">image</span></div>
+                        <div
+                            class="w-full h-full flex items-center justify-center bg-surface-variant border-2 border-dashed border-outline-variant text-on-surface-variant">
+                            <span class="material-symbols-outlined text-4xl opacity-50">image</span>
+                        </div>
                     </div>
                     <div class="p-md">
                         <div
@@ -284,14 +283,16 @@
                         <p class="text-sm text-on-secondary-container">Found 2 hours ago</p>
                     </div>
                 </div>
-                <!-- Card 2 -->
                 <div
                     class="bg-surface-container-lowest rounded-[12px] border border-outline-variant overflow-hidden hover:shadow-md transition-shadow relative group">
                     <div
                         class="absolute top-sm left-sm bg-error text-on-error px-sm py-xs rounded-full font-label-caps text-label-caps z-10 shadow-sm">
                         LOST</div>
                     <div class="h-48 bg-surface-variant flex items-center justify-center relative">
-                        <div class="w-full h-full flex items-center justify-center bg-surface-variant border-2 border-dashed border-outline-variant text-on-surface-variant"><span class="material-symbols-outlined text-4xl opacity-50">image</span></div>
+                        <div
+                            class="w-full h-full flex items-center justify-center bg-surface-variant border-2 border-dashed border-outline-variant text-on-surface-variant">
+                            <span class="material-symbols-outlined text-4xl opacity-50">image</span>
+                        </div>
                     </div>
                     <div class="p-md">
                         <div
@@ -308,14 +309,16 @@
                         <p class="text-sm text-error">Lost 5 hours ago</p>
                     </div>
                 </div>
-                <!-- Card 3 -->
                 <div
                     class="bg-surface-container-lowest rounded-[12px] border border-outline-variant overflow-hidden hover:shadow-md transition-shadow relative group">
                     <div
                         class="absolute top-sm left-sm bg-primary text-on-primary px-sm py-xs rounded-full font-label-caps text-label-caps z-10 shadow-sm">
                         FOUND</div>
                     <div class="h-48 bg-surface-variant flex items-center justify-center relative">
-                        <div class="w-full h-full flex items-center justify-center bg-surface-variant border-2 border-dashed border-outline-variant text-on-surface-variant"><span class="material-symbols-outlined text-4xl opacity-50">image</span></div>
+                        <div
+                            class="w-full h-full flex items-center justify-center bg-surface-variant border-2 border-dashed border-outline-variant text-on-surface-variant">
+                            <span class="material-symbols-outlined text-4xl opacity-50">image</span>
+                        </div>
                     </div>
                     <div class="p-md">
                         <div
@@ -334,7 +337,6 @@
                 </div>
             </div>
         </section>
-        <!-- How it Works Section -->
         <section class="py-xxl bg-surface-container-low rounded-xl px-lg mb-xxl">
             <div class="text-center mb-xl">
                 <h2 class="font-headline-md text-headline-md text-on-background">How Lemon Works</h2>
@@ -372,7 +374,6 @@
             </div>
         </section>
     </main>
-    <!-- Footer -->
     <footer
         class="bg-surface-container-low w-full py-xxl px-margin-mobile md:px-margin-desktop mt-xxl flex flex-col md:flex-row justify-between items-center max-w-max-width mx-auto">
         <div class="mb-lg md:mb-0">
