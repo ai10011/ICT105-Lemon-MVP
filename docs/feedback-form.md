@@ -1,4 +1,4 @@
-# Feedback Form Template
+# Feedback Form
 
 ## Tester Information
 - Tester code:
