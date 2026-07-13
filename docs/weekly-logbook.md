@@ -215,14 +215,14 @@ Smart Campus Lost-and-Found System
 # Weekly Logbook - Lab 07
 
 ## Group Information
-- Group name:
-- Project title:
-- Date:
-- Repository link:
+- Group name: Lemon
+- Project title: Lost and found app
+- Date: 13 Jul 2026
+- Repository link: 
 
 ## What We Completed Today
-- [ ] Reviewed requirements, user stories, MVP features, architecture, and wireframes
-- [ ] Identified critical assumptions
+- [ x] Reviewed requirements, user stories, MVP features, architecture, and wireframes
+- [ x] Identified critical assumptions
 - [ ] Selected MVP experiment type
 - [ ] Defined test users and success metrics
 - [ ] Prepared experiment script and feedback form
