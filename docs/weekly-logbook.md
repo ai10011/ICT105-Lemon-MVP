@@ -218,35 +218,35 @@ Smart Campus Lost-and-Found System
 - Group name: Lemon
 - Project title: Lost and found app
 - Date: 13 Jul 2026
-- Repository link: 
+- Repository link: https://github.com/ai10011/ICT105-Lemon-MVP
 
 ## What We Completed Today
-- [ ] Reviewed requirements, user stories, MVP features, architecture, and wireframes
-- [ ] Identified critical assumptions
-- [ ] Selected MVP experiment type
-- [ ] Defined test users and success metrics
-- [ ] Prepared experiment script and feedback form
-- [ ] Updated GitHub repository and README
+- [x] Reviewed requirements, user stories, MVP features, architecture, and wireframes
+- [x] Identified critical assumptions
+- [x] Selected MVP experiment type
+- [x] Defined test users and success metrics
+- [x] Prepared experiment script and feedback form
+- [x] Updated GitHub repository and README
 
 ## Member Contributions
 | Member Name | Contribution | Evidence/Commit/Issue Link |
 |---|---|---|
-|Tin May Lin | Add files via upload| 1f97a08a23d5291914fe41c39c1c6573cfbfe6c3|
-| | |08497202959609ad32459b79d5434ab2c1b93876 |
-| | |ee761e8b89e398e56bc70c121df42b8338f21d10 |
-| | |eb3a805a0dbadf3389d155a14ed96aa7c61cf5aa |
-| |Update mvp-demo-link.md |1df37236b973627c833cb2833a45b3357340f18c |
-| | | |
-| | | |
-| | | |
+| **Tin May Lin** | Added initial MVP experiment plan files and updated `mvp-demo-link.md` | `https://github.com/ai10011/ICT105-Lemon-MVP/commits/main/` |
+| **Phollapat Rodchue** | Updated `docs/success-metrics.md` and `docs/critical-assumptions.md` with staff/admin metrics | `https://github.com/ai10011/ICT105-Lemon-MVP/commits/main/` |
+| **Crystal (Kyaw Ye Lin)** | Completed `docs/experiment-script.md` with observations and feedback data | `https://github.com/ai10011/ICT105-Lemon-MVP/commits/main/` |
+| **Phoochit Jantakam** | Linked HTML prototype navigation pages and updated `mvp-demo-link.md` instructions | `https://github.com/ai10011/ICT105-Lemon-MVP/commits/main/` |
 
 ## Key Decisions
 | Decision | Reason | Evidence/Requirement Link |
 |---|---|---|
-| | | |
+| Selected Simple Web Prototype for MVP Experiment | Allows rapid testing of core user flows (report, search, admin dashboard) using static HTML pages linked together. | `docs/mvp-experiment-plan.md` |
+| Expanded Experiment Scope to Include Campus Staff Persona | Critical to validate admin inventory management (FR-08, FR-09, FR-12) alongside student reporting flows. | `docs/success-metrics.md`, `docs/critical-assumptions.md` |
+| Structured Quantitative & Qualitative Feedback Form | Enables measuring task completion rate, form accuracy, and usability scores against defined decision rules. | `docs/feedback-form.md`, `data/feedback-form.csv` |
 
 ## Problems and Next Action
 | Problem | Next Action | Responsible Member |
 |---|---|---|
-| | | |
+| Prototype currently consists of static HTML pages without `localStorage` state updates across page navigations. | Implement `localStorage` JavaScript logic to dynamically save, display, and update item statuses. | Phoochit Jantakam / Tin May Lin |
+| Testers reported minor confusion with location dropdown choices and item status labels during usability testing. | Refine location input options, add explanatory tooltips for status labels, and add additional search filters. | Crystal (Kyaw Ye Lin) / Phollapat Rodchue |
+
 
