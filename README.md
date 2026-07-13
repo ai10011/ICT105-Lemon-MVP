@@ -166,3 +166,28 @@ Here is how this lab's work guides the final development:
 *   **Structural Scaffolding:** The base HTML files already established in the `prototype/` directory (such as `index.html`, `form.html`, and `admin.html`) act as the structural foundation. The next development phase will simply involve injecting JavaScript logic into these existing files to enable dynamic rendering.
 *   **Architectural Blueprint:** The system architecture and data flow diagrams (`.mmd` files) map out the specific data pathways for the application. This ensures clarity on exactly where frontend JavaScript needs to intercept user inputs, run the matching engine, and interact with the JSON/`localStorage` data store. 
 *   **Feature Prioritization:** The extensive documentation (including the MVP feature list, user stories, and system requirements) dictates exactly which functionalities must be built first. This keeps the coding phase focused strictly on the core lost-and-found matching and claim operations, preventing scope creep.
+
+## Lab 07: MVP Experiment Design
+
+### Experiment Objective
+Briefly explain what the team wants to test before deeper implementation.
+
+### Critical Assumptions
+List the top 3 assumptions.
+
+### MVP Experiment Type
+State the selected experiment type and why it fits the project.
+
+### Success Metrics
+List measurable success metrics.
+
+### Files Added in Lab 07
+- `/docs/mvp-experiment-plan.md`
+- `/docs/critical-assumptions.md`
+- `/docs/experiment-script.md`
+- `/docs/success-metrics.md`
+- `/docs/feedback-form.md`
+- `/docs/weekly-logbook.md`
+
+### Connection to Final Prototype
+Explain how this experiment will guide the final prototype.
