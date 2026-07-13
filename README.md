@@ -167,29 +167,58 @@ Here is how this lab's work guides the final development:
 *   **Architectural Blueprint:** The system architecture and data flow diagrams (`.mmd` files) map out the specific data pathways for the application. This ensures clarity on exactly where frontend JavaScript needs to intercept user inputs, run the matching engine, and interact with the JSON/`localStorage` data store. 
 *   **Feature Prioritization:** The extensive documentation (including the MVP feature list, user stories, and system requirements) dictates exactly which functionalities must be built first. This keeps the coding phase focused strictly on the core lost-and-found matching and claim operations, preventing scope creep.
 
-## Lab 07: MVP Experiment Design
+# Lab 07: MVP Experiment Design
 
-### Experiment Objective
-Briefly explain what the team wants to test before deeper implementation.
+## Lab 07 Summary
 
-### Critical Assumptions
-List the top 3 assumptions.
+In Lab 07, our team planned an MVP experiment to test whether the Campus Lost-and-Found System is easy to use. Before continuing development, we wanted to collect feedback from real users and identify areas that need improvement.
 
-### MVP Experiment Type
+## Experiment Objective
+
+The goal of this experiment is to test whether:
+
+- Students can report lost and found items easily.
+- Students can search for reported items successfully.
+- Campus staff can use the dashboard and admin page without difficulty.
+- The prototype is simple and easy to understand.
+
+## MVP Experiment Type
+
 **Selected Experiment Type:** Simple Web Prototype
 
-**Reason for selection:** We have built a frontend-only web application utilizing `localStorage`. This allows us to rapidly simulate the core logic and real user interactions for reporting and tracking items without deploying a full backend database.
+**Reason:**  
+Our prototype is a frontend-only web application using HTML, CSS, JavaScript, and `localStorage`. This allows us to test the main features without building a backend server.
 
-### Success Metrics
-List measurable success metrics.
+## Critical Assumptions
 
-### Files Added in Lab 07
-- `/docs/mvp-experiment-plan.md`
-- `/docs/critical-assumptions.md`
-- `/docs/experiment-script.md`
-- `/docs/success-metrics.md`
-- `/docs/feedback-form.md`
-- `/docs/weekly-logbook.md`
+During the experiment, we will validate the following assumptions:
 
-### Connection to Final Prototype
-Explain how this experiment will guide the final prototype.
+- Students prefer one centralized platform instead of chat groups.
+- Users can report and search for items without additional instructions.
+- The item status is easy to understand.
+- Campus staff can manage reports using the dashboard and admin page.
+
+## Success Metrics
+
+The experiment will be considered successful if:
+
+- Most users complete the assigned tasks successfully.
+- Users can submit reports without errors.
+- Users can find items using the search feature.
+- Users rate the prototype as useful and easy to use.
+- Feedback helps us identify improvements for the next version.
+
+## Files Added in Lab 07
+
+- `docs/mvp-experiment-plan.md`
+- `docs/critical-assumptions.md`
+- `docs/experiment-script.md`
+- `docs/success-metrics.md`
+- `docs/feedback-form.md`
+- `docs/weekly-logbook.md`
+
+## Connection to the Final Prototype
+
+The results from this experiment will help us improve the prototype before implementation. User feedback will be used to fix usability issues, improve the interface, and make sure the final prototype meets user needs.
+
+---
