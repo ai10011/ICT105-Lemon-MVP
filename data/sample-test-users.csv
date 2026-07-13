@@ -1,6 +1,0 @@
-tester_code,tester_type,campus_role,experience_with_lost_item,reason_selected
-T01,Student,Undergraduate,Lost item before,Primary target user
-T02,Student,Undergraduate,Found item before,Can evaluate found-item workflow
-T03,Student,International student,Lost item before,Needs clear instructions
-T04,Staff,Administrative staff,Handles student requests,Potential admin user
-T05,Student,Undergraduate,No experience,Can test first-time clarity
