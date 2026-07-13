@@ -221,8 +221,8 @@ Smart Campus Lost-and-Found System
 - Repository link: 
 
 ## What We Completed Today
-- [ x] Reviewed requirements, user stories, MVP features, architecture, and wireframes
-- [ x] Identified critical assumptions
+- [ ] Reviewed requirements, user stories, MVP features, architecture, and wireframes
+- [ ] Identified critical assumptions
 - [ ] Selected MVP experiment type
 - [ ] Defined test users and success metrics
 - [ ] Prepared experiment script and feedback form
@@ -231,6 +231,13 @@ Smart Campus Lost-and-Found System
 ## Member Contributions
 | Member Name | Contribution | Evidence/Commit/Issue Link |
 |---|---|---|
+|Tin May Lin | Add files via upload| 1f97a08a23d5291914fe41c39c1c6573cfbfe6c3|
+| | |08497202959609ad32459b79d5434ab2c1b93876 |
+| | |ee761e8b89e398e56bc70c121df42b8338f21d10 |
+| | |eb3a805a0dbadf3389d155a14ed96aa7c61cf5aa |
+| |Update mvp-demo-link.md |1df37236b973627c833cb2833a45b3357340f18c |
+| | | |
+| | | |
 | | | |
 
 ## Key Decisions
