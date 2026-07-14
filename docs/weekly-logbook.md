@@ -246,7 +246,7 @@ Smart Campus Lost-and-Found System
 ## Problems and Next Action
 | Problem | Next Action | Responsible Member |
 |---|---|---|
-| Prototype currently consists of static HTML pages without `localStorage` state updates across page navigations. | Implement `localStorage` JavaScript logic to dynamically save, display, and update item statuses. | Phoochit Jantakam / Tin May Lin |
-| Testers reported minor confusion with location dropdown choices and item status labels during usability testing. | Refine location input options, add explanatory tooltips for status labels, and add additional search filters. | Crystal (Kyaw Ye Lin) / Phollapat Rodchue |
+| Prototype currently consists of static HTML pages without `localStorage` state updates across page navigations. | Implement `localStorage` JavaScript logic to dynamically save, display, and update item statuses. | Phollapat Rodchue |
+| Testers reported minor confusion with location dropdown choices and item status labels during usability testing. | Refine location input options, add explanatory tooltips for status labels, and add additional search filters. | Crystal (Kyaw Ye Lin) / Phoochit Jantakam / Tin May Lin |
 
 
