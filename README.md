@@ -221,25 +221,33 @@ The experiment will be considered successful if:
 
 The results from this experiment will help us improve the prototype before implementation. User feedback will be used to fix usability issues, improve the interface, and make sure the final prototype meets user needs.
 
----
+## Lab 08: Customer Validation and Analytics Sheet
 
-##  Project Progress Status
+### Validation Objective
+Explain what the group tested.
 
-### Lab 08: Customer Validation & Analytics 
-- [x] Review MVP Plan & Target Baseline Requirements (`FR-03`, `FR-06`, `FR-11`)
-- [x] Construct Structured Raw Data File (`/data/validation-results.csv`)
-- [x] Calculate Mandatory Performance Metrics Formulas (Task Success Rate: 80%)
-- [x] Generate Customer Validation Summary (`/docs/customer-validation-summary.md`)
-- [x] Complete Analytics Insights Interpretation (`/docs/analytics-insights.md`)
-- [x] Document Data-Backed MVP Evolution Choice (`/docs/mvp-decision.md`)
-- [x] Populate Repository Usability Test Assets (`/screenshots/validation-test-screens.png`)
-- [x] Log 7 Explicit Engineering Action Items via GitHub Issues
+### Prototype Version Tested
+- Version:
+- Link:
+- Screenshots:
 
----
+### Analytics Summary
+| Metric | Result |
+|---|---:|
+| Total test users | |
+| Task success rate | |
+| Average feedback score | |
+| Average interest level | |
+| Main confusion point | |
 
-###  Validation Dashboard Snapshot
-* **Total Testers:** 10 Active Campus Participants (8 Students / 2 Admins)
-* **Task Success Rate:** 80% (Formula: $\text{Completed Tasks} \div \text{Total Test Users}$)
-* **Average Usability Score:** 4.2 / 5.0
-* **Average Market Interest Score:** 4.6 / 5.0
-* **Current Core MVP Vector:** `REVISE` (Focusing sprints on UI feedback optimization and admin dashboard query latency resolution).
+### MVP Decision
+State whether the group will continue, revise, or collect more evidence.
+
+### Files Added
+- `/data/validation-results.xlsx`
+- `/data/validation-results.csv`
+- `/docs/customer-validation-summary.md`
+- `/docs/analytics-insights.md`
+- `/docs/mvp-decision.md`
+- `/screenshots/validation-test-screens.png`
+- `/docs/weekly-logbook.md`

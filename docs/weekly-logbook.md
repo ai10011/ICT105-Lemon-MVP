@@ -249,25 +249,42 @@ Smart Campus Lost-and-Found System
 | Prototype currently consists of static HTML pages without `localStorage` state updates across page navigations. | Implement `localStorage` JavaScript logic to dynamically save, display, and update item statuses. | Phollapat Rodchue |
 | Testers reported minor confusion with location dropdown choices and item status labels during usability testing. | Refine location input options, add explanatory tooltips for status labels, and add additional search filters. | Crystal (Kyaw Ye Lin) / Phoochit Jantakam / Tin May Lin |
 
-## Lab 08: Customer Validation & Analytics (15 July 2026)
+# Weekly Logbook - Lab 08
 
-### 1. Lab Overview & Objective
-The core objective for this session was to transition from theoretical assumptions to empirical data by gathering concrete validation evidence for our Campus Lost-and-Found System. We aggregated raw user testing data into a structured analytics sheet, calculated our core baseline validation metrics, and established a data-backed MVP pivot/persevere decision.
+## Group Information
+- Group name: Lemon
+- Project title: Smart Campus Lost-and-Found System
+- Repository link: https://github.com/ai10011/ICT105-Lemon-MVP
+- Lab date: 15 Jul 2026
 
-### 2. Team Reflection & MVP Status
-* **What Went Well:** The user cohort expressed massive interest in the solution, yielding an average interest score of 4.6 / 5.0. The search and filter feature workflow proved highly effective for the majority of testers.
-* **Key Challenges:** Our testing uncovered significant friction in the image upload response times (FR-03) and admin backend status changes (FR-06), resulting in a 20% workflow failure rate. 
-* **Definitive Strategy:** The team has officially elected to **Revise / Partially Change** our current MVP implementation layout before proceeding to full-scale development.
+## Work Completed Today
+- [x] Reviewed Lab 07 MVP experiment plan
+- [x] Prepared validation dataset structure
+- [x] Created or updated analytics sheet
+- [x] Wrote customer validation summary
+- [x] Wrote analytics insights
+- [x] Wrote MVP decision
+- [x] Updated README
+- [x] Created GitHub issues for prototype improvements
 
-### 3. Explicit Member Contributions
-| Member Name | Role / Responsibility | Key Deliverables Completed |
-| --- | --- | --- |
-| Tin May Lin| Data Analyst | Built /data/validation-results.xlsx, set up mandatory data columns, and calculated validation metrics formulas. |
-| Ice | Technical Writer | Authored /docs/customer-validation-summary.md and compiled qualitative tester feedback metrics. |
-| Phoochit| Product Owner | Formulated /docs/analytics-insights.md, /docs/mvp-decision.md, and created 7 distinct tracking issues on GitHub. |
-| Crystal | Quality Assurance | Conducted the usability testing walk-throughs with the 10 campus participants and captured /screenshots/validation-test-screens.png. |
+## Member Contributions
+| Member Name | Contribution | GitHub Evidence |
+|---|---|---|
+| **Tin May Lin** | Prepared validation dataset (`data/validation-results.csv`) and created GitHub issues for prototype improvements | `https://github.com/ai10011/ICT105-Lemon-MVP/commits/main/` |
+| **Phollapat Rodchue** | Calculated usability metrics and authored `docs/analytics-insights.md` | `https://github.com/ai10011/ICT105-Lemon-MVP/commits/main/` |
+| **Crystal (Kyaw Ye Lin)** | Authored `docs/customer-validation-summary.md` and synthesized qualitative user feedback | `https://github.com/ai10011/ICT105-Lemon-MVP/commits/main/` |
+| **Phoochit Jantakam** | Formulated decision rationale in `docs/mvp-decision.md` and updated `README.md` | `https://github.com/ai10011/ICT105-Lemon-MVP/commits/main/` |
 
-### 4. Next Action Items (Sprint Backlog)
-1. Optimize the file ingestion pipeline to provide immediate visual feedback prompts upon asset uploads (FR-03).
-2. Refactor administrative query speeds within the management dashboard queue (FR-06).
-3. Add a global reset button to clear active query parameters within the item search views (FR-11).
+## Problems Found
+- **Dashboard Navigation**: Testers struggled to locate the summary dashboard link (`FR-12`) during tasks.
+- **Status Clarity**: Text-only status labels caused confusion regarding whether an item was pending or claimed (`FR-08`).
+- **Form Input Overhead**: Excessive mandatory required fields led to completion delays during lost item report submissions (`FR-10`).
+- **Filter Precision**: Search location filters lacked building-specific dropdown options (`FR-06`).
+
+## Next Actions
+- Reposition the summary dashboard link directly into the main top header navigation bar (`FR-12`).
+- Deploy visual color-coded badges for item claim tracking (`FR-08`).
+- Reduce mandatory input fields on lost/found report forms and add helper tooltip guidance (`FR-10`).
+- Add campus building names to search location filter options (`FR-06`).
+
+

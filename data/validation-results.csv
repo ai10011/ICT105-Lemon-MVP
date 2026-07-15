@@ -1,13 +1,21 @@
-Test_User_ID,User_Role,Prototype_Version,Main_Task,Task_Completed,Time_Seconds,Confusion_Point,Feature_Most_Useful,Feedback_Score_1_5,Interest_Level_1_5,Comment,Requirement_Affected
-TU-01,Student,v0.1,Report a lost item,Yes,118,No confusion,Lost item form,5,5,The form is clear and quick to complete.,"FR-03, FR-10, FR-11"
-TU-02,Student,v0.1,Search for a found item,Yes,95,Search/filter,Search by category,4,4,"Search works, but category labels should be clearer.","FR-06, FR-07"
-TU-03,Student,v0.1,Check claim status,No,160,Status tracking,Status page,3,4,I could not easily see whether my claim was approved.,FR-08
-TU-04,Student,v0.1,Report a found item,Yes,122,Form fields,Photo upload / item details,4,5,Need clearer explanation for location field.,"FR-03, FR-10"
-TU-05,Student,v0.1,Search for a found item,Yes,88,No confusion,Search by keyword,5,5,Useful because I do not need to ask many chat groups.,FR-06
-TU-06,Admin/Staff,v0.1,Update item status,Yes,140,Admin dashboard,Status update button,4,4,Admin screen is useful but needs a clearer filter for pending items.,"FR-09, FR-08"
-TU-07,Student,v0.1,Open item detail and claim,No,175,Detail view,Item detail page,3,3,Claim process is not obvious from the detail page.,"FR-07, FR-02"
-TU-08,Student,v0.1,Report a lost item,Yes,110,No confusion,Confirmation message,5,4,I like the confirmation message after submission.,FR-11
-TU-09,Student,v0.1,Search and filter by location,Yes,102,Search/filter,Location filter,4,4,Location filter helps but should include building names.,FR-06
-TU-10,Admin/Staff,v0.1,Review pending reports,Yes,150,Dashboard summary,Pending report summary,4,4,Dashboard is helpful for prioritizing reports.,"FR-12, FR-09"
-TU-11,Student,v0.1,Submit incomplete form,Yes,75,No confusion,Validation message,5,5,The required-field warning is easy to understand.,FR-10
-TU-12,Student,v0.1,Check found item detail,Yes,96,Privacy note,Item detail page,4,4,The system should not show student phone numbers publicly.,"FR-15, FR-07"
+TestID,TestDate,TestUserID,UserRole,DeviceType,PrototypeVersion,TaskName,TaskCompleted,CompletionTimeSeconds,EaseOfUseScore,UsefulnessScore,ConfusionPoint,MostUsefulFeature,WouldUseAgain,InterestLevel,RequirementID,MVPDecisionSignal,Notes
+T001,2026-07-20,U001,Student,Mobile,v1,Submit lost item report,Yes,95,4,5,None,Submit form,Yes,5,FR-03,Validated,Could submit report easily.
+T002,2026-07-20,U002,Student,Laptop,v1,Search found item,Yes,80,4,4,Search label,Search/filter,Yes,4,FR-06,Validated,Search worked but label should be clearer.
+T003,2026-07-20,U003,Student,Mobile,v1,Check item status,No,150,2,4,Status wording,Status tracking,Maybe,3,FR-08,Revise,Could not understand Pending vs Claimed.
+T004,2026-07-20,U004,Student,Mobile,v1,View item detail,Yes,70,5,5,None,Detail view,Yes,5,FR-07,Validated,Detail screen was clear.
+T005,2026-07-21,U005,Student,Laptop,v1,Submit lost item report,Yes,110,3,4,Required fields,Submit form,Yes,4,FR-10,Partial,Required fields need stronger hints.
+T006,2026-07-21,U006,Staff,Laptop,v1,Update item status,Yes,130,3,5,Admin button,Admin update,Yes,4,FR-09,Partial,Admin page was useful but button was hard to find.
+T007,2026-07-21,U007,Student,Mobile,v1,Search found item,Yes,72,5,5,None,Search/filter,Yes,5,FR-06,Validated,Fast search on mobile.
+T008,2026-07-21,U008,Student,Mobile,v1,Check dashboard summary,No,180,2,3,Dashboard location,Dashboard summary,Maybe,3,FR-12,Revise,Did not know where to find dashboard.
+T009,2026-07-22,U009,Student,Laptop,v1,View item detail,Yes,65,4,4,None,Detail view,Yes,4,FR-07,Validated,Detail page was understandable.
+T010,2026-07-22,U010,Staff,Desktop,v1,Update item status,Yes,105,4,5,None,Admin update,Yes,5,FR-09,Validated,Admin update worked well.
+T011,2026-07-22,U011,Student,Mobile,v1,Submit lost item report,Yes,88,4,4,None,Submit form,Yes,4,FR-03,Validated,Submission confirmation was helpful.
+T012,2026-07-22,U012,Student,Mobile,v1,Search found item,No,160,2,4,Filter option,Search/filter,Maybe,3,FR-06,Revise,Expected category filter.
+T013,2026-07-23,U013,Student,Laptop,v1,Check item status,Yes,90,3,4,Status wording,Status tracking,Yes,4,FR-08,Partial,Status exists but needs clearer explanation.
+T014,2026-07-23,U014,Student,Mobile,v1,Check dashboard summary,Yes,120,3,4,Dashboard location,Dashboard summary,Maybe,3,FR-12,Partial,Dashboard useful after instruction.
+T015,2026-07-23,U015,Staff,Laptop,v1,Update item status,Yes,115,4,4,None,Admin update,Yes,4,FR-09,Validated,Useful for staff workflow.
+T016,2026-07-23,U016,Student,Mobile,v1,Submit lost item report,No,200,2,3,Required fields,Submit form,No,2,FR-10,Revise,Too many required fields.
+T017,2026-07-24,U017,Student,Laptop,v1,Search found item,Yes,78,4,5,None,Search/filter,Yes,5,FR-06,Validated,Search was useful.
+T018,2026-07-24,U018,Student,Mobile,v1,View item detail,Yes,75,5,5,None,Detail view,Yes,5,FR-07,Validated,Photo and description helped.
+T019,2026-07-24,U019,Student,Laptop,v1,Check dashboard summary,Yes,135,3,4,Chart labels,Dashboard summary,Maybe,3,FR-12,Partial,Chart labels need better wording.
+T020,2026-07-24,U020,Student,Mobile,v1,Check item status,Yes,98,4,4,None,Status tracking,Yes,4,FR-08,Validated,Status was easy after color labels.
