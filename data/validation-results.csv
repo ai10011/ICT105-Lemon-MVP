@@ -1,0 +1,13 @@
+Test_User_ID,User_Role,Prototype_Version,Main_Task,Task_Completed,Time_Seconds,Confusion_Point,Feature_Most_Useful,Feedback_Score_1_5,Interest_Level_1_5,Comment,Requirement_Affected
+TU-01,Student,v0.1,Report a lost item,Yes,118,No confusion,Lost item form,5,5,The form is clear and quick to complete.,"FR-03, FR-10, FR-11"
+TU-02,Student,v0.1,Search for a found item,Yes,95,Search/filter,Search by category,4,4,"Search works, but category labels should be clearer.","FR-06, FR-07"
+TU-03,Student,v0.1,Check claim status,No,160,Status tracking,Status page,3,4,I could not easily see whether my claim was approved.,FR-08
+TU-04,Student,v0.1,Report a found item,Yes,122,Form fields,Photo upload / item details,4,5,Need clearer explanation for location field.,"FR-03, FR-10"
+TU-05,Student,v0.1,Search for a found item,Yes,88,No confusion,Search by keyword,5,5,Useful because I do not need to ask many chat groups.,FR-06
+TU-06,Admin/Staff,v0.1,Update item status,Yes,140,Admin dashboard,Status update button,4,4,Admin screen is useful but needs a clearer filter for pending items.,"FR-09, FR-08"
+TU-07,Student,v0.1,Open item detail and claim,No,175,Detail view,Item detail page,3,3,Claim process is not obvious from the detail page.,"FR-07, FR-02"
+TU-08,Student,v0.1,Report a lost item,Yes,110,No confusion,Confirmation message,5,4,I like the confirmation message after submission.,FR-11
+TU-09,Student,v0.1,Search and filter by location,Yes,102,Search/filter,Location filter,4,4,Location filter helps but should include building names.,FR-06
+TU-10,Admin/Staff,v0.1,Review pending reports,Yes,150,Dashboard summary,Pending report summary,4,4,Dashboard is helpful for prioritizing reports.,"FR-12, FR-09"
+TU-11,Student,v0.1,Submit incomplete form,Yes,75,No confusion,Validation message,5,5,The required-field warning is easy to understand.,FR-10
+TU-12,Student,v0.1,Check found item detail,Yes,96,Privacy note,Item detail page,4,4,The system should not show student phone numbers publicly.,"FR-15, FR-07"

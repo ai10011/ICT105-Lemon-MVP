@@ -249,4 +249,25 @@ Smart Campus Lost-and-Found System
 | Prototype currently consists of static HTML pages without `localStorage` state updates across page navigations. | Implement `localStorage` JavaScript logic to dynamically save, display, and update item statuses. | Phollapat Rodchue |
 | Testers reported minor confusion with location dropdown choices and item status labels during usability testing. | Refine location input options, add explanatory tooltips for status labels, and add additional search filters. | Crystal (Kyaw Ye Lin) / Phoochit Jantakam / Tin May Lin |
 
+## Lab 08: Customer Validation & Analytics (15 July 2026)
 
+### 1. Lab Overview & Objective
+The core objective for this session was to transition from theoretical assumptions to empirical data by gathering concrete validation evidence for our Campus Lost-and-Found System. We aggregated raw user testing data into a structured analytics sheet, calculated our core baseline validation metrics, and established a data-backed MVP pivot/persevere decision.
+
+### 2. Team Reflection & MVP Status
+* **What Went Well:** The user cohort expressed massive interest in the solution, yielding an average interest score of 4.6 / 5.0. The search and filter feature workflow proved highly effective for the majority of testers.
+* **Key Challenges:** Our testing uncovered significant friction in the image upload response times (FR-03) and admin backend status changes (FR-06), resulting in a 20% workflow failure rate. 
+* **Definitive Strategy:** The team has officially elected to **Revise / Partially Change** our current MVP implementation layout before proceeding to full-scale development.
+
+### 3. Explicit Member Contributions
+| Member Name | Role / Responsibility | Key Deliverables Completed |
+| --- | --- | --- |
+| Tin May Lin| Data Analyst | Built /data/validation-results.xlsx, set up mandatory data columns, and calculated validation metrics formulas. |
+| Ice | Technical Writer | Authored /docs/customer-validation-summary.md and compiled qualitative tester feedback metrics. |
+| Phoochit| Product Owner | Formulated /docs/analytics-insights.md, /docs/mvp-decision.md, and created 7 distinct tracking issues on GitHub. |
+| Crystal | Quality Assurance | Conducted the usability testing walk-throughs with the 10 campus participants and captured /screenshots/validation-test-screens.png. |
+
+### 4. Next Action Items (Sprint Backlog)
+1. Optimize the file ingestion pipeline to provide immediate visual feedback prompts upon asset uploads (FR-03).
+2. Refactor administrative query speeds within the management dashboard queue (FR-06).
+3. Add a global reset button to clear active query parameters within the item search views (FR-11).
