@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html class="light" lang="en" style="">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Lemon - Smart Campus Lost &amp; Found</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-container": "#5f6366",
+                        "background": "#f9f9f9",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-container": "#66644b",
+                        "primary-fixed-dim": "#e0c70f",
+                        "primary": "#6c5e00",
+                        "on-background": "#1a1c1c",
+                        "tertiary-fixed-dim": "#ccc7a9",
+                        "surface-container-low": "#f3f3f3",
+                        "tertiary-fixed": "#e8e3c4",
+                        "secondary-fixed": "#e0e3e6",
+                        "on-secondary-fixed": "#181c1f",
+                        "on-error": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-surface": "#1a1c1c",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-tint": "#6c5e00",
+                        "on-secondary-fixed-variant": "#43474a",
+                        "on-secondary": "#ffffff",
+                        "on-surface-variant": "#4b4733",
+                        "on-primary-fixed-variant": "#514700",
+                        "inverse-on-surface": "#f0f1f1",
+                        "primary-fixed": "#fee336",
+                        "surface-dim": "#dadada",
+                        "surface-container-highest": "#e2e2e2",
+                        "outline": "#7d7760",
+                        "outline-variant": "#cec6ac",
+                        "on-error-container": "#93000a",
+                        "surface-variant": "#e2e2e2",
+                        "on-primary-container": "#716300",
+                        "secondary": "#5b5f62",
+                        "surface-container-high": "#e8e8e8",
+                        "primary-container": "#fce134",
+                        "secondary-fixed-dim": "#c4c7ca",
+                        "inverse-primary": "#e0c70f",
+                        "surface": "#f9f9f9",
+                        "secondary-container": "#dde0e4",
+                        "tertiary-container": "#e6e1c2",
+                        "on-tertiary-fixed-variant": "#4a4831",
+                        "tertiary": "#625f47",
+                        "inverse-surface": "#2f3131",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed": "#211c00",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed": "#1d1c09",
+                        "surface-bright": "#f9f9f9",
+                        "surface-container": "#eeeeee"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "max-width": "1200px",
+                        "md": "16px",
+                        "margin-desktop": "32px",
+                        "margin-mobile": "16px",
+                        "lg": "24px",
+                        "xs": "4px",
+                        "unit": "4px",
+                        "xxl": "48px",
+                        "xl": "32px",
+                        "sm": "8px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-md-mobile": [
+                            "Plus Jakarta Sans"
+                        ],
+                        "label-caps": [
+                            "Plus Jakarta Sans"
+                        ],
+                        "body-bold": [
+                            "Plus Jakarta Sans"
+                        ],
+                        "headline-md": [
+                            "Plus Jakarta Sans"
+                        ],
+                        "subheading-sm": [
+                            "Plus Jakarta Sans"
+                        ],
+                        "display-lg": [
+                            "Plus Jakarta Sans"
+                        ],
+                        "body-base": [
+                            "Plus Jakarta Sans"
+                        ]
+                    },
+                    "fontSize": {
+                        "headline-md-mobile": [
+                            "20px",
+                            {
+                                "lineHeight": "28px",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "700"
+                            }
+                        ],
+                        "label-caps": [
+                            "12px",
+                            {
+                                "lineHeight": "16px",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "700"
+                            }
+                        ],
+                        "body-bold": [
+                            "16px",
+                            {
+                                "lineHeight": "24px",
+                                "fontWeight": "600"
+                            }
+                        ],
+                        "headline-md": [
+                            "24px",
+                            {
+                                "lineHeight": "32px",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "700"
+                            }
+                        ],
+                        "subheading-sm": [
+                            "18px",
+                            {
+                                "lineHeight": "26px",
+                                "letterSpacing": "-0.005em",
+                                "fontWeight": "600"
+                            }
+                        ],
+                        "display-lg": [
+                            "36px",
+                            {
+                                "lineHeight": "44px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "800"
+                            }
+                        ],
+                        "body-base": [
+                            "16px",
+                            {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                            }
+                        ]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            background-color: #f9f9f9;
+            color: #1a1c1c;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+    </style>
+    <script src="Shared/components.js"></script>
+</head>
+
+<body class="bg-background text-on-background min-h-screen flex flex-col pt-[80px]">
+    <div id="header-placeholder"></div>
+    <main class="flex-grow w-full max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+        <section class="py-xxl text-center mt-xl relative">
+            <div class="absolute inset-0 z-[-1] opacity-20 pointer-events-none"
+                style="background-image: radial-gradient(circle at center, #fee336 0%, transparent 70%);"></div>
+            <h1
+                class="font-display-lg text-display-lg md:text-5xl lg:text-6xl text-on-background mb-lg max-w-3xl mx-auto tracking-tighter">
+                What did you lose today?</h1>
+            <p class="font-subheading-sm text-subheading-sm text-on-surface-variant mb-xl max-w-2xl mx-auto">The fastest
+                way to recover your personal property on campus. Search the database or report a found item instantly.
+            </p>
+            <div
+                class="max-w-2xl mx-auto bg-surface-container-lowest rounded-[16px] shadow-sm border border-outline-variant flex items-center p-xs mb-xl h-[64px]">
+                <div class="flex items-center px-md text-on-surface-variant">
+                    <span class="material-symbols-outlined">search</span>
+                </div>
+                <input
+                    class="flex-grow h-full bg-transparent border-none focus:ring-0 text-body-base text-on-surface outline-none px-md"
+                    placeholder="Search for keys, student ID, water bottle..." type="text">
+                <div class="h-8 w-px bg-outline-variant mx-2"></div>
+                <select
+                    class="h-full bg-transparent border-none focus:ring-0 text-body-base text-on-surface outline-none px-md appearance-none font-body-bold cursor-pointer">
+                    <option>All Buildings</option>
+                    <option>Main Library</option>
+                    <option>Science Block</option>
+                    <option>Student Union</option>
+                </select>
+                <button onclick="window.location.href='records.html'"
+                    class="bg-primary-container text-on-primary-container h-full px-lg rounded-[12px] font-body-bold hover:opacity-90 transition-opacity ml-xs text-body-bold">Search</button>
+            </div>
+            <div class="flex justify-center gap-md">
+                <button onclick="window.location.href='form.html'"
+                    class="bg-on-background text-primary-fixed h-[48px] px-xl rounded-lg font-body-bold hover:bg-black transition-colors shadow-sm flex items-center gap-sm">
+                    <span class="material-symbols-outlined text-sm">add_circle</span>
+                    Report an Item
+                </button>
+            </div>
+        </section>
+        <section class="py-xxl">
+            <div class="flex justify-between items-end mb-lg">
+                <h2 class="font-headline-md text-headline-md text-on-background">Recent Finds</h2>
+                <a class="font-body-bold text-body-bold text-primary hover:underline" href="records.html">View All</a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+                <div onclick="window.location.href='detail.html'"
+                    class="bg-surface-container-lowest rounded-[12px] border border-outline-variant overflow-hidden hover:shadow-md transition-shadow relative group cursor-pointer">
+                    <div
+                        class="absolute top-sm left-sm bg-primary text-on-primary px-sm py-xs rounded-full font-label-caps text-label-caps z-10 shadow-sm">
+                        FOUND</div>
+                    <div class="h-48 bg-surface-variant relative">
+                        <div
+                            class="w-full h-full flex items-center justify-center bg-surface-variant border-2 border-dashed border-outline-variant text-on-surface-variant">
+                            <span class="material-symbols-outlined text-4xl opacity-50">image</span>
+                        </div>
+                    </div>
+                    <div class="p-md">
+                        <div
+                            class="flex items-center gap-xs text-on-surface-variant font-label-caps text-label-caps mb-xs">
+                            <span class="material-symbols-outlined text-sm">water_bottle</span>
+                            <span class="">ACCESSORY</span>
+                        </div>
+                        <h3 class="font-body-bold text-body-bold text-on-background mb-sm truncate">Silver Hydro Flask
+                        </h3>
+                        <div class="flex items-center gap-xs text-on-surface-variant text-sm mb-xs">
+                            <span class="material-symbols-outlined text-[16px]">location_on</span>
+                            <span class="truncate">Main Library, 2nd Floor</span>
+                        </div>
+                        <p class="text-sm text-on-secondary-container">Found 2 hours ago</p>
+                    </div>
+                </div>
+                <div onclick="window.location.href='detail.html'"
+                    class="bg-surface-container-lowest rounded-[12px] border border-outline-variant overflow-hidden hover:shadow-md transition-shadow relative group cursor-pointer">
+                    <div
+                        class="absolute top-sm left-sm bg-error text-on-error px-sm py-xs rounded-full font-label-caps text-label-caps z-10 shadow-sm">
+                        LOST</div>
+                    <div class="h-48 bg-surface-variant flex items-center justify-center relative">
+                        <div
+                            class="w-full h-full flex items-center justify-center bg-surface-variant border-2 border-dashed border-outline-variant text-on-surface-variant">
+                            <span class="material-symbols-outlined text-4xl opacity-50">image</span>
+                        </div>
+                    </div>
+                    <div class="p-md">
+                        <div
+                            class="flex items-center gap-xs text-on-surface-variant font-label-caps text-label-caps mb-xs">
+                            <span class="material-symbols-outlined text-sm">badge</span>
+                            <span class="">DOCUMENT</span>
+                        </div>
+                        <h3 class="font-body-bold text-body-bold text-on-background mb-sm truncate">Student ID - John
+                            Doe</h3>
+                        <div class="flex items-center gap-xs text-on-surface-variant text-sm mb-xs">
+                            <span class="material-symbols-outlined text-[16px]">location_on</span>
+                            <span class="truncate">Science Block Cafeteria</span>
+                        </div>
+                        <p class="text-sm text-error">Lost 5 hours ago</p>
+                    </div>
+                </div>
+                <div onclick="window.location.href='detail.html'"
+                    class="bg-surface-container-lowest rounded-[12px] border border-outline-variant overflow-hidden hover:shadow-md transition-shadow relative group cursor-pointer">
+                    <div
+                        class="absolute top-sm left-sm bg-primary text-on-primary px-sm py-xs rounded-full font-label-caps text-label-caps z-10 shadow-sm">
+                        FOUND</div>
+                    <div class="h-48 bg-surface-variant flex items-center justify-center relative">
+                        <div
+                            class="w-full h-full flex items-center justify-center bg-surface-variant border-2 border-dashed border-outline-variant text-on-surface-variant">
+                            <span class="material-symbols-outlined text-4xl opacity-50">image</span>
+                        </div>
+                    </div>
+                    <div class="p-md">
+                        <div
+                            class="flex items-center gap-xs text-on-surface-variant font-label-caps text-label-caps mb-xs">
+                            <span class="material-symbols-outlined text-sm">calculate</span>
+                            <span class="">ELECTRONICS</span>
+                        </div>
+                        <h3 class="font-body-bold text-body-bold text-on-background mb-sm truncate">Casio FX-991EX
+                            Calculator</h3>
+                        <div class="flex items-center gap-xs text-on-surface-variant text-sm mb-xs">
+                            <span class="material-symbols-outlined text-[16px]">location_on</span>
+                            <span class="truncate">Lecture Hall A</span>
+                        </div>
+                        <p class="text-sm text-on-secondary-container">Found Yesterday</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-xxl bg-surface-container-low rounded-xl px-lg mb-xxl">
+            <h2 class="font-headline-md text-headline-md text-on-background text-center mb-xl">How Lemon Works</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+                <div class="text-center p-md">
+                    <div
+                        class="w-16 h-16 bg-primary-container text-on-primary-container rounded-full flex items-center justify-center mx-auto mb-md shadow-sm">
+                        <span class="material-symbols-outlined" style="font-size: 32px;">campaign</span>
+                    </div>
+                    <h3 class="font-body-bold text-body-bold text-on-background mb-xs">1. Report</h3>
+                    <p class="font-body-base text-body-base text-on-surface-variant text-sm">Instantly log a lost or
+                        found item with details and a photo to start the process.</p>
+                </div>
+                <div class="text-center p-md">
+                    <div
+                        class="w-16 h-16 bg-primary-container text-on-primary-container rounded-full flex items-center justify-center mx-auto mb-md shadow-sm">
+                        <span class="material-symbols-outlined" style="font-size: 32px;">travel_explore</span>
+                    </div>
+                    <h3 class="font-body-bold text-body-bold text-on-background mb-xs">2. Search</h3>
+                    <p class="font-body-base text-body-base text-on-surface-variant text-sm">Browse the centralized
+                        database categorized by item type, location, and date.</p>
+                </div>
+                <div class="text-center p-md">
+                    <div
+                        class="w-16 h-16 bg-primary-container text-on-primary-container rounded-full flex items-center justify-center mx-auto mb-md shadow-sm">
+                        <span class="material-symbols-outlined" style="font-size: 32px;">handshake</span>
+                    </div>
+                    <h3 class="font-body-bold text-body-bold text-on-background mb-xs">3. Reclaim</h3>
+                    <p class="font-body-base text-body-base text-on-surface-variant text-sm">Verify ownership and
+                        coordinate securely to return the item to its owner.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="footer-placeholder"></div>
+</body>
+
+</html>

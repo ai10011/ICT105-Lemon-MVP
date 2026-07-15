@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en" style="">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Lemon Campus Security - Admin Portal</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed": "#e0e3e6",
+                        "surface-dim": "#dadada",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-container": "#fce134",
+                        "surface-container": "#eeeeee",
+                        "surface-bright": "#f9f9f9",
+                        "on-tertiary": "#ffffff",
+                        "on-surface-variant": "#4b4733",
+                        "error-container": "#ffdad6",
+                        "surface-variant": "#e2e2e2",
+                        "surface": "#f9f9f9",
+                        "on-primary-fixed": "#211c00",
+                        "outline-variant": "#cec6ac",
+                        "secondary-fixed-dim": "#c4c7ca",
+                        "on-secondary-fixed": "#181c1f",
+                        "surface-tint": "#6c5e00",
+                        "secondary": "#5b5f62",
+                        "on-secondary-container": "#5f6366",
+                        "inverse-on-surface": "#f0f1f1",
+                        "primary-fixed": "#fee336",
+                        "inverse-surface": "#2f3131",
+                        "inverse-primary": "#e0c70f",
+                        "tertiary-fixed": "#e8e3c4",
+                        "on-surface": "#1a1c1c",
+                        "on-secondary": "#ffffff",
+                        "surface-container-low": "#f3f3f3",
+                        "on-tertiary-fixed-variant": "#4a4831",
+                        "on-error": "#ffffff",
+                        "secondary-container": "#dde0e4",
+                        "surface-container-highest": "#e2e2e2",
+                        "error": "#ba1a1a",
+                        "outline": "#7d7760",
+                        "on-primary-fixed-variant": "#514700",
+                        "tertiary": "#625f47",
+                        "surface-container-high": "#e8e8e8",
+                        "on-background": "#1a1c1c",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed-dim": "#ccc7a9",
+                        "on-secondary-fixed-variant": "#43474a",
+                        "primary": "#6c5e00",
+                        "on-tertiary-fixed": "#1d1c09",
+                        "on-primary-container": "#716300",
+                        "background": "#f9f9f9",
+                        "tertiary-container": "#e6e1c2",
+                        "primary-fixed-dim": "#e0c70f",
+                        "on-tertiary-container": "#66644b",
+                        "on-primary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "md": "16px",
+                        "margin-desktop": "32px",
+                        "unit": "4px",
+                        "sm": "8px",
+                        "lg": "24px",
+                        "margin-mobile": "16px",
+                        "max-width": "1200px",
+                        "xs": "4px",
+                        "xl": "32px",
+                        "xxl": "48px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "headline-md-mobile": ["Plus Jakarta Sans"],
+                        "body-base": ["Plus Jakarta Sans"],
+                        "subheading-sm": ["Plus Jakarta Sans"],
+                        "label-caps": ["Plus Jakarta Sans"],
+                        "body-bold": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "display-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "headline-md-mobile": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "body-base": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "subheading-sm": ["18px", { "lineHeight": "26px", "letterSpacing": "-0.005em", "fontWeight": "600" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "body-bold": ["16px", { "lineHeight": "24px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+    <script src="Shared/components.js"></script>
+</head>
+
+<body class="bg-background text-on-background flex h-screen overflow-hidden">
+    <aside class="hidden md:flex flex-col h-full w-64 shadow-md p-md space-y-sm z-20 shrink-0 bg-on-surface">
+        <div class="mb-xl flex items-center space-x-md">
+            <div class="w-12 h-12 rounded-full overflow-hidden shrink-0 border-2 border-primary-container">
+                <img alt="Admin Avatar" class="w-full h-full object-cover"
+                    data-alt="A professional headshot of a campus security admin wearing a neat uniform, well-lit in a modern office environment. The lighting is crisp and the background is slightly blurred. The overall aesthetic implies trust, security, and competence."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPdnYxzjm37Bx7Szb3Z6OtRYS9BtZpdUSiQse3HEMk2P6flcwTHJnbTWbNtKWiJw33MFUSeUZ9HD9BZoaWuQ7kmabviBhuvxN32wJHjRiPp4cuqka_Bf45GKZKsweKn9so5CjCbtecip9BGKJan6ANah6_sP7zQ6Qylu84Cop7dPViAnAo-fH_09Ldj-msOlDxpK4zIJ2cXj6fxnJ_KiwPiyIYxEWObvfSi-tTK95HvLW8VI3j6IL3yrVBvsHu_m_qAKSkCraBROU">
+            </div>
+            <div>
+                <a href="index.html" class="font-headline-md text-headline-md text-primary-fixed truncate hover:opacity-80 transition-opacity block">Lemon Admin</a>
+                <p class="font-label-caps text-label-caps text-secondary-fixed-dim uppercase">University Station</p>
+            </div>
+        </div>
+        <nav class="flex-1 space-y-sm overflow-y-auto">
+            <a class="flex items-center space-x-md px-md py-sm bg-primary-container text-on-primary-container rounded-lg font-bold transition-all duration-200 ease-in-out group"
+                href="admin.html">
+                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+                <span class="font-subheading-sm text-subheading-sm">Dashboard</span>
+            </a>
+            <a class="flex items-center space-x-md px-md py-sm text-secondary-fixed-dim hover:text-secondary-fixed hover:bg-on-surface-variant/10 rounded-lg transition-all duration-200 ease-in-out group"
+                href="records.html">
+                <span
+                    class="material-symbols-outlined group-hover:text-primary-fixed transition-colors">inventory_2</span>
+                <span class="font-subheading-sm text-subheading-sm">Active Items</span>
+            </a>
+            <a class="flex items-center space-x-md px-md py-sm text-secondary-fixed-dim hover:text-secondary-fixed hover:bg-on-surface-variant/10 rounded-lg transition-all duration-200 ease-in-out group"
+                href="#">
+                <span
+                    class="material-symbols-outlined group-hover:text-primary-fixed transition-colors">verified_user</span>
+                <span class="font-subheading-sm text-subheading-sm">Claims</span>
+            </a>
+            <a class="flex items-center space-x-md px-md py-sm text-secondary-fixed-dim hover:text-secondary-fixed hover:bg-on-surface-variant/10 rounded-lg transition-all duration-200 ease-in-out group"
+                href="#">
+                <span
+                    class="material-symbols-outlined group-hover:text-primary-fixed transition-colors">apartment</span>
+                <span class="font-subheading-sm text-subheading-sm">Buildings</span>
+            </a>
+            <a class="flex items-center space-x-md px-md py-sm text-secondary-fixed-dim hover:text-secondary-fixed hover:bg-on-surface-variant/10 rounded-lg transition-all duration-200 ease-in-out group"
+                href="#">
+                <span class="material-symbols-outlined group-hover:text-primary-fixed transition-colors">settings</span>
+                <span class="font-subheading-sm text-subheading-sm">Settings</span>
+            </a>
+        </nav>
+        <button onclick="window.location.href='form.html'"
+            class="w-full mt-xl py-sm px-md bg-primary-container text-on-primary-container font-body-bold text-body-bold rounded-lg hover:bg-primary-fixed-dim active:scale-95 transition-all duration-150 shadow-sm flex items-center justify-center space-x-sm font-bold">
+            <span class="material-symbols-outlined">add_circle</span>
+            <span class="">Report Found Item</span>
+        </button>
+        <div class="mt-lg pt-lg border-t border-secondary-fixed/20 space-y-sm">
+            <a class="flex items-center space-x-md px-md py-sm text-secondary-fixed-dim hover:text-secondary-fixed hover:bg-on-surface-variant/10 rounded-lg transition-all duration-200 ease-in-out"
+                href="#">
+                <span class="material-symbols-outlined">help</span>
+                <span class="font-subheading-sm text-subheading-sm">Support</span>
+            </a>
+            <a class="flex items-center space-x-md px-md py-sm text-secondary-fixed-dim hover:text-secondary-fixed hover:bg-on-surface-variant/10 rounded-lg transition-all duration-200 ease-in-out"
+                href="login.html">
+                <span class="material-symbols-outlined">logout</span>
+                <span class="font-subheading-sm text-subheading-sm">Logout</span>
+            </a>
+        </div>
+    </aside>
+    <main class="flex-1 flex flex-col h-full overflow-hidden bg-background">
+        <header class="bg-primary-container shadow-sm z-10 shrink-0 border-b border-outline-variant h-16">
+            <div
+                class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-full w-full max-w-max-width mx-auto">
+                <button
+                    class="md:hidden p-sm text-primary active:scale-95 duration-150 rounded-full hover:bg-surface-container transition-colors">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+                <div class="flex items-center space-x-sm"><a href="index.html"
+                        class="font-display-lg text-headline-md font-black tracking-tight text-on-primary-container hover:opacity-80 transition-opacity">Lemon</a><span
+                        class="hidden sm:inline-block font-label-caps text-label-caps text-on-surface-variant ml-sm px-sm py-xs bg-surface-container-high rounded-full uppercase tracking-wider font-bold">Security
+                        Hub</span></div>
+                <div class="flex items-center space-x-lg">
+                    <div
+                        class="hidden lg:flex items-center border border-outline-variant rounded-full h-12 px-md focus-within:border-primary-container focus-within:ring-2 focus-within:ring-primary-container/20 transition-all shadow-sm bg-surface-container-low">
+                        <span class="material-symbols-outlined text-secondary">search</span>
+                        <input
+                            class="bg-transparent border-none focus:ring-0 text-body-base font-body-base text-on-surface placeholder-secondary w-64 ml-sm outline-none"
+                            placeholder="Search items, users, claims..." type="text">
+                        <div class="w-px h-6 bg-outline-variant mx-md"></div>
+                        <select
+                            class="bg-transparent border-none focus:ring-0 text-body-bold font-body-bold text-primary appearance-none cursor-pointer outline-none pr-md">
+                            <option>All Buildings</option>
+                            <option>Library</option>
+                            <option>Student Union</option>
+                        </select>
+                    </div>
+                    <button
+                        class="lg:hidden p-sm text-on-surface-variant hover:bg-surface-container rounded-full transition-colors active:scale-95 duration-150">
+                        <span class="material-symbols-outlined">search</span>
+                    </button>
+                    <div class="flex items-center space-x-sm">
+                        <button
+                            class="p-sm text-primary hover:bg-surface-container rounded-full transition-colors active:scale-95 duration-150 relative">
+                            <span class="material-symbols-outlined">notifications</span>
+                            <span
+                                class="absolute top-2 right-2 w-2.5 h-2.5 bg-error rounded-full border-2 border-surface-container-lowest"></span>
+                        </button>
+                        <button
+                            class="p-sm text-primary hover:bg-surface-container rounded-full transition-colors active:scale-95 duration-150 hidden md:block">
+                            <span class="material-symbols-outlined">account_circle</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="flex-1 overflow-y-auto p-margin-mobile md:p-margin-desktop lg:p-xxl">
+            <div class="max-w-max-width mx-auto space-y-xxl">
+                <div>
+                    <h2 class="font-display-lg text-display-lg text-on-surface mb-sm font-bold">Overview Dashboard</h2>
+                    <p class="font-body-base text-body-base text-on-surface-variant">Real-time campus security and lost
+                        property metrics.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+                    <div
+                        class="rounded-xl p-lg shadow-sm border border-outline-variant flex flex-col justify-between relative overflow-hidden group bg-on-surface">
+                        <div
+                            class="absolute -right-4 -top-4 w-24 h-24 bg-primary-container/10 rounded-full blur-2xl group-hover:bg-primary-container/20 transition-all">
+                        </div>
+                        <div class="flex justify-between items-start mb-lg relative z-10">
+                            <div>
+                                <p
+                                    class="font-label-caps text-label-caps text-secondary-fixed-dim uppercase tracking-wider mb-xs">
+                                    Total Items Secured</p>
+                                <h3 class="font-display-lg text-display-lg text-primary-fixed">1,248</h3>
+                            </div>
+                            <div class="p-sm bg-surface-tint/30 rounded-lg">
+                                <span class="material-symbols-outlined text-primary-fixed">inventory_2</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center text-secondary-fixed-dim text-sm relative z-10">
+                            <span class="material-symbols-outlined text-sm mr-xs text-[#a8c7fa]">trending_up</span>
+                            <span class="">+12% from last month</span>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-surface-container-lowest rounded-xl p-lg shadow-sm border border-outline-variant flex flex-col justify-between">
+                        <div class="flex justify-between items-start mb-lg">
+                            <div>
+                                <p
+                                    class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider mb-xs">
+                                    Pending Claims</p>
+                                <h3 class="font-display-lg text-display-lg text-on-surface">24</h3>
+                            </div>
+                            <div class="p-sm bg-primary-container rounded-lg">
+                                <span class="material-symbols-outlined text-on-primary-container">pending_actions</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center text-on-surface-variant text-sm">
+                            <span class="material-symbols-outlined text-sm mr-xs text-error">priority_high</span>
+                            <span class="">5 require urgent review</span>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-surface-container-lowest rounded-xl p-lg shadow-sm border border-outline-variant flex flex-col justify-between">
+                        <div class="flex justify-between items-start mb-lg">
+                            <div>
+                                <p
+                                    class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider mb-xs">
+                                    Claim Success Rate</p>
+                                <h3 class="font-display-lg text-display-lg text-on-surface">87.5%</h3>
+                            </div>
+                            <div class="p-sm bg-tertiary-container rounded-lg">
+                                <span class="material-symbols-outlined text-on-tertiary-container">done_all</span>
+                            </div>
+                        </div>
+                        <div class="w-full bg-surface-container h-2 rounded-full overflow-hidden mt-2">
+                            <div class="bg-primary h-full rounded-full" style="width: 87.5%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant overflow-hidden">
+                    <div
+                        class="p-lg border-b border-outline-variant flex justify-between items-center bg-surface-bright">
+                        <h3 class="font-headline-md text-headline-md text-on-surface">Recent Reports &amp; Claims</h3>
+                        <button
+                            class="text-primary font-body-bold text-body-bold hover:underline flex items-center font-bold">
+                            View All <span class="material-symbols-outlined ml-xs text-sm">arrow_forward</span>
+                        </button>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr
+                                    class="bg-surface text-on-surface-variant font-label-caps text-label-caps uppercase tracking-wider border-b border-outline-variant font-bold">
+                                    <th class="p-md font-semibold">Item Details</th>
+                                    <th class="p-md font-semibold">Status</th>
+                                    <th class="p-md font-semibold">Location</th>
+                                    <th class="p-md font-semibold">Date / Time</th>
+                                    <th class="p-md font-semibold text-right">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody class="font-body-base text-body-base divide-y divide-outline-variant">
+                                <tr class="hover:bg-surface-bright transition-colors group">
+                                    <td class="p-md flex items-center space-x-md">
+                                        <div
+                                            class="w-12 h-12 bg-surface-container rounded-lg flex items-center justify-center shrink-0 border border-outline-variant">
+                                            <span class="material-symbols-outlined text-secondary">laptop_mac</span>
+                                        </div>
+                                        <div>
+                                            <p
+                                                class="font-body-bold text-on-surface group-hover:text-primary transition-colors">
+                                                MacBook Pro 14"</p>
+                                            <p class="text-sm text-on-surface-variant">Silver, Black Case</p>
+                                        </div>
+                                    </td>
+                                    <td class="p-md">
+                                        <span
+                                            class="inline-flex items-center px-sm py-xs rounded-full text-xs font-bold bg-primary-container text-on-primary-container border border-primary/20">
+                                            <span class="material-symbols-outlined text-[14px] mr-1">pending</span>
+                                            Claim Pending
+                                        </span>
+                                    </td>
+                                    <td class="p-md text-on-surface-variant">Main Library, 2nd Floor</td>
+                                    <td class="p-md text-on-surface-variant">Oct 24, 2:15 PM</td>
+                                    <td class="p-md text-right">
+                                        <button
+                                            class="p-sm text-secondary hover:text-primary hover:bg-surface-container rounded-lg transition-colors active:scale-95">
+                                            <span class="material-symbols-outlined">more_vert</span>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-surface-bright transition-colors group">
+                                    <td class="p-md flex items-center space-x-md">
+                                        <div
+                                            class="w-12 h-12 bg-surface-container rounded-lg flex items-center justify-center shrink-0 border border-outline-variant">
+                                            <span
+                                                class="material-symbols-outlined text-secondary">account_balance_wallet</span>
+                                        </div>
+                                        <div>
+                                            <p
+                                                class="font-body-bold text-on-surface group-hover:text-primary transition-colors">
+                                                Leather Wallet</p>
+                                            <p class="text-sm text-on-surface-variant">Brown, Contains ID</p>
+                                        </div>
+                                    </td>
+                                    <td class="p-md">
+                                        <span
+                                            class="inline-flex items-center px-sm py-xs rounded-full text-xs font-bold bg-tertiary-container text-on-tertiary-container border border-tertiary/20">
+                                            <span class="material-symbols-outlined text-[14px] mr-1">check_circle</span>
+                                            Found
+                                        </span>
+                                    </td>
+                                    <td class="p-md text-on-surface-variant">Student Union Cafe</td>
+                                    <td class="p-md text-on-surface-variant">Oct 24, 11:30 AM</td>
+                                    <td class="p-md text-right">
+                                        <button
+                                            class="p-sm text-secondary hover:text-primary hover:bg-surface-container rounded-lg transition-colors active:scale-95">
+                                            <span class="material-symbols-outlined">more_vert</span>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-surface-bright transition-colors group">
+                                    <td class="p-md flex items-center space-x-md">
+                                        <div
+                                            class="w-12 h-12 bg-error-container rounded-lg flex items-center justify-center shrink-0 border border-error/20">
+                                            <span class="material-symbols-outlined text-error">key</span>
+                                        </div>
+                                        <div>
+                                            <p
+                                                class="font-body-bold text-on-surface group-hover:text-primary transition-colors">
+                                                Dorm Keys on Lanyard</p>
+                                            <p class="text-sm text-on-surface-variant">Red Lanyard, 3 keys</p>
+                                        </div>
+                                    </td>
+                                    <td class="p-md">
+                                        <span
+                                            class="inline-flex items-center px-sm py-xs rounded-full text-xs font-bold bg-error-container text-on-error-container border border-error/20">
+                                            <span class="material-symbols-outlined text-[14px] mr-1">warning</span> Lost
+                                            - Urgent
+                                        </span>
+                                    </td>
+                                    <td class="p-md text-on-surface-variant">Science Building West</td>
+                                    <td class="p-md text-on-surface-variant">Oct 23, 5:45 PM</td>
+                                    <td class="p-md text-right">
+                                        <button
+                                            class="p-sm text-secondary hover:text-primary hover:bg-surface-container rounded-lg transition-colors active:scale-95">
+                                            <span class="material-symbols-outlined">more_vert</span>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="bg-surface-container-lowest border-t border-outline-variant p-lg mt-auto">
+            <div class="max-w-max-width mx-auto flex flex-col md:flex-row justify-between items-center gap-md">
+                <p class="text-sm text-on-surface-variant">© 2026 Lemon Smart Campus. All rights reserved.</p>
+                <div class="flex flex-wrap justify-center gap-md"><a href="#"
+                        class="text-sm text-secondary hover:text-primary transition-colors">Campus Map</a><a href="#"
+                        class="text-sm text-secondary hover:text-primary transition-colors">Security Office</a><a
+                        href="#" class="text-sm text-secondary hover:text-primary transition-colors">Privacy
+                        Policy</a><a href="#"
+                        class="text-sm text-secondary hover:text-primary transition-colors">Contact Support</a></div>
+            </div>
+        </footer>
+</body>
+
+</html>

@@ -50,3 +50,27 @@ Students will use a simple digital lost-and-found system if it is faster and cle
 
 ## Example Experiment Type
 Clickable prototype, form-based simulation, or simple web prototype.
+
+# Lab 08 Case Study Brief - Smart Campus Lost-and-Found System
+
+## Case Context
+Students often lose items on campus and do not know where to report, search, or claim them. Existing workarounds include asking classmates, posting in chat groups, visiting offices, or waiting for someone to return the item.
+
+## MVP Experiment
+The practice MVP experiment tests whether users can:
+1. Report a lost item.
+2. Search found items.
+3. Open item details.
+4. Check item or claim status.
+5. Understand basic admin/status update logic.
+
+## Validation Goal
+The goal is to learn whether the proposed workflow is understandable, useful, and worth continuing before the final prototype implementation.
+
+## Practice Data
+Use the provided sample dataset:
+- `/data/validation-results-sample.csv`
+- `/data/validation-results-analytics.xlsx`
+
+## Student Group Task
+After studying this practice case, each group must create equivalent validation files using its own selected project case.

@@ -1,0 +1,16 @@
+[
+    {
+        "id": "usr_1784086268343",
+        "full_name": "Test",
+        "email": "test@test.com",
+        "password": "testtest",
+        "created_at": "2026-07-15T03:31:08.343Z"
+    },
+    {
+        "id": "usr_1784092843224",
+        "full_name": "Phollapat Rodchue",
+        "email": "phollapat.r68@rsu.ac.th",
+        "password": "ice11898",
+        "created_at": "2026-07-15T05:20:43.224Z"
+    }
+]
