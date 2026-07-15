@@ -53,5 +53,6 @@ Smart Campus Lost-and-Found System (Lemon MVP)
 | FR-12 | T008 failed (180s) & T014/T019 noted dashboard summary location was unclear. | Add direct navigation link for dashboard summary in main top header bar. |
 
 ## 8. Conclusion
-The current MVP direction is **partially validated** (55% fully validated, 25% partial signal). The team will **continue with minor revisions** to simplify form fields, deploy visual status badges, improve search filters, and elevate admin button visibility prior to full campus rollout.
+
+The current MVP direction is **mostly validated** (55% fully validated, 25% partially validated). The team will **move forward with minor revisions** to simplify the form fields, add visual status badges, improve search filters, and enhance the visibility of admin action buttons before the full campus rollout.
 
