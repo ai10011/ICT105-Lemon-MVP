@@ -224,30 +224,37 @@ The results from this experiment will help us improve the prototype before imple
 ## Lab 08: Customer Validation and Analytics Sheet
 
 ### Validation Objective
-Explain what the group tested.
+Evaluated core usability, task completion, and interest for key user flows (reporting lost items, searching found items, viewing item details, checking claim status, and administrative status updates) across student and staff user personas.
 
 ### Prototype Version Tested
-- Version:
-- Link:
-- Screenshots:
+- **Version:** v1
+- **Link:** [prototype/project/](prototype/project/) (`index.html`, `dashboard.html`, `form.html`, `detail.html`, `admin.html`)
+- **Screenshots:** [screenshots/project-dashboard.png](screenshots/project-dashboard.png)
 
 ### Analytics Summary
 | Metric | Result |
 |---|---:|
-| Total test users | |
-| Task success rate | |
-| Average feedback score | |
-| Average interest level | |
-| Main confusion point | |
+| Total test users | 20 Testers (T001 - T020) |
+| Task success rate | 80.00% (16 / 20) |
+| Average feedback score | 3.55 / 5.0 |
+| Average interest level | 3.80 / 5.0 (76.00%) |
+| Main confusion point | Dashboard location & Status wording |
 
 ### MVP Decision
-State whether the group will continue, revise, or collect more evidence.
+**Continue with minor revisions**. The MVP direction is validated by 80% positive directional signal (55% fully validated, 25% partial). The team will implement targeted usability improvements:
+1. **Form Input Streamlining (FR-10)**: Reduce mandatory required fields and provide inline tooltip guidance.
+2. **Visual Status Badges (FR-08)**: Replace text status labels with color-coded badges (Pending Review, Approved, Collected).
+3. **Reposition Dashboard Access (FR-12)**: Place a direct navigation link for the summary dashboard in the main header bar.
+4. **Enhanced Search Filters (FR-06)**: Add campus building dropdown options to location search filters.
+5. **Promote Admin CTA (FR-09)**: Make staff status update buttons easier to find on the administrative view.
 
-### Files Added
-- `/data/validation-results.xlsx`
-- `/data/validation-results.csv`
-- `/docs/customer-validation-summary.md`
-- `/docs/analytics-insights.md`
-- `/docs/mvp-decision.md`
-- `/screenshots/validation-test-screens.png`
-- `/docs/weekly-logbook.md`
+### Files Added / Updated
+- `data/validation-results.csv`
+- `data/test-users.csv`
+- `docs/customer-validation-summary.md`
+- `docs/analytics-insights.md`
+- `docs/mvp-decision.md`
+- `docs/test-user-notes.md`
+- `docs/weekly-logbook.md`
+- `screenshots/project-dashboard.png`
+
