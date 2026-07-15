@@ -1,7 +1,7 @@
 # Lab 08 - Customer Validation Summary
 
 ## 1. Project Title
-Write your group project title.
+Campus lost and found
 
 ## 2. Prototype Tested
 Describe the MVP experiment or prototype version tested.
