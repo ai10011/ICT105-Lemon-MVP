@@ -14,7 +14,7 @@ Semester-long IT startup MVP project for ICT105 Fundamental Technology Entrepren
 ## Team Members and Roles
 | Name | Role | Responsibility |
 |---|---|---|
-| Crystal | Product Lead | Define problem, target users, and value proposition |
+| Kyaw Ye LIn | Product Lead | Define problem, target users, and value proposition |
 | Phollapat Rodchue | Technical Lead | Manage repository and prototype feasibility |
 | Tin May Lin | UX/UI Lead  | Design interface |
 | Phoochit Jantakam | Documentation Lead | Maintain documentation |
