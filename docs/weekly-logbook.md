@@ -249,4 +249,25 @@ Smart Campus Lost-and-Found System
 | Prototype currently consists of static HTML pages without `localStorage` state updates across page navigations. | Implement `localStorage` JavaScript logic to dynamically save, display, and update item statuses. | Phollapat Rodchue |
 | Testers reported minor confusion with location dropdown choices and item status labels during usability testing. | Refine location input options, add explanatory tooltips for status labels, and add additional search filters. | Crystal (Kyaw Ye Lin) / Phoochit Jantakam / Tin May Lin |
 
+## Lab 08: Customer Validation & Analytics (July 2026)
 
+### 1. Lab Overview & Objective
+[cite_start]The core objective for this session was to transition from theoretical assumptions to empirical data by gathering concrete validation evidence for our Campus Lost-and-Found System[cite: 2, 3]. [cite_start]We aggregated raw user testing data into a structured analytics sheet, calculated our core baseline validation metrics, and established a data-backed MVP pivot/persevere decision[cite: 3].
+
+### 2. Team Reflection & MVP Status
+* [cite_start]**What Went Well:** The user cohort expressed massive interest in the solution, yielding an average interest score of 4.6 / 5.0[cite: 59]. [cite_start]The search and filter feature workflow proved highly effective for the majority of testers[cite: 62].
+* [cite_start]**Key Challenges:** Our testing uncovered significant friction in the image upload response times (FR-03) and admin backend status changes (FR-06), resulting in a 20% workflow failure rate[cite: 56, 63, 64]. 
+* [cite_start]**Definitive Strategy:** The team has officially elected to **Revise / Partially Change** our current MVP implementation layout before proceeding to full-scale development[cite: 18, 72].
+
+### 3. Explicit Member Contributions
+| Member Name | Role / Responsibility | Key Deliverables Completed |
+| --- | --- | --- |
+| Team Member 1 | Data Analyst | [cite_start]Built `/data/validation-results.xlsx`, set up mandatory data columns, and calculated validation metrics formulas[cite: 11, 12, 14]. |
+| Team Member 2 | Technical Writer | [cite_start]Authored `/docs/customer-validation-summary.md` and compiled qualitative tester feedback metrics[cite: 16, 38]. |
+| Team Member 3 | Product Owner | [cite_start]Formulated `/docs/analytics-insights.md`, `/docs/mvp-decision.md`, and created 7 distinct tracking issues on GitHub[cite: 17, 18, 22]. |
+| Team Member 4 | Quality Assurance | [cite_start]Conducted the usability testing walk-throughs with the 10 campus participants and captured `/screenshots/validation-test-screens.png`[cite: 26, 47, 53]. |
+
+### 4. Next Action Items (Sprint Backlog)
+1. [cite_start]Optimize the file ingestion pipeline to provide immediate visual feedback prompts upon asset uploads (FR-03)[cite: 67].
+2. [cite_start]Refactor administrative query speeds within the management dashboard queue (FR-06)[cite: 69].
+3. [cite_start]Add a global reset button to clear active query parameters within the item search views (FR-11)[cite: 71].
