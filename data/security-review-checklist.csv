@@ -1,0 +1,8 @@
+Area,Check_Question,Yes_No_Partial,Risk_Level,Mitigation_Action
+Input form,Are required fields validated?,Partial,Medium,Implement HTML5 required attributes and client-side JavaScript validation for item categories, dates, and mandatory fields in form.html.
+Input form,Are sensitive fields avoided?,Yes,Low,Form explicitly excludes passwords, financial info, and national IDs; collects pseudonyms and masked student IDs only.
+Admin function,Are admin actions separated from user actions?,Partial,High,Isolate admin management to admin.html and simulate role-based authorization checks in localStorage (components.js).
+Data display,Is private information hidden from public screens?,Yes,Low,Public record cards (records.html) display only item category, general location, and status badges; reporter emails and claim details remain admin-only.
+Status update,Can only admin/manager update status?,Partial,Medium,Restrict status modification options (Available, Claimed, In Review) to the dedicated Admin view and disable public status edits.
+Public links,Do public links expose hidden data?,Yes,Low,Detail view URLs (detail.html?id=LF-001) sanitize URL parameters and render only non-sensitive item metadata.
+Prototype data,Does the prototype use sample or masked data?,Yes,Low,Prototype uses fictional sample datasets (lost_found_sample_records.csv) with masked IDs (65XXXXX) and face-free sample images.

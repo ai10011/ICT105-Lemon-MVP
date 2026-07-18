@@ -1,0 +1,7 @@
+Asset_Name,Type,Source_URL,License_or_Permission,Used_In,Credit_Required,Risk_Level,Action
+Tailwind CSS Play CDN,CSS Framework,https://cdn.tailwindcss.com?plugins=forms,MIT License,All prototype HTML pages (index.html, form.html, records.html, detail.html, dashboard.html, admin.html, login.html, signup.html),No,Low,Keep for MVP prototype demo; compile static CSS for production build.
+Google Fonts (Plus Jakarta Sans),Font Family,https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans,SIL Open Font License 1.1,Web application typography across all pages,No,Low,Keep CDN link; bundle fonts locally for offline campus network deployment.
+Google Material Symbols Outlined,Icon Library,https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined,Apache License 2.0,UI navigation icons, buttons, status badges, and search filters,No,Low,Keep; maintain icon usage log for UI consistency.
+Express.js Server Framework,Backend Server Engine,https://expressjs.com,MIT License,prototype/project/server.js (local testing & API route simulation),No,Low,Keep for local development and testing environment.
+Google User Avatar Demo Asset,Image Asset,https://lh3.googleusercontent.com,Permissive Demo Asset,login.html, signup.html, and admin.html profile card components,No,Medium,Replace with local open-source SVG avatar illustrations prior to production release.
+Mermaid.js Diagramming Library,Diagram Renderer,https://mermaid.js.org,MIT License,System architecture and data flow diagrams (diagrams/*.mmd),No,Low,Keep for technical architecture and workflow visualization.

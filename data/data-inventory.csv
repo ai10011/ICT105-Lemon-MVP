@@ -1,0 +1,14 @@
+Data_Field,Example_Value,Purpose,Personal_Data,Sensitive_Data,Visibility,Keep_Remove_Replace,Responsible_Action
+record_id,LF-001,Unique identification key for lost/found item record,No,No,Public,Keep,Display as primary reference ID across search and detail views
+report_type,Lost,Categorize record as lost or found item,No,No,Public,Keep,Use for primary search filtering and matching engine logic
+item_type,Electronics,Classify item category (e.g. Card, Bag, Electronics),No,No,Public,Keep,Standardize options with dropdown selection in submission form
+item_name,Wireless earbuds,Brief title of reported item,Possibly,No,Public,Keep with caution,Avoid including full student names or sensitive text in item title
+location,Library Floor 2,Campus location where item was lost or found,No,No,Public,Keep,Use general campus building or zone name rather than precise personal spot
+date_reported,2026-07-01,Timestamp of report submission,No,No,Public,Keep,Standardize format (YYYY-MM-DD) for sorting and recency filtering
+reported_by_role,Student,Role of user submitting the report (Student, Staff, Security),No,No,Admin only,Keep,Restrict role metadata to administrative logging and audit views
+status,Pending,Workflow state (Pending, Available, In Review, Claimed, Closed),No,No,Public,Keep,Display color-coded status badges; restrict status edits to admin/staff
+Reporter nickname,Maya,Pseudonym to identify report owner without full legal name,Yes,No,Admin only,Keep,Hide from public view; use nickname or anonymous ID for privacy
+Student ID,6500001,Student identification number for claim verification,Yes,No,Admin only,Replace,Use masked student ID (e.g. 65XXXXX) or temporary claim security code
+Email,student@example.com,User contact email for status updates and match alerts,Yes,No,Admin only,Keep if needed,Do not display publicly; process notifications through backend/admin
+Item photo,sample_photo.jpg,Visual image of reported item to aid identification,Possibly,No,Public/limited,Keep with caution,Inspect upload to ensure no human faces or background personal details are visible
+Claim notes,Black cable with sticker,Detailed ownership proof for claim verification,Possibly,No,Admin only,Keep with caution,Store claim details in admin-only verification field; never display publicly
