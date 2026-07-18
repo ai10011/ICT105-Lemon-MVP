@@ -1,13 +1,16 @@
 # Basic Security Risk Check
 
+## Project Title
+**Lemon** - Smart Campus Lost-and-Found System
+
 | Area | Risk Question | Current Status | Risk Level | Mitigation | Owner |
 |---|---|---|---|---|---|
-| **Form input** | Can incomplete or invalid data be submitted? | Yes, front-end validation is currently missing on the text areas. | **Medium** | Implement standard HTML5 required attributes and backend validation rules using a validation library (e.g., Zod or Joi). | Frontend Dev |
-| **Admin function** | Can normal users access admin actions? | Currently, API routes for grading lack role-based checks; anyone with the URL can call them. | **High** | Implement a middleware check (`isAdmin` / `isTeacher`) on all grading and management API endpoints before execution. | Backend Dev |
-| **Data display** | Is private information visible to everyone? | Student grades are currently visible on a public dashboard view. | **High** | Restrict the dashboard query to filter records by the logged-in user's unique `student_id`. | Backend Dev / Database Eng |
-| **Status update** | Can records be edited without control? | Yes, an assignment status can be manually overwritten via raw API requests without a timestamp or log. | **Medium** | Implement an audit log table to track state changes and enforce state-machine logic (e.g., cannot change from "Graded" back to "Draft"). | Backend Dev |
-| **Public links** | Does a public link expose data that should be private? | Yes, uploaded assignment files are currently stored in a public S3 bucket with guessable sequential URLs. | **High** | Move files to a private bucket and generate time-limited, pre-signed URLs for authorized teachers/students only. | Cloud Architect |
-| **File upload** | If used, can unsafe or unrelated files be uploaded? | The upload input accepts any file extension up to 50MB. | **High** | Restrict allowed MIME types to `.pdf`, `.docx`, and `.zip`. Enforce a strict 5MB file size limit and run basic malware scanning if possible. | DevOps / Frontend Dev |
+| **Form input** | Can incomplete or invalid data be submitted? | Yes, client-side validation is missing on some text inputs in form.html. | **Medium** | Implement standard HTML5 required attributes, category dropdown validation, and character limits. | Lemon MVP Team |
+| **Admin function** | Can normal users access admin actions? | Prototype demo relies on client-side JS; admin functions require role segregation. | **High** | Isolate admin features in `admin.html` and simulate role-based authorization check in `components.js`. | Lemon MVP Team |
+| **Data display** | Is private information visible to everyone? | Reporter contact details could be exposed on public item listings. | **High** | Restrict public records view (`records.html`) to item category, location, and status badges; keep email in admin view. | Lemon MVP Team |
+| **Status update** | Can records be edited without control? | Item status updates could be triggered without administrative audit tracking. | **Medium** | Enforce status updates only through `admin.html` forms and log status changes with timestamps in localStorage. | Lemon MVP Team |
+| **Public links** | Does a public link expose data that should be private? | Item detail URLs (`detail.html?id=LF-001`) might render unmasked data if parameters are tampered with. | **Medium** | Sanitize URL query parameters and ensure `detail.html` only renders public non-sensitive attributes. | Lemon MVP Team |
+| **File upload** | If used, can unsafe or unrelated files be uploaded? | Image uploads currently accept any file type or large file sizes. | **High** | Restrict allowed MIME types to `.jpg`, `.png`, `.jpeg`, enforce a strict 5MB file size limit, and provide upload preview. | Lemon MVP Team |
 
 ## Security Decision
-- **Redesign required** (Due to high risks identified in Admin functions, Data display, and File uploads, implementation is paused until mitigations are actively in development).
+- **Safe to continue with revision** (Mitigations actively implemented for form validation, public data masking, and admin role separation).

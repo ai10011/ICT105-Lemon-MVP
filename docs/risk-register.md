@@ -1,27 +1,27 @@
 # Risk Register
 
+## Project Title
+**Lemon** - Smart Campus Lost-and-Found System
+
 | Risk ID | Category | Risk Description | Affected Feature / Requirement | Severity | Likelihood | Mitigation Action | Owner | GitHub Evidence | Status |
 |---|---|---|---|---|---|---|---|---|---|
-| R-01 | Privacy | Users may enter personal information when submitting lost item reports. | Lost Item Report Form (FR-03) | High | Medium | Display a privacy notice, request user consent, and collect only necessary information. | Lemon MVP Team | `/docs/consent.md` | Open |
-| R-02 | Ethical | Users may submit fake or misleading lost/found reports. | Report Submission (FR-02, FR-03) | Medium | Medium | Add report guidelines and allow administrators to review suspicious reports. | Lemon MVP Team | `/docs/risk-register.md` | Open |
-| R-03 | IP | Users may upload copyrighted images or content that they do not own. | Image Upload (FR-04) | Medium | Low | Inform users to upload only original or authorized images. | Lemon MVP Team | `/README.md` | Open |
-| R-04 | Security | Unauthorized users may access or modify report information. | Login and Report Management (FR-01, FR-09) | High | Medium | Implement authentication, input validation, and secure access control. | Lemon MVP Team | `/docs/security.md` | In Progress |
-| R-05 | Legal | Collecting user information without consent may violate privacy regulations. | User Registration and Feedback Collection | High | Low | Obtain user consent before collecting personal information and explain data usage. | Lemon MVP Team | `/docs/consent.md` | Open |
-| R-06 | Data Quality | Reports may contain incomplete, inaccurate, or duplicate information. | Report Form Validation (FR-03, FR-10) | Medium | High | Validate required fields and check for duplicate submissions before saving. | Lemon MVP Team | `/docs/validation.md` | In Progress |
+| R-01 | Privacy | Reporter email or contact info may be visible in public item list. | FR-05 View records | High | Medium | Show only item category and status publicly; restrict contact details to admin view. | Lemon MVP Team | `data/risk-register.csv` | Open |
+| R-02 | Security | Unauthenticated users may change item status in prototype demo. | FR-09 Admin function | High | Medium | Separate admin dashboard and simulate role-based authorization check in localStorage. | Lemon MVP Team | `data/security-review-checklist.csv` | Open |
+| R-03 | IP | Third-party icons or font assets used without clear licensing records. | UI consistency (FR-13) | Medium | Medium | Establish third-party asset register and verify open-source licenses. | Lemon MVP Team | `data/third-party-assets-register.csv` | In Progress |
+| R-04 | Ethical | Prototype landing page messaging may imply guaranteed item recovery rate. | FR-01 Homepage | Medium | Low | Rephrase messaging to emphasize centralized search/reporting rather than guaranteed recovery. | Lemon MVP Team | `docs/legal_ethical_checklist.md` | Closed |
+| R-05 | Data Quality | Duplicate item reports for the same lost item may confuse users and staff. | FR-06 Search & Filter | Medium | Medium | Add category/location filters and allow admin users to merge or flag duplicate entries. | Lemon MVP Team | `data/data-inventory.csv` | Open |
+| R-06 | Privacy | Uploaded item photos may accidentally reveal student faces or background personal info. | FR-03 Data Submission | High | Low | Provide photo upload guidelines (item-only closeups) and sanitize sample demo images. | Lemon MVP Team | `docs/privacy_and_data_protection.md` | Open |
+| R-07 | Operational | High search time leading students to abandon search within 24 hours if location is too vague. | FR-06 Search & Filter | High | Medium | Include specific campus building dropdowns and visual status badges to accelerate search. | Lemon MVP Team | `docs/update-requirements-note.md` | In Progress |
 
 ---
 
-# Overall Risk Decision
+## Overall Risk Decision
 
-The Lemon MVP prototype is **safe to continue developing** because the identified risks are manageable and do not prevent further usability testing or prototype evaluation.
+The Lemon MVP prototype is **safe to continue developing** because identified risks are manageable and actively mitigated through frontend data masking, role isolation, and clear user disclaimers.
 
-Before implementation, the project team should:
+Before final prototype evaluation, the project team will:
 
-1. Add a clear privacy notice and user consent statement.
-2. Validate all required form fields to improve data quality.
-3. Implement user authentication and access control.
-4. Review reports to reduce fake or inappropriate submissions.
-5. Ensure users upload only content they own.
-6. Follow applicable privacy regulations when collecting and storing user data.
-
-Once these mitigation measures are implemented, the prototype will be more secure, reliable, and suitable for deployment.
+1. Display the explicit user consent statement (`docs/user-consent-statement.md`) on report submission forms.
+2. Validate required form fields (`FR-10`) to ensure data accuracy.
+3. Restrict item status modifications (`FR-08`, `FR-09`) to administrative views (`admin.html`).
+4. Maintain third-party asset licensing tracking (`data/third-party-assets-register.csv`).
