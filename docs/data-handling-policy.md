@@ -43,17 +43,16 @@ Submitted reports are stored using a simulated data source suitable for the prot
 
 ## Data Minimization
 
-To protect user privacy, the prototype **does not collect** unnecessary personal information such as:
+To protect user privacy, the prototype minimizes personal data collection by:
 
-- Student ID
-- National ID or Passport Number
-- Home Address
-- Date of Birth
-- Financial or Payment Information
-- Passwords (if authentication is not implemented)
-- Any other sensitive personal information unrelated to the lost-and-found process
-
-Only the minimum information required to identify and return lost items is collected.
+- Using a masked Student ID (e.g., 65XXXXX) instead of displaying the full ID.
+- Keeping contact email visible only to administrators when required.
+- Using a nickname or anonymous identifier instead of a full legal name where possible.
+- Not collecting unnecessary sensitive information such as:
+  - National ID or Passport Number
+  - Home Address
+  - Date of Birth
+  - Financial or Payment Information
 
 ---
 
