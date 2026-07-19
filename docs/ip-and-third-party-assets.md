@@ -6,7 +6,7 @@
 | Plus Jakarta Sans | Font | https://fonts.google.com/specimen/Plus+Jakarta+Sans | SIL Open Font License | Main font used throughout the prototype | Yes | Low | Acknowledge Google Fonts |
 | Google Material Symbols | Icon Set | https://fonts.google.com/icons | Apache License 2.0 | Icons for navigation and interface elements | Yes | Low | Acknowledge Google Material Symbols |
 | HTML, CSS, JavaScript Source Code | Source Code | Created by the **Phollapat Rodchue** | Original Work | Prototype implementation | No | Low | No action required |
-| Project Documentation | Documentation | Created by the **all team member** | Original Work | Project reports and GitHub documentation | No | Low | No action required |
+| Project Documentation | Documentation | Created by the **Lemon Team** | Original Work | Project reports and GitHub documentation | No | Low | No action required |
 
 ---
 
