@@ -291,29 +291,50 @@ Smart Campus Lost-and-Found System
 
 ## Group Name
 
+Lemon
+
 ## Date
+
+20/07/2026
 
 ## Members Present
 
+- Kyaw Ye Lin
+- Phollapat Rodchue
+- Tin May Lin
+- Phoochit Jantakam
+
 ## Work Completed Today
-- Data inventory:
-- Privacy review:
-- Ethical review:
-- IP review:
-- Security review:
-- Risk register:
-- Requirements update note:
+
+- Data inventory: Completed the project data inventory and classified collected data according to personal data, sensitive data, visibility, and responsible handling.
+- Privacy review: Reviewed data collection, storage, access control, data minimization, and responsible data handling practices.
+- Ethical review: Completed the legal and ethical checklist and reviewed responsible use of user data.
+- IP review: Documented original work and third-party assets used in the prototype, including licenses and permissions.
+- Security review: Conducted a basic security risk assessment covering form validation, data visibility, admin access, status updates, and file uploads.
+- Risk register: Identified privacy, security, operational, and data quality risks together with mitigation actions.
+- Requirements update note: Reviewed system requirements and updated documentation to improve privacy, security, and responsible data handling.
 
 ## Member Contributions
-| Member | Contribution | GitHub Evidence |
+
+| Member Name | Contribution | GitHub Evidence |
 |---|---|---|
-| | | |
+| **Tin May Lin** | Authored `docs/legal-ethical-checklist.md`, `docs/privacy-and-data-protection.md`, and `docs/security-risk-check.md`. | `https://github.com/ai10011/ICT105-Lemon-MVP/commits/main/` |
+| **Phollapat Rodchue** | Prepared `data/data-inventory.csv`, `data/risk-register.csv`, `data/third-party-assets-register.csv`, and created `diagrams/privacy-security-review.png` and `screenshots/privacy-security-review.png`. | `https://github.com/ai10011/ICT105-Lemon-MVP/commits/main/` |
+| **Kyaw Ye Lin** | Authored `docs/data-handling-policy.md`, `docs/ip-and-third-party-assets.md`, updated `docs/weekly-logbook.md`, and `README.md`. | `https://github.com/ai10011/ICT105-Lemon-MVP/commits/main/` |
+| **Phoochit Jantakam** | Authored `docs/risk-register.md`, `docs/updated-requirements-note.md`, and `docs/user-consent-statement.md`. | `https://github.com/ai10011/ICT105-Lemon-MVP/commits/main/` |
 
 ## Decisions Made
 
+| Decision | Reason | Evidence / Requirement |
+|---|---|---|
+| Completed a project data inventory. | To identify what information is collected and how it should be handled responsibly. | `data/data-inventory.csv` |
+| Implemented a data handling policy. | To support privacy awareness and satisfy **FR-15: Basic privacy and responsible data handling**. | `docs/data-handling-policy.md` |
+| Reviewed intellectual property and third-party assets. | To ensure external resources are properly documented and licensed. | `docs/ip-and-third-party-assets.md` |
+| Performed a security and risk review. | To identify potential risks and define mitigation strategies before the final prototype. | `docs/security-risk-check.md`, `docs/risk-register.md` |
+| Updated project documentation. | To keep privacy, security, and project documentation consistent across the repository. | `docs/updated-requirements-note.md`, `README.md` |
+
 ## Issues / Blockers
 
+
 ## Next Action Before Lab 10
-
-
 
