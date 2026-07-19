@@ -335,6 +335,16 @@ Lemon
 
 ## Issues / Blockers
 
+- Verifying licenses and permissions for third-party assets used in the prototype.
+- Identifying the minimum personal information required while maintaining user privacy.
+- Reviewing potential security risks for public data display and administrator functions.
 
 ## Next Action Before Lab 10
+
+- Finalize all prototype features and complete any remaining improvements.
+- Apply additional input validation and privacy enhancements where necessary.
+- Review the complete prototype against **FR-01 to FR-16**.
+- Verify that all documentation and GitHub files remain consistent.
+- Prepare the final prototype demonstration and presentation.
+
 
