@@ -12,8 +12,8 @@ The prototype collects only the information necessary to support the campus lost
 | Lost/Found Location | Yes | Record where the item was lost or found |
 | Lost/Found Date | Yes | Record when the item was lost or found |
 | Item Image | Optional | Help users recognize the item |
-| Contact Email or Phone | Yes | Allow communication between users |
-| Report Status | Yes | Track the report status (Open, Claimed, Resolved) |
+| Contact Email | Yes | Allow communication & ownership verification (masked on public listings) |
+| Report Status | Yes | Track the report status (Pending, Available, In Review, Claimed, Closed) |
 
 ---
 
@@ -35,8 +35,8 @@ Submitted reports are stored using a simulated data source suitable for the prot
 
 | User Role | Permissions |
 |-----------|-------------|
-| Student | Create reports, view reports, and update the status of their own reports |
-| Administrator | View all reports, update report status, edit records, and remove invalid reports |
+| Student | Create lost/found reports, search records, and view public item listings |
+| Administrator / Security Staff | View all reports, update report status (Available, Claimed, In Review, Closed), edit records, and remove invalid reports |
 | Visitor (if allowed) | View publicly available lost and found reports only |
 
 ---
@@ -50,6 +50,7 @@ To protect user privacy, the prototype minimizes personal data collection by:
 - Using a nickname or anonymous identifier instead of a full legal name where possible.
 - Not collecting unnecessary sensitive information such as:
   - National ID or Passport Number
+  - Phone Number
   - Home Address
   - Date of Birth
   - Financial or Payment Information
@@ -63,6 +64,6 @@ The prototype follows responsible data handling practices by:
 - Collecting only data necessary for the lost-and-found process.
 - Using sample or masked data during demonstrations whenever possible.
 - Avoiding unnecessary sensitive personal information.
-- Restricting data modification to authorized users (e.g., report owners and administrators).
+- Restricting status updates and record modifications to authorized administrative roles (FR-09).
 - Explaining how collected data is used within the prototype.
 - Using data only for academic purposes as part of the ICT105 project.

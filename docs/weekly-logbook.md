@@ -318,10 +318,10 @@ Lemon
 
 | Member Name | Contribution | GitHub Evidence |
 |---|---|---|
-| **Tin May Lin** | Authored `docs/legal-ethical-checklist.md`, `docs/privacy-and-data-protection.md`, and `docs/security-risk-check.md`. | `https://github.com/ai10011/ICT105-Lemon-MVP/commits/main/` |
-| **Phollapat Rodchue** | Prepared `data/data-inventory.csv`, `data/risk-register.csv`, `data/third-party-assets-register.csv`, and created `diagrams/privacy-security-review.png` and `screenshots/privacy-security-review.png`. | `https://github.com/ai10011/ICT105-Lemon-MVP/commits/main/` |
-| **Kyaw Ye Lin** | Authored `docs/data-handling-policy.md`, `docs/ip-and-third-party-assets.md`, updated `docs/weekly-logbook.md`, and `README.md`. | `https://github.com/ai10011/ICT105-Lemon-MVP/commits/main/` |
-| **Phoochit Jantakam** | Authored `docs/risk-register.md`, `docs/updated-requirements-note.md`, and `docs/user-consent-statement.md`. | `https://github.com/ai10011/ICT105-Lemon-MVP/commits/main/` |
+| **Tin May Lin** (`meirosemary`) | Authored `docs/legal-ethical-checklist.md`, `docs/privacy-and-data-protection.md`, and `docs/security-risk-check.md`. | Issue `#62` (`https://github.com/ai10011/ICT105-Lemon-MVP/issues/62`) |
+| **Phollapat Rodchue** (`ai10011`) | Prepared `data/data-inventory.csv`, `data/risk-register.csv`, `data/third-party-assets-register.csv`, and created `diagrams/privacy-security-review.png` and `screenshots/privacy-security-review.png`. | Issue `#63` (`https://github.com/ai10011/ICT105-Lemon-MVP/issues/63`) |
+| **Phoochit Jantakam** (`Bilal112344`) | Authored `docs/risk-register.md`, `docs/updated-requirements-note.md`, and `docs/user-consent-statement.md`. | Issue `#64` (`https://github.com/ai10011/ICT105-Lemon-MVP/issues/64`) |
+| **Kyaw Ye Lin** (`kyawyel68-Crystal`) | Authored `docs/data-handling-policy.md`, `docs/ip-and-third-party-assets.md`, updated `docs/weekly-logbook.md`, and `README.md`. | Issue `#65` (`https://github.com/ai10011/ICT105-Lemon-MVP/issues/65`) |
 
 ## Decisions Made
 

@@ -8,8 +8,8 @@
 | Express.js | Backend Framework | https://expressjs.com | MIT License | Local development server and API route simulation | No | Low | Keep for local development and testing |
 | Google User Avatar Demo Asset | Image Asset | https://lh3.googleusercontent.com | Permissive Demo Asset | Sample user profile images used in the prototype | No | Medium | Replace with original or open-source images before production |
 | Mermaid.js | Diagram Library | https://mermaid.js.org | MIT License | System architecture and data flow diagrams | No | Low | Keep for technical documentation |
-| HTML, CSS, JavaScript Source Code | Source Code | Created by the **Phollapat Rodchue** | Original Work | Prototype implementation | No | Low | No action required |
-| Project Documentation | Documentation | Created by the **Lemon Team** | Original Work | Project reports and GitHub documentation | No | Low | No action required |
+| HTML, CSS, JavaScript Source Code | Source Code | Created by **Phollapat Rodchue** and the **Lemon MVP Team** | Original Work | Prototype implementation | No | Low | No action required |
+| Project Documentation | Documentation | Created by the **Lemon MVP Team** | Original Work | Project reports and GitHub documentation | No | Low | No action required |
 
 ---
 
@@ -20,23 +20,21 @@ This project contains both original work and third-party resources.
 ## Original Assets
 
 - HTML, CSS, and JavaScript source code created by the student team.
-- Prototype interface design.
-- Project documentation.
+- Prototype interface design and wireframe layouts.
+- Project documentation and technical architectural diagrams.
 
 ## Third-Party Assets
 
 The project uses the following third-party resources:
 
-- **Tailwind CSS** for interface styling.
-- **Plus Jakarta Sans** from Google Fonts for typography.
-- **Google Material Symbols** for icons.
-- **Express.js**
-- **Mermaid.js**
-- **Google User Avatar Demo Asset**(for demonstration purposes)
-
+- **Tailwind CSS** (MIT License) for interface styling and responsive layouts.
+- **Plus Jakarta Sans** (SIL Open Font License) from Google Fonts for web application typography.
+- **Google Material Symbols** (Apache License 2.0) for navigational icons and status indicators.
+- **Express.js** (MIT License) for local server development and API route simulation.
+- **Mermaid.js** (MIT License) for rendering dynamic system architecture and data flow diagrams.
+- **Google User Avatar Demo Asset** (Permissive Demo Asset) for sample profile display during testing.
 
 These resources are used according to their respective licenses and remain the property of their original owners.
-
 
 ## External APIs and Datasets
 

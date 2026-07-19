@@ -258,28 +258,44 @@ Evaluated core usability, task completion, and interest for key user flows (repo
 - `docs/weekly-logbook.md`
 - `screenshots/project-dashboard.png`
 
-# README Update Template for Lab 09
-
-Add this section to your project README.md.
-
 ## Lab 09 - Responsible IT Check
 
 ### Responsible Design Summary
-Explain the main privacy, ethical, IP, and basic security risks identified.
+In Lab 09, our group conducted a comprehensive responsible IT design evaluation for **Lemon - Smart Campus Lost-and-Found System**. We evaluated data privacy, ethical communication, intellectual property compliance, and basic web security:
+* **Privacy & Data Minimization**: Stripped unnecessary sensitive fields (Home Address, Phone Number, National ID). Personal contact details (email) and Student IDs are masked on public views (`65XXXXX`) and restricted to the admin dashboard (`admin.html`).
+* **Ethical Transparency**: Ensured clear educational MVP disclaimers and recovery expectations on the landing page so users understand that reporting does not guarantee recovery.
+* **IP & Licensing**: Verified all third-party UI assets (Tailwind CSS, Plus Jakarta Sans, Google Material Symbols, Mermaid.js, Express.js) under open-source licenses (MIT, SIL OFL, Apache 2.0).
+* **Basic Security**: Implemented client-side input validation, isolated administrative status updates behind role checks, and restricted file upload types (`.jpg`, `.png`, `< 5MB`).
 
-### Files Added
-- docs/legal-ethical-checklist.md
-- docs/privacy-and-data-protection.md
-- docs/ip-and-third-party-assets.md
-- docs/security-risk-check.md
-- docs/risk-register.md
-- docs/updated-requirements-note.md
-- docs/weekly-logbook.md
+### Files Added / Updated
+- `docs/legal-ethical-checklist.md`
+- `docs/privacy-and-data-protection.md`
+- `docs/ip-and-third-party-assets.md`
+- `docs/security-risk-check.md`
+- `docs/risk-register.md`
+- `docs/updated-requirements-note.md`
+- `docs/user-consent-statement.md`
+- `docs/data-handling-policy.md`
+- `docs/weekly-logbook.md`
+- `data/data-inventory.csv`
+- `data/risk-register.csv`
+- `data/third-party-assets-register.csv`
+- `diagrams/privacy-security-review.png`
+- `screenshots/privacy-security-review.png`
 
 ### Requirement Update
-State whether system-requirements.md changed after Lab 09.
+Core system requirements (`FR-01` through `FR-16` in `docs/system-requirements.md`) remain active. Responsible design updates were formally documented in `docs/updated-requirements-note.md`:
+- **FR-03**: Added photo guidelines (no human faces) and mandatory user consent check before submission (Issue `#62` & Issue `#64`).
+- **FR-06**: Added specific campus building dropdowns and visual status badges to prevent high search abandonment (Issue `#64`).
+- **FR-09**: Isolated administrative status updates to `admin.html` with simulated role authentication (Issue `#62` & Issue `#64`).
+- **FR-10**: Enforced mandatory field validation (category, location, date) with visual inline feedback (Issue `#62` & Issue `#64`).
 
 ### Team Contributions
-List what each member contributed to the GitHub repository.
+| Member Name | Role | Contribution | GitHub Evidence |
+|---|---|---|---|
+| **Tin May Lin** (`meirosemary`) | UX/UI Lead | Authored `docs/legal-ethical-checklist.md`, `docs/privacy-and-data-protection.md`, and `docs/security-risk-check.md` | Issue `#62` ([#62](https://github.com/ai10011/ICT105-Lemon-MVP/issues/62)) |
+| **Phollapat Rodchue** (`ai10011`) | Technical Lead | Prepared `data/data-inventory.csv`, `data/risk-register.csv`, `data/third-party-assets-register.csv`, and diagrams | Issue `#63` ([#63](https://github.com/ai10011/ICT105-Lemon-MVP/issues/63)) |
+| **Phoochit Jantakam** (`Bilal112344`) | Documentation Lead | Authored `docs/risk-register.md`, `docs/updated-requirements-note.md`, and `docs/user-consent-statement.md` | Issue `#64` ([#64](https://github.com/ai10011/ICT105-Lemon-MVP/issues/64)) |
+| **Kyaw Ye Lin** (`kyawyel68-Crystal`) | Product Lead | Authored `docs/data-handling-policy.md`, `docs/ip-and-third-party-assets.md`, updated `docs/weekly-logbook.md`, and `README.md` | Issue `#65` ([#65](https://github.com/ai10011/ICT105-Lemon-MVP/issues/65)) |
 
 
