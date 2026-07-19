@@ -239,7 +239,7 @@
                 <a class="font-body-bold text-body-bold text-primary hover:underline" href="records.html">View All</a>
             </div>
             <div id="recent-finds-grid" class="grid grid-cols-1 md:grid-cols-3 gap-lg">
-                <!-- Dynamically populated -->
+                
             </div>
         </section>
         <section class="py-xxl bg-surface-container-low rounded-xl px-lg mb-xxl">
@@ -296,7 +296,7 @@
                 });
             }
 
-            // Populate recent finds dynamically
+            
             const allRecords = await LemonData.getRecords();
             const activeRecords = allRecords.filter(r => !(r.reportType || '').toLowerCase().includes('completed'));
             const recent = activeRecords.slice(0, 3);

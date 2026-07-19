@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Login | Lemon Smart Campus</title>
-    <!-- Tailwind CSS -->
+    
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap"
         rel="stylesheet" />
@@ -133,7 +133,7 @@
     class="min-h-screen flex flex-col items-center justify-center p-margin-mobile md:p-margin-desktop overflow-x-hidden">
     <main
         class="w-full max-w-[1100px] grid grid-cols-1 lg:grid-cols-2 bg-surface-container-lowest rounded-xl shadow-[0_4px_6px_-1px_rgba(45,49,52,0.05)] border border-outline-variant overflow-hidden my-auto">
-        <!-- Brand/Visual Side -->
+        
         <section class="hidden lg:flex flex-col justify-between p-xxl bg-primary-container relative overflow-hidden">
             <div class="relative z-10">
                 <a href="index.html" class="inline-block mb-xl hover:opacity-80 transition-opacity">
@@ -144,7 +144,7 @@
                 <p class="font-body-base text-body-base text-on-primary-container opacity-80 max-w-[360px]">Join over
                     15,000 students and staff in creating a safer, more supportive campus environment.</p>
             </div>
-            <!-- Illustration Area -->
+            
             <div class="relative mt-auto pt-xxl">
                 <div
                     class="absolute -bottom-20 -right-20 w-80 h-80 bg-primary-fixed-dim rounded-full mix-blend-multiply filter blur-3xl opacity-50">
@@ -163,9 +163,9 @@
                 </div>
             </div>
         </section>
-        <!-- Form Side -->
+        
         <section class="p-lg md:p-xxl flex flex-col justify-center bg-surface-container-lowest">
-            <!-- Mobile Header Only -->
+            
             <div class="lg:hidden flex items-center gap-xs mb-lg">
                 <a href="index.html"
                     class="font-display-lg text-headline-md text-primary tracking-tighter hover:opacity-80 transition-opacity">Lemon</a>
@@ -181,7 +181,7 @@
                 <span id="error-message">Invalid email or password.</span>
             </div>
             <form id="login-form" class="space-y-lg">
-                <!-- Email Field -->
+                
                 <div class="space-y-xs">
                     <label class="font-body-bold text-body-bold text-on-surface" for="email">Email</label>
                     <div class="relative group">
@@ -192,7 +192,7 @@
                             id="email" placeholder="e.g. student@campus.edu" required="" type="email" />
                     </div>
                 </div>
-                <!-- Password Field -->
+                
                 <div class="space-y-xs">
                     <label class="font-body-bold text-body-bold text-on-surface" for="password">Password</label>
                     <div class="relative group">
@@ -208,12 +208,12 @@
                         </button>
                     </div>
                 </div>
-                <!-- Options Row -->
+                
                 <div class="flex items-center justify-end">
                     <a class="font-body-bold text-body-bold text-primary hover:underline transition-all" href="#">Forgot
                         Password?</a>
                 </div>
-                <!-- Action Button -->
+                
                 <button
                     class="w-full h-[52px] mt-md bg-primary-container text-on-primary-container font-body-bold text-body-base rounded-lg border border-primary flex items-center justify-center gap-sm transition-all btn-primary-hover active:opacity-80"
                     type="submit">
@@ -221,7 +221,7 @@
                     <span class="material-symbols-outlined">arrow_forward</span>
                 </button>
             </form>
-            <!-- Sign Up Redirect -->
+            
             <footer class="mt-xxl text-center">
                 <p class="font-body-base text-body-base text-on-surface-variant">
                     New to the campus portal?
@@ -229,7 +229,7 @@
                         href="signup.html">Sign Up</a>
                 </p>
             </footer>
-            <!-- Trust Badges -->
+            
             <div class="mt-lg flex justify-center gap-xl opacity-60">
                 <div class="flex items-center gap-xs">
                     <span class="material-symbols-outlined text-[18px]">verified_user</span>
@@ -242,7 +242,7 @@
             </div>
         </section>
     </main>
-    <!-- Minimal Footer -->
+    
     <footer
         class="w-full max-w-[1100px] mt-lg flex flex-col md:flex-row justify-between items-center py-md px-md opacity-60">
         <p class="font-body-base text-[14px] text-on-surface-variant">© 2026 Lemon Smart Campus. All rights reserved.
@@ -257,7 +257,7 @@
         </div>
     </footer>
     <script>
-        // Password visibility toggle logic
+        
         document.querySelectorAll('button[type="button"]').forEach(btn => {
             btn.addEventListener('click', function () {
                 const input = this.previousElementSibling;
@@ -293,7 +293,7 @@
                         }
                     }
                 } catch (err) {
-                    // try next URL
+                    
                 }
             }
 
@@ -312,7 +312,7 @@
             );
         }
 
-        // Login authentication logic
+        
         document.getElementById('login-form').addEventListener('submit', async function (e) {
             e.preventDefault();
             const emailInput = document.getElementById('email').value.trim();
@@ -324,7 +324,7 @@
 
             const matchedUser = await authenticateUser(emailInput, passwordInput);
 
-            // Log in matched user or create active session user
+            
             const activeUser = matchedUser || {
                 id: 'usr_' + Date.now(),
                 full_name: emailInput.split('@')[0] || 'Campus User',

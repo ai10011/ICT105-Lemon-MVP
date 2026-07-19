@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Sign Up | Lemon Smart Campus</title>
-    <!-- Tailwind CSS -->
+    
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap"
         rel="stylesheet" />
@@ -133,7 +133,7 @@
     class="min-h-screen flex flex-col items-center justify-center p-margin-mobile md:p-margin-desktop overflow-x-hidden">
     <main
         class="w-full max-w-[1100px] grid grid-cols-1 lg:grid-cols-2 bg-surface-container-lowest rounded-xl shadow-[0_4px_6px_-1px_rgba(45,49,52,0.05)] border border-outline-variant overflow-hidden my-auto">
-        <!-- Brand/Visual Side -->
+        
         <section class="hidden lg:flex flex-col justify-between p-xxl bg-primary-container relative overflow-hidden">
             <div class="relative z-10">
                 <a href="index.html" class="inline-block mb-xl hover:opacity-80 transition-opacity">
@@ -144,7 +144,7 @@
                 <p class="font-body-base text-body-base text-on-primary-container opacity-80 max-w-[360px]">Join over
                     15,000 students and staff in creating a safer, more supportive campus environment.</p>
             </div>
-            <!-- Illustration Area -->
+            
             <div class="relative mt-auto pt-xxl">
                 <div
                     class="absolute -bottom-20 -right-20 w-80 h-80 bg-primary-fixed-dim rounded-full mix-blend-multiply filter blur-3xl opacity-50">
@@ -163,9 +163,9 @@
                 </div>
             </div>
         </section>
-        <!-- Form Side -->
+        
         <section class="p-lg md:p-xxl flex flex-col justify-center bg-surface-container-lowest">
-            <!-- Mobile Header Only -->
+            
             <div class="lg:hidden flex items-center gap-xs mb-lg">
                 <a href="index.html"
                     class="font-display-lg text-headline-md text-primary tracking-tighter hover:opacity-80 transition-opacity">Lemon</a>
@@ -176,7 +176,7 @@
                     and claiming items.</p>
             </header>
             <form id="signup-form" class="space-y-lg" method="POST">
-                <!-- Full Name -->
+                
                 <div class="space-y-xs">
                     <label class="font-body-bold text-body-bold text-on-surface" for="full_name">Full Name</label>
                     <div class="relative group">
@@ -188,7 +188,7 @@
                             type="text" />
                     </div>
                 </div>
-                <!-- Email Field -->
+                
                 <div class="space-y-xs">
                     <label class="font-body-bold text-body-bold text-on-surface" for="email">Email</label>
                     <div class="relative group">
@@ -199,7 +199,7 @@
                             id="email" name="email" placeholder="e.g. student@campus.edu" required="" type="email" />
                     </div>
                 </div>
-                <!-- Password -->
+                
                 <div class="space-y-xs">
                     <label class="font-body-bold text-body-bold text-on-surface" for="password">Password</label>
                     <div class="relative group">
@@ -217,7 +217,7 @@
                     </div>
                 </div>
 
-                <!-- Action Button -->
+                
                 <button
                     class="w-full h-[52px] mt-md bg-primary-container text-on-primary-container font-body-bold text-body-base rounded-lg border border-primary flex items-center justify-center gap-sm transition-all btn-primary-hover active:opacity-80"
                     type="submit">
@@ -225,7 +225,7 @@
                     <span class="material-symbols-outlined">arrow_forward</span>
                 </button>
             </form>
-            <!-- Login Redirect -->
+            
             <footer class="mt-xxl text-center">
                 <p class="font-body-base text-body-base text-on-surface-variant">
                     Already have an account?
@@ -233,7 +233,7 @@
                         href="login.html">Login here</a>
                 </p>
             </footer>
-            <!-- Trust Badges -->
+            
             <div class="mt-lg flex justify-center gap-xl opacity-60">
                 <div class="flex items-center gap-xs">
                     <span class="material-symbols-outlined text-[18px]">verified_user</span>
@@ -246,7 +246,7 @@
             </div>
         </section>
     </main>
-    <!-- Minimal Footer -->
+    
     <footer
         class="w-full max-w-[1100px] mt-lg flex flex-col md:flex-row justify-between items-center py-md px-md opacity-60">
         <p class="font-body-base text-[14px] text-on-surface-variant">© 2026 Lemon Smart Campus. All rights reserved.
@@ -261,7 +261,7 @@
         </div>
     </footer>
     <script>
-        // Password visibility toggle logic
+        
         document.querySelectorAll('button[type="button"]').forEach(btn => {
             btn.addEventListener('click', function () {
                 const input = this.previousElementSibling;
@@ -278,14 +278,14 @@
             });
         });
 
-        // Signup form submission & JSON storage logic
+        
         document.getElementById('signup-form').addEventListener('submit', function (e) {
             e.preventDefault();
             const fullName = document.getElementById('full_name').value.trim();
             const email = document.getElementById('email').value.trim();
             const password = document.getElementById('password').value;
 
-            // Load existing users from localStorage
+            
             let users = [];
             const savedUsers = localStorage.getItem('lemon_users');
             if (savedUsers) {
@@ -296,7 +296,7 @@
                 }
             }
 
-            // Create new user record including password
+            
             const newUser = {
                 id: 'usr_' + Date.now(),
                 full_name: fullName,
@@ -307,11 +307,11 @@
 
             users.push(newUser);
 
-            // Save to localStorage
+            
             const jsonString = JSON.stringify(users, null, 2);
             localStorage.setItem('lemon_users', jsonString);
 
-            // Post to backend server at http://localhost:3000/api/signup to write to data/users.json on disk
+            
             fetch('http://localhost:3000/api/signup', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },

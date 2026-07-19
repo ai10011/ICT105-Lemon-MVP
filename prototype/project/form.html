@@ -357,7 +357,7 @@
                     created_at: new Date().toISOString()
                 };
 
-                // Save to localStorage
+                
                 let records = [];
                 try {
                     const saved = localStorage.getItem('lemon_records');
@@ -379,7 +379,7 @@
                     }
                 }
 
-                // Optional background sync if server is running
+                
                 if (window.location.protocol === 'http:' || window.location.protocol === 'https:') {
                     fetch('/api/records', {
                         method: 'POST',

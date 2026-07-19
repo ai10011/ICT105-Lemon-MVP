@@ -241,7 +241,7 @@ const server = http.createServer((req, res) => {
         return;
     }
 
-    // Serve static files
+    
     let urlPath = req.url.split('?')[0];
     if (urlPath.startsWith('/prototype/project/')) {
         urlPath = urlPath.replace('/prototype/project/', '/');

@@ -1,9 +1,4 @@
-/**
- * Lemon Smart Campus - Shared Components Loader & Auth Manager
- * Handles dynamic insertion of header and footer into prototype HTML pages,
- * sets active menu highlights, manages auth state, and intercepts access
- * to protected features with a sleek pop-up modal on public pages.
- */
+
 
 window.LemonData = {
     async getRecords() {
@@ -193,9 +188,9 @@ window.LemonData = {
         document.getElementById('cancel-auth-modal')?.addEventListener('click', removeModal);
     }
 
-    // Intercept clicks on links pointing to protected pages when not logged in
+    
     document.addEventListener('click', function (e) {
-        if (isLoggedIn()) return; // User IS logged in -> allow normal navigation!
+        if (isLoggedIn()) return; 
 
         const anchor = e.target.closest('a');
         if (!anchor) return;
@@ -211,7 +206,7 @@ window.LemonData = {
         }
     }, true);
 
-    // Direct page access check if user navigates directly to a protected URL while logged out
+    
     function checkDirectAccess() {
         const path = window.location.pathname;
         const pageName = path.substring(path.lastIndexOf('/') + 1) || 'index.html';
@@ -222,11 +217,11 @@ window.LemonData = {
                 const target = urlParams.get('target') || 'protected page';
                 showAuthModal(target);
             } else if (PROTECTED_PAGES.includes(pageName)) {
-                // Redirect from protected page to records.html so the modal pops up on records.html
+                
                 window.location.href = `records.html?auth_required=1&target=${encodeURIComponent(pageName)}`;
             }
         } else {
-            // User IS logged in -> clean up auth_required URL param if present
+            
             if (urlParams.get('auth_required') === '1') {
                 const cleanUrl = window.location.pathname;
                 window.history.replaceState({}, document.title, cleanUrl);

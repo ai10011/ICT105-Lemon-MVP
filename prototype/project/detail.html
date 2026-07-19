@@ -193,7 +193,7 @@
                         </div>
                     </div>
                     <div id="action-buttons-container" class="flex flex-col gap-md mt-auto">
-                        <!-- Dynamically rendered based on Lost vs Found vs My Report -->
+                        
                     </div>
                 </div>
             </div>
@@ -223,7 +223,7 @@
                 Reported on ${dateStr || 'Recent Date'} (${LemonData.formatTimeAgo(record.created_at || record.date)})
             `;
 
-            // Resolve Reporter Name
+            
             const reporterNameEl = document.getElementById('item-reporter-name');
             if (reporterNameEl) {
                 if (record.reporterName) {
@@ -261,7 +261,7 @@
                 badgeEl.className = `absolute top-4 left-4 ${badgeBg} px-3 py-1 rounded-full font-label-caps text-label-caps shadow-sm`;
             }
 
-            // Render dynamic action buttons
+            
             let currentUser = null;
             try {
                 const uStr = localStorage.getItem('lemon_current_user') || sessionStorage.getItem('lemon_current_user');
@@ -274,7 +274,7 @@
 
             if (actionContainer) {
                 if (isCompleted) {
-                    // Item already resolved & completed
+                    
                     actionContainer.innerHTML = `
                         <div class="w-full h-12 bg-emerald-100 border border-emerald-300 text-emerald-800 font-body-bold text-body-bold rounded-lg flex items-center justify-center gap-2 shadow-sm">
                             <span class="material-symbols-outlined text-lg">verified</span> Case Resolved & Closed
@@ -284,7 +284,7 @@
                         </button>
                     `;
                 } else if (isReporter && isClaimPending) {
-                    // Reporter viewing a post where someone requested to claim
+                    
                     actionContainer.innerHTML = `
                         <div class="bg-amber-50 border border-amber-300 rounded-xl p-md mb-xs text-amber-900 shadow-sm text-left">
                             <div class="flex items-start gap-sm">
@@ -357,7 +357,7 @@
                         window.location.reload();
                     });
                 } else if (isReporter) {
-                    // Own report (no claim pending)
+                    
                     actionContainer.innerHTML = `
                         <button id="primary-action-btn" class="w-full h-12 bg-primary text-on-primary font-body-bold text-body-bold rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2 shadow-sm">
                             <span class="material-symbols-outlined text-lg">check_circle</span> Mark as Resolved / Returned
@@ -391,7 +391,7 @@
                         window.location.href = 'dashboard.html';
                     });
                 } else if (isClaimer && isClaimPending) {
-                    // Logged in user requested to claim this item
+                    
                     actionContainer.innerHTML = `
                         <div class="w-full h-12 bg-amber-100 border border-amber-300 text-amber-900 font-body-bold text-body-bold rounded-lg flex items-center justify-center gap-2 shadow-sm mb-xs">
                             <span class="material-symbols-outlined text-lg">hourglass_top</span> You Requested to Claim This Item
@@ -401,7 +401,7 @@
                         </button>
                     `;
                 } else if (isFound) {
-                    // Visitor viewing a found item
+                    
                     actionContainer.innerHTML = `
                         <button id="primary-action-btn" class="w-full h-12 bg-primary-container text-on-primary-container font-body-bold text-body-bold rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2 shadow-sm">
                             <span class="material-symbols-outlined text-lg">verified</span> Claim This Item
@@ -460,7 +460,7 @@
                         }
                     });
                 } else {
-                    // Someone else lost an item -> Visitor wants to report finding it or contact owner
+                    
                     actionContainer.innerHTML = `
                         <button id="primary-action-btn" class="w-full h-12 bg-emerald-600 hover:bg-emerald-700 text-white font-body-bold text-body-bold rounded-lg transition-colors flex items-center justify-center gap-2 shadow-sm">
                             <span class="material-symbols-outlined text-lg">front_hand</span> I Found This Item!
