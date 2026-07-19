@@ -208,18 +208,21 @@
                 <div class="flex items-center px-md text-on-surface-variant">
                     <span class="material-symbols-outlined">search</span>
                 </div>
-                <input
+                <input id="home-search-input"
                     class="flex-grow h-full bg-transparent border-none focus:ring-0 text-body-base text-on-surface outline-none px-md"
                     placeholder="Search for keys, student ID, water bottle..." type="text">
                 <div class="h-8 w-px bg-outline-variant mx-2"></div>
-                <select
+                <select id="home-location-select"
                     class="h-full bg-transparent border-none focus:ring-0 text-body-base text-on-surface outline-none px-md appearance-none font-body-bold cursor-pointer">
-                    <option>All Buildings</option>
-                    <option>Main Library</option>
-                    <option>Science Block</option>
-                    <option>Student Union</option>
+                    <option value="">All Buildings</option>
+                    <option value="Main Library">Main Library</option>
+                    <option value="Student Union">Student Union</option>
+                    <option value="Science Building">Science Building</option>
+                    <option value="Engineering Block">Engineering Block</option>
+                    <option value="Cafeteria">Cafeteria</option>
+                    <option value="Other">Other</option>
                 </select>
-                <button onclick="window.location.href='records.html'"
+                <button id="home-search-btn"
                     class="bg-primary-container text-on-primary-container h-full px-lg rounded-[12px] font-body-bold hover:opacity-90 transition-opacity ml-xs text-body-bold">Search</button>
             </div>
             <div class="flex justify-center gap-md">
@@ -235,85 +238,8 @@
                 <h2 class="font-headline-md text-headline-md text-on-background">Recent Finds</h2>
                 <a class="font-body-bold text-body-bold text-primary hover:underline" href="records.html">View All</a>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
-                <div onclick="window.location.href='detail.html'"
-                    class="bg-surface-container-lowest rounded-[12px] border border-outline-variant overflow-hidden hover:shadow-md transition-shadow relative group cursor-pointer">
-                    <div
-                        class="absolute top-sm left-sm bg-primary text-on-primary px-sm py-xs rounded-full font-label-caps text-label-caps z-10 shadow-sm">
-                        FOUND</div>
-                    <div class="h-48 bg-surface-variant relative">
-                        <div
-                            class="w-full h-full flex items-center justify-center bg-surface-variant border-2 border-dashed border-outline-variant text-on-surface-variant">
-                            <span class="material-symbols-outlined text-4xl opacity-50">image</span>
-                        </div>
-                    </div>
-                    <div class="p-md">
-                        <div
-                            class="flex items-center gap-xs text-on-surface-variant font-label-caps text-label-caps mb-xs">
-                            <span class="material-symbols-outlined text-sm">water_bottle</span>
-                            <span class="">ACCESSORY</span>
-                        </div>
-                        <h3 class="font-body-bold text-body-bold text-on-background mb-sm truncate">Silver Hydro Flask
-                        </h3>
-                        <div class="flex items-center gap-xs text-on-surface-variant text-sm mb-xs">
-                            <span class="material-symbols-outlined text-[16px]">location_on</span>
-                            <span class="truncate">Main Library, 2nd Floor</span>
-                        </div>
-                        <p class="text-sm text-on-secondary-container">Found 2 hours ago</p>
-                    </div>
-                </div>
-                <div onclick="window.location.href='detail.html'"
-                    class="bg-surface-container-lowest rounded-[12px] border border-outline-variant overflow-hidden hover:shadow-md transition-shadow relative group cursor-pointer">
-                    <div
-                        class="absolute top-sm left-sm bg-error text-on-error px-sm py-xs rounded-full font-label-caps text-label-caps z-10 shadow-sm">
-                        LOST</div>
-                    <div class="h-48 bg-surface-variant flex items-center justify-center relative">
-                        <div
-                            class="w-full h-full flex items-center justify-center bg-surface-variant border-2 border-dashed border-outline-variant text-on-surface-variant">
-                            <span class="material-symbols-outlined text-4xl opacity-50">image</span>
-                        </div>
-                    </div>
-                    <div class="p-md">
-                        <div
-                            class="flex items-center gap-xs text-on-surface-variant font-label-caps text-label-caps mb-xs">
-                            <span class="material-symbols-outlined text-sm">badge</span>
-                            <span class="">DOCUMENT</span>
-                        </div>
-                        <h3 class="font-body-bold text-body-bold text-on-background mb-sm truncate">Student ID - John
-                            Doe</h3>
-                        <div class="flex items-center gap-xs text-on-surface-variant text-sm mb-xs">
-                            <span class="material-symbols-outlined text-[16px]">location_on</span>
-                            <span class="truncate">Science Block Cafeteria</span>
-                        </div>
-                        <p class="text-sm text-error">Lost 5 hours ago</p>
-                    </div>
-                </div>
-                <div onclick="window.location.href='detail.html'"
-                    class="bg-surface-container-lowest rounded-[12px] border border-outline-variant overflow-hidden hover:shadow-md transition-shadow relative group cursor-pointer">
-                    <div
-                        class="absolute top-sm left-sm bg-primary text-on-primary px-sm py-xs rounded-full font-label-caps text-label-caps z-10 shadow-sm">
-                        FOUND</div>
-                    <div class="h-48 bg-surface-variant flex items-center justify-center relative">
-                        <div
-                            class="w-full h-full flex items-center justify-center bg-surface-variant border-2 border-dashed border-outline-variant text-on-surface-variant">
-                            <span class="material-symbols-outlined text-4xl opacity-50">image</span>
-                        </div>
-                    </div>
-                    <div class="p-md">
-                        <div
-                            class="flex items-center gap-xs text-on-surface-variant font-label-caps text-label-caps mb-xs">
-                            <span class="material-symbols-outlined text-sm">calculate</span>
-                            <span class="">ELECTRONICS</span>
-                        </div>
-                        <h3 class="font-body-bold text-body-bold text-on-background mb-sm truncate">Casio FX-991EX
-                            Calculator</h3>
-                        <div class="flex items-center gap-xs text-on-surface-variant text-sm mb-xs">
-                            <span class="material-symbols-outlined text-[16px]">location_on</span>
-                            <span class="truncate">Lecture Hall A</span>
-                        </div>
-                        <p class="text-sm text-on-secondary-container">Found Yesterday</p>
-                    </div>
-                </div>
+            <div id="recent-finds-grid" class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+                <!-- Dynamically populated -->
             </div>
         </section>
         <section class="py-xxl bg-surface-container-low rounded-xl px-lg mb-xxl">
@@ -350,6 +276,87 @@
         </section>
     </main>
     <div id="footer-placeholder"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', async function () {
+            const searchInput = document.getElementById('home-search-input');
+            const locSelect = document.getElementById('home-location-select');
+            const searchBtn = document.getElementById('home-search-btn');
+
+            function performSearch() {
+                const searchVal = searchInput ? searchInput.value.trim() : '';
+                const locVal = locSelect ? locSelect.value : '';
+                window.location.href = `records.html?search=${encodeURIComponent(searchVal)}&location=${encodeURIComponent(locVal)}`;
+            }
+
+            if (searchBtn) searchBtn.addEventListener('click', performSearch);
+            if (searchInput) {
+                searchInput.addEventListener('keypress', function (e) {
+                    if (e.key === 'Enter') performSearch();
+                });
+            }
+
+            // Populate recent finds dynamically
+            const allRecords = await LemonData.getRecords();
+            const activeRecords = allRecords.filter(r => !(r.reportType || '').toLowerCase().includes('completed'));
+            const recent = activeRecords.slice(0, 3);
+            const grid = document.getElementById('recent-finds-grid');
+
+            if (!grid) return;
+
+            if (recent.length === 0) {
+                grid.innerHTML = `
+                    <div class="col-span-full py-lg text-center bg-surface-container-lowest rounded-xl border border-outline-variant p-md">
+                        <p class="text-on-surface-variant text-sm">No items submitted yet. Use "Report an Item" to add one!</p>
+                    </div>
+                `;
+                return;
+            }
+
+            grid.innerHTML = recent.map(rec => {
+                const isFound = (rec.reportType || '').toLowerCase().includes('found');
+                const badgeClass = isFound ? 'bg-primary text-on-primary' : 'bg-error text-on-error';
+                const badgeText = isFound ? 'FOUND' : 'LOST';
+                const photoSrc = rec.photoPath || rec.photoData || null;
+
+                let mediaHtml = `
+                    <div class="w-full h-full flex items-center justify-center bg-surface-variant border-2 border-dashed border-outline-variant text-on-surface-variant">
+                        <span class="material-symbols-outlined text-4xl opacity-50">image</span>
+                    </div>
+                `;
+                if (photoSrc) {
+                    mediaHtml = `<img src="${photoSrc}" alt="${rec.itemName}" class="w-full h-full object-cover">`;
+                }
+
+                const category = (rec.category || 'General').toUpperCase();
+                const timeAgo = LemonData.formatTimeAgo(rec.created_at || rec.date);
+
+                return `
+                    <div onclick="window.location.href='detail.html?id=${encodeURIComponent(rec.id)}'"
+                        class="bg-surface-container-lowest rounded-[12px] border border-outline-variant overflow-hidden hover:shadow-md transition-shadow relative group cursor-pointer">
+                        <div class="absolute top-sm left-sm ${badgeClass} px-sm py-xs rounded-full font-label-caps text-label-caps z-10 shadow-sm">
+                            ${badgeText}
+                        </div>
+                        <div class="h-48 bg-surface-variant relative overflow-hidden">
+                            ${mediaHtml}
+                        </div>
+                        <div class="p-md">
+                            <div class="flex items-center gap-xs text-on-surface-variant font-label-caps text-label-caps mb-xs">
+                                <span class="material-symbols-outlined text-sm">label</span>
+                                <span class="">${category}</span>
+                            </div>
+                            <h3 class="font-body-bold text-body-bold text-on-background mb-sm truncate">${rec.itemName || 'Unnamed Item'}</h3>
+                            <div class="flex items-center gap-xs text-on-surface-variant text-sm mb-xs">
+                                <span class="material-symbols-outlined text-[16px]">location_on</span>
+                                <span class="truncate">${rec.location || 'Campus'}</span>
+                            </div>
+                            <p class="text-sm text-on-secondary-container">Reported ${timeAgo}</p>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        });
+    </script>
 </body>
 
 </html>

@@ -192,13 +192,13 @@
                         <h3 class="font-body-bold text-body-bold text-on-surface-variant mb-sm">Status</h3>
                         <div class="flex flex-col gap-sm">
                             <label class="flex items-center gap-sm">
-                                <input checked=""
+                                <input id="filter-lost" checked=""
                                     class="rounded border-outline-variant text-primary focus:ring-primary h-5 w-5"
                                     type="checkbox">
                                 <span class="">Lost</span>
                             </label>
                             <label class="flex items-center gap-sm">
-                                <input checked=""
+                                <input id="filter-found" checked=""
                                     class="rounded border-outline-variant text-primary focus:ring-primary h-5 w-5"
                                     type="checkbox">
                                 <span class="">Found</span>
@@ -208,28 +208,31 @@
                     <hr class="border-outline-variant">
                     <div>
                         <h3 class="font-body-bold text-body-bold text-on-surface-variant mb-sm">Item Type</h3>
-                        <select
+                        <select id="filter-category"
                             class="w-full h-12 bg-surface-container-lowest border border-outline-variant rounded-lg px-md focus:border-primary focus:ring-1 focus:ring-primary">
-                            <option>All Types</option>
-                            <option>Electronics</option>
-                            <option>ID &amp; Cards</option>
-                            <option>Keys</option>
-                            <option>Clothing</option>
+                            <option value="">All Types</option>
+                            <option value="Electronics">Electronics</option>
+                            <option value="Stationery">Stationery</option>
+                            <option value="Personal">Personal</option>
+                            <option value="Clothing">Clothing</option>
+                            <option value="Other">Other</option>
                         </select>
                     </div>
                     <hr class="border-outline-variant">
                     <div>
                         <h3 class="font-body-bold text-body-bold text-on-surface-variant mb-sm">Location</h3>
-                        <select
+                        <select id="filter-location"
                             class="w-full h-12 bg-surface-container-lowest border border-outline-variant rounded-lg px-md focus:border-primary focus:ring-1 focus:ring-primary">
-                            <option>All Locations</option>
-                            <option>Main Library</option>
-                            <option>Student Union</option>
-                            <option>Engineering Block</option>
-                            <option>Cafeteria</option>
+                            <option value="">All Locations</option>
+                            <option value="Main Library">Main Library</option>
+                            <option value="Student Union">Student Union</option>
+                            <option value="Science Building">Science Building</option>
+                            <option value="Engineering Block">Engineering Block</option>
+                            <option value="Cafeteria">Cafeteria</option>
+                            <option value="Other">Other</option>
                         </select>
                     </div>
-                    <button
+                    <button id="filter-reset"
                         class="w-full h-12 border border-outline text-on-surface font-body-bold rounded-lg mt-md hover:bg-surface-container-low transition-colors">
                         Reset Filters
                     </button>
@@ -238,119 +241,152 @@
         </aside>
         <div class="flex-grow flex flex-col gap-lg">
             <div
-                class="md:hidden flex items-center bg-surface-container-lowest border border-outline-variant rounded-full px-md h-12 shadow-sm">
+                class="flex items-center bg-surface-container-lowest border border-outline-variant rounded-full px-md h-12 shadow-sm">
                 <span class="material-symbols-outlined text-on-surface-variant"
                     style="font-variation-settings: 'FILL' 0;">search</span>
-                <input class="bg-transparent border-none focus:ring-0 text-body-base w-full ml-sm"
+                <input id="filter-search"
+                    class="bg-transparent border-none focus:ring-0 text-body-base w-full ml-sm outline-none"
                     placeholder="Search items..." type="text">
             </div>
             <div class="flex justify-between items-center mb-sm">
                 <h1 class="font-headline-md text-headline-md text-on-surface">Browse Items</h1>
-                <span class="text-on-surface-variant font-body-base">Showing 24 results</span>
+                <span id="results-counter" class="text-on-surface-variant font-body-base">Showing 0 results</span>
             </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-lg">
-                <div
-                    class="bg-surface-container-lowest rounded-xl border border-outline-variant shadow-sm overflow-hidden flex flex-col hover:shadow-md transition-shadow relative">
-                    <span
-                        class="absolute top-sm left-sm bg-error text-on-error font-label-caps text-label-caps px-sm py-xs rounded-full z-10">LOST</span>
-                    <div class="h-48 bg-surface-container-highest relative">
-                        <div
-                            class="w-full h-full flex items-center justify-center bg-surface-variant border-2 border-dashed border-outline-variant text-on-surface-variant">
-                            <span class="material-symbols-outlined text-4xl opacity-50">image</span>
-                        </div>
-                    </div>
-                    <div class="p-md flex-grow flex flex-col">
-                        <h3 class="font-body-bold text-body-bold text-on-surface mb-xs line-clamp-1">iPhone 13 Pro -
-                            Blue</h3>
-                        <p class="text-on-surface-variant text-sm mb-md flex items-center gap-xs">
-                            <span class="material-symbols-outlined text-[16px]">location_on</span> Main Library
-                        </p>
-                        <div class="mt-auto">
-                            <p class="text-on-surface-variant text-xs mb-sm">Reported 2 hours ago</p>
-                            <button onclick="window.location.href='detail.html'"
-                                class="w-full h-10 border border-outline-variant text-on-surface font-body-bold rounded-lg hover:bg-surface-container-low transition-colors">View
-                                Details</button>
-                        </div>
-                    </div>
-                </div>
-                <div
-                    class="bg-surface-container-lowest rounded-xl border border-outline-variant shadow-sm overflow-hidden flex flex-col hover:shadow-md transition-shadow relative">
-                    <span
-                        class="absolute top-sm left-sm bg-primary text-on-primary font-label-caps text-label-caps px-sm py-xs rounded-full z-10">FOUND</span>
-                    <div class="h-48 bg-surface-container-highest relative flex items-center justify-center">
-                        <span
-                            class="material-symbols-outlined text-[64px] text-on-surface-variant opacity-50">headphones</span>
-                    </div>
-                    <div class="p-md flex-grow flex flex-col">
-                        <h3 class="font-body-bold text-body-bold text-on-surface mb-xs line-clamp-1">Sony WH-1000XM4
-                        </h3>
-                        <p class="text-on-surface-variant text-sm mb-md flex items-center gap-xs">
-                            <span class="material-symbols-outlined text-[16px]">location_on</span> Cafeteria
-                        </p>
-                        <div class="mt-auto">
-                            <p class="text-on-surface-variant text-xs mb-sm">Reported 5 hours ago</p>
-                            <button onclick="window.location.href='detail.html'"
-                                class="w-full h-10 border border-outline-variant text-on-surface font-body-bold rounded-lg hover:bg-surface-container-low transition-colors">View
-                                Details</button>
-                        </div>
-                    </div>
-                </div>
-                <div
-                    class="bg-surface-container-lowest rounded-xl border border-outline-variant shadow-sm overflow-hidden flex flex-col hover:shadow-md transition-shadow relative">
-                    <span
-                        class="absolute top-sm left-sm bg-error text-on-error font-label-caps text-label-caps px-sm py-xs rounded-full z-10">LOST</span>
-                    <div class="h-48 bg-surface-container-highest relative flex items-center justify-center">
-                        <span
-                            class="material-symbols-outlined text-[64px] text-on-surface-variant opacity-50">badge</span>
-                    </div>
-                    <div class="p-md flex-grow flex flex-col">
-                        <h3 class="font-body-bold text-body-bold text-on-surface mb-xs line-clamp-1">Student ID Card -
-                            Justin</h3>
-                        <p class="text-on-surface-variant text-sm mb-md flex items-center gap-xs">
-                            <span class="material-symbols-outlined text-[16px]">location_on</span> Engineering Block
-                        </p>
-                        <div class="mt-auto">
-                            <p class="text-on-surface-variant text-xs mb-sm">Reported 1 day ago</p>
-                            <button onclick="window.location.href='detail.html'"
-                                class="w-full h-10 border border-outline-variant text-on-surface font-body-bold rounded-lg hover:bg-surface-container-low transition-colors">View
-                                Details</button>
-                        </div>
-                    </div>
-                </div>
-                <div
-                    class="bg-surface-container-lowest rounded-xl border border-outline-variant shadow-sm overflow-hidden flex flex-col hover:shadow-md transition-shadow relative">
-                    <span
-                        class="absolute top-sm left-sm bg-primary text-on-primary font-label-caps text-label-caps px-sm py-xs rounded-full z-10">FOUND</span>
-                    <div class="h-48 bg-surface-container-highest relative">
-                        <div
-                            class="w-full h-full flex items-center justify-center bg-surface-variant border-2 border-dashed border-outline-variant text-on-surface-variant">
-                            <span class="material-symbols-outlined text-4xl opacity-50">image</span>
-                        </div>
-                    </div>
-                    <div class="p-md flex-grow flex flex-col">
-                        <h3 class="font-body-bold text-body-bold text-on-surface mb-xs line-clamp-1">Hydroflask Silver
-                            32oz</h3>
-                        <p class="text-on-surface-variant text-sm mb-md flex items-center gap-xs">
-                            <span class="material-symbols-outlined text-[16px]">location_on</span> Student Union
-                        </p>
-                        <div class="mt-auto">
-                            <p class="text-on-surface-variant text-xs mb-sm">Reported 2 days ago</p>
-                            <button onclick="window.location.href='detail.html'"
-                                class="w-full h-10 border border-outline-variant text-on-surface font-body-bold rounded-lg hover:bg-surface-container-low transition-colors">View
-                                Details</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="flex justify-center mt-lg">
-                <button
-                    class="h-12 px-xl bg-primary-fixed text-on-primary-fixed font-body-bold rounded-full hover:shadow-md transition-all">
-                    Load More
-                </button>
+            <div id="records-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-lg">
+                <!-- Records dynamically populated here -->
             </div>
         </div>
     </main>
     <div id="footer-placeholder"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', async function () {
+            let allRecords = await LemonData.getRecords();
+
+            const grid = document.getElementById('records-grid');
+            const counter = document.getElementById('results-counter');
+            const filterLost = document.getElementById('filter-lost');
+            const filterFound = document.getElementById('filter-found');
+            const filterCategory = document.getElementById('filter-category');
+            const filterLocation = document.getElementById('filter-location');
+            const filterSearch = document.getElementById('filter-search');
+            const filterReset = document.getElementById('filter-reset');
+
+            // Parse query params (e.g. from homepage search bar)
+            const urlParams = new URLSearchParams(window.location.search);
+            const initialSearch = urlParams.get('search');
+            const initialLocation = urlParams.get('location');
+            if (initialSearch) filterSearch.value = initialSearch;
+            if (initialLocation && initialLocation !== 'All Buildings') {
+                for (let option of filterLocation.options) {
+                    if (option.text.toLowerCase().includes(initialLocation.toLowerCase()) || initialLocation.toLowerCase().includes(option.value.toLowerCase())) {
+                        filterLocation.value = option.value;
+                        break;
+                    }
+                }
+            }
+
+            function render() {
+                const searchVal = filterSearch.value.trim().toLowerCase();
+                const catVal = filterCategory.value.toLowerCase();
+                const locVal = filterLocation.value.toLowerCase();
+                const showLost = filterLost.checked;
+                const showFound = filterFound.checked;
+
+                const filtered = allRecords.filter(rec => {
+                    const status = (rec.reportType || '').toLowerCase();
+                    if (status.includes('completed')) return false;
+
+                    const isFound = status.includes('found');
+                    const isLost = status.includes('lost') || !isFound;
+
+                    if (isLost && !showLost) return false;
+                    if (isFound && !showFound) return false;
+
+                    if (catVal && !(rec.category || '').toLowerCase().includes(catVal)) return false;
+                    if (locVal && !(rec.location || '').toLowerCase().includes(locVal)) return false;
+
+                    if (searchVal) {
+                        const titleMatch = (rec.itemName || '').toLowerCase().includes(searchVal);
+                        const descMatch = (rec.description || '').toLowerCase().includes(searchVal);
+                        const locMatch = (rec.location || '').toLowerCase().includes(searchVal);
+                        if (!titleMatch && !descMatch && !locMatch) return false;
+                    }
+
+                    return true;
+                });
+
+                counter.textContent = `Showing ${filtered.length} result${filtered.length === 1 ? '' : 's'}`;
+
+                if (filtered.length === 0) {
+                    grid.innerHTML = `
+                        <div class="col-span-full py-xl text-center bg-surface-container-lowest rounded-xl border border-outline-variant p-lg">
+                            <span class="material-symbols-outlined text-4xl text-on-surface-variant opacity-40 mb-2">search_off</span>
+                            <h3 class="font-body-bold text-on-surface text-lg">No matching records found</h3>
+                            <p class="text-on-surface-variant text-sm mt-1">Try resetting your filters or adjusting your search term.</p>
+                        </div>
+                    `;
+                    return;
+                }
+
+                grid.innerHTML = filtered.map(rec => {
+                    const isFound = (rec.reportType || '').toLowerCase().includes('found');
+                    const badgeClass = isFound ? 'bg-primary text-on-primary' : 'bg-error text-on-error';
+                    const badgeText = isFound ? 'FOUND' : 'LOST';
+                    const photoSrc = rec.photoPath || rec.photoData || null;
+
+                    let mediaHtml = `
+                        <div class="w-full h-full flex items-center justify-center bg-surface-variant border-2 border-dashed border-outline-variant text-on-surface-variant">
+                            <span class="material-symbols-outlined text-4xl opacity-50">image</span>
+                        </div>
+                    `;
+                    if (photoSrc) {
+                        mediaHtml = `<img src="${photoSrc}" alt="${rec.itemName}" class="w-full h-full object-cover">`;
+                    }
+
+                    const timeAgo = LemonData.formatTimeAgo(rec.created_at || rec.date);
+
+                    return `
+                        <div class="bg-surface-container-lowest rounded-xl border border-outline-variant shadow-sm overflow-hidden flex flex-col hover:shadow-md transition-shadow relative">
+                            <span class="absolute top-sm left-sm ${badgeClass} font-label-caps text-label-caps px-sm py-xs rounded-full z-10 shadow-sm">${badgeText}</span>
+                            <div class="h-48 bg-surface-container-highest relative overflow-hidden">
+                                ${mediaHtml}
+                            </div>
+                            <div class="p-md flex-grow flex flex-col">
+                                <h3 class="font-body-bold text-body-bold text-on-surface mb-xs line-clamp-1">${rec.itemName || 'Unnamed Item'}</h3>
+                                <p class="text-on-surface-variant text-sm mb-md flex items-center gap-xs">
+                                    <span class="material-symbols-outlined text-[16px]">location_on</span> ${rec.location || 'Campus'}
+                                </p>
+                                <div class="mt-auto">
+                                    <p class="text-on-surface-variant text-xs mb-sm">Reported ${timeAgo}</p>
+                                    <button onclick="window.location.href='detail.html?id=${encodeURIComponent(rec.id)}'"
+                                        class="w-full h-10 border border-outline-variant text-on-surface font-body-bold rounded-lg hover:bg-surface-container-low transition-colors">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+            }
+
+            [filterLost, filterFound, filterCategory, filterLocation, filterSearch].forEach(el => {
+                if (el) el.addEventListener('input', render);
+                if (el) el.addEventListener('change', render);
+            });
+
+            if (filterReset) {
+                filterReset.addEventListener('click', function () {
+                    filterLost.checked = true;
+                    filterFound.checked = true;
+                    filterCategory.value = '';
+                    filterLocation.value = '';
+                    filterSearch.value = '';
+                    render();
+                });
+            }
+
+            render();
+        });
+    </script>
 </body>
 
 </html>

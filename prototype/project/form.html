@@ -203,10 +203,17 @@
                             for="location">LOCATION</label>
                         <div class="relative group">
                             <span
-                                class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant group-focus-within:text-primary transition-colors">pin_drop</span>
-                            <input id="location" name="location" required
-                                class="w-full h-12 pl-12 pr-4 border border-slate rounded-lg font-body-base text-on-background focus:ring-2 focus:ring-primary-fixed focus:border-primary-fixed outline-none transition-all"
-                                placeholder="Enter location (e.g. Student Union 2nd Floor, Main Library)" type="text">
+                                class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant group-focus-within:text-primary transition-colors pointer-events-none z-10">pin_drop</span>
+                            <select id="location" name="location" required
+                                class="w-full h-12 pl-12 pr-4 border border-slate rounded-lg font-body-base text-on-background bg-white focus:ring-2 focus:ring-primary-fixed focus:border-primary-fixed outline-none appearance-none transition-all cursor-pointer">
+                                <option value="">Select Location</option>
+                                <option value="Main Library">Main Library</option>
+                                <option value="Student Union">Student Union</option>
+                                <option value="Science Building">Science Building</option>
+                                <option value="Engineering Block">Engineering Block</option>
+                                <option value="Cafeteria">Cafeteria</option>
+                                <option value="Other">Other</option>
+                            </select>
                         </div>
                         <p class="font-body-base text-on-surface-variant text-xs mt-1">Specify where the item was lost
                             or found.</p>
@@ -217,12 +224,18 @@
                 <div class="bg-surface-container-lowest p-lg border border-slate shadow-soft rounded-lg">
                     <h2 class="font-subheading-sm text-subheading-sm text-on-background mb-md">Photo</h2>
                     <label for="photo"
-                        class="border-2 border-dashed border-outline-variant rounded-lg p-xl flex flex-col items-center justify-center text-center cursor-pointer hover:bg-surface-container-low transition-colors block">
-                        <span class="material-symbols-outlined text-outline text-4xl mb-2">add_a_photo</span>
-                        <p class="font-body-bold text-on-background" id="photo-label">Upload Image</p>
-                        <p class="font-body-base text-on-surface-variant text-sm mt-1">JPG, PNG up to 5MB</p>
+                        class="border-2 border-dashed border-outline-variant rounded-lg p-lg flex flex-col items-center justify-center text-center cursor-pointer hover:bg-surface-container-low transition-colors w-full overflow-hidden">
+                        <div id="photo-preview-container"
+                            class="hidden mb-2 relative w-full h-32 rounded-md overflow-hidden bg-surface-variant">
+                            <img id="photo-preview" class="w-full h-full object-cover" alt="Selected photo preview">
+                        </div>
+                        <span id="photo-icon"
+                            class="material-symbols-outlined text-outline text-4xl mb-2">add_a_photo</span>
+                        <p class="font-body-bold text-on-background text-sm w-full max-w-full truncate px-2"
+                            id="photo-label" title="Upload Image">Upload Image</p>
+                        <p class="font-body-base text-on-surface-variant text-xs mt-1">JPG, PNG up to 5MB</p>
                         <input id="photo" type="file" accept="image/*" class="hidden"
-                            onchange="if(this.files[0]) document.getElementById('photo-label').innerText = this.files[0].name">
+                            onchange="handlePhotoSelect(this)">
                     </label>
                 </div>
                 <div
@@ -253,20 +266,86 @@
     <div id="footer-placeholder"></div>
 
     <script>
+        function handlePhotoSelect(input) {
+            if (input.files && input.files[0]) {
+                const file = input.files[0];
+                const label = document.getElementById('photo-label');
+                if (label) {
+                    label.textContent = file.name;
+                    label.title = file.name;
+                }
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const preview = document.getElementById('photo-preview');
+                    const container = document.getElementById('photo-preview-container');
+                    const icon = document.getElementById('photo-icon');
+                    if (preview && container) {
+                        preview.src = e.target.result;
+                        container.classList.remove('hidden');
+                    }
+                    if (icon) icon.classList.add('hidden');
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        function compressPhoto(file, callback) {
+            const reader = new FileReader();
+            reader.onload = function (evt) {
+                const img = new Image();
+                img.onload = function () {
+                    const canvas = document.createElement('canvas');
+                    const maxDim = 500;
+                    let width = img.width;
+                    let height = img.height;
+
+                    if (width > height) {
+                        if (width > maxDim) {
+                            height = Math.round((height * maxDim) / width);
+                            width = maxDim;
+                        }
+                    } else {
+                        if (height > maxDim) {
+                            width = Math.round((width * maxDim) / height);
+                            height = maxDim;
+                        }
+                    }
+
+                    canvas.width = width;
+                    canvas.height = height;
+                    const ctx = canvas.getContext('2d');
+                    ctx.drawImage(img, 0, 0, width, height);
+                    callback(canvas.toDataURL('image/jpeg', 0.6));
+                };
+                img.onerror = function () {
+                    callback(evt.target.result);
+                };
+                img.src = evt.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+
         document.getElementById('report-form').addEventListener('submit', function (e) {
             e.preventDefault();
 
-            const reportType = document.querySelector('input[name="reportType"]:checked')?.value || 'I Lost Something';
+            const rawReportType = document.querySelector('input[name="reportType"]:checked')?.value || 'I Lost Something';
+            const reportType = rawReportType.toLowerCase().includes('found') ? 'Found' : 'Lost';
             const itemName = document.getElementById('itemName').value.trim();
             const category = document.getElementById('category').value;
             const date = document.getElementById('date').value;
             const description = document.getElementById('description').value.trim();
             const location = document.getElementById('location').value.trim();
             const photoInput = document.getElementById('photo');
+            let currentUser = null;
+            try {
+                const uStr = localStorage.getItem('lemon_current_user') || sessionStorage.getItem('lemon_current_user');
+                if (uStr) currentUser = JSON.parse(uStr);
+            } catch (err) { }
 
             function submitRecord(photoData, photoName) {
                 const newRecord = {
                     id: 'rec_' + Date.now(),
+                    userId: currentUser?.id || null,
                     reportType: reportType,
                     itemName: itemName,
                     category: category,
@@ -278,7 +357,7 @@
                     created_at: new Date().toISOString()
                 };
 
-                // Save to localStorage fallback
+                // Save to localStorage
                 let records = [];
                 try {
                     const saved = localStorage.getItem('lemon_records');
@@ -287,37 +366,37 @@
                     records = [];
                 }
                 records.push(newRecord);
-                localStorage.setItem('lemon_records', JSON.stringify(records, null, 2));
 
-                // Post to backend server endpoint to store in data/record-data.json and image in data/uploads
-                const apiUrl = (window.location.protocol === 'http:' || window.location.protocol === 'https:')
-                    ? '/api/records'
-                    : 'http://localhost:3000/api/records';
+                try {
+                    localStorage.setItem('lemon_records', JSON.stringify(records));
+                } catch (err) {
+                    console.warn('LocalStorage quota exceeded. Retrying without photo for storage safety...', err);
+                    newRecord.photoData = null;
+                    try {
+                        localStorage.setItem('lemon_records', JSON.stringify(records));
+                    } catch (e2) {
+                        console.error('LocalStorage save error:', e2);
+                    }
+                }
 
-                fetch(apiUrl, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(newRecord)
-                }).then(res => {
-                    if (!res.ok) throw new Error('HTTP error ' + res.status);
-                    return res.json();
-                }).then(data => {
-                    alert('Report submitted and recorded to file successfully!');
-                    window.location.href = 'records.html';
-                }).catch(err => {
-                    console.error('Server upload error:', err);
-                    alert('Submitted locally, but could not connect to server at http://localhost:3000. Make sure node server.js is running!');
-                    window.location.href = 'records.html';
-                });
+                // Optional background sync if server is running
+                if (window.location.protocol === 'http:' || window.location.protocol === 'https:') {
+                    fetch('/api/records', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(newRecord)
+                    }).catch(e => console.log('Server sync skipped:', e));
+                }
+
+                alert('Report submitted successfully!');
+                window.location.href = 'records.html';
             }
 
             if (photoInput && photoInput.files[0]) {
                 const file = photoInput.files[0];
-                const reader = new FileReader();
-                reader.onload = function (evt) {
-                    submitRecord(evt.target.result, file.name);
-                };
-                reader.readAsDataURL(file);
+                compressPhoto(file, function (compressedBase64) {
+                    submitRecord(compressedBase64, file.name);
+                });
             } else {
                 submitRecord(null, '');
             }

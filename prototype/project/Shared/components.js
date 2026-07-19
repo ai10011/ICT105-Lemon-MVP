@@ -5,6 +5,122 @@
  * to protected features with a sleek pop-up modal on public pages.
  */
 
+window.LemonData = {
+    async getRecords() {
+        let fileRecords = [];
+        const urls = ['data/record-data.json', '/data/record-data.json', 'http://localhost:3000/data/record-data.json'];
+        let fetchedFromFile = false;
+        for (const url of urls) {
+            try {
+                const res = await fetch(url);
+                if (res.ok) {
+                    const data = await res.json();
+                    if (Array.isArray(data)) {
+                        fileRecords = data;
+                        fetchedFromFile = true;
+                        break;
+                    }
+                }
+            } catch (e) { }
+        }
+
+        if (!fetchedFromFile && fileRecords.length === 0) {
+            const DEFAULT_RECORDS = [
+                {
+                    "id": "rec_default_1",
+                    "reportType": "I Lost Something",
+                    "itemName": "Test Hydro Flask",
+                    "category": "Personal",
+                    "date": "2026-07-15",
+                    "description": "Blue water bottle",
+                    "location": "Main Library",
+                    "photoName": "flask.png",
+                    "photoPath": ""
+                },
+                {
+                    "id": "rec_1784092215649",
+                    "reportType": "I Lost Something",
+                    "itemName": "Macbook",
+                    "category": "Electronics",
+                    "date": "2026-07-14",
+                    "description": "Black laptop",
+                    "location": "Science Building",
+                    "created_at": "2026-07-15T05:10:15.649Z",
+                    "photoPath": ""
+                }
+            ];
+            fileRecords = DEFAULT_RECORDS;
+        }
+
+        let localRecords = [];
+        try {
+            const saved = localStorage.getItem('lemon_records');
+            if (saved) localRecords = JSON.parse(saved);
+        } catch (e) { }
+
+        const map = new Map();
+        fileRecords.forEach((rec, idx) => {
+            const id = rec.id || `rec_file_${idx}`;
+            map.set(id, { ...rec, id });
+        });
+
+        if (!fetchedFromFile) {
+            localRecords.forEach((rec, idx) => {
+                const id = rec.id || `rec_local_${idx}`;
+                map.set(id, { ...rec, id });
+            });
+        }
+
+        const records = Array.from(map.values());
+        records.sort((a, b) => {
+            const dateA = a.created_at || a.date || '';
+            const dateB = b.created_at || b.date || '';
+            return dateB.localeCompare(dateA);
+        });
+        return records;
+    },
+
+    async getRecordById(id) {
+        const records = await this.getRecords();
+        if (!id) return records[0] || null;
+        return records.find(r => String(r.id) === String(id)) || records[0] || null;
+    },
+
+    formatTimeAgo(dateStr) {
+        if (!dateStr) return 'Recently';
+        const date = new Date(dateStr);
+        if (isNaN(date.getTime())) return dateStr;
+        const diffMs = Date.now() - date.getTime();
+        const diffHours = Math.floor(diffMs / (1000 * 60 * 60));
+        if (diffHours < 1) return 'Just now';
+        if (diffHours < 24) return `${diffHours} hour${diffHours > 1 ? 's' : ''} ago`;
+        const diffDays = Math.floor(diffHours / 24);
+        if (diffDays === 1) return 'Yesterday';
+        if (diffDays < 30) return `${diffDays} days ago`;
+        return date.toLocaleDateString();
+    },
+
+    async getUsers() {
+        const urls = ['data/users.json', '/data/users.json', 'http://localhost:3000/data/users.json'];
+        for (const url of urls) {
+            try {
+                const res = await fetch(url);
+                if (res.ok) {
+                    const data = await res.json();
+                    if (Array.isArray(data)) return data;
+                }
+            } catch (e) { }
+        }
+        return [];
+    },
+
+    async getUserById(id) {
+        if (!id) return null;
+        const users = await this.getUsers();
+        return users.find(u => String(u.id) === String(id)) || null;
+    }
+};
+
 (function () {
     const PROTECTED_PAGES = ['form.html', 'dashboard.html', 'admin.html'];
 

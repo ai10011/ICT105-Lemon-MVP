@@ -77,6 +77,67 @@ const server = http.createServer((req, res) => {
         return;
     }
 
+    if (req.method === 'DELETE' && req.url.startsWith('/api/records')) {
+        const urlObj = new URL(req.url, `http://${req.headers.host || 'localhost'}`);
+        const id = urlObj.searchParams.get('id');
+        let records = [];
+        if (fs.existsSync(RECORD_DATA_FILE)) {
+            try {
+                records = JSON.parse(fs.readFileSync(RECORD_DATA_FILE, 'utf8'));
+            } catch (e) {
+                records = [];
+            }
+        }
+        if (id) {
+            records = records.filter(r => String(r.id) !== String(id));
+            fs.writeFileSync(RECORD_DATA_FILE, JSON.stringify(records, null, 2), 'utf8');
+        }
+        res.writeHead(200, {
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Headers': 'Content-Type'
+        });
+        res.end(JSON.stringify({ success: true, records }));
+        return;
+    }
+
+    if ((req.method === 'PATCH' || req.method === 'PUT') && req.url.startsWith('/api/records')) {
+        let body = '';
+        req.on('data', chunk => { body += chunk.toString(); });
+        req.on('end', () => {
+            try {
+                const updateData = JSON.parse(body);
+                let records = [];
+                if (fs.existsSync(RECORD_DATA_FILE)) {
+                    try {
+                        records = JSON.parse(fs.readFileSync(RECORD_DATA_FILE, 'utf8'));
+                    } catch (e) {
+                        records = [];
+                    }
+                }
+                const target = records.find(r => String(r.id) === String(updateData.id));
+                if (target) {
+                    Object.assign(target, updateData);
+                    fs.writeFileSync(RECORD_DATA_FILE, JSON.stringify(records, null, 2), 'utf8');
+                }
+                res.writeHead(200, {
+                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin': '*',
+                    'Access-Control-Allow-Headers': 'Content-Type'
+                });
+                res.end(JSON.stringify({ success: true, records }));
+            } catch (err) {
+                res.writeHead(500, {
+                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin': '*',
+                    'Access-Control-Allow-Headers': 'Content-Type'
+                });
+                res.end(JSON.stringify({ success: false, error: err.message }));
+            }
+        });
+        return;
+    }
+
     if (req.method === 'POST' && req.url === '/api/signup') {
         let body = '';
         req.on('data', chunk => { body += chunk.toString(); });
@@ -115,10 +176,65 @@ const server = http.createServer((req, res) => {
         return;
     }
 
+    if ((req.method === 'POST' || req.method === 'PATCH' || req.method === 'PUT') && req.url === '/api/users/update') {
+        let body = '';
+        req.on('data', chunk => { body += chunk.toString(); });
+        req.on('end', () => {
+            try {
+                const updatedUser = JSON.parse(body);
+                let users = [];
+                if (fs.existsSync(DATA_FILE)) {
+                    const content = fs.readFileSync(DATA_FILE, 'utf8').trim();
+                    if (content) {
+                        try {
+                            users = JSON.parse(content);
+                        } catch (e) {
+                            users = [];
+                        }
+                    }
+                }
+                const targetIdx = users.findIndex(u =>
+                    (updatedUser.id && String(u.id) === String(updatedUser.id)) ||
+                    (updatedUser.oldEmail && u.email === updatedUser.oldEmail) ||
+                    (updatedUser.email && u.email === updatedUser.email)
+                );
+
+                if (targetIdx !== -1) {
+                    if (updatedUser.full_name) users[targetIdx].full_name = updatedUser.full_name;
+                    if (updatedUser.email) users[targetIdx].email = updatedUser.email;
+                } else if (updatedUser.id || updatedUser.email) {
+                    users.push({
+                        id: updatedUser.id || ('usr_' + Date.now()),
+                        full_name: updatedUser.full_name || '',
+                        email: updatedUser.email || '',
+                        created_at: new Date().toISOString()
+                    });
+                }
+
+                fs.writeFileSync(DATA_FILE, JSON.stringify(users, null, 2), 'utf8');
+                res.writeHead(200, {
+                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin': '*',
+                    'Access-Control-Allow-Headers': 'Content-Type'
+                });
+                res.end(JSON.stringify({ success: true, users }));
+            } catch (err) {
+                console.error('Error handling profile update:', err);
+                res.writeHead(500, {
+                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin': '*',
+                    'Access-Control-Allow-Headers': 'Content-Type'
+                });
+                res.end(JSON.stringify({ success: false, error: err.message }));
+            }
+        });
+        return;
+    }
+
     if (req.method === 'OPTIONS') {
         res.writeHead(204, {
             'Access-Control-Allow-Origin': '*',
-            'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+            'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
             'Access-Control-Allow-Headers': 'Content-Type'
         });
         res.end();
@@ -127,6 +243,9 @@ const server = http.createServer((req, res) => {
 
     // Serve static files
     let urlPath = req.url.split('?')[0];
+    if (urlPath.startsWith('/prototype/project/')) {
+        urlPath = urlPath.replace('/prototype/project/', '/');
+    }
     let filePath = path.join(__dirname, urlPath === '/' ? 'index.html' : urlPath);
     const ext = path.extname(filePath);
     const mimeTypes = {

@@ -248,7 +248,7 @@
                                 <p
                                     class="font-label-caps text-label-caps text-secondary-fixed-dim uppercase tracking-wider mb-xs">
                                     Total Items Secured</p>
-                                <h3 class="font-display-lg text-display-lg text-primary-fixed">1,248</h3>
+                                <h3 id="admin-total-secured" class="font-display-lg text-display-lg text-primary-fixed">0</h3>
                             </div>
                             <div class="p-sm bg-surface-tint/30 rounded-lg">
                                 <span class="material-symbols-outlined text-primary-fixed">inventory_2</span>
@@ -256,7 +256,7 @@
                         </div>
                         <div class="flex items-center text-secondary-fixed-dim text-sm relative z-10">
                             <span class="material-symbols-outlined text-sm mr-xs text-[#a8c7fa]">trending_up</span>
-                            <span class="">+12% from last month</span>
+                            <span class="">Active database entries</span>
                         </div>
                     </div>
                     <div
@@ -266,7 +266,7 @@
                                 <p
                                     class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider mb-xs">
                                     Pending Claims</p>
-                                <h3 class="font-display-lg text-display-lg text-on-surface">24</h3>
+                                <h3 id="admin-pending-claims" class="font-display-lg text-display-lg text-on-surface">0</h3>
                             </div>
                             <div class="p-sm bg-primary-container rounded-lg">
                                 <span class="material-symbols-outlined text-on-primary-container">pending_actions</span>
@@ -274,7 +274,7 @@
                         </div>
                         <div class="flex items-center text-on-surface-variant text-sm">
                             <span class="material-symbols-outlined text-sm mr-xs text-error">priority_high</span>
-                            <span class="">5 require urgent review</span>
+                            <span class="">Items awaiting retrieval</span>
                         </div>
                     </div>
                     <div
@@ -284,14 +284,14 @@
                                 <p
                                     class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider mb-xs">
                                     Claim Success Rate</p>
-                                <h3 class="font-display-lg text-display-lg text-on-surface">87.5%</h3>
+                                <h3 id="admin-success-rate" class="font-display-lg text-display-lg text-on-surface">0%</h3>
                             </div>
                             <div class="p-sm bg-tertiary-container rounded-lg">
                                 <span class="material-symbols-outlined text-on-tertiary-container">done_all</span>
                             </div>
                         </div>
                         <div class="w-full bg-surface-container h-2 rounded-full overflow-hidden mt-2">
-                            <div class="bg-primary h-full rounded-full" style="width: 87.5%"></div>
+                            <div id="admin-rate-bar" class="bg-primary h-full rounded-full" style="width: 0%"></div>
                         </div>
                     </div>
                 </div>
@@ -300,10 +300,10 @@
                     <div
                         class="p-lg border-b border-outline-variant flex justify-between items-center bg-surface-bright">
                         <h3 class="font-headline-md text-headline-md text-on-surface">Recent Reports &amp; Claims</h3>
-                        <button
+                        <a href="records.html"
                             class="text-primary font-body-bold text-body-bold hover:underline flex items-center font-bold">
                             View All <span class="material-symbols-outlined ml-xs text-sm">arrow_forward</span>
-                        </button>
+                        </a>
                     </div>
                     <div class="overflow-x-auto">
                         <table class="w-full text-left border-collapse">
@@ -317,95 +317,8 @@
                                     <th class="p-md font-semibold text-right">Action</th>
                                 </tr>
                             </thead>
-                            <tbody class="font-body-base text-body-base divide-y divide-outline-variant">
-                                <tr class="hover:bg-surface-bright transition-colors group">
-                                    <td class="p-md flex items-center space-x-md">
-                                        <div
-                                            class="w-12 h-12 bg-surface-container rounded-lg flex items-center justify-center shrink-0 border border-outline-variant">
-                                            <span class="material-symbols-outlined text-secondary">laptop_mac</span>
-                                        </div>
-                                        <div>
-                                            <p
-                                                class="font-body-bold text-on-surface group-hover:text-primary transition-colors">
-                                                MacBook Pro 14"</p>
-                                            <p class="text-sm text-on-surface-variant">Silver, Black Case</p>
-                                        </div>
-                                    </td>
-                                    <td class="p-md">
-                                        <span
-                                            class="inline-flex items-center px-sm py-xs rounded-full text-xs font-bold bg-primary-container text-on-primary-container border border-primary/20">
-                                            <span class="material-symbols-outlined text-[14px] mr-1">pending</span>
-                                            Claim Pending
-                                        </span>
-                                    </td>
-                                    <td class="p-md text-on-surface-variant">Main Library, 2nd Floor</td>
-                                    <td class="p-md text-on-surface-variant">Oct 24, 2:15 PM</td>
-                                    <td class="p-md text-right">
-                                        <button
-                                            class="p-sm text-secondary hover:text-primary hover:bg-surface-container rounded-lg transition-colors active:scale-95">
-                                            <span class="material-symbols-outlined">more_vert</span>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr class="hover:bg-surface-bright transition-colors group">
-                                    <td class="p-md flex items-center space-x-md">
-                                        <div
-                                            class="w-12 h-12 bg-surface-container rounded-lg flex items-center justify-center shrink-0 border border-outline-variant">
-                                            <span
-                                                class="material-symbols-outlined text-secondary">account_balance_wallet</span>
-                                        </div>
-                                        <div>
-                                            <p
-                                                class="font-body-bold text-on-surface group-hover:text-primary transition-colors">
-                                                Leather Wallet</p>
-                                            <p class="text-sm text-on-surface-variant">Brown, Contains ID</p>
-                                        </div>
-                                    </td>
-                                    <td class="p-md">
-                                        <span
-                                            class="inline-flex items-center px-sm py-xs rounded-full text-xs font-bold bg-tertiary-container text-on-tertiary-container border border-tertiary/20">
-                                            <span class="material-symbols-outlined text-[14px] mr-1">check_circle</span>
-                                            Found
-                                        </span>
-                                    </td>
-                                    <td class="p-md text-on-surface-variant">Student Union Cafe</td>
-                                    <td class="p-md text-on-surface-variant">Oct 24, 11:30 AM</td>
-                                    <td class="p-md text-right">
-                                        <button
-                                            class="p-sm text-secondary hover:text-primary hover:bg-surface-container rounded-lg transition-colors active:scale-95">
-                                            <span class="material-symbols-outlined">more_vert</span>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr class="hover:bg-surface-bright transition-colors group">
-                                    <td class="p-md flex items-center space-x-md">
-                                        <div
-                                            class="w-12 h-12 bg-error-container rounded-lg flex items-center justify-center shrink-0 border border-error/20">
-                                            <span class="material-symbols-outlined text-error">key</span>
-                                        </div>
-                                        <div>
-                                            <p
-                                                class="font-body-bold text-on-surface group-hover:text-primary transition-colors">
-                                                Dorm Keys on Lanyard</p>
-                                            <p class="text-sm text-on-surface-variant">Red Lanyard, 3 keys</p>
-                                        </div>
-                                    </td>
-                                    <td class="p-md">
-                                        <span
-                                            class="inline-flex items-center px-sm py-xs rounded-full text-xs font-bold bg-error-container text-on-error-container border border-error/20">
-                                            <span class="material-symbols-outlined text-[14px] mr-1">warning</span> Lost
-                                            - Urgent
-                                        </span>
-                                    </td>
-                                    <td class="p-md text-on-surface-variant">Science Building West</td>
-                                    <td class="p-md text-on-surface-variant">Oct 23, 5:45 PM</td>
-                                    <td class="p-md text-right">
-                                        <button
-                                            class="p-sm text-secondary hover:text-primary hover:bg-surface-container rounded-lg transition-colors active:scale-95">
-                                            <span class="material-symbols-outlined">more_vert</span>
-                                        </button>
-                                    </td>
-                                </tr>
+                            <tbody id="admin-records-tbody" class="font-body-base text-body-base divide-y divide-outline-variant">
+                                <!-- Dynamically populated -->
                             </tbody>
                         </table>
                     </div>
@@ -423,6 +336,77 @@
                         class="text-sm text-secondary hover:text-primary transition-colors">Contact Support</a></div>
             </div>
         </footer>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', async function () {
+                const records = await LemonData.getRecords();
+
+                const total = records.length;
+                const found = records.filter(r => (r.reportType || '').toLowerCase().includes('found')).length;
+                const rate = total > 0 ? Math.round((found / total) * 100) : 0;
+
+                document.getElementById('admin-total-secured').textContent = total;
+                document.getElementById('admin-pending-claims').textContent = total - found;
+                document.getElementById('admin-success-rate').textContent = `${rate}%`;
+                const rateBar = document.getElementById('admin-rate-bar');
+                if (rateBar) rateBar.style.width = `${rate}%`;
+
+                const tbody = document.getElementById('admin-records-tbody');
+                if (!tbody) return;
+
+                if (records.length === 0) {
+                    tbody.innerHTML = `
+                        <tr>
+                            <td colspan="5" class="p-lg text-center text-on-surface-variant">No reports found in the system.</td>
+                        </tr>
+                    `;
+                    return;
+                }
+
+                tbody.innerHTML = records.map(rec => {
+                    const isFound = (rec.reportType || '').toLowerCase().includes('found');
+                    const statusBg = isFound ? 'bg-tertiary-container text-on-tertiary-container border-tertiary/20' : 'bg-error-container text-on-error-container border-error/20';
+                    const statusIcon = isFound ? 'check_circle' : 'warning';
+                    const statusLabel = isFound ? 'Found' : 'Lost - Active';
+
+                    const photoSrc = rec.photoPath || rec.photoData || null;
+                    let iconHtml = `<span class="material-symbols-outlined text-secondary">inventory_2</span>`;
+                    if (photoSrc) {
+                        iconHtml = `<img src="${photoSrc}" alt="" class="w-full h-full object-cover rounded-lg">`;
+                    }
+
+                    const dateStr = rec.date || (rec.created_at ? rec.created_at.split('T')[0] : 'Recent');
+
+                    return `
+                        <tr class="hover:bg-surface-bright transition-colors group cursor-pointer" onclick="window.location.href='detail.html?id=${encodeURIComponent(rec.id)}'">
+                            <td class="p-md flex items-center space-x-md">
+                                <div class="w-12 h-12 bg-surface-container rounded-lg flex items-center justify-center shrink-0 border border-outline-variant overflow-hidden">
+                                    ${iconHtml}
+                                </div>
+                                <div>
+                                    <p class="font-body-bold text-on-surface group-hover:text-primary transition-colors">${rec.itemName || 'Unnamed Item'}</p>
+                                    <p class="text-sm text-on-surface-variant truncate max-w-xs">${rec.description || rec.category || ''}</p>
+                                </div>
+                            </td>
+                            <td class="p-md">
+                                <span class="inline-flex items-center px-sm py-xs rounded-full text-xs font-bold ${statusBg} border">
+                                    <span class="material-symbols-outlined text-[14px] mr-1">${statusIcon}</span>
+                                    ${statusLabel}
+                                </span>
+                            </td>
+                            <td class="p-md text-on-surface-variant">${rec.location || 'Campus'}</td>
+                            <td class="p-md text-on-surface-variant">${dateStr}</td>
+                            <td class="p-md text-right" onclick="event.stopPropagation()">
+                                <button onclick="window.location.href='detail.html?id=${encodeURIComponent(rec.id)}'"
+                                    class="p-sm text-secondary hover:text-primary hover:bg-surface-container rounded-lg transition-colors active:scale-95">
+                                    <span class="material-symbols-outlined">visibility</span>
+                                </button>
+                            </td>
+                        </tr>
+                    `;
+                }).join('');
+            });
+        </script>
 </body>
 
 </html>
