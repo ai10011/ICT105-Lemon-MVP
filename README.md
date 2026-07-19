@@ -258,3 +258,28 @@ Evaluated core usability, task completion, and interest for key user flows (repo
 - `docs/weekly-logbook.md`
 - `screenshots/project-dashboard.png`
 
+# README Update Template for Lab 09
+
+Add this section to your project README.md.
+
+## Lab 09 - Responsible IT Check
+
+### Responsible Design Summary
+Explain the main privacy, ethical, IP, and basic security risks identified.
+
+### Files Added
+- docs/legal-ethical-checklist.md
+- docs/privacy-and-data-protection.md
+- docs/ip-and-third-party-assets.md
+- docs/security-risk-check.md
+- docs/risk-register.md
+- docs/updated-requirements-note.md
+- docs/weekly-logbook.md
+
+### Requirement Update
+State whether system-requirements.md changed after Lab 09.
+
+### Team Contributions
+List what each member contributed to the GitHub repository.
+
+
