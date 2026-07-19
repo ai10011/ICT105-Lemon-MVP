@@ -287,4 +287,33 @@ Smart Campus Lost-and-Found System
 - Reduce mandatory input fields on lost/found report forms and add helper tooltip guidance (`FR-10`).
 - Add campus building names to search location filter options (`FR-06`).
 
+# Weekly Logbook - Lab 09
+
+## Group Name
+
+## Date
+
+## Members Present
+
+## Work Completed Today
+- Data inventory:
+- Privacy review:
+- Ethical review:
+- IP review:
+- Security review:
+- Risk register:
+- Requirements update note:
+
+## Member Contributions
+| Member | Contribution | GitHub Evidence |
+|---|---|---|
+| | | |
+
+## Decisions Made
+
+## Issues / Blockers
+
+## Next Action Before Lab 10
+
+
 
