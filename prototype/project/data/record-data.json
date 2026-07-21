@@ -1,1 +1,15 @@
-[]
+[
+  {
+    "id": "rec_1784449990478",
+    "userId": "usr_1784445778923",
+    "reportType": "Lost",
+    "itemName": "Macbook",
+    "category": "Electronics",
+    "date": "2026-07-07",
+    "description": "Macbook Air",
+    "location": "Student Union",
+    "photoName": "",
+    "photoData": null,
+    "created_at": "2026-07-19T08:33:10.478Z"
+  }
+]
