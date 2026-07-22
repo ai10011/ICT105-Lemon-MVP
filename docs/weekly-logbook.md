@@ -353,10 +353,10 @@ Lemon
 MVP Implementation Sprint 1
 
 ## What We Built Today
-- Completed the core web application prototype (`prototype/project/`) including Landing page, Report Form, Records List, Detail View, Admin Management, and Analytics Dashboard.
-- Implemented Node.js Express REST API server (`server.js`) with JSON file-based data persistence and `localStorage` fallback.
-- Standardized status categories across sample datasets (`data/lost-found-sample-records.csv`, `data/lost-found-status-categories.csv`) and UI select inputs to 5 core categories (`Electronics`, `Stationery`, `Personal`, `Clothing`, `Other`).
-- Completed Lab 10 Feature Implementation Status (`docs/feature-implementation-status.md`), Implementation Plan (`docs/implementation-plan.md`), and Implementation Flow diagram (`diagrams/implementation-flow.mmd`).
+- Completed the core web application prototype (`prototype/project/`), including the Landing Page, Report Form, Records List, Detail View, Admin Management, and Analytics Dashboard.
+- Implemented a Node.js Express REST API server (`server.js`) with JSON file-based data persistence and `localStorage` fallback.
+- Standardized status categories across the sample datasets (`data/lost-found-sample-records.csv`, `data/lost-found-status-categories.csv`) and UI select inputs to five core categories: `Electronics`, `Stationery`, `Personal`, `Clothing`, and `Other`.
+- Completed the Lab 10 Feature Implementation Status (`docs/feature-implementation-status.md`), Implementation Plan (`docs/implementation-plan.md`), and Implementation Flow diagram (`diagrams/implementation-flow.mmd`).
 
 ## Requirement IDs Addressed
 - FR-01: Homepage or landing screen
@@ -380,10 +380,10 @@ MVP Implementation Sprint 1
 
 | Member | Contribution | Evidence |
 |---|---|---|
-| **Kyaw Ye Lin** | Standardized sample datasets & category files | `data/lost-found-sample-records.csv`, `data/lost-found-status-categories.csv` |
-| **Tin May Lin** | Feature implementation status, implementation plan, & system flow diagrams | `docs/feature-implementation-status.md`, `docs/implementation-plan.md`, `diagrams/implementation-flow.mmd` |
-| **Phollapat Rodchue** | Built and integrated project web prototype | `prototype/project/` (`index.html`, `form.html`, `records.html`, `detail.html`, `admin.html`, `dashboard.html`, `server.js`) |
-| **Phoochit Jantakam** | Maintained project documentation & weekly progress logbook | `docs/weekly-logbook.md`, `README.md` |
+| **Kyaw Ye Lin** | Standardized the sample datasets and category files | `data/lost-found-sample-records.csv`, `data/lost-found-status-categories.csv` |
+| **Tin May Lin** | Prepared the Feature Implementation Status, Implementation Plan, and Implementation Flow diagram | `docs/feature-implementation-status.md`, `docs/implementation-plan.md`, `diagrams/implementation-flow.mmd` |
+| **Phollapat Rodchue** | Built and integrated the project web prototype | `prototype/project/` (`index.html`, `form.html`, `records.html`, `detail.html`, `admin.html`, `dashboard.html`, `server.js`) |
+| **Phoochit Jantakam** | Maintained the project documentation and weekly progress logbook | `docs/weekly-logbook.md`, `README.md` |
 
 ## Screenshots Added
 - `screenshots/homepage.png`
@@ -393,8 +393,8 @@ MVP Implementation Sprint 1
 - `screenshots/admin-view.png`
 
 ## Problems Faced
-- Category mismatches between CSV datasets and HTML dropdown options. Fixed by standardizing all dropdowns and CSV files to 5 categories (`Electronics`, `Stationery`, `Personal`, `Clothing`, `Other`).
-- Navigational header and footer code duplication across prototype pages. Resolved by creating a shared component loader (`Shared/components.js`).
+- Category mismatches between the CSV datasets and HTML dropdown options were identified. This was resolved by standardizing all dropdowns and CSV files to five categories: `Electronics`, `Stationery`, `Personal`, `Clothing`, and `Other`.
+- Navigation header and footer code were duplicated across multiple prototype pages. This was resolved by creating a shared component loader (`Shared/components.js`).
 
 ## Plan for Next Lab
 - Prepare final prototype demonstration, polish responsive design touchpoints, and complete Lab 11 user testing and final presentation slides.
