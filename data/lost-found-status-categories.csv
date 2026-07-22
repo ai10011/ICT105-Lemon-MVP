@@ -1,5 +1,6 @@
 category,examples
 Electronics,"Laptop charger, phone, tablet, earbuds, calculator"
-Document,"ID card, passport copy, printed assignment, certificate"
-Personal Item,"Water bottle, umbrella, wallet, bag, keys"
-Stationery,"Notebook, pen case, textbook, folder"
+Stationery,"Notebook, pen case, textbook, folder, printed assignment"
+Personal,"Water bottle, umbrella, wallet, bag, keys, ID card"
+Clothing,"Jacket, hoodie, hat, scarf, sportswear"
+Other,"Sports equipment, miscellaneous items"

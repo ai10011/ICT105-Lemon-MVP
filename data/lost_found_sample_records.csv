@@ -1,12 +1,13 @@
 record_id,item_type,item_name,location,report_type,reported_by_role,date_reported,status,admin_action,priority
 LF001,Electronics,Wireless earbuds,Library,Lost,Student,2026-07-01,Pending,Not yet reviewed,Medium
-LF002,Card,Student ID card,Cafeteria,Found,Staff,2026-07-01,Available,Verified by admin,High
-LF003,Bag,Black backpack,Building 6,Lost,Student,2026-07-02,In Progress,Checking CCTV / inquiry,High
+LF002,Personal,Student ID card,Cafeteria,Found,Staff,2026-07-01,Available,Verified by admin,High
+LF003,Personal,Black backpack,Building 6,Lost,Student,2026-07-02,In Progress,Checking CCTV / inquiry,High
 LF004,Stationery,Calculator,Classroom 502,Found,Student,2026-07-02,Available,Stored at admin desk,Low
-LF005,Bottle,Blue water bottle,Gym,Lost,Student,2026-07-03,Closed,Returned to owner,Low
+LF005,Personal,Blue water bottle,Gym,Lost,Student,2026-07-03,Closed,Returned to owner,Low
 LF006,Electronics,Phone charger,Computer Lab,Found,Student,2026-07-03,Available,Photo uploaded,Medium
-LF007,Documents,Notebook,Study Area,Lost,Student,2026-07-04,Pending,Waiting for match,Medium
-LF008,Accessory,Silver keychain,Parking Area,Found,Security,2026-07-04,In Progress,Owner verification needed,High
-LF009,Accessory,One Piece keychain,Computer Lab,Found,Staff,2026-07-08,Available,Stored at admin desk,Low
-LF010,Book,Flutter Development Book,Library,Lost,Student,2026-07-08,In Progress,Checking CCTV,Medium
-LF011,Sports,Orange basketball,Gym,Found,Security,2026-07-09,Available,Held by security,Low
+LF007,Stationery,Notebook,Study Area,Lost,Student,2026-07-04,Pending,Waiting for match,Medium
+LF008,Other,Silver keychain,Parking Area,Found,Security,2026-07-04,In Progress,Owner verification needed,High
+LF009,Other,One Piece keychain,Computer Lab,Found,Staff,2026-07-08,Available,Stored at admin desk,Low
+LF010,Stationery,Flutter Development Book,Library,Lost,Student,2026-07-08,In Progress,Checking CCTV,Medium
+LF011,Other,Orange basketball,Gym,Found,Security,2026-07-09,Available,Held by security,Low
+LF012,Clothing,Winter Scarf,Main Entrance,Lost,Student,2026-07-10,Pending,Checking lost desk,Low
