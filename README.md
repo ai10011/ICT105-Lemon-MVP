@@ -325,8 +325,8 @@ Our goal in Lab 10 is to build the first working version of the prototype based 
 
 ### Screenshots
 - Homepage:
-- Input form:
-- Record list:
+- Input form: [screenshots/input-form.png](screenshots/input-form.png)
+- Record list: [screenshots/record-list.png](screenshots/record-list.png)
 - Detail view:
 - Admin/status view:
 
