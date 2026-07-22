@@ -324,11 +324,14 @@ Our goal in Lab 10 is to build the first working version of the prototype based 
 | Dashboard | FR-12 | Completed | `prototype/project/dashboard.html` |
 
 ### Screenshots
-- Homepage:
+- Homepage: [screenshots/homepage.png](screenshots/homepage.png)
+- Login page: [screenshots/login.png](screenshots/login.png)
+- Registration page: [screenshots/registration.png](screenshots/registration.png)
 - Input form: [screenshots/input-form.png](screenshots/input-form.png)
 - Record list: [screenshots/record-list.png](screenshots/record-list.png)
-- Detail view:
-- Admin/status view:
+- Detail view: [screenshots/detail-view.png](screenshots/detail-view.png)
+- Admin/status view: [screenshots/admin-view.png](screenshots/admin-view.png)
+- Dashboard: [screenshots/dashboard.png](screenshots/dashboard.png)
 
 ### Team Contribution
 
