@@ -9,3 +9,37 @@ flowchart LR
     F --> I[Final Prototype Direction]
     G --> I
     H --> I
+
+flowchart TD
+    %% Roles & Entry Points
+    A[User / Student Accesses Landing Page] --> B{Choose Action}
+
+    %% Pathway 1: Report Item
+    B -->|Report Lost/Found Item| C[Fill Item Report Form]
+    C --> D{Form Input Valid?}
+    D -->|No| E[Show Inline Validation Errors]
+    E --> C
+    D -->|Yes| F[Save Record to LocalStorage]
+    F --> G[Display Confirmation Toast Message]
+    G --> H[Redirect to Status Tracker / Catalog]
+
+    %% Pathway 2: Search & Claim
+    B -->|Search/Browse Items| I[View Item Catalog]
+    I --> J[Apply Keyword Search / Category Filters]
+    J --> K[View Filtered List of Items]
+    K --> L[Click Item for Detail View]
+    L --> M{Wish to Claim?}
+    M -->|No| I
+    M -->|Yes| N[Submit Claim Request with Verification Info]
+    N --> O[Save Claim State as 'Pending' in LocalStorage]
+    O --> P[Display Claim Tracking Status]
+
+    %% Pathway 3: Admin Management
+    B -->|Admin Access| Q[Open Admin Panel]
+    Q --> R[Review Pending Item Claims & Reports]
+    R --> S{Verify Proof of Ownership?}
+    S -->|Rejected| T[Update Status to 'Claim Rejected']
+    S -->|Approved| U[Update Status to 'Returned / Closed']
+    T --> V[Sync Status Update to LocalStorage & Dashboard Metrics]
+    U --> V
+    V --> W[Update Summary Dashboard Analytics]
