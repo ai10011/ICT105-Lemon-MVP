@@ -146,14 +146,38 @@ document.addEventListener('DOMContentLoaded', async function () {
     const reviewMatchBtn = document.getElementById('review-match-btn');
     if (reviewMatchBtn) {
         reviewMatchBtn.addEventListener('click', function () {
-            alert('Potential Match Details:\n\nItem: Black HP Laptop Charger\nFound at: Main Library Security Desk\nStatus: Available for pickup & verification.');
+            if (typeof window.showWebsiteModal === 'function') {
+                window.showWebsiteModal({
+                    icon: 'manage_search',
+                    iconColor: 'text-amber-800',
+                    iconBg: 'bg-amber-100 border-amber-300',
+                    title: 'Potential Match Details',
+                    message: 'Item: Black HP Laptop Charger<br>Found at: Main Library Security Desk<br>Status: Available for pickup & verification.',
+                    buttonText: 'Close',
+                    buttonIcon: 'close'
+                });
+            } else {
+                alert('Potential Match Details:\n\nItem: Black HP Laptop Charger\nFound at: Main Library Security Desk\nStatus: Available for pickup & verification.');
+            }
         });
     }
 
     window.deleteReport = async function (id) {
         const target = records.find(r => String(r.id) === String(id));
         if (target && (target.reportType || '').toLowerCase().includes('completed')) {
-            alert('Completed reports cannot be deleted.');
+            if (typeof window.showWebsiteModal === 'function') {
+                window.showWebsiteModal({
+                    icon: 'block',
+                    iconColor: 'text-rose-600',
+                    iconBg: 'bg-rose-100 border-rose-300',
+                    title: 'Cannot Delete',
+                    message: 'Completed reports cannot be deleted.',
+                    buttonText: 'OK',
+                    buttonIcon: 'close'
+                });
+            } else {
+                alert('Completed reports cannot be deleted.');
+            }
             return;
         }
 
@@ -172,8 +196,20 @@ document.addEventListener('DOMContentLoaded', async function () {
             }
         } catch (e) { }
 
-        alert('Report deleted successfully!');
-        window.location.reload();
+        if (typeof window.showWebsiteModal === 'function') {
+            window.showWebsiteModal({
+                icon: 'delete_check',
+                iconColor: 'text-emerald-700',
+                iconBg: 'bg-emerald-100 border-emerald-300',
+                title: 'Report Deleted',
+                message: 'Report deleted successfully!',
+                buttonText: 'OK',
+                onClose: () => window.location.reload()
+            });
+        } else {
+            alert('Report deleted successfully!');
+            window.location.reload();
+        }
     };
 
     container.innerHTML = records.map(rec => {

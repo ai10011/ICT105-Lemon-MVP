@@ -119,8 +119,18 @@ document.addEventListener('DOMContentLoaded', async function () {
                     }
                 } catch (e) { }
 
-                alert('Claim approved! Report marked as Completed.');
-                window.location.href = 'dashboard.html';
+                if (typeof window.showWebsiteModal === 'function') {
+                    window.showWebsiteModal({
+                        icon: 'verified',
+                        title: 'Claim Approved!',
+                        message: 'Claim approved! Report marked as Completed.',
+                        buttonText: 'Go to Dashboard',
+                        onClose: () => window.location.href = 'dashboard.html'
+                    });
+                } else {
+                    alert('Claim approved! Report marked as Completed.');
+                    window.location.href = 'dashboard.html';
+                }
             });
 
             document.getElementById('decline-claim-btn')?.addEventListener('click', async function () {
@@ -145,8 +155,20 @@ document.addEventListener('DOMContentLoaded', async function () {
                     }
                 } catch (e) { }
 
-                alert('Claim request declined.');
-                window.location.reload();
+                if (typeof window.showWebsiteModal === 'function') {
+                    window.showWebsiteModal({
+                        icon: 'cancel',
+                        iconColor: 'text-rose-600',
+                        iconBg: 'bg-rose-100 border-rose-300',
+                        title: 'Claim Declined',
+                        message: 'Claim request declined.',
+                        buttonText: 'OK',
+                        onClose: () => window.location.reload()
+                    });
+                } else {
+                    alert('Claim request declined.');
+                    window.location.reload();
+                }
             });
         } else if (isReporter) {
             actionContainer.innerHTML = `
@@ -178,8 +200,18 @@ document.addEventListener('DOMContentLoaded', async function () {
                     }
                 } catch (e) { }
 
-                alert('Report marked as Completed!');
-                window.location.href = 'dashboard.html';
+                if (typeof window.showWebsiteModal === 'function') {
+                    window.showWebsiteModal({
+                        icon: 'task_alt',
+                        title: 'Report Completed',
+                        message: 'Report marked as Completed!',
+                        buttonText: 'Go to Dashboard',
+                        onClose: () => window.location.href = 'dashboard.html'
+                    });
+                } else {
+                    alert('Report marked as Completed!');
+                    window.location.href = 'dashboard.html';
+                }
             });
         } else if (isClaimer && isClaimPending) {
             actionContainer.innerHTML = `
@@ -201,8 +233,20 @@ document.addEventListener('DOMContentLoaded', async function () {
             `;
             document.getElementById('primary-action-btn')?.addEventListener('click', async function () {
                 if (!currentUser) {
-                    alert('Please log in first to claim this item.');
-                    window.location.href = 'login.html';
+                    if (typeof window.showWebsiteModal === 'function') {
+                        window.showWebsiteModal({
+                            icon: 'lock',
+                            iconColor: 'text-amber-800',
+                            iconBg: 'bg-amber-100 border-amber-300',
+                            title: 'Login Required',
+                            message: 'Please log in first to claim this item.',
+                            buttonText: 'Log In Now',
+                            onClose: () => window.location.href = 'login.html'
+                        });
+                    } else {
+                        alert('Please log in first to claim this item.');
+                        window.location.href = 'login.html';
+                    }
                     return;
                 }
 
@@ -236,16 +280,48 @@ document.addEventListener('DOMContentLoaded', async function () {
                     }
                 } catch (e) { }
 
-                alert(`Claim request submitted!\n\n${claimerName} (${claimerEmail}) has been notified to the submitter.`);
-                window.location.reload();
+                if (typeof window.showWebsiteModal === 'function') {
+                    window.showWebsiteModal({
+                        icon: 'send',
+                        title: 'Claim Submitted!',
+                        message: `Claim request submitted!\n\n${claimerName} (${claimerEmail}) has been notified to the submitter.`,
+                        buttonText: 'OK',
+                        onClose: () => window.location.reload()
+                    });
+                } else {
+                    alert(`Claim request submitted!\n\n${claimerName} (${claimerEmail}) has been notified to the submitter.`);
+                    window.location.reload();
+                }
             });
             document.getElementById('secondary-action-btn')?.addEventListener('click', function () {
                 if (!currentUser) {
-                    alert('Please log in first to message the finder.');
-                    window.location.href = 'login.html';
+                    if (typeof window.showWebsiteModal === 'function') {
+                        window.showWebsiteModal({
+                            icon: 'lock',
+                            iconColor: 'text-amber-800',
+                            iconBg: 'bg-amber-100 border-amber-300',
+                            title: 'Login Required',
+                            message: 'Please log in first to message the finder.',
+                            buttonText: 'Log In Now',
+                            onClose: () => window.location.href = 'login.html'
+                        });
+                    } else {
+                        alert('Please log in first to message the finder.');
+                        window.location.href = 'login.html';
+                    }
                 } else {
-                    alert('Opening conversation with the finder...');
-                    window.location.href = 'dashboard.html';
+                    if (typeof window.showWebsiteModal === 'function') {
+                        window.showWebsiteModal({
+                            icon: 'chat',
+                            title: 'Messaging Finder',
+                            message: 'Opening conversation with the finder...',
+                            buttonText: 'Go to Dashboard',
+                            onClose: () => window.location.href = 'dashboard.html'
+                        });
+                    } else {
+                        alert('Opening conversation with the finder...');
+                        window.location.href = 'dashboard.html';
+                    }
                 }
             });
         } else {
@@ -259,20 +335,64 @@ document.addEventListener('DOMContentLoaded', async function () {
             `;
             document.getElementById('primary-action-btn')?.addEventListener('click', function () {
                 if (!currentUser) {
-                    alert('Please log in first to report finding this item.');
-                    window.location.href = 'login.html';
+                    if (typeof window.showWebsiteModal === 'function') {
+                        window.showWebsiteModal({
+                            icon: 'lock',
+                            iconColor: 'text-amber-800',
+                            iconBg: 'bg-amber-100 border-amber-300',
+                            title: 'Login Required',
+                            message: 'Please log in first to report finding this item.',
+                            buttonText: 'Log In Now',
+                            onClose: () => window.location.href = 'login.html'
+                        });
+                    } else {
+                        alert('Please log in first to report finding this item.');
+                        window.location.href = 'login.html';
+                    }
                 } else {
-                    alert('Awesome! The owner of this lost item has been notified that you found it.');
-                    window.location.href = 'dashboard.html';
+                    if (typeof window.showWebsiteModal === 'function') {
+                        window.showWebsiteModal({
+                            icon: 'celebration',
+                            title: 'Owner Notified!',
+                            message: 'Awesome! The owner of this lost item has been notified that you found it.',
+                            buttonText: 'Go to Dashboard',
+                            onClose: () => window.location.href = 'dashboard.html'
+                        });
+                    } else {
+                        alert('Awesome! The owner of this lost item has been notified that you found it.');
+                        window.location.href = 'dashboard.html';
+                    }
                 }
             });
             document.getElementById('secondary-action-btn')?.addEventListener('click', function () {
                 if (!currentUser) {
-                    alert('Please log in first to contact the owner.');
-                    window.location.href = 'login.html';
+                    if (typeof window.showWebsiteModal === 'function') {
+                        window.showWebsiteModal({
+                            icon: 'lock',
+                            iconColor: 'text-amber-800',
+                            iconBg: 'bg-amber-100 border-amber-300',
+                            title: 'Login Required',
+                            message: 'Please log in first to contact the owner.',
+                            buttonText: 'Log In Now',
+                            onClose: () => window.location.href = 'login.html'
+                        });
+                    } else {
+                        alert('Please log in first to contact the owner.');
+                        window.location.href = 'login.html';
+                    }
                 } else {
-                    alert('Opening conversation with the owner...');
-                    window.location.href = 'dashboard.html';
+                    if (typeof window.showWebsiteModal === 'function') {
+                        window.showWebsiteModal({
+                            icon: 'chat',
+                            title: 'Messaging Owner',
+                            message: 'Opening conversation with the owner...',
+                            buttonText: 'Go to Dashboard',
+                            onClose: () => window.location.href = 'dashboard.html'
+                        });
+                    } else {
+                        alert('Opening conversation with the owner...');
+                        window.location.href = 'dashboard.html';
+                    }
                 }
             });
         }

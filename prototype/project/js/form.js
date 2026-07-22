@@ -121,8 +121,24 @@ document.addEventListener('DOMContentLoaded', function () {
                     }).catch(e => console.log('Server sync skipped:', e));
                 }
 
-                alert('Report submitted successfully!');
-                window.location.href = 'records.html';
+                if (typeof window.showWebsiteModal === 'function') {
+                    window.showWebsiteModal({
+                        icon: 'check_circle',
+                        iconColor: 'text-emerald-700',
+                        iconBg: 'bg-emerald-100 border-emerald-300',
+                        title: 'Report Submitted!',
+                        message: 'Your report has been successfully recorded in the system. Redirecting to the records directory...',
+                        buttonText: 'View Records Now',
+                        buttonIcon: 'arrow_forward',
+                        autoCloseMs: 2500,
+                        onClose: function () {
+                            window.location.href = 'records.html';
+                        }
+                    });
+                } else {
+                    alert('Report submitted successfully!');
+                    window.location.href = 'records.html';
+                }
             }
 
             if (photoInput && photoInput.files[0]) {

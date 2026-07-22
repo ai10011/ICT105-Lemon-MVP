@@ -188,7 +188,64 @@ window.LemonData = {
         document.getElementById('cancel-auth-modal')?.addEventListener('click', removeModal);
     }
 
-    
+    window.showWebsiteModal = function (options = {}) {
+        const {
+            icon = 'check_circle',
+            iconColor = 'text-emerald-700',
+            iconBg = 'bg-emerald-100 border-emerald-300',
+            title = 'Notification',
+            message = '',
+            buttonText = 'Continue',
+            buttonIcon = 'arrow_forward',
+            onClose = null,
+            autoCloseMs = 0
+        } = options;
+
+        const existing = document.getElementById('custom-website-modal');
+        if (existing) existing.remove();
+
+        const modal = document.createElement('div');
+        modal.id = 'custom-website-modal';
+        modal.className = 'fixed inset-0 z-[99999] flex items-center justify-center bg-black/65 backdrop-blur-md p-4 transition-opacity duration-300';
+        modal.innerHTML = `
+            <div class="bg-white rounded-2xl max-w-md w-full p-8 shadow-2xl border border-slate-100 flex flex-col items-center text-center relative z-[100000] animate-in zoom-in-95 duration-200">
+                <button id="close-custom-modal" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 transition-colors p-1 rounded-full hover:bg-slate-100 cursor-pointer">
+                    <span class="material-symbols-outlined text-xl">close</span>
+                </button>
+                <div class="w-16 h-16 rounded-full ${iconBg} border flex items-center justify-center mb-5 shadow-inner">
+                    <span class="material-symbols-outlined ${iconColor} text-3xl">${icon}</span>
+                </div>
+                <h3 class="text-2xl font-extrabold text-slate-900 mb-2">${title}</h3>
+                <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                    ${message}
+                </p>
+                <button id="custom-modal-btn" class="w-full h-12 bg-[#1A1C1C] hover:bg-black text-primary-fixed font-body-bold rounded-lg transition-all flex items-center justify-center gap-2 shadow text-sm cursor-pointer">
+                    <span>${buttonText}</span>
+                    <span class="material-symbols-outlined text-base">${buttonIcon}</span>
+                </button>
+            </div>
+        `;
+        document.body.appendChild(modal);
+        document.body.style.overflow = 'hidden';
+
+        let closed = false;
+        const closeModal = () => {
+            if (closed) return;
+            closed = true;
+            const m = document.getElementById('custom-website-modal');
+            if (m) m.remove();
+            document.body.style.overflow = '';
+            if (typeof onClose === 'function') onClose();
+        };
+
+        document.getElementById('close-custom-modal')?.addEventListener('click', closeModal);
+        document.getElementById('custom-modal-btn')?.addEventListener('click', closeModal);
+
+        if (autoCloseMs > 0) {
+            setTimeout(closeModal, autoCloseMs);
+        }
+    };
+
     document.addEventListener('click', function (e) {
         if (isLoggedIn()) return; 
 
