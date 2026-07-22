@@ -347,4 +347,41 @@ Lemon
 - Verify that all documentation and GitHub files remain consistent.
 - Prepare the final prototype demonstration and presentation.
 
+# Weekly Logbook - Lab 10
+
+## Lab Topic
+MVP Implementation Sprint 1
+
+## What We Built Today
+- 
+- 
+- 
+
+## Requirement IDs Addressed
+- FR-__:
+- FR-__:
+- FR-__:
+
+## Contribution by Members
+
+| Member | Contribution | Evidence |
+|---|---|---|
+| | | |
+| | | |
+| | | |
+
+## Screenshots Added
+- /screenshots/homepage.png
+- /screenshots/input-form.png
+- /screenshots/record-list.png
+- /screenshots/detail-view.png
+- /screenshots/admin-view.png
+
+## Problems Faced
+- 
+
+## Plan for Next Lab
+-
+
+
 

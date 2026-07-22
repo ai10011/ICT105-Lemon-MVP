@@ -1,0 +1,7 @@
+record_id,report_type,item_name,category,location,date_reported,description,status,contact
+LF-001,Lost,Laptop Charger,Electronics,"Building 6, Room 204",2026-02-02,Black Lenovo charger left after class,Open,student01@example.com
+LF-002,Found,Water Bottle,Personal Item,Library 2nd Floor,2026-02-03,Blue bottle found near study table,Pending Verification,security@example.com
+LF-003,Lost,Student ID Card,Document,Canteen Area,2026-02-04,Student ID card lost during lunch,Open,student02@example.com
+LF-004,Found,Umbrella,Personal Item,Main Entrance,2026-02-04,Small black umbrella found near door,Claimed,security@example.com
+LF-005,Lost,Earbuds Case,Electronics,Computer Lab,2026-02-05,White earbuds case missing after lab,Open,student03@example.com
+LF-006,Found,Notebook,Stationery,Building 5 Hallway,2026-02-05,Green notebook with course notes,Closed,staff01@example.com

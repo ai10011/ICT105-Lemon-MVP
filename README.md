@@ -298,4 +298,36 @@ Core system requirements (`FR-01` through `FR-16` in `docs/system-requirements.m
 | **Phoochit Jantakam** (`Bilal112344`) | Documentation Lead | Authored `docs/risk-register.md`, `docs/updated-requirements-note.md`, and `docs/user-consent-statement.md` | Issue `#64` ([#64](https://github.com/ai10011/ICT105-Lemon-MVP/issues/64)) |
 | **Kyaw Ye Lin** (`kyawyel68-Crystal`) | Product Lead | Authored `docs/data-handling-policy.md`, `docs/ip-and-third-party-assets.md`, updated `docs/weekly-logbook.md`, and `README.md` | Issue `#65` ([#65](https://github.com/ai10011/ICT105-Lemon-MVP/issues/65)) |
 
+## Lab 10 - MVP Implementation Sprint 1
 
+### Sprint Goal
+Our goal in Lab 10 is to begin building the first working version of the prototype based on the approved requirements, wireframes, architecture, and responsible-design checks.
+
+### Implementation Approach
+- Platform/tools:
+- Backend status:
+- Data storage/simulation:
+- Prototype link or folder:
+
+### Features Implemented in Sprint 1
+
+| Feature | Requirement ID | Status | Evidence |
+|---|---|---|---|
+| Homepage | FR-01 | | |
+| Input form | FR-03 | | |
+| Record list | FR-05 | | |
+| Search/filter | FR-06 | | |
+| Detail view | FR-07 | | |
+| Status tracking | FR-08 | | |
+| Admin view | FR-09 | | |
+| Dashboard | FR-12 | | |
+
+### Screenshots
+- Homepage:
+- Input form:
+- Record list:
+- Detail view:
+- Admin/status view:
+
+### Team Contribution
+All group members contributed to the same GitHub repository/page.
