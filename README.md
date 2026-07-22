@@ -301,44 +301,43 @@ Core system requirements (`FR-01` through `FR-16` in `docs/system-requirements.m
 ## Lab 10 - MVP Implementation Sprint 1
 
 ### Sprint Goal
-Our goal in Lab 10 is to build the first working version of the prototype based on the approved requirements, wireframes, technical architecture, and responsible-design checks.
+Lab 10 focused on developing the first functional version of the MVP prototype using the approved requirements, wireframes, technical architecture, and responsible design guidelines as the foundation.
 
 ### Implementation Approach
-- **Platform/tools:** HTML5, Tailwind CSS, Vanilla JavaScript, Node.js Express REST API
-- **Backend status:** Real backend / Simulated backend (Node.js Express REST API server with JSON file storage & localStorage fallback)
-- **Data storage/simulation:** `prototype/project/data/record-data.json`, `data/lost-found-sample-records.csv`
-- **Prototype link or folder:** `prototype/project/` (`index.html`, `form.html`, `records.html`, `detail.html`, `admin.html`, `dashboard.html`)
+- **Development Stack:** HTML5, Tailwind CSS, Vanilla JavaScript, Node.js Express REST API
+- **Backend Implementation:** Node.js Express REST API server with JSON file storage and `localStorage` fallback.
+- **Data Source:** `prototype/project/data/record-data.json` and `data/lost-found-sample-records.csv`
+- **Prototype Location:** `prototype/project/` (`index.html`, `form.html`, `records.html`, `detail.html`, `admin.html`, `dashboard.html`)
 
-### Features Implemented in Sprint 1
+### Features Completed in Sprint 1
 
 | Feature | Requirement ID | Status | Evidence |
 |---|---|---|---|
 | Homepage | FR-01 | Completed | `prototype/project/index.html` |
-| Input form | FR-03 | Completed | `prototype/project/form.html` |
-| Data storage / REST API | FR-04 | Completed | `prototype/project/server.js` |
-| Record list | FR-05 | Completed | `prototype/project/records.html` |
-| Search/filter | FR-06 | Completed | `prototype/project/records.html` |
-| Detail view | FR-07 | Completed | `prototype/project/detail.html` |
-| Status tracking | FR-08 | Completed | `prototype/project/detail.html`, `admin.html` |
-| Admin view | FR-09 | Completed | `prototype/project/admin.html` |
-| Dashboard | FR-12 | Completed | `prototype/project/dashboard.html` |
+| Report Form | FR-03 | Completed | `prototype/project/form.html` |
+| REST API and Data Storage | FR-04 | Completed | `prototype/project/server.js` |
+| Records List | FR-05 | Completed | `prototype/project/records.html` |
+| Search and Filter | FR-06 | Completed | `prototype/project/records.html` |
+| Record Detail View | FR-07 | Completed | `prototype/project/detail.html` |
+| Status Tracking | FR-08 | Completed | `prototype/project/detail.html`, `admin.html` |
+| Admin Management | FR-09 | Completed | `prototype/project/admin.html` |
+| Analytics Dashboard | FR-12 | Completed | `prototype/project/dashboard.html` |
 
-### Screenshots
-- Homepage: [screenshots/homepage.png](screenshots/homepage.png)
-- Login page: [screenshots/login.png](screenshots/login.png)
-- Registration page: [screenshots/registration.png](screenshots/registration.png)
-- Input form: [screenshots/input-form.png](screenshots/input-form.png)
-- Record list: [screenshots/record-list.png](screenshots/record-list.png)
-- Detail view: [screenshots/detail-view.png](screenshots/detail-view.png)
-- Admin/status view: [screenshots/admin-view.png](screenshots/admin-view.png)
-- Dashboard: [screenshots/dashboard.png](screenshots/dashboard.png)
+### Prototype Screenshots
+- Homepage – `screenshots/homepage.png`
+- Login Page – `screenshots/login.png`
+- Registration Page – `screenshots/registration.png`
+- Report Form – `screenshots/input-form.png`
+- Records List – `screenshots/record-list.png`
+- Detail View – `screenshots/detail-view.png`
+- Admin / Status View – `screenshots/admin-view.png`
+- Dashboard – `screenshots/dashboard.png`
 
 ### Team Contribution
 
-| Member Name | Role | Deliverables & Artifact Evidence |
+| Member | Role | Evidence |
 |---|---|---|
-| **Kyaw Ye Lin** | Product Lead | `data/lost-found-sample-records.csv`, `data/lost-found-status-categories.csv` |
-| **Tin May Lin** | UX/UI Lead | `docs/feature-implementation-status.md`, `docs/implementation-plan.md`, `diagrams/implementation-flow.mmd` |
-| **Phollapat Rodchue** | Technical Lead | Web prototype development under `prototype/project/` |
-| **Phoochit Jantakam** | Documentation Lead | `docs/weekly-logbook.md`, `README.md` |
-
+| **Kyaw Ye Lin** | Product Lead | Standardized the sample datasets and category files (`data/lost-found-sample-records.csv`, `data/lost-found-status-categories.csv`) |
+| **Tin May Lin** | UX/UI Lead | Prepared the feature implementation status, implementation plan, and implementation flow diagram (`docs/feature-implementation-status.md`, `docs/implementation-plan.md`, `diagrams/implementation-flow.mmd`) |
+| **Phollapat Rodchue** | Technical Lead | Developed and integrated the complete web prototype under `prototype/project/` |
+| **Phoochit Jantakam** | Documentation Lead | Maintained the project documentation and weekly logbook (`docs/weekly-logbook.md`, `README.md`) |
