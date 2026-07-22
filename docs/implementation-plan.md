@@ -8,7 +8,6 @@
 - Backend status: Real backend / Simulated backend (Node.js Express REST API server with JSON file storage & localStorage fallback)
 
 ## 2. Prototype Scope for Sprint 1
-List the features your group will implement in Lab 10.
 
 | Feature | Requirement ID | User Story ID | Screen/Module | Sprint 1 Status |
 |---|---|---|---|---|
@@ -24,7 +23,6 @@ List the features your group will implement in Lab 10.
 | Dashboard/summary | FR-12 | US-03, US-06 | [dashboard.html](../prototype/project/dashboard.html) | Completed |
 
 ## 3. Implementation Approach
-Explain how your prototype will be built.
 
 - Frontend: Built using responsive HTML5 pages, Tailwind CSS for consistent design system tokens, and Vanilla JavaScript for dynamic rendering, client-side filtering, and modular UI components.
 - Data source/storage: Powered by a lightweight Node.js Express REST API server (`server.js`) that persists reports into structured JSON (`prototype/project/data/record-data.json`), complemented by `localStorage` fallback and standardized CSV datasets (`data/lost-found-sample-records.csv`).
@@ -43,7 +41,6 @@ Explain how your prototype will be built.
 | Phoochit Jantakam | Documentation Lead - Weekly logbook & project documentation | [weekly-logbook.md](weekly-logbook.md), [README.md](../README.md) |
 
 ## 5. Risks or Blockers
-Write technical problems your team faced and how you plan to solve them.
 
 1. **Category Mismatch across CSV Datasets and UI Dropdowns:** Initial datasets contained conflicting category names (`Personal Item`, `Document`, `Card`).  
    - *Solution:* Standardized all CSV data files and HTML `<select>` forms across the project to 5 core categories: `Electronics`, `Stationery`, `Personal`, `Clothing`, `Other`.
