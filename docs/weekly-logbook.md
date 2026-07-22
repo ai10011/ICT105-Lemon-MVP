@@ -353,35 +353,52 @@ Lemon
 MVP Implementation Sprint 1
 
 ## What We Built Today
-- 
-- 
-- 
+- Completed the core web application prototype (`prototype/project/`) including Landing page, Report Form, Records List, Detail View, Admin Management, and Analytics Dashboard.
+- Implemented Node.js Express REST API server (`server.js`) with JSON file-based data persistence and `localStorage` fallback.
+- Standardized status categories across sample datasets (`data/lost-found-sample-records.csv`, `data/lost-found-status-categories.csv`) and UI select inputs to 5 core categories (`Electronics`, `Stationery`, `Personal`, `Clothing`, `Other`).
+- Completed Lab 10 Feature Implementation Status (`docs/feature-implementation-status.md`), Implementation Plan (`docs/implementation-plan.md`), and Implementation Flow diagram (`diagrams/implementation-flow.mmd`).
 
 ## Requirement IDs Addressed
-- FR-__:
-- FR-__:
-- FR-__:
+- FR-01: Homepage or landing screen
+- FR-02: Primary user pathway
+- FR-03: User input or data submission feature
+- FR-04: Data storage or record management
+- FR-05: View records / information list
+- FR-06: Search, filter, or category function
+- FR-07: Detail view for each record
+- FR-08: Status or progress tracking
+- FR-09: Admin or manager function
+- FR-10: Basic validation and error prevention
+- FR-11: Confirmation or feedback message
+- FR-12: Dashboard, summary, or simple analytics view
+- FR-13: Basic user interface consistency
+- FR-14: Mobile-friendly or responsive design consideration
+- FR-15: Basic privacy and responsible data handling
+- FR-16: Final prototype traceability
 
 ## Contribution by Members
 
 | Member | Contribution | Evidence |
 |---|---|---|
-| | | |
-| | | |
-| | | |
+| **Kyaw Ye Lin** | Standardized sample datasets & category files | `data/lost-found-sample-records.csv`, `data/lost-found-status-categories.csv` |
+| **Tin May Lin** | Feature implementation status, implementation plan, & system flow diagrams | `docs/feature-implementation-status.md`, `docs/implementation-plan.md`, `diagrams/implementation-flow.mmd` |
+| **Phollapat Rodchue** | Built and integrated project web prototype | `prototype/project/` (`index.html`, `form.html`, `records.html`, `detail.html`, `admin.html`, `dashboard.html`, `server.js`) |
+| **Phoochit Jantakam** | Maintained project documentation & weekly progress logbook | `docs/weekly-logbook.md`, `README.md` |
 
 ## Screenshots Added
-- /screenshots/homepage.png
-- /screenshots/input-form.png
-- /screenshots/record-list.png
-- /screenshots/detail-view.png
-- /screenshots/admin-view.png
+- `screenshots/homepage.png`
+- `screenshots/input-form.png`
+- `screenshots/record-list.png`
+- `screenshots/detail-view.png`
+- `screenshots/admin-view.png`
 
 ## Problems Faced
-- 
+- Category mismatches between CSV datasets and HTML dropdown options. Fixed by standardizing all dropdowns and CSV files to 5 categories (`Electronics`, `Stationery`, `Personal`, `Clothing`, `Other`).
+- Navigational header and footer code duplication across prototype pages. Resolved by creating a shared component loader (`Shared/components.js`).
 
 ## Plan for Next Lab
--
+- Prepare final prototype demonstration, polish responsive design touchpoints, and complete Lab 11 user testing and final presentation slides.
+
 
 
 

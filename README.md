@@ -301,26 +301,27 @@ Core system requirements (`FR-01` through `FR-16` in `docs/system-requirements.m
 ## Lab 10 - MVP Implementation Sprint 1
 
 ### Sprint Goal
-Our goal in Lab 10 is to begin building the first working version of the prototype based on the approved requirements, wireframes, architecture, and responsible-design checks.
+Our goal in Lab 10 is to build the first working version of the prototype based on the approved requirements, wireframes, technical architecture, and responsible-design checks.
 
 ### Implementation Approach
-- Platform/tools:
-- Backend status:
-- Data storage/simulation:
-- Prototype link or folder:
+- **Platform/tools:** HTML5, Tailwind CSS, Vanilla JavaScript, Node.js Express REST API
+- **Backend status:** Real backend / Simulated backend (Node.js Express REST API server with JSON file storage & localStorage fallback)
+- **Data storage/simulation:** `prototype/project/data/record-data.json`, `data/lost-found-sample-records.csv`
+- **Prototype link or folder:** `prototype/project/` (`index.html`, `form.html`, `records.html`, `detail.html`, `admin.html`, `dashboard.html`)
 
 ### Features Implemented in Sprint 1
 
 | Feature | Requirement ID | Status | Evidence |
 |---|---|---|---|
-| Homepage | FR-01 | | |
-| Input form | FR-03 | | |
-| Record list | FR-05 | | |
-| Search/filter | FR-06 | | |
-| Detail view | FR-07 | | |
-| Status tracking | FR-08 | | |
-| Admin view | FR-09 | | |
-| Dashboard | FR-12 | | |
+| Homepage | FR-01 | Completed | `prototype/project/index.html` |
+| Input form | FR-03 | Completed | `prototype/project/form.html` |
+| Data storage / REST API | FR-04 | Completed | `prototype/project/server.js` |
+| Record list | FR-05 | Completed | `prototype/project/records.html` |
+| Search/filter | FR-06 | Completed | `prototype/project/records.html` |
+| Detail view | FR-07 | Completed | `prototype/project/detail.html` |
+| Status tracking | FR-08 | Completed | `prototype/project/detail.html`, `admin.html` |
+| Admin view | FR-09 | Completed | `prototype/project/admin.html` |
+| Dashboard | FR-12 | Completed | `prototype/project/dashboard.html` |
 
 ### Screenshots
 - Homepage:
@@ -330,4 +331,11 @@ Our goal in Lab 10 is to begin building the first working version of the prototy
 - Admin/status view:
 
 ### Team Contribution
-All group members contributed to the same GitHub repository/page.
+
+| Member Name | Role | Deliverables & Artifact Evidence |
+|---|---|---|
+| **Kyaw Ye Lin** | Product Lead | `data/lost-found-sample-records.csv`, `data/lost-found-status-categories.csv` |
+| **Tin May Lin** | UX/UI Lead | `docs/feature-implementation-status.md`, `docs/implementation-plan.md`, `diagrams/implementation-flow.mmd` |
+| **Phollapat Rodchue** | Technical Lead | Web prototype development under `prototype/project/` |
+| **Phoochit Jantakam** | Documentation Lead | `docs/weekly-logbook.md`, `README.md` |
+
