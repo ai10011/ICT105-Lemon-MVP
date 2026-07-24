@@ -341,3 +341,28 @@ Lab 10 focused on developing the first functional version of the MVP prototype u
 | **Tin May Lin** | UX/UI Lead | Prepared the feature implementation status, implementation plan, and implementation flow diagram (`docs/feature-implementation-status.md`, `docs/implementation-plan.md`, `diagrams/implementation-flow.mmd`) |
 | **Phollapat Rodchue** | Technical Lead | Developed and integrated the complete web prototype under `prototype/project/` |
 | **Phoochit Jantakam** | Documentation Lead | Maintained the project documentation and weekly logbook (`docs/weekly-logbook.md`, `README.md`) |
+
+## Lab 11: MVP Implementation Sprint 2 and Startup Metrics
+
+### Prototype Progress
+Describe what improved from Lab 10 to Lab 11.
+
+### Implemented / Improved Features
+| Requirement ID | Feature | Status | Evidence |
+|---|---|---|---|
+| FR-03 |  |  |  |
+| FR-06 |  |  |  |
+| FR-08 |  |  |  |
+| FR-12 |  |  |  |
+
+### Startup/Product Metrics
+List the metrics implemented or documented.
+
+### Prototype Screenshots
+Add links to updated screenshots.
+
+### Member Contributions
+Summarize each member's contribution.
+
+### Remaining Work
+List what must still be completed before the final prototype.

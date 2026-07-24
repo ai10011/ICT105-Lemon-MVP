@@ -123,5 +123,23 @@ document.addEventListener('DOMContentLoaded', async function () {
         });
     }
 
+    const mobileFilterToggle = document.getElementById('mobile-filter-toggle');
+    const filterBox = document.getElementById('filter-container-box');
+    const filterArrow = document.getElementById('mobile-filter-arrow');
+
+    if (mobileFilterToggle && filterBox && filterArrow) {
+        mobileFilterToggle.addEventListener('click', function () {
+            const isHidden = filterBox.classList.contains('hidden');
+            if (isHidden) {
+                filterBox.classList.remove('hidden');
+                filterArrow.style.transform = 'rotate(180deg)';
+            } else {
+                filterBox.classList.add('hidden');
+                filterArrow.style.transform = 'rotate(0deg)';
+            }
+        });
+    }
+
     render();
 });
+

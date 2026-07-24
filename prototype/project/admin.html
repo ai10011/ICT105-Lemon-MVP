@@ -22,19 +22,25 @@
 </head>
 
 <body class="bg-background text-on-background flex h-screen overflow-hidden">
-    <aside class="hidden md:flex flex-col h-full w-64 shadow-md p-md space-y-sm z-20 shrink-0 bg-on-surface">
-        <div class="mb-xl flex items-center space-x-md">
-            <div class="w-12 h-12 rounded-full overflow-hidden shrink-0 border-2 border-primary-container">
-                <img alt="Admin Avatar" class="w-full h-full object-cover"
-                    data-alt="A professional headshot of a campus security admin wearing a neat uniform, well-lit in a modern office environment. The lighting is crisp and the background is slightly blurred. The overall aesthetic implies trust, security, and competence."
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPdnYxzjm37Bx7Szb3Z6OtRYS9BtZpdUSiQse3HEMk2P6flcwTHJnbTWbNtKWiJw33MFUSeUZ9HD9BZoaWuQ7kmabviBhuvxN32wJHjRiPp4cuqka_Bf45GKZKsweKn9so5CjCbtecip9BGKJan6ANah6_sP7zQ6Qylu84Cop7dPViAnAo-fH_09Ldj-msOlDxpK4zIJ2cXj6fxnJ_KiwPiyIYxEWObvfSi-tTK95HvLW8VI3j6IL3yrVBvsHu_m_qAKSkCraBROU">
+    <div id="admin-sidebar-overlay" class="hidden fixed inset-0 bg-black/60 backdrop-blur-sm z-40 md:hidden"></div>
+    <aside id="admin-sidebar" class="hidden md:flex flex-col fixed md:static inset-y-0 left-0 h-full w-64 shadow-xl md:shadow-md p-md space-y-sm z-50 shrink-0 bg-on-surface">
+        <div class="mb-xl flex items-center justify-between">
+            <div class="flex items-center space-x-md">
+                <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden shrink-0 border-2 border-primary-container">
+                    <img alt="Admin Avatar" class="w-full h-full object-cover"
+                        data-alt="A professional headshot of a campus security admin wearing a neat uniform, well-lit in a modern office environment."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPdnYxzjm37Bx7Szb3Z6OtRYS9BtZpdUSiQse3HEMk2P6flcwTHJnbTWbNtKWiJw33MFUSeUZ9HD9BZoaWuQ7kmabviBhuvxN32wJHjRiPp4cuqka_Bf45GKZKsweKn9so5CjCbtecip9BGKJan6ANah6_sP7zQ6Qylu84Cop7dPViAnAo-fH_09Ldj-msOlDxpK4zIJ2cXj6fxnJ_KiwPiyIYxEWObvfSi-tTK95HvLW8VI3j6IL3yrVBvsHu_m_qAKSkCraBROU">
+                </div>
+                <div>
+                    <a href="index.html"
+                        class="font-headline-md text-headline-md text-primary-fixed truncate hover:opacity-80 transition-opacity block">Lemon
+                        Admin</a>
+                    <p class="font-label-caps text-label-caps text-secondary-fixed-dim uppercase text-xs">University Station</p>
+                </div>
             </div>
-            <div>
-                <a href="index.html"
-                    class="font-headline-md text-headline-md text-primary-fixed truncate hover:opacity-80 transition-opacity block">Lemon
-                    Admin</a>
-                <p class="font-label-caps text-label-caps text-secondary-fixed-dim uppercase">University Station</p>
-            </div>
+            <button id="close-admin-sidebar-btn" class="md:hidden text-secondary-fixed-dim hover:text-white p-1 rounded-lg">
+                <span class="material-symbols-outlined text-2xl">close</span>
+            </button>
         </div>
         <nav class="flex-1 space-y-sm overflow-y-auto">
             <a class="flex items-center space-x-md px-md py-sm bg-primary-container text-on-primary-container rounded-lg font-bold transition-all duration-200 ease-in-out group"
@@ -67,7 +73,7 @@
             </a>
         </nav>
         <button onclick="window.location.href='form.html'"
-            class="w-full mt-xl py-sm px-md bg-primary-container text-on-primary-container font-body-bold text-body-bold rounded-lg hover:bg-primary-fixed-dim active:scale-95 transition-all duration-150 shadow-sm flex items-center justify-center space-x-sm font-bold">
+            class="w-full mt-xl py-sm px-md bg-primary-container text-on-primary-container font-body-bold text-body-bold rounded-lg hover:bg-primary-fixed-dim active:scale-95 transition-all duration-150 shadow-sm flex items-center justify-center space-x-sm font-bold cursor-pointer">
             <span class="material-symbols-outlined">add_circle</span>
             <span class="">Report Found Item</span>
         </button>
@@ -88,15 +94,15 @@
         <header class="bg-primary-container shadow-sm z-10 shrink-0 border-b border-outline-variant h-16">
             <div
                 class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-full w-full max-w-max-width mx-auto">
-                <button
-                    class="md:hidden p-sm text-primary active:scale-95 duration-150 rounded-full hover:bg-surface-container transition-colors">
-                    <span class="material-symbols-outlined">menu</span>
+                <button id="admin-mobile-menu-btn"
+                    class="md:hidden p-sm text-primary active:scale-95 duration-150 rounded-full hover:bg-surface-container transition-colors cursor-pointer" aria-label="Toggle Admin Navigation">
+                    <span class="material-symbols-outlined text-2xl">menu</span>
                 </button>
                 <div class="flex items-center space-x-sm"><a href="index.html"
                         class="font-display-lg text-headline-md font-black tracking-tight text-on-primary-container hover:opacity-80 transition-opacity">Lemon</a><span
                         class="hidden sm:inline-block font-label-caps text-label-caps text-on-surface-variant ml-sm px-sm py-xs bg-surface-container-high rounded-full uppercase tracking-wider font-bold">Security
                         Hub</span></div>
-                <div class="flex items-center space-x-lg">
+                <div class="flex items-center space-x-md md:space-x-lg">
                     <div
                         class="hidden lg:flex items-center border border-outline-variant rounded-full h-12 px-md focus-within:border-primary-container focus-within:ring-2 focus-within:ring-primary-container/20 transition-all shadow-sm bg-surface-container-low">
                         <span class="material-symbols-outlined text-secondary">search</span>
@@ -112,29 +118,29 @@
                         </select>
                     </div>
                     <button
-                        class="lg:hidden p-sm text-on-surface-variant hover:bg-surface-container rounded-full transition-colors active:scale-95 duration-150">
-                        <span class="material-symbols-outlined">search</span>
+                        class="lg:hidden p-sm text-on-surface-variant hover:bg-surface-container rounded-full transition-colors active:scale-95 duration-150 cursor-pointer">
+                        <span class="material-symbols-outlined text-xl sm:text-2xl">search</span>
                     </button>
-                    <div class="flex items-center space-x-sm">
+                    <div class="flex items-center space-x-xs sm:space-x-sm">
                         <button
-                            class="p-sm text-primary hover:bg-surface-container rounded-full transition-colors active:scale-95 duration-150 relative">
-                            <span class="material-symbols-outlined">notifications</span>
+                            class="p-sm text-primary hover:bg-surface-container rounded-full transition-colors active:scale-95 duration-150 relative cursor-pointer">
+                            <span class="material-symbols-outlined text-xl sm:text-2xl">notifications</span>
                             <span
                                 class="absolute top-2 right-2 w-2.5 h-2.5 bg-error rounded-full border-2 border-surface-container-lowest"></span>
                         </button>
                         <button
-                            class="p-sm text-primary hover:bg-surface-container rounded-full transition-colors active:scale-95 duration-150 hidden md:block">
-                            <span class="material-symbols-outlined">account_circle</span>
+                            class="p-sm text-primary hover:bg-surface-container rounded-full transition-colors active:scale-95 duration-150 hidden md:block cursor-pointer">
+                            <span class="material-symbols-outlined text-2xl">account_circle</span>
                         </button>
                     </div>
                 </div>
             </div>
         </header>
         <div class="flex-1 overflow-y-auto p-margin-mobile md:p-margin-desktop lg:p-xxl">
-            <div class="max-w-max-width mx-auto space-y-xxl">
+            <div class="max-w-max-width mx-auto space-y-lg sm:space-y-xxl">
                 <div>
-                    <h2 class="font-display-lg text-display-lg text-on-surface mb-sm font-bold">Overview Dashboard</h2>
-                    <p class="font-body-base text-body-base text-on-surface-variant">Real-time campus security and lost
+                    <h2 class="font-display-lg text-2xl sm:text-3xl md:text-display-lg text-on-surface mb-xs sm:mb-sm font-bold">Overview Dashboard</h2>
+                    <p class="font-body-base text-xs sm:text-body-base text-on-surface-variant">Real-time campus security and lost
                         property metrics.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-lg">

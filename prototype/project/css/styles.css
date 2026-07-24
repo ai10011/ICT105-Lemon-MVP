@@ -30,3 +30,20 @@ body {
 .border-slate {
     border-color: #E2E8F0;
 }
+
+/* Mobile Responsiveness & Drawer Animations */
+@media (max-width: 767px) {
+    .mobile-menu-active {
+        overflow: hidden;
+    }
+}
+
+#mobile-nav-menu {
+    transition: all 0.25s ease-in-out;
+}
+
+.admin-sidebar-overlay {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+}
+

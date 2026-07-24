@@ -70,4 +70,34 @@ document.addEventListener('DOMContentLoaded', async function () {
             </tr>
         `;
     }).join('');
+    // Admin Mobile Sidebar Drawer Handlers
+    const adminMenuBtn = document.getElementById('admin-mobile-menu-btn');
+    const closeAdminBtn = document.getElementById('close-admin-sidebar-btn');
+    const adminSidebar = document.getElementById('admin-sidebar');
+    const adminOverlay = document.getElementById('admin-sidebar-overlay');
+
+    function openAdminSidebar() {
+        if (adminSidebar) {
+            adminSidebar.classList.remove('hidden');
+            adminSidebar.classList.add('flex');
+        }
+        if (adminOverlay) {
+            adminOverlay.classList.remove('hidden');
+        }
+    }
+
+    function closeAdminSidebar() {
+        if (adminSidebar) {
+            adminSidebar.classList.add('hidden');
+            adminSidebar.classList.remove('flex');
+        }
+        if (adminOverlay) {
+            adminOverlay.classList.add('hidden');
+        }
+    }
+
+    if (adminMenuBtn) adminMenuBtn.addEventListener('click', openAdminSidebar);
+    if (closeAdminBtn) closeAdminBtn.addEventListener('click', closeAdminSidebar);
+    if (adminOverlay) adminOverlay.addEventListener('click', closeAdminSidebar);
 });
+

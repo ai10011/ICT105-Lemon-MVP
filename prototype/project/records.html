@@ -18,25 +18,29 @@
 
 <body class="bg-background text-on-background min-h-screen flex flex-col pt-[80px]">
     <div id="header-placeholder"></div>
-    <main class="flex-grow w-full max-w-max-width mx-auto px-margin-desktop py-xl flex flex-col md:flex-row gap-gutter">
-        <aside class="w-full md:w-64 flex-shrink-0 space-y-lg">
-            <div class="bg-surface-container-lowest p-lg rounded-xl border border-outline-variant shadow-sm space-y-md">
-                <h2 class="font-subheading-sm text-subheading-sm text-on-surface mb-md">Filters</h2>
+    <main class="flex-grow w-full max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-lg md:py-xl flex flex-col md:flex-row gap-gutter">
+        <aside class="w-full md:w-64 flex-shrink-0">
+            <button id="mobile-filter-toggle" type="button" class="md:hidden w-full h-12 bg-surface-container-lowest border border-outline-variant rounded-xl px-md flex items-center justify-between font-body-bold text-on-surface shadow-sm cursor-pointer mb-xs">
+                <span class="flex items-center gap-xs"><span class="material-symbols-outlined text-primary text-xl">tune</span> Search Filters &amp; Options</span>
+                <span id="mobile-filter-arrow" class="material-symbols-outlined text-xl transition-transform">expand_more</span>
+            </button>
+            <div id="filter-container-box" class="hidden md:block bg-surface-container-lowest p-md sm:p-lg rounded-xl border border-outline-variant shadow-sm space-y-md">
+                <h2 class="font-subheading-sm text-subheading-sm text-on-surface mb-md hidden md:block">Filters</h2>
                 <div class="space-y-md">
                     <div>
                         <h3 class="font-body-bold text-body-bold text-on-surface-variant mb-sm">Status</h3>
-                        <div class="flex flex-col gap-sm">
-                            <label class="flex items-center gap-sm">
+                        <div class="flex flex-row md:flex-col gap-md md:gap-sm">
+                            <label class="flex items-center gap-sm cursor-pointer">
                                 <input id="filter-lost" checked=""
-                                    class="rounded border-outline-variant text-primary focus:ring-primary h-5 w-5"
+                                    class="rounded border-outline-variant text-primary focus:ring-primary h-5 w-5 cursor-pointer"
                                     type="checkbox">
-                                <span class="">Lost</span>
+                                <span class="text-sm font-body-bold">Lost</span>
                             </label>
-                            <label class="flex items-center gap-sm">
+                            <label class="flex items-center gap-sm cursor-pointer">
                                 <input id="filter-found" checked=""
-                                    class="rounded border-outline-variant text-primary focus:ring-primary h-5 w-5"
+                                    class="rounded border-outline-variant text-primary focus:ring-primary h-5 w-5 cursor-pointer"
                                     type="checkbox">
-                                <span class="">Found</span>
+                                <span class="text-sm font-body-bold">Found</span>
                             </label>
                         </div>
                     </div>
@@ -44,7 +48,7 @@
                     <div>
                         <h3 class="font-body-bold text-body-bold text-on-surface-variant mb-sm">Item Type</h3>
                         <select id="filter-category"
-                            class="w-full h-12 bg-surface-container-lowest border border-outline-variant rounded-lg px-md focus:border-primary focus:ring-1 focus:ring-primary">
+                            class="w-full h-11 bg-surface-container-lowest border border-outline-variant rounded-lg px-md focus:border-primary focus:ring-1 focus:ring-primary text-sm">
                             <option value="">All Types</option>
                             <option value="Electronics">Electronics</option>
                             <option value="Stationery">Stationery</option>
@@ -57,7 +61,7 @@
                     <div>
                         <h3 class="font-body-bold text-body-bold text-on-surface-variant mb-sm">Location</h3>
                         <select id="filter-location"
-                            class="w-full h-12 bg-surface-container-lowest border border-outline-variant rounded-lg px-md focus:border-primary focus:ring-1 focus:ring-primary">
+                            class="w-full h-11 bg-surface-container-lowest border border-outline-variant rounded-lg px-md focus:border-primary focus:ring-1 focus:ring-primary text-sm">
                             <option value="">All Locations</option>
                             <option value="Main Library">Main Library</option>
                             <option value="Student Union">Student Union</option>
@@ -68,7 +72,7 @@
                         </select>
                     </div>
                     <button id="filter-reset"
-                        class="w-full h-12 border border-outline text-on-surface font-body-bold rounded-lg mt-md hover:bg-surface-container-low transition-colors">
+                        class="w-full h-11 border border-outline text-on-surface font-body-bold rounded-lg mt-md hover:bg-surface-container-low transition-colors text-sm cursor-pointer">
                         Reset Filters
                     </button>
                 </div>

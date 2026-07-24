@@ -247,7 +247,7 @@ window.LemonData = {
     };
 
     document.addEventListener('click', function (e) {
-        if (isLoggedIn()) return; 
+        if (isLoggedIn()) return;
 
         const anchor = e.target.closest('a');
         if (!anchor) return;
@@ -263,7 +263,7 @@ window.LemonData = {
         }
     }, true);
 
-    
+
     function checkDirectAccess() {
         const path = window.location.pathname;
         const pageName = path.substring(path.lastIndexOf('/') + 1) || 'index.html';
@@ -274,11 +274,11 @@ window.LemonData = {
                 const target = urlParams.get('target') || 'protected page';
                 showAuthModal(target);
             } else if (PROTECTED_PAGES.includes(pageName)) {
-                
+
                 window.location.href = `records.html?auth_required=1&target=${encodeURIComponent(pageName)}`;
             }
         } else {
-            
+
             if (urlParams.get('auth_required') === '1') {
                 const cleanUrl = window.location.pathname;
                 window.history.replaceState({}, document.title, cleanUrl);
@@ -288,8 +288,8 @@ window.LemonData = {
 
     function getHeaderHTML() {
         let accountSection = `
-            <a href="login.html" class="text-on-surface-variant hover:text-primary transition-colors flex items-center" title="Account / Login">
-                <span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+            <a href="login.html" class="text-on-surface-variant hover:text-primary transition-colors flex items-center p-1" title="Account / Login">
+                <span class="material-symbols-outlined text-2xl" data-icon="account_circle">account_circle</span>
             </a>
         `;
 
@@ -301,9 +301,9 @@ window.LemonData = {
 
             accountSection = `
                 <div class="flex items-center gap-xs">
-                    <a href="dashboard.html" class="flex items-center gap-xs text-on-surface hover:text-primary font-body-bold text-sm bg-surface-container-low px-3 py-1.5 rounded-lg transition-colors" title="My Account">
+                    <a href="dashboard.html" class="flex items-center gap-xs text-on-surface hover:text-primary font-body-bold text-sm bg-surface-container-low px-2.5 py-1.5 rounded-lg transition-colors" title="My Account">
                         <span class="material-symbols-outlined text-primary text-base">account_circle</span>
-                        <span>${userName}</span>
+                        <span class="max-w-[80px] sm:max-w-none truncate">${userName}</span>
                     </a>
                     <button id="nav-logout-btn" class="text-on-surface-variant hover:text-error transition-colors p-1.5 rounded-lg hover:bg-surface-container-low cursor-pointer" title="Log Out">
                         <span class="material-symbols-outlined text-base">logout</span>
@@ -313,36 +313,56 @@ window.LemonData = {
         }
 
         return `
-        <header class="bg-surface-container-lowest border-b border-outline-variant fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-md">
-            <div class="flex items-center gap-lg">
-                <a href="index.html" class="font-display-lg text-display-lg text-primary tracking-tighter hover:opacity-80 transition-opacity">Lemon</a>
-                <nav class="hidden md:flex gap-lg ml-xl" id="main-nav">
-                    <a class="nav-link text-on-surface-variant font-body-base hover:text-primary transition-colors" data-page="records.html" href="records.html">Browse</a>
-                    <a class="nav-link text-on-surface-variant font-body-base hover:text-primary transition-colors" data-page="form.html" href="form.html">Report</a>
-                    <a class="nav-link text-on-surface-variant font-body-base hover:text-primary transition-colors" data-page="dashboard.html" href="dashboard.html">Dashboard</a>
-                </nav>
+        <header class="bg-surface-container-lowest border-b border-outline-variant fixed top-0 left-0 w-full z-50 px-margin-mobile md:px-margin-desktop py-md">
+            <div class="flex justify-between items-center max-w-max-width mx-auto">
+                <div class="flex items-center gap-lg">
+                    <a href="index.html" class="font-display-lg text-display-lg text-primary tracking-tighter hover:opacity-80 transition-opacity">Lemon</a>
+                    <nav class="hidden md:flex gap-lg ml-xl" id="main-nav">
+                        <a class="nav-link text-on-surface-variant font-body-base hover:text-primary transition-colors" data-page="records.html" href="records.html">Browse</a>
+                        <a class="nav-link text-on-surface-variant font-body-base hover:text-primary transition-colors" data-page="form.html" href="form.html">Report</a>
+                        <a class="nav-link text-on-surface-variant font-body-base hover:text-primary transition-colors" data-page="dashboard.html" href="dashboard.html">Dashboard</a>
+                    </nav>
+                </div>
+                <div class="flex items-center gap-sm sm:gap-md">
+                    <a href="dashboard.html" class="text-on-surface-variant hover:text-primary transition-colors flex items-center p-1" title="Notifications">
+                        <span class="material-symbols-outlined text-2xl" data-icon="notifications">notifications</span>
+                    </a>
+                    ${accountSection}
+                    <button id="mobile-menu-toggle" class="md:hidden text-on-surface p-1.5 rounded-lg hover:bg-surface-container-low focus:outline-none transition-colors cursor-pointer" aria-label="Toggle Menu">
+                        <span class="material-symbols-outlined text-2xl block" id="mobile-menu-icon">menu</span>
+                    </button>
+                </div>
             </div>
-            <div class="flex items-center gap-md">
-                <a href="dashboard.html" class="text-on-surface-variant hover:text-primary transition-colors flex items-center" title="Notifications">
-                    <span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+            <!-- Responsive Mobile Drawer Menu -->
+            <div id="mobile-nav-menu" class="hidden md:hidden border-t border-outline-variant mt-md pt-md pb-xs flex-col gap-xs max-w-max-width mx-auto">
+                <a class="mobile-nav-link px-md py-2.5 rounded-lg font-body-bold text-on-surface hover:bg-surface-container-low transition-colors flex items-center gap-md" data-page="records.html" href="records.html">
+                    <span class="material-symbols-outlined text-primary text-xl">search</span> Browse Items
                 </a>
-                ${accountSection}
+                <a class="mobile-nav-link px-md py-2.5 rounded-lg font-body-bold text-on-surface hover:bg-surface-container-low transition-colors flex items-center gap-md" data-page="form.html" href="form.html">
+                    <span class="material-symbols-outlined text-primary text-xl">add_circle</span> Report Lost or Found Item
+                </a>
+                <a class="mobile-nav-link px-md py-2.5 rounded-lg font-body-bold text-on-surface hover:bg-surface-container-low transition-colors flex items-center gap-md" data-page="dashboard.html" href="dashboard.html">
+                    <span class="material-symbols-outlined text-primary text-xl">dashboard</span> My Dashboard
+                </a>
+                <a class="mobile-nav-link px-md py-2.5 rounded-lg font-body-bold text-on-surface hover:bg-surface-container-low transition-colors flex items-center gap-md" data-page="admin.html" href="admin.html">
+                    <span class="material-symbols-outlined text-primary text-xl">security</span> Campus Security Portal
+                </a>
             </div>
         </header>
         `;
     }
 
     const FOOTER_HTML = `
-    <footer class="bg-surface-container-low w-full py-xxl px-margin-mobile md:px-margin-desktop mt-xxl flex flex-col md:flex-row justify-between items-center max-w-max-width mx-auto">
-        <div class="mb-lg md:mb-0">
-            <a href="index.html" class="font-headline-md text-headline-md text-on-secondary-fixed dark:text-on-secondary mb-sm tracking-tight block hover:opacity-80 transition-opacity">Lemon</a>
-            <p class="font-body-base text-body-base text-on-secondary-fixed dark:text-on-secondary text-sm">© 2026 Lemon Smart Campus. All rights reserved.</p>
+    <footer class="bg-surface-container-low w-full py-xl md:py-xxl px-margin-mobile md:px-margin-desktop mt-xl md:mt-xxl flex flex-col md:flex-row justify-between items-center max-w-max-width mx-auto gap-lg">
+        <div class="text-center md:text-left">
+            <a href="index.html" class="font-headline-md text-headline-md text-on-secondary-fixed dark:text-on-secondary mb-xs tracking-tight block hover:opacity-80 transition-opacity">Lemon</a>
+            <p class="font-body-base text-body-base text-on-secondary-fixed dark:text-on-secondary text-xs sm:text-sm">© 2026 Lemon Smart Campus. All rights reserved.</p>
         </div>
-        <nav class="flex flex-wrap gap-md justify-center">
-            <a class="font-body-base text-body-base text-on-surface-variant hover:text-primary transition-all focus:ring-2 focus:ring-primary rounded" href="records.html">Campus Map</a>
-            <a class="font-body-base text-body-base text-on-surface-variant hover:text-primary transition-all focus:ring-2 focus:ring-primary rounded" href="admin.html">Security Office</a>
-            <a class="font-body-base text-body-base text-on-surface-variant hover:text-primary transition-all focus:ring-2 focus:ring-primary rounded" href="#">Privacy Policy</a>
-            <a class="font-body-base text-body-base text-on-surface-variant hover:text-primary transition-all focus:ring-2 focus:ring-primary rounded" href="#">Contact Support</a>
+        <nav class="flex flex-wrap gap-sm sm:gap-md justify-center text-xs sm:text-sm">
+            <a class="font-body-base text-on-surface-variant hover:text-primary transition-all focus:ring-2 focus:ring-primary rounded p-1" href="records.html">Campus Map</a>
+            <a class="font-body-base text-on-surface-variant hover:text-primary transition-all focus:ring-2 focus:ring-primary rounded p-1" href="admin.html">Security Office</a>
+            <a class="font-body-base text-on-surface-variant hover:text-primary transition-all focus:ring-2 focus:ring-primary rounded p-1" href="#">Privacy Policy</a>
+            <a class="font-body-base text-on-surface-variant hover:text-primary transition-all focus:ring-2 focus:ring-primary rounded p-1" href="#">Contact Support</a>
         </nav>
     </footer>
     `;
@@ -357,6 +377,26 @@ window.LemonData = {
                 document.cookie = "lemon_logged_in=; path=/; max-age=0";
                 window.location.href = 'index.html';
             });
+
+            // Mobile menu toggle logic
+            const toggleBtn = document.getElementById('mobile-menu-toggle');
+            const menuDrawer = document.getElementById('mobile-nav-menu');
+            const icon = document.getElementById('mobile-menu-icon');
+
+            if (toggleBtn && menuDrawer && icon) {
+                toggleBtn.addEventListener('click', function () {
+                    const isHidden = menuDrawer.classList.contains('hidden');
+                    if (isHidden) {
+                        menuDrawer.classList.remove('hidden');
+                        menuDrawer.classList.add('flex');
+                        icon.textContent = 'close';
+                    } else {
+                        menuDrawer.classList.add('hidden');
+                        menuDrawer.classList.remove('flex');
+                        icon.textContent = 'menu';
+                    }
+                });
+            }
         }
 
         const footerPlaceholder = document.getElementById('footer-placeholder');
@@ -378,6 +418,15 @@ window.LemonData = {
                 link.className = "nav-link text-primary font-body-bold border-b-2 border-primary pb-1 transition-colors";
             } else {
                 link.className = "nav-link text-on-surface-variant font-body-base hover:text-primary transition-colors";
+            }
+        });
+
+        document.querySelectorAll('#mobile-nav-menu .mobile-nav-link').forEach(link => {
+            const targetPage = link.getAttribute('data-page');
+            if (targetPage === pageName || (pageName === 'detail.html' && targetPage === 'records.html')) {
+                link.className = "mobile-nav-link px-md py-2.5 rounded-lg font-body-bold text-primary bg-primary-container/30 transition-colors flex items-center gap-md";
+            } else {
+                link.className = "mobile-nav-link px-md py-2.5 rounded-lg font-body-bold text-on-surface hover:bg-surface-container-low transition-colors flex items-center gap-md";
             }
         });
     }

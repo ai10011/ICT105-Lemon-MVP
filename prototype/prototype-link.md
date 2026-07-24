@@ -1,10 +1,34 @@
 # Prototype Link
 
-## Prototype Platform
+## Prototype Platform (Previous Format)
 - Platform: Web App Prototype (HTML5 / Vanilla CSS / JavaScript / Node.js Express server)
 - Prototype link: https://ai10011.github.io/ICT105-Lemon-MVP/prototype/project/index.html
 - Access note: GitHub repository prototype folder at https://github.com/ai10011/ICT105-Lemon-MVP/tree/main/prototype/project
 - Last updated: 2026-07-21
+
+## Access Notes
+Explain whether the lecturer needs permission or login.
+- Public hosted web app: No login or special permission required for public access.
+- GitHub repository source files: [prototype/project](https://github.com/ai10011/ICT105-Lemon-MVP/tree/main/prototype/project)
+
+## Screens Included
+- Homepage (`index.html`)
+- Input form (`form.html`)
+- Record list (`records.html`)
+- Detail view (`detail.html`)
+- Dashboard (`dashboard.html`)
+- Admin/manager view (`admin.html`)
+
+## Requirements Demonstrated
+List requirement IDs shown in the prototype.
+- **FR-01**: Homepage displaying overview, quick search, and action button (`index.html`)
+- **FR-03**: Lost/Found Item Report Form (`form.html`)
+- **FR-05**: Interactive item directory listing (`records.html`)
+- **FR-06**: Search bar, category selector, location & status filters (`records.html` & `index.html`)
+- **FR-07**: Complete item detail view (`detail.html`)
+- **FR-08**: Item status tracking indicators (`detail.html` & `admin.html`)
+- **FR-09**: Admin management dashboard (`admin.html`)
+- **FR-12**: Summary analytics & statistics dashboard (`dashboard.html`)
 
 ## Requirement Coverage
 

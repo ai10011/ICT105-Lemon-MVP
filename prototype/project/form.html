@@ -18,22 +18,22 @@
 
 <body class="bg-background text-on-background min-h-screen flex flex-col pt-[80px]">
     <div id="header-placeholder"></div>
-    <main class="flex-grow w-full max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-xxl">
-        <div class="mb-lg">
-            <h1 class="font-display-lg text-display-lg text-on-background">Report an Item</h1>
-            <p class="font-body-base text-body-base text-on-surface-variant mt-xs">Help us reunite lost items with their
+    <main class="flex-grow w-full max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-lg md:py-xxl">
+        <div class="mb-md md:mb-lg">
+            <h1 class="font-display-lg text-2xl sm:text-3xl md:text-display-lg text-on-background">Report an Item</h1>
+            <p class="font-body-base text-sm sm:text-body-base text-on-surface-variant mt-xs">Help us reunite lost items with their
                 owners. Please provide as much detail as possible.</p>
         </div>
-        <form id="report-form" class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+        <form id="report-form" class="grid grid-cols-1 lg:grid-cols-12 gap-lg lg:gap-gutter">
             <div class="col-span-1 lg:col-span-8 flex flex-col gap-lg">
-                <div class="bg-surface-container-lowest p-lg border border-slate shadow-soft rounded-lg">
+                <div class="bg-surface-container-lowest p-md sm:p-lg border border-slate shadow-soft rounded-lg">
                     <h2 class="font-subheading-sm text-subheading-sm text-on-background mb-md">Report Type</h2>
-                    <div class="flex gap-4">
+                    <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
                         <label class="flex-1 cursor-pointer">
                             <input checked="" class="peer sr-only" id="reportTypeLost" name="reportType" type="radio"
                                 value="I Lost Something">
                             <div
-                                class="h-12 border border-slate rounded-lg flex items-center justify-center font-body-bold text-on-surface-variant peer-checked:border-primary-fixed peer-checked:bg-primary-container peer-checked:text-on-primary-container transition-all">
+                                class="min-h-[48px] py-2 px-3 border border-slate rounded-lg flex items-center justify-center font-body-bold text-sm sm:text-base text-on-surface-variant peer-checked:border-primary-fixed peer-checked:bg-primary-container peer-checked:text-on-primary-container transition-all">
                                 I Lost Something
                             </div>
                         </label>
@@ -41,7 +41,7 @@
                             <input class="peer sr-only" id="reportTypeFound" name="reportType" type="radio"
                                 value="I Found Something">
                             <div
-                                class="h-12 border border-slate rounded-lg flex items-center justify-center font-body-bold text-on-surface-variant peer-checked:border-primary-fixed peer-checked:bg-primary-container peer-checked:text-on-primary-container transition-all">
+                                class="min-h-[48px] py-2 px-3 border border-slate rounded-lg flex items-center justify-center font-body-bold text-sm sm:text-base text-on-surface-variant peer-checked:border-primary-fixed peer-checked:bg-primary-container peer-checked:text-on-primary-container transition-all">
                                 I Found Something
                             </div>
                         </label>

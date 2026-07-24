@@ -22,46 +22,50 @@
 <body class="bg-background text-on-background min-h-screen flex flex-col pt-[80px]">
     <div id="header-placeholder"></div>
     <main class="flex-grow w-full max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
-        <section class="py-xxl text-center mt-xl relative">
+        <section class="py-lg md:py-xxl text-center mt-md md:mt-xl relative">
             <div class="absolute inset-0 z-[-1] opacity-20 pointer-events-none"
                 style="background-image: radial-gradient(circle at center, #fee336 0%, transparent 70%);"></div>
             <h1
-                class="font-display-lg text-display-lg md:text-5xl lg:text-6xl text-on-background mb-lg max-w-3xl mx-auto tracking-tighter">
+                class="font-display-lg text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-on-background mb-md md:mb-lg max-w-3xl mx-auto tracking-tighter">
                 What did you lose today?</h1>
-            <p class="font-subheading-sm text-subheading-sm text-on-surface-variant mb-xl max-w-2xl mx-auto">The fastest
+            <p class="font-subheading-sm text-sm sm:text-subheading-sm text-on-surface-variant mb-lg md:mb-xl max-w-2xl mx-auto px-xs">The fastest
                 way to recover your personal property on campus. Search the database or report a found item instantly.
             </p>
             <div
-                class="max-w-2xl mx-auto bg-surface-container-lowest rounded-[16px] shadow-sm border border-outline-variant flex items-center p-xs mb-xl h-[64px]">
-                <div class="flex items-center px-md text-on-surface-variant">
-                    <span class="material-symbols-outlined">search</span>
+                class="max-w-2xl mx-auto bg-surface-container-lowest rounded-[16px] shadow-sm border border-outline-variant flex flex-col md:flex-row items-stretch md:items-center p-sm md:p-xs mb-lg md:mb-xl h-auto md:h-[64px] gap-sm md:gap-0">
+                <div class="flex items-center flex-grow bg-surface-container-low md:bg-transparent rounded-lg md:rounded-none px-sm md:px-0 h-11 md:h-full">
+                    <div class="flex items-center px-xs md:px-sm text-on-surface-variant">
+                        <span class="material-symbols-outlined">search</span>
+                    </div>
+                    <input id="home-search-input"
+                        class="flex-grow h-full bg-transparent border-none focus:ring-0 text-sm md:text-body-base text-on-surface outline-none px-xs md:px-md"
+                        placeholder="Search for keys, student ID, water bottle..." type="text">
                 </div>
-                <input id="home-search-input"
-                    class="flex-grow h-full bg-transparent border-none focus:ring-0 text-body-base text-on-surface outline-none px-md"
-                    placeholder="Search for keys, student ID, water bottle..." type="text">
-                <div class="h-8 w-px bg-outline-variant mx-2"></div>
-                <select id="home-location-select"
-                    class="h-full bg-transparent border-none focus:ring-0 text-body-base text-on-surface outline-none px-md appearance-none font-body-bold cursor-pointer">
-                    <option value="">All Buildings</option>
-                    <option value="Main Library">Main Library</option>
-                    <option value="Student Union">Student Union</option>
-                    <option value="Science Building">Science Building</option>
-                    <option value="Engineering Block">Engineering Block</option>
-                    <option value="Cafeteria">Cafeteria</option>
-                    <option value="Other">Other</option>
-                </select>
-                <button id="home-search-btn"
-                    class="bg-primary-container text-on-primary-container h-full px-lg rounded-[12px] font-body-bold hover:opacity-90 transition-opacity ml-xs text-body-bold">Search</button>
+                <div class="hidden md:block h-8 w-px bg-outline-variant mx-2"></div>
+                <div class="flex items-center gap-sm">
+                    <select id="home-location-select"
+                        class="flex-grow md:flex-grow-0 h-11 md:h-full bg-surface-container-low md:bg-transparent border border-outline-variant md:border-none rounded-lg md:rounded-none focus:ring-0 text-sm md:text-body-base text-on-surface outline-none px-xs md:px-md appearance-none font-body-bold cursor-pointer">
+                        <option value="">All Buildings</option>
+                        <option value="Main Library">Main Library</option>
+                        <option value="Student Union">Student Union</option>
+                        <option value="Science Building">Science Building</option>
+                        <option value="Engineering Block">Engineering Block</option>
+                        <option value="Cafeteria">Cafeteria</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <button id="home-search-btn"
+                        class="bg-primary-container text-on-primary-container h-11 md:h-full px-lg rounded-lg md:rounded-[12px] font-body-bold hover:opacity-90 transition-opacity ml-0 md:ml-xs text-sm md:text-body-bold shrink-0">Search</button>
+                </div>
             </div>
             <div class="flex justify-center gap-md">
                 <button onclick="window.location.href='form.html'"
-                    class="bg-on-background text-primary-fixed h-[48px] px-xl rounded-lg font-body-bold hover:bg-black transition-colors shadow-sm flex items-center gap-sm">
+                    class="bg-on-background text-primary-fixed h-[48px] px-xl rounded-lg font-body-bold hover:bg-black transition-colors shadow-sm flex items-center justify-center gap-sm w-full sm:w-auto">
                     <span class="material-symbols-outlined text-sm">add_circle</span>
                     Report an Item
                 </button>
             </div>
         </section>
-        <section class="py-xxl">
+        <section class="py-lg md:py-xxl">
             <div class="flex justify-between items-end mb-lg">
                 <h2 class="font-headline-md text-headline-md text-on-background">Recent Finds</h2>
                 <a class="font-body-bold text-body-bold text-primary hover:underline" href="records.html">View All</a>
