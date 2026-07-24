@@ -1,0 +1,7 @@
+field,allowed_values,notes
+report_type,Lost; Found,Use only one value per record for primary item classification
+category,Electronics; Personal; Stationery; Clothing; Other,Item categories used for form submission and directory filtering (maps with aliases: Personal Item; Document; Book)
+location,Main Library; Student Union; Science Building; Engineering Block; Cafeteria; Other,Standardized campus location zones for lost and found occurrences
+status,Pending; Available; In Review; Claimed; Resolved; Closed; Rejected,Record lifecycle workflow status values displayed on badges and admin portal
+reporter_role,Student; Staff; Security,Role metadata of the person submitting or processing the item report
+priority,Low; Medium; High,Administrative priority scoring for triage, match notifications, and dashboard sorting
