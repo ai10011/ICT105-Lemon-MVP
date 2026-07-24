@@ -1,6 +1,6 @@
 ItemID,ReportType,ItemCategory,ItemName,Location,DateReported,ReporterRole,Status,Description
 LF-001,Lost,Personal,Blue RSU student ID card,Main Library,2026-06-01,Student,Pending,Card lost after group study session.
-LF-002,Found,Electronics,Black phone charger,Other,Student,Available,USB-C charger found near computer desk.
+LF-002,Found,Electronics,Black phone charger,Other,2026-06-02,Student,Available,USB-C charger found near computer desk.
 LF-003,Lost,Personal,Silver water bottle,Cafeteria,2026-06-03,Student,In Review,Bottle has sticker on the side.
 LF-004,Found,Stationery,Green notebook,Science Building,2026-06-04,Staff,Claimed,Notebook returned to owner after verification.
 LF-005,Lost,Personal,Small black umbrella,Other,2026-06-05,Student,Pending,Lost during rainy afternoon.
