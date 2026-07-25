@@ -1,22 +1,34 @@
 # Startup / Product Metrics
 
-> Define metrics that show useful product activity. Metrics should not be random numbers. Each metric should help the team understand usage, value, status, validation, or operational performance.
-
 ## 1. Metrics Summary
 
 | Metric ID | Metric Name | Metric Type | Why This Metric Matters | Formula / How to Calculate | Data Source | Prototype Screen |
 |---|---|---|---|---|---|---|
-| M-01 | Total Records | Usage | Shows whether the system is receiving activity | Count all records | Records table / localStorage / database | Dashboard |
-| M-02 | Pending Cases | Status | Shows unresolved work | Count records with status = Pending | Records table | Dashboard |
-| M-03 | Completed/Resolved Cases | Status | Shows completed outcomes | Count records with completed status | Records table | Dashboard |
-| M-04 | Most Common Category | Category | Shows the common problem type | Count categories and find highest | Records table | Dashboard |
-| M-05 | Task Completion Rate | Validation | Shows whether users can complete the main task | Completed tasks / total tests × 100 | Validation results | Analytics summary |
-| M-06 | Average Feedback Score | Validation | Shows user perception of usefulness/usability | Average of feedback scores | Feedback results | Analytics summary |
+| M-01 | Total Item Reports | Usage | Measures user engagement, activity volume, and overall platform adoption across campus. | Count of all items in database (`Lost` + `Found` records) | `localStorage` (`lemon_records`) / Express REST API (`/api/records`) | [index.html](../prototype/project/index.html), [dashboard.html](../prototype/project/dashboard.html), [admin.html](../prototype/project/admin.html) |
+| M-02 | Pending / Unresolved Cases | Status | Tracks active workload and lost item reports awaiting claim verification or matching. | Count of records where `status = "Pending"` or `claimStatus = "Pending"` | [record-data.json](../prototype/project/data/record-data.json) / `localStorage` | [dashboard.html](../prototype/project/dashboard.html), [admin.html](../prototype/project/admin.html) |
+| M-03 | Completed / Recovered Cases | Status & Value | Demonstrates core value proposition fulfillment (successfully returning items to owners). | Count of records where `status = "Claimed"` or `status = "Resolved"` | [record-data.json](../prototype/project/data/record-data.json) / `localStorage` | [dashboard.html](../prototype/project/dashboard.html), [admin.html](../prototype/project/admin.html) |
+| M-04 | Item Resolution Rate (%) | Performance | Evaluates overall system success in matching lost property with reported found items. | `(Completed & Claimed Items / Total Item Reports) × 100` | Dynamic calculation in [dashboard.js](../prototype/project/js/dashboard.js) & [admin.js](../prototype/project/js/admin.js) | [dashboard.html](../prototype/project/dashboard.html), [admin.html](../prototype/project/admin.html) |
+| M-05 | Category Distribution | Category | Identifies high-risk item types (Electronics, Personal Items) to optimize search indexing. | Count of items grouped by category (`Electronics`, `Personal`, `Stationery`, etc.) | [status-category-reference.csv](../data/status-category-reference.csv) / `localStorage` | [dashboard.html](../prototype/project/dashboard.html), [records.html](../prototype/project/records.html) |
+| M-06 | Task Completion Rate | Validation | Validates end-to-end user flow feasibility during customer testing (Target: ≥ 70%). | `(Successfully Completed User Tasks / Total Validation Tasks) × 100` | [validation-results.csv](../data/validation-results.csv) (20 Testers) | [analytics-insights.md](analytics-insights.md) |
+| M-07 | Average Ease of Use & Usefulness | Validation | Measures user perception, interface satisfaction, and subjective UX quality (Scale 1-5). | `Sum of Ease of Use (or Usefulness) Scores / Total Respondents` | [validation-results.csv](../data/validation-results.csv) / [feedback-form.csv](../data/feedback-form.csv) | [customer-validation-summary.md](customer-validation-summary.md) |
+| M-08 | Search & Filter Success Rate | Validation | Measures student ability to locate target records using keyword text and location filters. | `(Successful Search Tasks / Total Search Tests) × 100` | [validation-results.csv](../data/validation-results.csv) (Tasks T002, T007, T012, T017) | [records.html](../prototype/project/records.html) |
 
 ## 2. Metrics Interpretation
 
-Write 5-8 sentences explaining what your metrics show and what the team should improve next.
+Customer validation testing (Lab 08) with 20 campus users (T001–T020) demonstrated strong validation signals for the core product concept. The overall **Task Completion Rate reached 80.00%** (16 out of 20 completed tasks), exceeding our predefined success benchmark of 70.00%. Testers awarded the prototype a high **Usefulness Score of 4.35 / 5.0** and an **Interest Level of 3.80 / 5.0 (76.00%)**, confirming that students and campus staff strongly prefer a centralized digital portal over unstructured social media chat groups. However, the **Average Ease of Use Score was 3.55 / 5.0**, driven down by 4 specific task failures (T003, T008, T012, T016). Qualitative feedback revealed that failure points stemmed from status terminology confusion ("Pending" vs "Claimed"), hidden dashboard access links in the navigation bar, mandatory form input friction, and missing multi-select category filters. Live telemetry metrics further show that high-value categories (Electronics and Personal Items) account for over 45% of reports, centered in high-density areas like the Main Library and Student Union.
+
+To build upon these findings, the team will implement targeted Sprint 2 usability enhancements:
+1. **Deploy Color-Coded Status Badges (FR-08)**: Replace text-only status labels with distinct visual indicators (`Pending Review`, `Available`, `Claimed`, `Closed`) across list, detail, and admin views to eliminate status tracking ambiguity.
+2. **Reposition Dashboard Access (FR-12)**: Add a prominent top-level navigation link in `Shared/header.html` for direct access to personal analytics and claim tracking.
+3. **Streamline Report Form Inputs (FR-10)**: Reduce non-essential required fields and introduce inline tooltip guidance on [form.html](../prototype/project/form.html) to lower form abandonment.
+4. **Upgrade Search & Filtering (FR-06)**: Add campus building dropdown filters on [records.html](../prototype/project/records.html) and promote administrative action CTAs on [admin.html](../prototype/project/admin.html) to accelerate staff resolution workflows.
 
 ## 3. Link to Final Prototype
 
-Explain how these metrics will appear or be demonstrated in the final prototype.
+These startup and product metrics are directly integrated and visually demonstrated across the working web prototype:
+
+- **Dynamic Landing Page Counters ([index.html](../prototype/project/index.html))**: Displays live overview statistics (Total Items Tracked, Recovered Items, Active Reports) powered by `LemonData.getRecords()`.
+- **Personalized User Analytics Dashboard ([dashboard.html](../prototype/project/dashboard.html) & [dashboard.js](../prototype/project/js/dashboard.js))**: Renders dynamic metric cards for *Items Reported*, *Items Found/Recovered*, *Pending Claims*, *Resolution Rate (%)*, and visual progress bars for category breakdowns.
+- **Campus Administrative Portal ([admin.html](../prototype/project/admin.html) & [admin.js](../prototype/project/js/admin.js))**: Provides campus staff with real-time operational summary widgets (*Total Secured Items*, *Pending Claims*, *Resolution Rate progress bar*), along with item verification and status management controls.
+- **Client-Side & Server REST API Storage ([server.js](../prototype/project/server.js) & [record-data.json](../prototype/project/data/record-data.json))**: Express REST API endpoints (`/api/records`) and `localStorage` (`lemon_records`) calculate and update all metrics in real time upon new report submissions or status edits.
+- **Empirical Validation Traceability**: Backed by structured datasets in [validation-results.csv](../data/validation-results.csv), documented in [analytics-insights.md](analytics-insights.md), and tracked in [customer-validation-summary.md](customer-validation-summary.md).

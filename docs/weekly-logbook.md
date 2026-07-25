@@ -399,6 +399,54 @@ MVP Implementation Sprint 1
 ## Plan for Next Lab
 - Prepare final prototype demonstration, polish responsive design touchpoints, and complete Lab 11 user testing and final presentation slides.
 
+# Weekly Logbook - Lab 11
+
+## Lab Topic
+MVP Implementation Sprint 2 and Startup Metrics
+
+## Group Case
+Lemon - Smart Campus Lost-and-Found System
+
+## Work Completed Today
+- Maintained core UI layout stability from Lab 10 while delivering targeted **mobile responsive enhancements** across all key web pages (`prototype/project/`).
+- Implemented touch-friendly navigation drawer in `Shared/components.js`, stacked hero search layout in `index.html`, collapsible mobile filter accordion drawer (`#mobile-filter-toggle`) in `records.html`, and slide-out admin sidebar drawer with backdrop overlay in `admin.html` & `admin.js`.
+- Deployed visual color-coded status badges (`Pending Review`, `Available`, `Claimed`, `Closed`) across directory lists, item details, and administrative views to eliminate status tracking ambiguity.
+- Defined and documented 8 startup & product metrics (`M-01` through `M-08`) in `docs/startup-metrics.md` covering platform usage, case status, resolution rate %, and customer validation results.
+- Updated project documentation: `docs/feature-implementation-status.md`, `docs/startup-metrics.md`, `docs/prototype-testing-notes.md`, `screenshots/README.md`, `docs/weekly-logbook.md`, and `README.md`.
+
+## Member Contributions
+| Member Name | Contribution | File/Feature Updated | GitHub Evidence |
+|---|---|---|---|
+| **Kyaw Ye Lin** | Integrated Power BI dashboard analytics and business metrics model | Power BI Model & Data Integration | Issue / Commit |
+| **Tin May Lin** | Authored Lab 11 documentation artifacts | `docs/feature-implementation-status.md`, `docs/startup-metrics.md`, `docs/prototype-testing-notes.md` | Issue / Commit |
+| **Phollapat Rodchue** | Updated web prototype application and added mobile responsiveness | `prototype/project/` (`components.js`, `records.js`, `admin.js`, `form.html`, `styles.css`) | Issue / Commit |
+| **Phoochit Jantakam** | Maintained weekly logbook and root repository documentation | `docs/weekly-logbook.md`, `README.md` | Issue / Commit |
+
+## Requirements Addressed
+- **FR-03 (Report Form Submission):** Responsive radio option cards (`flex-col sm:flex-row`), mobile touch padding, photo preview, and privacy consent.
+- **FR-06 (Search & Filter):** Keyword text search, report type pills, category multi-select filter, campus building dropdown filter, and collapsible mobile filter drawer (`#mobile-filter-toggle`).
+- **FR-08 (Status Tracking):** Standardized visual color-coded status badges (`Pending Review`, `Available`, `Claimed`, `Closed`) across detail, list, and admin screens.
+- **FR-12 (Dashboard Analytics):** Personal user stats cards, resolution rate %, pending claims count, category progress bars, and direct header navigation link.
+- **FR-14 (Mobile Responsiveness):** Touch-friendly mobile menu drawer, stacked mobile search inputs, responsive grid utility breakpoints, and mobile admin drawer overlay.
+
+## Metrics Added
+- **M-01 (Total Item Reports):** Total system usage and report activity count.
+- **M-02 (Pending / Unresolved Cases):** Active workload and pending verification queue.
+- **M-03 (Completed / Recovered Cases):** Core value proposition fulfillment count.
+- **M-04 (Item Resolution Rate %):** Dynamic matching success rate percentage.
+- **M-05 (Category Distribution):** Category breakdown and high-risk item loss hotspots.
+- **M-06 (Task Completion Rate):** Customer validation success rate (80.00% across 20 testers).
+- **M-07 (Average Ease of Use & Usefulness):** UX satisfaction ratings (3.55 Ease of Use, 4.35 Usefulness).
+- **M-08 (Search & Filter Success Rate):** Search and discovery workflow validation.
+
+## Problems Found
+- **Mobile Screen Layout Overflow:** Hero search inputs jammed horizontally on phone viewports (< 768px), and filter controls occupied excessive vertical space above item results. Resolved by implementing stacked flex column layouts in `index.html` and a collapsible filter accordion toggle (`#mobile-filter-toggle`) in `records.html`.
+- **Status Terminology Ambiguity:** Plain text status labels ("Pending" vs "Claimed") caused user confusion during testing. Resolved by deploying standardized color-coded visual badges across list, detail, and admin screens.
+
+## Next Action Before Lab 12
+- Prepare final prototype demonstration video and pitch presentation slides.
+- Finalize live backend database integration and dynamic Chart.js chart rendering.
+
 
 
 

@@ -1,7 +1,7 @@
 # Team Profile
 
 ## Team Name
-[Lemon]
+Lemon
 
 ## Team Members and Roles
 | Student ID | Name | Role | Main Responsibility |

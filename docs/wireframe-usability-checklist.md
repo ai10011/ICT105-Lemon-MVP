@@ -1,7 +1,5 @@
 # Wireframe Usability Review Checklist
 
-Use this checklist before submitting Lab 05.
-
 | Check Item | Yes/No | Evidence or Screenshot |
 |---|---|---|
 | The homepage clearly states the problem and main action. | Yes | `wireframes/homepage.png` |

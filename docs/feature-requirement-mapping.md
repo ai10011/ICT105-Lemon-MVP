@@ -1,7 +1,5 @@
 # Feature-Requirement Mapping
 
-Use this file to prove that your wireframe and final prototype are not random screens. Every planned screen and feature must connect to `system-requirements.md`.
-
 | Feature ID | Feature / Screen | Requirement ID | User Story ID | Purpose | Wireframe File | Final Prototype Module |
 |---|---|---|---|---|---|---|
 | F-01 | Homepage / Main Screen | FR-01, FR-02 | US-01 | Present the system, identify the target users, and provide access to the main features. | /wireframes/homepage.png | /prototype/project/index.html |

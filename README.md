@@ -9,7 +9,7 @@ Semester-long IT startup MVP project for ICT105 Fundamental Technology Entrepren
 - **Project Type:** 14-Labs Continuous IT Startup MVP Development
 
 ## Team Name
-[Lemon]
+Lemon
 
 ## Team Members and Roles
 | Name | Role | Responsibility |
@@ -345,24 +345,36 @@ Lab 10 focused on developing the first functional version of the MVP prototype u
 ## Lab 11: MVP Implementation Sprint 2 and Startup Metrics
 
 ### Prototype Progress
-Describe what improved from Lab 10 to Lab 11.
+The core prototype UI design remained consistent from Lab 10 to Lab 11, with Sprint 2 focused specifically on **adding mobile responsiveness** and refining platform usability across mobile viewports:
+- **Responsive Navigation Drawer (`Shared/components.js`):** Implemented a touch-friendly mobile menu drawer for header navigation.
+- **Mobile Search & Hero Optimization (`index.html`):** Stacked hero search inputs vertically on screens `< 768px` to eliminate horizontal layout overflow.
+- **Collapsible Mobile Filter Accordion (`records.html` & `js/records.js`):** Created a toggleable filter accordion (`#mobile-filter-toggle`) so search results stay visible on mobile screens.
+- **Admin Mobile Drawer (`admin.html` & `js/admin.js`):** Created a slide-out mobile sidebar drawer with backdrop overlay (`#admin-sidebar-overlay`).
 
 ### Implemented / Improved Features
 | Requirement ID | Feature | Status | Evidence |
 |---|---|---|---|
-| FR-03 |  |  |  |
-| FR-06 |  |  |  |
-| FR-08 |  |  |  |
-| FR-12 |  |  |  |
+| FR-03 | Report Form Mobile Optimization | Completed | [form.html](prototype/project/form.html) (Responsive radio card layouts `flex-col sm:flex-row` and mobile touch padding) |
+| FR-06 | Mobile Search & Filter Accordion | Completed | [records.html](prototype/project/records.html) & [records.js](prototype/project/js/records.js) (Collapsible `#mobile-filter-toggle` and campus location filter) |
+| FR-08 | Visual Color-Coded Status Badges | Completed | [detail.html](prototype/project/detail.html), [admin.html](prototype/project/admin.html) (Standardized badges `Pending Review`, `Available`, `Claimed`, `Closed`) |
+| FR-12 | Analytics Dashboard & Header Access | Completed | [dashboard.html](prototype/project/dashboard.html) & [header.html](prototype/project/Shared/header.html) (User stats cards, resolution rate %, direct header navigation) |
+| FR-14 | Mobile-Friendly Navigation Drawer | Completed | [components.js](prototype/project/Shared/components.js) & [admin.js](prototype/project/js/admin.js) (Slide-down header drawer & slide-out admin sidebar drawer) |
 
 ### Startup/Product Metrics
-List the metrics implemented or documented.
+Documented 8 core startup & product metrics in [docs/startup-metrics.md](docs/startup-metrics.md) (`M-01` to `M-08`), mapping platform activity, case status, resolution rate %, category distribution, and customer validation metrics (80.00% task completion rate across 20 test users).
 
 ### Prototype Screenshots
-Add links to updated screenshots.
+- Baseline UI screenshots registered in [screenshots/README.md](screenshots/README.md) (`homepage.png`, `input-form.png`, `record-list.png`, `detail-view.png`, `admin-view.png`, `dashboard.png`).
 
 ### Member Contributions
-Summarize each member's contribution.
+| Member | Role | Sprint 2 Contribution |
+|---|---|---|
+| **Kyaw Ye Lin** | Product Lead | Integrated Power BI dashboard analytics and business metrics model. |
+| **Tin May Lin** | UX/UI Lead | Authored Lab 11 documentation artifacts ([feature-implementation-status.md](docs/feature-implementation-status.md), [startup-metrics.md](docs/startup-metrics.md), and [prototype-testing-notes.md](docs/prototype-testing-notes.md)). |
+| **Phollapat Rodchue** | Technical Lead | Updated web prototype application and added mobile responsiveness across all screens (`prototype/project/`). |
+| **Phoochit Jantakam** | Documentation Lead | Maintained weekly logbook ([docs/weekly-logbook.md](docs/weekly-logbook.md)) and root repository overview ([README.md](README.md)). |
 
 ### Remaining Work
-List what must still be completed before the final prototype.
+- Final backend relational database integration.
+- Dynamic Chart.js category distribution rendering.
+- Final pitch deck presentation and demo video recording.
