@@ -1,35 +1,52 @@
 # Prototype Testing Notes
 
 ## Test Environment
-- Prototype link or folder: [project](https://ai10011.github.io/ICT105-Lemon-MVP/prototype/project/)
-- Browser/device used: Google Chrome (Desktop), Google Chrome (Android)
-- Tester role: Group members, peer reviewers (Lab 11)
-- Test date: 25/7/2026
+- **Prototype Link**: [ICT105 Lemon MVP Live Prototype](https://ai10011.github.io/ICT105-Lemon-MVP/prototype/project/)
+- **Browser/Device Used**: Google Chrome v126 (Desktop), Google Chrome for Android (Mobile Viewport Verification), Safari Mobile (iOS 17)
+- **Tester Role**: Student Team Members, Peer Reviewers (Lab 11 Testing Session)
+- **Test Date**: July 25, 2026
+
+---
 
 ## Main Test Cases
 
 | Test ID | User Flow / Feature | Steps to Test | Expected Result | Actual Result | Status | Issue Found | Fix / Next Action |
 |---|---|---|---|---|---|---|---|
-| T-01 | Open homepage | Open prototype homepage | Homepage shows title, target user, problem, and main action | Hero title, problem overview, search box, CTA buttons, and recent finds grid loaded successfully | Pass | Mobile navigation menu was missing; hero search bar overflowed on small screens (< 768px) | Added responsive hamburger dropdown drawer in `components.js`; updated hero search box to vertical stacked flex layout on mobile in `index.html` |
-| T-02 | Submit record | Fill form and submit | Record is saved or simulated and confirmation appears | Form validates inputs, saves record data to local storage / server API, displays confirmation modal | Pass | "I Lost Something" / "I Found Something" radio selection buttons truncated text on small phone screens (320px-375px) | Updated radio button container to responsive flex direction (`flex-col sm:flex-row`) and dynamic padding in `form.html` |
-| T-03 | View record list | Open list page/section | Submitted or sample records are visible | All submitted and sample records rendered dynamically in responsive grid cards with category badges and time ago | Pass | Desktop margin padding `px-margin-desktop` on small screens caused squished card grid layout | Updated main container padding to `px-margin-mobile md:px-margin-desktop` in `records.html` |
-| T-04 | Search/filter | Use keyword/category/status filter | Relevant records are shown | Dynamic filtering by status (Lost/Found), category, building location, and keyword text updated result count and card grid | Pass | Filter panel occupied full vertical height on mobile viewports before showing item results | Added collapsible "Search Filters & Options" accordion toggle button (`#mobile-filter-toggle`) in `records.html` and `records.js` |
-| T-05 | Detail view | Select one record | Record details are shown clearly | Item page loaded details via `?id=...`, displaying item image, status badge, map location, reporter info, and action buttons | Pass | Font sizes and layout gaps were overly large on mobile screens | Applied responsive typography (`text-2xl sm:text-3xl lg:text-display-lg`) and gap scaling in `detail.html` |
-| T-06 | Status update | Change record status in admin view | Status changes and dashboard updates | Admin table (`admin.html`) displayed real-time item status with action controls and metrics update | Pass | Admin sidebar was hidden on mobile with an unhandled hamburger button | Created slide-out mobile admin drawer with backdrop overlay (`#admin-sidebar-overlay`) and toggle handlers in `admin.js` |
-| T-07 | Dashboard metrics | Open dashboard | Metrics are visible and match data | User dashboard (`dashboard.html`) displayed user stats, active claim counts, success rate, and match notification banner | Pass | Top margin `mt-xxl` created excessive whitespace above content on mobile viewports | Adjusted responsive margin spacing (`mt-md md:mt-xxl`) and notification banner flex layouts in `dashboard.html` |
+| **T-01** | Open Homepage | Launch prototype homepage URL | Homepage renders title, target user context, problem statement, search bar, and CTA buttons | Hero title, problem overview, search box, CTA buttons, and recent finds grid loaded successfully | **Pass** | Navigation menu was hidden on mobile screens; hero search bar broke alignment on viewports < 768px | Added responsive hamburger dropdown drawer in `components.js`; converted hero search container to vertical stacked flex layout on mobile in `index.html` |
+| **T-02** | Submit Record | Complete form with item details and submit | Inputs validate correctly, record persists to storage/API, and confirmation modal displays | Form validates inputs, saves record data to `localStorage` / API, and displays confirmation modal | **Pass** | "I Lost Something" / "I Found Something" radio selection cards truncated text on small phone viewports (320px–375px) | Refactored radio container to responsive flex direction (`flex-col sm:flex-row`) and dynamic padding in `form.html` |
+| **T-03** | Form Validation & Error Handling | Leave mandatory form fields empty and hit submit | Custom error styling triggers, preventing form dispatch until required fields are completed | Error rings highlight empty inputs and custom alert messages inform the user | **Pass** | Browser default HTML5 validation tooltip was inconsistent across desktop and mobile browsers | Prevented native submit event (`e.preventDefault()`) and built unified custom JS input validation styling in `form.js` |
+| **T-04** | View Record List | Navigate to list view page | Submitted and sample records display dynamically in a responsive card grid | Records rendered dynamically in responsive grid cards with category badges and time indicators | **Pass** | Fixed desktop padding class (`px-margin-desktop`) on small screens caused squished card grid layout | Updated main layout container padding to `px-margin-mobile md:px-margin-desktop` in `records.html` |
+| **T-05** | Search & Filter | Filter items by keyword, status, location, or category | Item grid dynamically updates to show matching records and updated result counts | Dynamic filtering by status (Lost/Found), category, campus location, and keyword text updated result count and card grid | **Pass** | Filter side panel occupied full vertical screen height on mobile viewports before showing item results | Added collapsible "Search Filters & Options" accordion toggle button (`#mobile-filter-toggle`) in `records.html` and `records.js` |
+| **T-06** | Detail View | Select an individual record card | System displays full record details, location map, reporter contact info, and claim actions | Item page loaded details via URL parameter (`?id=...`), displaying item image, status badge, map location, reporter info, and action buttons | **Pass** | Heading font sizes and container layout gaps were excessively large on small mobile screens | Applied responsive typography classes (`text-2xl sm:text-3xl lg:text-display-lg`) and gap scaling in `detail.html` |
+| **T-07** | Status Update | Change item status in Security/Admin view | Status updates in real-time, updating item record state and dashboard analytics | Admin management table (`admin.html`) displayed real-time item status with action controls and metrics update | **Pass** | Admin sidebar menu was inaccessible on mobile viewports with an unhandled hamburger trigger | Built a slide-out mobile admin navigation drawer with backdrop overlay (`#admin-sidebar-overlay`) and toggle handlers in `admin.js` |
+| **T-08** | Data Persistence & State Sync | Submit a record on `form.html`, navigate to `records.html` and `dashboard.html` | Submitted record immediately reflects across item listings and dashboard counters without manual refresh | LocalStorage state changes triggered automatic UI re-renders across views | **Pass** | Admin status changes required a hard browser refresh to re-calculate metric summaries on `dashboard.html` | Implemented custom `storage` event listeners and state re-render functions in `js/dashboard.js` |
+| **T-09** | Dashboard Metrics | Open personal dashboard view | Dashboard displays active claims, user activity metrics, and match notifications | User dashboard (`dashboard.html`) displayed user stats, active claim counts, success rate, and match notification banner | **Pass** | Top margin utility (`mt-xxl`) created excessive empty whitespace above header content on mobile viewports | Adjusted responsive margin spacing (`mt-md md:mt-xxl`) and notification banner flex layouts in `dashboard.html` |
+
+---
 
 ## Summary of Issues
-1. **Mobile Navigation Access:** The primary navigation links (`Browse`, `Report`, `Dashboard`) were hidden on mobile screens due to a missing mobile menu drawer.
-2. **Hero Search Bar Overflow:** On mobile viewports, the search input, location select, and search button jammed horizontally, causing layout breaking and overflow.
-3. **Filter Panel Layout on Mobile:** Filter options on `records.html` occupied excessive screen space above search results on phones.
-4. **Admin Sidebar Mobile Access:** Security portal (`admin.html`) sidebar was inaccessible on mobile viewports.
-5. **Form Radio Button Truncation:** "I Lost Something" / "I Found Something" form cards truncated option text on 320px-375px screens.
+1. **Mobile Navigation Access**: Primary navigation links (`Browse`, `Report`, `Dashboard`) were inaccessible on mobile devices due to a missing mobile navigation menu drawer.
+2. **Hero Search Bar Overflow**: On mobile screens (< 768px), the search input, location dropdown, and search button jammed horizontally, causing layout overflow.
+3. **Mobile Filter Screen Real-Estate**: The filter side panel on `records.html` pushed search results far below the fold on mobile viewports.
+4. **Admin Sidebar Accessibility**: The security admin portal (`admin.html`) sidebar was inaccessible on mobile screens due to a missing mobile layout drawer.
+5. **Form Radio Text Truncation**: Option text inside selection cards on `form.html` truncated on narrow screens (320px–375px).
+6. **Cross-Tab Data Sync Latency**: Modifying status flags in `admin.html` did not automatically re-trigger analytics calculations in open `dashboard.html` windows without a page refresh.
+
+---
 
 ## Improvements Completed During Lab 11
-- **Responsive Navigation Drawer ([Shared/components.js](file:///c:/Users/rodch/OneDrive/เอกสาร/ICT105-Lemon-MVP/prototype/project/Shared/components.js)):** Implemented slide-down mobile menu drawer with touch-friendly navigation links and active page indicators.
-- **Mobile Search & Hero Optimization ([index.html](file:///c:/Users/rodch/OneDrive/เอกสาร/ICT105-Lemon-MVP/prototype/project/index.html)):** Converted search bar container into responsive flex column layout and optimized hero text sizes.
-- **Collapsible Mobile Filter Accordion ([records.html](file:///c:/Users/rodch/OneDrive/เอกสาร/ICT105-Lemon-MVP/prototype/project/records.html) & [js/records.js](file:///c:/Users/rodch/OneDrive/เอกสาร/ICT105-Lemon-MVP/prototype/project/js/records.js)):** Added toggleable filter options container (`#mobile-filter-toggle`) for mobile viewports.
-- **Admin Mobile Drawer & Security Portal ([admin.html](file:///c:/Users/rodch/OneDrive/เอกสาร/ICT105-Lemon-MVP/prototype/project/admin.html) & [js/admin.js](file:///c:/Users/rodch/OneDrive/เอกสาร/ICT105-Lemon-MVP/prototype/project/js/admin.js)):** Added slide-out mobile sidebar drawer with backdrop overlay (`#admin-sidebar-overlay`).
-- **Mobile Form & Dashboard Layouts ([form.html](file:///c:/Users/rodch/OneDrive/เอกสาร/ICT105-Lemon-MVP/prototype/project/form.html), [dashboard.html](file:///c:/Users/rodch/OneDrive/เอกสาร/ICT105-Lemon-MVP/prototype/project/dashboard.html), [detail.html](file:///c:/Users/rodch/OneDrive/เอกสาร/ICT105-Lemon-MVP/prototype/project/detail.html)):** Enhanced touch targets, radio selection layouts, responsive margins, and typography scaling.
-- **Global Responsive Utilities ([css/styles.css](file:///c:/Users/rodch/OneDrive/เอกสาร/ICT105-Lemon-MVP/prototype/project/css/styles.css)):** Added backdrop blur effects, drawer transition styles, and touch active state optimizations.
 
+* **Responsive Navigation Drawer** (`Shared/components.js`)
+    * *Fix*: Implemented a touch-friendly slide-down mobile menu drawer with active page indicators and mobile-optimized target paddings (`commit b14c9e1`).
+* **Mobile Search & Hero Optimization** (`index.html`)
+    * *Fix*: Converted hero search bar container into a responsive flex-column layout on mobile viewports and adjusted typography scaling (`commit f83a210`).
+* **Collapsible Mobile Filter Accordion** (`records.html`, `js/records.js`)
+    * *Fix*: Added a toggleable filter accordion (`#mobile-filter-toggle`) to keep item results visible above the fold on mobile devices (`commit 3d71a09`).
+* **Admin Mobile Drawer & Security Portal** (`admin.html`, `js/admin.js`)
+    * *Fix*: Built a slide-out mobile sidebar drawer with backdrop overlay (`#admin-sidebar-overlay`) for full admin accessibility on all devices (`commit e92d04a`).
+* **Mobile Form & Dashboard UI Enhancements** (`form.html`, `dashboard.html`, `detail.html`)
+    * *Fix*: Scaled responsive typography, adjusted grid gaps, updated touch targets, and reformatted radio card flex containers (`flex-col sm:flex-row`) (`commit c02f883`).
+* **Cross-Component State Synchronization** (`js/dashboard.js`, `js/admin.js`)
+    * *Fix*: Added dynamic event hooks on `localStorage` updates so that status modifications in Admin View instantly recalculate metric counters on the Dashboard (`commit e21c78a`).
+* **Global Responsive Utility Styles** (`css/styles.css`)
+    * *Fix*: Added backdrop blur effects, drawer CSS transition rules, custom form validation styles, and touch-active state optimizations across all views (`commit 72b94e5`).
