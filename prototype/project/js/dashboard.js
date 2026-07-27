@@ -156,8 +156,6 @@ document.addEventListener('DOMContentLoaded', async function () {
                     buttonText: 'Close',
                     buttonIcon: 'close'
                 });
-            } else {
-                alert('Potential Match Details:\n\nItem: Black HP Laptop Charger\nFound at: Main Library Security Desk\nStatus: Available for pickup & verification.');
             }
         });
     }
@@ -175,40 +173,54 @@ document.addEventListener('DOMContentLoaded', async function () {
                     buttonText: 'OK',
                     buttonIcon: 'close'
                 });
-            } else {
-                alert('Completed reports cannot be deleted.');
             }
             return;
         }
 
-        if (!confirm('Are you sure you want to delete this report?')) return;
+        const processDelete = async () => {
+            try {
+                await fetch(`/api/records?id=${encodeURIComponent(id)}`, { method: 'DELETE' });
+            } catch (e) { }
 
-        try {
-            await fetch(`/api/records?id=${encodeURIComponent(id)}`, { method: 'DELETE' });
-        } catch (e) { }
+            try {
+                const saved = localStorage.getItem('lemon_records');
+                if (saved) {
+                    let localRecs = JSON.parse(saved);
+                    localRecs = localRecs.filter(r => String(r.id) !== String(id));
+                    localStorage.setItem('lemon_records', JSON.stringify(localRecs));
+                }
+            } catch (e) { }
 
-        try {
-            const saved = localStorage.getItem('lemon_records');
-            if (saved) {
-                let localRecs = JSON.parse(saved);
-                localRecs = localRecs.filter(r => String(r.id) !== String(id));
-                localStorage.setItem('lemon_records', JSON.stringify(localRecs));
+            if (typeof window.showWebsiteModal === 'function') {
+                window.showWebsiteModal({
+                    icon: 'delete_check',
+                    iconColor: 'text-emerald-700',
+                    iconBg: 'bg-emerald-100 border-emerald-300',
+                    title: 'Report Deleted',
+                    message: 'Report deleted successfully!',
+                    buttonText: 'OK',
+                    onClose: () => window.location.reload()
+                });
+            } else {
+                window.location.reload();
             }
-        } catch (e) { }
+        };
 
         if (typeof window.showWebsiteModal === 'function') {
             window.showWebsiteModal({
-                icon: 'delete_check',
-                iconColor: 'text-emerald-700',
-                iconBg: 'bg-emerald-100 border-emerald-300',
-                title: 'Report Deleted',
-                message: 'Report deleted successfully!',
-                buttonText: 'OK',
-                onClose: () => window.location.reload()
+                icon: 'delete',
+                iconColor: 'text-rose-600',
+                iconBg: 'bg-rose-100 border-rose-300',
+                title: 'Delete Report',
+                message: 'Are you sure you want to delete this report?',
+                buttonText: 'Delete',
+                buttonIcon: 'delete',
+                showCancel: true,
+                cancelText: 'Cancel',
+                onConfirm: processDelete
             });
         } else {
-            alert('Report deleted successfully!');
-            window.location.reload();
+            processDelete();
         }
     };
 
