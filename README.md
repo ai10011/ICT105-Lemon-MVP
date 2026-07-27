@@ -378,3 +378,32 @@ Documented 8 core startup & product metrics in [docs/startup-metrics.md](docs/st
 - Final backend relational database integration.
 - Dynamic Chart.js category distribution rendering.
 - Final pitch deck presentation and demo video recording.
+
+## Lab 12 - Landing Page and Digital Go-to-Market
+
+### Landing Page
+- Landing page folder/link: [insert path or link]
+- Main CTA: [insert CTA]
+- Prototype/demo link: [insert link]
+
+### Go-to-Market Plan
+- Target early users:
+- Selected channels:
+- Main marketing message:
+
+### Acquisition Metrics
+- Metric 1:
+- Metric 2:
+- Metric 3:
+
+### Screenshots
+- Landing page screenshot: /screenshots/landing-page.png
+- CTA screenshot: /screenshots/call-to-action.png
+
+### Requirement Alignment
+Explain how the landing page and CTA reflect the final prototype requirements in system-requirements.md.
+
+### Member Contributions
+| Member | Contribution | Commit/Issue Evidence |
+| --- | --- | --- |
+| | | |

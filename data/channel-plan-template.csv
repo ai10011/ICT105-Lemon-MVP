@@ -1,0 +1,4 @@
+channel,target_user,message_angle,cta,metric,responsible_note
+Class chat,Students,Solve common campus lost-item problem,Try Demo,CTA clicks,Avoid collecting unnecessary personal data
+Campus QR poster,Students on campus,Quick report and search access,Scan QR,QR scans/page views,Use general location only
+Email,Potential testers,Request feedback for class prototype,Give Feedback,Feedback responses,Explain data use clearly

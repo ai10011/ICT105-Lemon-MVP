@@ -447,6 +447,35 @@ Lemon - Smart Campus Lost-and-Found System
 - Prepare final prototype demonstration video and pitch presentation slides.
 - Finalize live backend database integration and dynamic Chart.js chart rendering.
 
+# Weekly Logbook - Lab 12
+
+## Group Name
+
+## Project Title
+
+## Lab Date
+
+## Work Completed Today
+
+| Member Name | Contribution | File/Commit Evidence |
+| --- | --- | --- |
+| Member 1 | | |
+| Member 2 | | |
+| Member 3 | | |
+
+## Landing Page Progress
+Describe what was created or improved.
+
+## Go-to-Market Progress
+Describe target users, channels, and messages.
+
+## Metrics Plan
+Describe what will be measured and how.
+
+## Problems Encountered
+
+## Next Action Before Lab 13
+
 
 
 

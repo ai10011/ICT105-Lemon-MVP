@@ -1,0 +1,6 @@
+metric_id,metric_name,description,sample_value,how_to_collect
+M-01,Landing page views,Number of people who open the landing page,65,"manual count, analytics, or simulated localStorage"
+M-02,CTA clicks,Number of people who click Try Demo,21,button click counter or manual observation
+M-03,Demo attempts,Number of users who open the prototype flow,13,prototype link counter or tester sheet
+M-04,Feedback responses,Number of feedback forms submitted,8,Google Form or spreadsheet
+M-05,Conversion rate,CTA clicks divided by landing page views,0.323,formula in spreadsheet
