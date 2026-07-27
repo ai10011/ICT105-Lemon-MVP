@@ -382,28 +382,32 @@ Documented 8 core startup & product metrics in [docs/startup-metrics.md](docs/st
 ## Lab 12 - Landing Page and Digital Go-to-Market
 
 ### Landing Page
-- Landing page folder/link: [insert path or link]
-- Main CTA: [insert CTA]
-- Prototype/demo link: [insert link]
+- **Landing page folder/link**: [`prototype/project/index.html`](prototype/project/index.html) (`https://ai10011.github.io/ICT105-Lemon-MVP/prototype/project/index.html`)
+- **Main CTA**: **Try Demo / Search Lost Items** (Primary) & **Submit Test Report** (Secondary)
+- **Prototype/demo link**: [`prototype/project/index.html`](prototype/project/index.html)
 
 ### Go-to-Market Plan
-- Target early users:
-- Selected channels:
-- Main marketing message:
+- **Target early users**: University undergraduate students who frequently lose or find baseline items across campus facilities, alongside campus security staff and processing clerks.
+- **Selected channels**: Class LINE/Discord chat groups, campus posters with QR codes, student community Facebook/IG posts, and direct staff emails.
+- **Main marketing message**: *"Recover lost campus items faster with one central platform. Stop searching through scattered group chats."*
 
 ### Acquisition Metrics
-- Metric 1:
-- Metric 2:
-- Metric 3:
+- **Landing Page Views (M-01)**: 365 total page views logged across channels (`Target >= 100`).
+- **CTA Click Rate (M-02)**: 41.37% click-through rate (151 clicks / 365 views).
+- **Demo Attempts & Active Testers (M-03 / M-05)**: 99 demo task attempts and 48 active testers (13.15% conversion rate).
 
 ### Screenshots
-- Landing page screenshot: /screenshots/landing-page.png
-- CTA screenshot: /screenshots/call-to-action.png
+- Landing page screenshot: [`screenshots/homepage.png`](screenshots/homepage.png)
+- CTA & Form screenshot: [`screenshots/input-form.png`](screenshots/input-form.png)
 
 ### Requirement Alignment
-Explain how the landing page and CTA reflect the final prototype requirements in system-requirements.md.
+The landing page directly implements **FR-01** (Homepage displaying platform value proposition, hero quick search, and reporting action button). The CTAs guide users directly into **FR-03** (Lost/Found Item Reporting Form) and **FR-06** (Campus catalog search and filtering), maintaining strict alignment with core system requirements in [`docs/system-requirements.md`](docs/system-requirements.md).
 
 ### Member Contributions
-| Member | Contribution | Commit/Issue Evidence |
-| --- | --- | --- |
-| | | |
+| Member Name | Role | Contribution | File / Feature Evidence |
+| --- | --- | --- | --- |
+| **Phollapat Rodchue** | Technical Lead | Built landing page gateway, CSS styles, JS scripts, linkage notes, and content specifications | `prototype/project/index.html`, `css/styles.css`, `js/main.js`, `prototype/landing-page-link.md`, `docs/landing-page-content.md` |
+| **Kyaw Ye Lin** | Product Lead | Authored Digital Go-to-Market strategy and channel marketing messages | `docs/go-to-market-plan.md`, `docs/marketing-message.md` |
+| **Tin May Lin (Mei)** | UX/UI Lead | Defined acquisition metrics framework and populated GTM dataset | `docs/acquisition-metrics.md`, `data/acquisition-metrics.csv` |
+| **Phoochit Jantakam** | Documentation Lead | Maintained Lab 12 weekly logbook and root repository documentation | `docs/weekly-logbook.md`, `README.md` |
+

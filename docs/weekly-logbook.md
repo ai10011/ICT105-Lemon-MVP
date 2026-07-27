@@ -450,31 +450,45 @@ Lemon - Smart Campus Lost-and-Found System
 # Weekly Logbook - Lab 12
 
 ## Group Name
+Lemon
 
 ## Project Title
+Lemon - Smart Campus Lost-and-Found System
 
 ## Lab Date
+2026-07-27
 
 ## Work Completed Today
+- Created and integrated the landing page gateway (`prototype/project/index.html`, `css/styles.css`, `js/main.js`) presenting the core value proposition, problem background, hero search bar, and primary CTAs.
+- Authored the landing page specification and linkage notes in [`docs/landing-page-content.md`](landing-page-content.md) and [`prototype/landing-page-link.md`](../prototype/landing-page-link.md).
+- Formulated the Digital Go-to-Market (GTM) plan in [`docs/go-to-market-plan.md`](go-to-market-plan.md) and channel-specific marketing copy across LINE/Discord chat groups, campus QR posters, social media, and direct email outreach in [`docs/marketing-message.md`](marketing-message.md).
+- Established the acquisition metrics framework in [`docs/acquisition-metrics.md`](acquisition-metrics.md) and logged 14 dataset entries in [`data/acquisition-metrics.csv`](../data/acquisition-metrics.csv) tracking 365 landing page views, 151 CTA clicks, 99 demo attempts, 59 feedback responses, and 48 active testers.
+- Updated root repository documentation in [`README.md`](../README.md) and maintained the weekly logbook in [`docs/weekly-logbook.md`](weekly-logbook.md).
 
-| Member Name | Contribution | File/Commit Evidence |
+## Member Contributions
+| Member Name | Contribution | File/Feature Updated |
 | --- | --- | --- |
-| Member 1 | | |
-| Member 2 | | |
-| Member 3 | | |
+| **Phollapat Rodchue** | Built landing page gateway, styling, interactions, and linkage documentation | `prototype/project/index.html`, `css/styles.css`, `js/main.js`, `prototype/landing-page-link.md`, `docs/landing-page-content.md` |
+| **Kyaw Ye Lin** | Developed Digital Go-to-Market strategy and channel marketing messages | `docs/go-to-market-plan.md`, `docs/marketing-message.md` |
+| **Tin May Lin (Mei)** | Defined acquisition metrics framework and populated GTM dataset | `docs/acquisition-metrics.md`, `data/acquisition-metrics.csv` |
+| **Phoochit Jantakam** | Maintained Lab 12 weekly logbook and root repository documentation | `docs/weekly-logbook.md`, `README.md` |
 
 ## Landing Page Progress
-Describe what was created or improved.
+The landing page was established as the primary front gateway for the Lemon MVP system (`prototype/project/index.html`). It features a hero value proposition headline (*"Recover lost campus items faster with one central platform"*), target student benefits, quick-search integration, and two clear call-to-action buttons (*Try Demo / Search Lost Items* and *Submit Test Report*).
 
 ## Go-to-Market Progress
-Describe target users, channels, and messages.
+Targeted early users across university undergraduate students and campus security staff. Defined a multi-channel campaign strategy leveraging class LINE/Discord chat groups, campus QR posters placed at high-traffic bottleneck areas (Main Library, Student Union cafeteria, ICT computer labs), student association Facebook/IG posts, and direct staff outreach emails.
 
 ## Metrics Plan
-Describe what will be measured and how.
+Implemented a quantitative acquisition metrics tracking framework (`M-01` to `M-05`) in `docs/acquisition-metrics.md` supported by a 14-entry campaign dataset in `data/acquisition-metrics.csv`. Recorded 365 total page views, a 41.4% CTA click-through rate, 99 demo attempts, 59 feedback submissions, and an overall interest conversion rate of 13.2% (48 active testers).
 
 ## Problems Encountered
+- **Routing & Link Consistency:** Ensured landing page CTAs navigate seamlessly between directory catalog (`records.html`), report submission (`form.html`), admin management (`admin.html`), and metrics dashboard (`dashboard.html`). Resolved by standardizing relative navigation paths across shared components (`Shared/header.html`).
 
 ## Next Action Before Lab 13
+- Finalize demo video recording and presentation slides for final pitch evaluation.
+- Perform end-to-end integration testing between frontend storage and backend REST API endpoints (`server.js`).
+
 
 
 

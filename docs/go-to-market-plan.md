@@ -13,9 +13,11 @@ A centralized, web-based platform that helps students quickly report, search by 
 
 | Channel | Target User | Message Angle | User Action Expected | Metric to Track | Why This Channel Fits |
 | --- | --- | --- | --- | --- | --- |
-| Class LINE / Discord chat group | Students | Stop searching multiple chat groups for lost items | Click prototype link | Number of link clicks & page views | Students interact in class chat groups every day |
-| Campus poster with QR code | Students & Security Staff | Report or search for lost items in seconds | Scan QR code | Number of QR scans | Reaches users directly at high-density loss locations (Library, Student Center) |
-| Campus Facebook / Instagram Post | Student Community | Find lost items faster with one central website | Visit prototype demo | Post engagements and CTA clicks | High daily student reach across university social channels |
+| **Class Chat (LINE / Discord)** | Students | Stop searching multiple scattered chat groups for lost items | Click prototype demo link | Number of link clicks & page views | Students interact in class chat groups every day |
+| **Campus Poster with QR Code** | Students on campus & Security Staff | Report or search for lost items in seconds | Scan QR code | Number of QR scans | Reaches users directly at high-density loss locations (Library, Student Center) |
+| **Social Media (Facebook / Instagram)** | Student Community | Find lost items faster with one central web portal | Visit prototype demo & test workflow | Post engagements and CTA clicks | High daily student reach across university social channels |
+| **Student / Staff Email Outreach** | Security Staff & Club Leaders | Test our Smart Campus Lost-and-Found prototype to streamline logistics | Try demo & submit feedback | Email link clicks & feedback responses | Reaches campus administrators and student organization leaders directly |
+
 
 ## Launch Sequence
 1. Finalize the landing page gateway ([`../prototype/project/index.html`](../prototype/project/index.html)) and live demo link.
