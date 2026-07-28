@@ -447,6 +447,7 @@ Lemon - Smart Campus Lost-and-Found System
 - Prepare final prototype demonstration video and pitch presentation slides.
 - Finalize live backend database integration and dynamic Chart.js chart rendering.
 
+<<<<<<< HEAD
 # Weekly Logbook - Lab 13
 
 ## Group Name
@@ -476,5 +477,51 @@ Lemon - Smart Campus Lost-and-Found System
 
 ## Requirement Traceability Notes
 Which requirements need final checking before Lab 14?
+=======
+# Weekly Logbook - Lab 12
+
+## Group Name
+Lemon
+
+## Project Title
+Lemon - Smart Campus Lost-and-Found System
+
+## Lab Date
+2026-07-27
+
+## Work Completed Today
+- Designed and integrated the landing page gateway (`prototype/project/index.html`, `css/styles.css`, `js/main.js`) highlighting the project's value proposition, problem overview, hero search section, and primary call-to-action buttons.
+- Prepared the landing page specification and navigation documentation in [`docs/landing-page-content.md`](landing-page-content.md) and [`prototype/landing-page-link.md`](../prototype/landing-page-link.md).
+- Created the Digital Go-to-Market (GTM) strategy in [`docs/go-to-market-plan.md`](go-to-market-plan.md), together with marketing content for LINE/Discord groups, campus QR posters, social media, and direct email communication in [`docs/marketing-message.md`](marketing-message.md).
+- Defined the acquisition metrics framework in [`docs/acquisition-metrics.md`](acquisition-metrics.md) and recorded 14 dataset entries in [`data/acquisition-metrics.csv`](../data/acquisition-metrics.csv), capturing 365 landing page views, 151 CTA clicks, 99 demo attempts, 59 feedback submissions, and 48 active testers.
+- Updated the main project documentation in [`README.md`](../README.md) and completed the weekly progress record in [`docs/weekly-logbook.md`](weekly-logbook.md).
+
+## Member Contributions
+| Member Name | Contribution | File/Feature Updated |
+| --- | --- | --- |
+| **Phollapat Rodchue** | Developed the landing page gateway, page styling, interactive components, and supporting navigation documentation | `prototype/project/index.html`, `css/styles.css`, `js/main.js`, `prototype/landing-page-link.md`, `docs/landing-page-content.md` |
+| **Kyaw Ye Lin** | Prepared the Digital Go-to-Market strategy and channel-specific marketing content | `docs/go-to-market-plan.md`, `docs/marketing-message.md` |
+| **Tin May Lin (Mei)** | Designed the acquisition metrics framework and completed the GTM campaign dataset | `docs/acquisition-metrics.md`, `data/acquisition-metrics.csv` |
+| **Phoochit Jantakam** | Updated the Lab 12 weekly logbook and maintained the root repository documentation | `docs/weekly-logbook.md`, `README.md` |
+
+## Landing Page Progress
+The landing page was implemented as the main entry point for the Lemon MVP system (`prototype/project/index.html`). It includes a hero headline (*"Recover lost campus items faster with one central platform"*), highlights key benefits for students, provides a quick-search feature, and offers two primary call-to-action buttons (*Try Demo / Search Lost Items* and *Submit Test Report*).
+
+## Go-to-Market Progress
+Focused on attracting early users from university undergraduate students and campus security staff. A multi-channel campaign was planned using class LINE/Discord groups, campus QR posters at high-traffic locations (Main Library, Student Union cafeteria, ICT computer labs), student association Facebook/Instagram posts, and direct outreach emails to staff.
+
+## Metrics Plan
+Established a quantitative acquisition metrics framework (`M-01` to `M-05`) in `docs/acquisition-metrics.md`, supported by a 14-entry campaign dataset in `data/acquisition-metrics.csv`. The recorded results include 365 page views, a 41.4% CTA click-through rate, 99 demo attempts, 59 feedback submissions, and an overall interest conversion rate of 13.2% (48 active testers).
+
+## Problems Encountered
+- **Routing & Link Consistency:** Verified that landing page CTAs navigate correctly between the directory catalog (`records.html`), report submission (`form.html`), admin management (`admin.html`), and metrics dashboard (`dashboard.html`). The issue was resolved by standardizing relative navigation paths across shared components (`Shared/header.html`).
+
+## Next Action Before Lab 13
+- Finalize demo video recording and presentation slides for final pitch evaluation.
+- Perform end-to-end integration testing between frontend storage and backend REST API endpoints (`server.js`).
+
+
+
+>>>>>>> f4740f1dc8f41a7df7d2751b5c02ed29b11d64c2
 
 

@@ -378,3 +378,35 @@ Documented 8 core startup & product metrics in [docs/startup-metrics.md](docs/st
 - Final backend relational database integration.
 - Dynamic Chart.js category distribution rendering.
 - Final pitch deck presentation and demo video recording.
+
+## Lab 12 - Landing Page and Digital Go-to-Market
+
+### Landing Page
+- **Landing page folder/link**: [`prototype/project/index.html`](prototype/project/index.html) (`https://ai10011.github.io/ICT105-Lemon-MVP/prototype/project/index.html`)
+- **Main CTA**: **Try Demo / Search Lost Items** (Primary) & **Submit Test Report** (Secondary)
+- **Prototype/demo link**: [`prototype/project/index.html`](prototype/project/index.html)
+
+### Go-to-Market Plan
+- **Target early users**: University undergraduate students who frequently lose or find everyday items across campus, together with campus security staff and processing clerks.
+- **Selected channels**: Class LINE/Discord chat groups, campus QR-code posters, student community Facebook/IG posts, and direct emails to staff.
+- **Main marketing message**: *"Recover lost campus items faster with one central platform. Stop searching through scattered group chats."*
+
+### Acquisition Metrics
+- **Landing Page Views (M-01)**: Recorded 365 total page views across all channels (`Target >= 100`).
+- **CTA Click Rate (M-02)**: Achieved a 41.37% click-through rate (151 clicks / 365 views).
+- **Demo Attempts & Active Testers (M-03 / M-05)**: Logged 99 demo task attempts and 48 active testers, resulting in a 13.15% conversion rate.
+
+### Screenshots
+- Landing page screenshot: [`screenshots/homepage.png`](screenshots/homepage.png)
+- CTA & Form screenshot: [`screenshots/input-form.png`](screenshots/input-form.png)
+
+### Requirement Alignment
+The landing page directly supports **FR-01** (Homepage displaying platform value proposition, hero quick search, and reporting action button). The CTAs lead users directly to **FR-03** (Lost/Found Item Reporting Form) and **FR-06** (Campus catalog search and filtering), ensuring alignment with the core system requirements in [`docs/system-requirements.md`](docs/system-requirements.md).
+
+### Member Contributions
+| Member Name | Role | Contribution | File / Feature Evidence |
+| --- | --- | --- | --- |
+| **Phollapat Rodchue** | Technical Lead | Developed the landing page gateway, CSS styling, JavaScript functionality, linkage notes, and content specifications | `prototype/project/index.html`, `css/styles.css`, `js/main.js`, `prototype/landing-page-link.md`, `docs/landing-page-content.md` |
+| **Kyaw Ye Lin** | Product Lead | Prepared the Digital Go-to-Market strategy and channel-specific marketing messages | `docs/go-to-market-plan.md`, `docs/marketing-message.md` |
+| **Tin May Lin (Mei)** | UX/UI Lead | Designed the acquisition metrics framework and completed the GTM dataset | `docs/acquisition-metrics.md`, `data/acquisition-metrics.csv` |
+| **Phoochit Jantakam** | Documentation Lead | Updated the Lab 12 weekly logbook and maintained the root repository documentation | `docs/weekly-logbook.md`, `README.md` |

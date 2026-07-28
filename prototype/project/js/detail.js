@@ -97,77 +97,109 @@ document.addEventListener('DOMContentLoaded', async function () {
                 </button>
             `;
 
-            document.getElementById('approve-claim-btn')?.addEventListener('click', async function () {
-                if (!confirm(`Approve claim by ${record.claimedByName || 'this user'} and mark as resolved?`)) return;
+            document.getElementById('approve-claim-btn')?.addEventListener('click', function () {
+                const processApprove = async () => {
+                    const patchPayload = { id: record.id, reportType: 'Completed', claimStatus: 'Approved' };
+                    try {
+                        await fetch('/api/records', {
+                            method: 'PATCH',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(patchPayload)
+                        });
+                    } catch (e) { }
 
-                const patchPayload = { id: record.id, reportType: 'Completed', claimStatus: 'Approved' };
-                try {
-                    await fetch('/api/records', {
-                        method: 'PATCH',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify(patchPayload)
-                    });
-                } catch (e) { }
+                    try {
+                        const saved = localStorage.getItem('lemon_records');
+                        if (saved) {
+                            let localRecs = JSON.parse(saved);
+                            const target = localRecs.find(r => String(r.id) === String(record.id));
+                            if (target) Object.assign(target, patchPayload);
+                            localStorage.setItem('lemon_records', JSON.stringify(localRecs));
+                        }
+                    } catch (e) { }
 
-                try {
-                    const saved = localStorage.getItem('lemon_records');
-                    if (saved) {
-                        let localRecs = JSON.parse(saved);
-                        const target = localRecs.find(r => String(r.id) === String(record.id));
-                        if (target) Object.assign(target, patchPayload);
-                        localStorage.setItem('lemon_records', JSON.stringify(localRecs));
+                    if (typeof window.showWebsiteModal === 'function') {
+                        window.showWebsiteModal({
+                            icon: 'verified',
+                            title: 'Claim Approved!',
+                            message: 'Claim approved! Report marked as Completed.',
+                            buttonText: 'Go to Dashboard',
+                            onClose: () => window.location.href = 'dashboard.html'
+                        });
+                    } else {
+                        window.location.href = 'dashboard.html';
                     }
-                } catch (e) { }
+                };
 
                 if (typeof window.showWebsiteModal === 'function') {
                     window.showWebsiteModal({
-                        icon: 'verified',
-                        title: 'Claim Approved!',
-                        message: 'Claim approved! Report marked as Completed.',
-                        buttonText: 'Go to Dashboard',
-                        onClose: () => window.location.href = 'dashboard.html'
+                        icon: 'help_outline',
+                        iconColor: 'text-emerald-700',
+                        iconBg: 'bg-emerald-100 border-emerald-300',
+                        title: 'Approve Claim Request',
+                        message: `Approve claim request by <strong>${record.claimedByName || 'this user'}</strong> and mark report as resolved?`,
+                        buttonText: 'Approve Claim',
+                        buttonIcon: 'check_circle',
+                        showCancel: true,
+                        cancelText: 'Cancel',
+                        onConfirm: processApprove
                     });
                 } else {
-                    alert('Claim approved! Report marked as Completed.');
-                    window.location.href = 'dashboard.html';
+                    processApprove();
                 }
             });
 
-            document.getElementById('decline-claim-btn')?.addEventListener('click', async function () {
-                if (!confirm('Decline this claim request?')) return;
+            document.getElementById('decline-claim-btn')?.addEventListener('click', function () {
+                const processDecline = async () => {
+                    const patchPayload = { id: record.id, claimStatus: null, claimedByName: null, claimedByEmail: null, claimedByUserId: null };
+                    try {
+                        await fetch('/api/records', {
+                            method: 'PATCH',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(patchPayload)
+                        });
+                    } catch (e) { }
 
-                const patchPayload = { id: record.id, claimStatus: null, claimedByName: null, claimedByEmail: null, claimedByUserId: null };
-                try {
-                    await fetch('/api/records', {
-                        method: 'PATCH',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify(patchPayload)
-                    });
-                } catch (e) { }
+                    try {
+                        const saved = localStorage.getItem('lemon_records');
+                        if (saved) {
+                            let localRecs = JSON.parse(saved);
+                            const target = localRecs.find(r => String(r.id) === String(record.id));
+                            if (target) Object.assign(target, patchPayload);
+                            localStorage.setItem('lemon_records', JSON.stringify(localRecs));
+                        }
+                    } catch (e) { }
 
-                try {
-                    const saved = localStorage.getItem('lemon_records');
-                    if (saved) {
-                        let localRecs = JSON.parse(saved);
-                        const target = localRecs.find(r => String(r.id) === String(record.id));
-                        if (target) Object.assign(target, patchPayload);
-                        localStorage.setItem('lemon_records', JSON.stringify(localRecs));
+                    if (typeof window.showWebsiteModal === 'function') {
+                        window.showWebsiteModal({
+                            icon: 'cancel',
+                            iconColor: 'text-rose-600',
+                            iconBg: 'bg-rose-100 border-rose-300',
+                            title: 'Claim Declined',
+                            message: 'Claim request declined.',
+                            buttonText: 'OK',
+                            onClose: () => window.location.reload()
+                        });
+                    } else {
+                        window.location.reload();
                     }
-                } catch (e) { }
+                };
 
                 if (typeof window.showWebsiteModal === 'function') {
                     window.showWebsiteModal({
-                        icon: 'cancel',
+                        icon: 'warning',
                         iconColor: 'text-rose-600',
                         iconBg: 'bg-rose-100 border-rose-300',
-                        title: 'Claim Declined',
-                        message: 'Claim request declined.',
-                        buttonText: 'OK',
-                        onClose: () => window.location.reload()
+                        title: 'Decline Claim Request',
+                        message: 'Are you sure you want to decline this claim request?',
+                        buttonText: 'Decline Claim',
+                        buttonIcon: 'cancel',
+                        showCancel: true,
+                        cancelText: 'Keep Claim',
+                        onConfirm: processDecline
                     });
                 } else {
-                    alert('Claim request declined.');
-                    window.location.reload();
+                    processDecline();
                 }
             });
         } else if (isReporter) {
@@ -179,38 +211,54 @@ document.addEventListener('DOMContentLoaded', async function () {
                     Manage in Dashboard
                 </button>
             `;
-            document.getElementById('primary-action-btn')?.addEventListener('click', async function () {
-                if (!confirm('Mark this report as resolved / returned?')) return;
+            document.getElementById('primary-action-btn')?.addEventListener('click', function () {
+                const processResolve = async () => {
+                    try {
+                        await fetch(`/api/records`, {
+                            method: 'PATCH',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ id: record.id, reportType: 'Completed' })
+                        });
+                    } catch (e) { }
 
-                try {
-                    await fetch(`/api/records`, {
-                        method: 'PATCH',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({ id: record.id, reportType: 'Completed' })
-                    });
-                } catch (e) { }
+                    try {
+                        const saved = localStorage.getItem('lemon_records');
+                        if (saved) {
+                            let localRecs = JSON.parse(saved);
+                            const target = localRecs.find(r => String(r.id) === String(record.id));
+                            if (target) target.reportType = 'Completed';
+                            localStorage.setItem('lemon_records', JSON.stringify(localRecs));
+                        }
+                    } catch (e) { }
 
-                try {
-                    const saved = localStorage.getItem('lemon_records');
-                    if (saved) {
-                        let localRecs = JSON.parse(saved);
-                        const target = localRecs.find(r => String(r.id) === String(record.id));
-                        if (target) target.reportType = 'Completed';
-                        localStorage.setItem('lemon_records', JSON.stringify(localRecs));
+                    if (typeof window.showWebsiteModal === 'function') {
+                        window.showWebsiteModal({
+                            icon: 'task_alt',
+                            title: 'Report Completed',
+                            message: 'Report marked as Completed!',
+                            buttonText: 'Go to Dashboard',
+                            onClose: () => window.location.href = 'dashboard.html'
+                        });
+                    } else {
+                        window.location.href = 'dashboard.html';
                     }
-                } catch (e) { }
+                };
 
                 if (typeof window.showWebsiteModal === 'function') {
                     window.showWebsiteModal({
-                        icon: 'task_alt',
-                        title: 'Report Completed',
-                        message: 'Report marked as Completed!',
-                        buttonText: 'Go to Dashboard',
-                        onClose: () => window.location.href = 'dashboard.html'
+                        icon: 'help_outline',
+                        iconColor: 'text-primary',
+                        iconBg: 'bg-primary-container/20 border-primary-container',
+                        title: 'Mark Case Resolved',
+                        message: 'Are you sure you want to mark this report as resolved / returned?',
+                        buttonText: 'Confirm & Complete',
+                        buttonIcon: 'check_circle',
+                        showCancel: true,
+                        cancelText: 'Cancel',
+                        onConfirm: processResolve
                     });
                 } else {
-                    alert('Report marked as Completed!');
-                    window.location.href = 'dashboard.html';
+                    processResolve();
                 }
             });
         } else if (isClaimer && isClaimPending) {
@@ -244,7 +292,6 @@ document.addEventListener('DOMContentLoaded', async function () {
                             onClose: () => window.location.href = 'login.html'
                         });
                     } else {
-                        alert('Please log in first to claim this item.');
                         window.location.href = 'login.html';
                     }
                     return;
@@ -284,12 +331,11 @@ document.addEventListener('DOMContentLoaded', async function () {
                     window.showWebsiteModal({
                         icon: 'send',
                         title: 'Claim Submitted!',
-                        message: `Claim request submitted!\n\n${claimerName} (${claimerEmail}) has been notified to the submitter.`,
+                        message: `Claim request submitted!<br><br><strong>${claimerName}</strong> (${claimerEmail}) has been notified to the submitter.`,
                         buttonText: 'OK',
                         onClose: () => window.location.reload()
                     });
                 } else {
-                    alert(`Claim request submitted!\n\n${claimerName} (${claimerEmail}) has been notified to the submitter.`);
                     window.location.reload();
                 }
             });
@@ -306,7 +352,6 @@ document.addEventListener('DOMContentLoaded', async function () {
                             onClose: () => window.location.href = 'login.html'
                         });
                     } else {
-                        alert('Please log in first to message the finder.');
                         window.location.href = 'login.html';
                     }
                 } else {
@@ -319,7 +364,6 @@ document.addEventListener('DOMContentLoaded', async function () {
                             onClose: () => window.location.href = 'dashboard.html'
                         });
                     } else {
-                        alert('Opening conversation with the finder...');
                         window.location.href = 'dashboard.html';
                     }
                 }
@@ -346,7 +390,6 @@ document.addEventListener('DOMContentLoaded', async function () {
                             onClose: () => window.location.href = 'login.html'
                         });
                     } else {
-                        alert('Please log in first to report finding this item.');
                         window.location.href = 'login.html';
                     }
                 } else {
@@ -359,7 +402,6 @@ document.addEventListener('DOMContentLoaded', async function () {
                             onClose: () => window.location.href = 'dashboard.html'
                         });
                     } else {
-                        alert('Awesome! The owner of this lost item has been notified that you found it.');
                         window.location.href = 'dashboard.html';
                     }
                 }
@@ -377,7 +419,6 @@ document.addEventListener('DOMContentLoaded', async function () {
                             onClose: () => window.location.href = 'login.html'
                         });
                     } else {
-                        alert('Please log in first to contact the owner.');
                         window.location.href = 'login.html';
                     }
                 } else {
@@ -390,7 +431,6 @@ document.addEventListener('DOMContentLoaded', async function () {
                             onClose: () => window.location.href = 'dashboard.html'
                         });
                     } else {
-                        alert('Opening conversation with the owner...');
                         window.location.href = 'dashboard.html';
                     }
                 }

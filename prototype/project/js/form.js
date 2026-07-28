@@ -136,7 +136,6 @@ document.addEventListener('DOMContentLoaded', function () {
                         }
                     });
                 } else {
-                    alert('Report submitted successfully!');
                     window.location.href = 'records.html';
                 }
             }
