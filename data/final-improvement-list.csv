@@ -1,0 +1,4 @@
+Issue_ID,Issue_Description,Severity,Related_Requirement,Evidence_Source,Proposed_Fix,Owner,Status
+UI-01,Submit button not visible on small screen,Critical,FR-14,Tester U02,Move button above fold and test mobile view,,Pending
+UX-02,Users did not understand item status labels,Important,FR-08,Tester U04,Add status explanation and color legend,,Pending
+DATA-03,Record detail page missing contact instruction,Important,FR-07/FR-15,Tester U01,Add safe claim instruction without exposing unnecessary personal data,,Pending
