@@ -447,37 +447,6 @@ Lemon - Smart Campus Lost-and-Found System
 - Prepare final prototype demonstration video and pitch presentation slides.
 - Finalize live backend database integration and dynamic Chart.js chart rendering.
 
-<<<<<<< HEAD
-# Weekly Logbook - Lab 13
-
-## Group Name
-
-## Project Title
-
-## Date
-
-## Members and Contributions
-| Member | Contribution This Lab | GitHub Evidence |
-| --- | --- | --- |
-| | | |
-
-## Work Completed
-- Sales scenario:
-- Demo script:
-- User testing plan:
-- User testing results:
-- Final improvement list:
-- Screenshots:
-
-## Key Decisions
-
-## Problems Encountered
-
-## Next Actions Before Lab 14
-
-## Requirement Traceability Notes
-Which requirements need final checking before Lab 14?
-=======
 # Weekly Logbook - Lab 12
 
 ## Group Name
@@ -520,8 +489,34 @@ Established a quantitative acquisition metrics framework (`M-01` to `M-05`) in `
 - Finalize demo video recording and presentation slides for final pitch evaluation.
 - Perform end-to-end integration testing between frontend storage and backend REST API endpoints (`server.js`).
 
+# Weekly Logbook - Lab 13
 
+## Group Name
 
->>>>>>> f4740f1dc8f41a7df7d2751b5c02ed29b11d64c2
+## Project Title
+
+## Date
+
+## Members and Contributions
+| Member | Contribution This Lab | GitHub Evidence |
+| --- | --- | --- |
+| | | |
+
+## Work Completed
+- Sales scenario:
+- Demo script:
+- User testing plan:
+- User testing results:
+- Final improvement list:
+- Screenshots:
+
+## Key Decisions
+
+## Problems Encountered
+
+## Next Actions Before Lab 14
+
+## Requirement Traceability Notes
+Which requirements need final checking before Lab 14?
 
 

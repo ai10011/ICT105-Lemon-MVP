@@ -410,3 +410,24 @@ The landing page directly supports **FR-01** (Homepage displaying platform value
 | **Kyaw Ye Lin** | Product Lead | Prepared the Digital Go-to-Market strategy and channel-specific marketing messages | `docs/go-to-market-plan.md`, `docs/marketing-message.md` |
 | **Tin May Lin (Mei)** | UX/UI Lead | Designed the acquisition metrics framework and completed the GTM dataset | `docs/acquisition-metrics.md`, `data/acquisition-metrics.csv` |
 | **Phoochit Jantakam** | Documentation Lead | Updated the Lab 12 weekly logbook and maintained the root repository documentation | `docs/weekly-logbook.md`, `README.md` |
+
+## Lab 13: Sales Scenario, Demo Script, and User Testing
+
+### Lab 13 Objective
+We prepared the final demo scenario, demo script, user testing plan, testing results, and final improvement list before Lab 14.
+
+### Files Completed
+- [ ] /docs/sales-scenario.md
+- [ ] /docs/demo-script.md
+- [ ] /docs/user-testing-plan.md
+- [ ] /docs/user-testing-results.md
+- [ ] /docs/final-improvement-list.md
+- [ ] /docs/weekly-logbook.md
+- [ ] /screenshots/demo-flow.png
+- [ ] /screenshots/user-testing-evidence.png
+
+### Prototype / Demo Link
+Paste your prototype/demo link here.
+
+### Final Preparation Status
+Summarize whether the prototype is ready for Lab 14 or still needs improvement.
