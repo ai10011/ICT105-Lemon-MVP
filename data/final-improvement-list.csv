@@ -1,4 +1,13 @@
 Issue_ID,Issue_Description,Severity,Related_Requirement,Evidence_Source,Proposed_Fix,Owner,Status
-UI-01,Submit button not visible on small screen,Critical,FR-14,Tester U02,Move button above fold and test mobile view,,Pending
-UX-02,Users did not understand item status labels,Important,FR-08,Tester U04,Add status explanation and color legend,,Pending
-DATA-03,Record detail page missing contact instruction,Important,FR-07/FR-15,Tester U01,Add safe claim instruction without exposing unnecessary personal data,,Pending
+IMP-01,Submit button not visible on small screen (< 375px),Critical,FR-14,Tester U02,Move button above fold and apply responsive flex column layout,Phollapat Rodchue,Completed
+IMP-02,Navigation header and hero search bar overflow on mobile viewports,Critical,FR-01/FR-14,Lab 11 QA,Build responsive slide-down mobile menu drawer in components.js,Phollapat Rodchue,Completed
+IMP-03,Users did not understand plain text item status labels,Important,FR-08,Tester U04,Deploy color-coded status badges and visual status legend,Tin May Lin,Completed
+IMP-04,Filter side panel occupying 100% vertical viewport on mobile,Important,FR-06/FR-14,Lab 11 QA,Implement collapsible mobile filter accordion drawer (#mobile-filter-toggle),Phollapat Rodchue,Completed
+IMP-05,Administrative status update sidebar hidden on mobile,Important,FR-09/FR-14,Lab 11 QA,Create slide-out mobile admin drawer with backdrop overlay (#admin-sidebar-overlay),Phollapat Rodchue,Completed
+IMP-06,Record detail page missing safe contact & claim instructions,Important,FR-07/FR-15,Tester U01,Add safe claim instructions and mask student contact email (65XXXXX@au.edu),Kyaw Ye Lin,Completed
+IMP-07,Form inputs lacking explicit optional indicator for item photo uploads,Useful,FR-03/FR-10,Tester U01,Add explicit (Optional) text tags on photo upload form field,Phoochit Jantakam,Completed
+IMP-08,Dashboard metrics missing real-time cross-tab storage sync,Useful,FR-12,Lab 11 QA,Add window storage event listener to sync dashboard metrics automatically,Phollapat Rodchue,Completed
+IMP-09,Navigation header missing direct access link to public summary dashboard,Useful,FR-12,Lab 08 Testing,Add direct Analytics Dashboard link to global header bar,Tin May Lin,Completed
+IMP-10,Migration from client JSON/localStorage to live backend relational database,Future,FR-04,Architecture Review,Plan transition to live PostgreSQL database with Prisma ORM,Phollapat Rodchue,Pending
+IMP-11,Real-time anonymized student-to-finder WebSocket chat service,Future,US-08/NFR-01,Lab 04 Scope,Implement socket-based private messaging without sharing phone numbers,Kyaw Ye Lin,Pending
+

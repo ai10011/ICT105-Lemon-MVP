@@ -29,8 +29,16 @@ document.addEventListener('DOMContentLoaded', async function () {
 
     const userSubmissions = records.filter(r => user && r.userId && String(r.userId) === String(user.id));
     const totalReported = userSubmissions.length;
-    const foundCount = userSubmissions.filter(r => (r.reportType || '').toLowerCase().includes('completed')).length;
-    const pendingClaimsCount = records.filter(r => user && r.claimedByUserId && String(r.claimedByUserId) === String(user.id) && r.claimStatus === 'Pending').length;
+    const foundCount = userSubmissions.filter(r => {
+        const type = (r.reportType || '').toLowerCase();
+        return type.includes('completed') || type.includes('found');
+    }).length;
+    const pendingClaimsCount = records.filter(r => {
+        if (!user || r.claimStatus !== 'Pending') return false;
+        const isOwner = r.userId && String(r.userId) === String(user.id);
+        const isClaimer = r.claimedByUserId && String(r.claimedByUserId) === String(user.id);
+        return isOwner || isClaimer;
+    }).length;
     const successRate = totalReported > 0 ? Math.round((foundCount / totalReported) * 100) : 0;
 
     const statReported = document.getElementById('stat-items-reported');

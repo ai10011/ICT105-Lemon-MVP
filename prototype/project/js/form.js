@@ -58,6 +58,11 @@ function compressPhoto(file, callback) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
+    const dateInput = document.getElementById('date');
+    if (dateInput && !dateInput.value) {
+        dateInput.value = new Date().toISOString().split('T')[0];
+    }
+
     const reportForm = document.getElementById('report-form');
     if (reportForm) {
         reportForm.addEventListener('submit', function (e) {

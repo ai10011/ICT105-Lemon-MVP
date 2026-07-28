@@ -1,7 +1,23 @@
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #aaa;
+}
+
 body {
     background-color: #f9f9f9;
     color: #1a1c1c;
     font-family: 'Plus Jakarta Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
 }
 
 .material-symbols-outlined {
@@ -9,29 +25,28 @@ body {
 }
 
 .glass-card {
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .btn-primary-hover:hover {
     background-color: #1A1C1C !important;
     color: #FCE134 !important;
-    box-shadow: 0 4px 12px rgba(254, 227, 54, 0.3);
+    box-shadow: 0 4px 14px rgba(254, 227, 54, 0.35);
 }
 
 .input-focus:focus {
     outline: none;
     border-color: #FCE134 !important;
-    box-shadow: 0 0 0 4px rgba(252, 225, 52, 0.15);
+    box-shadow: 0 0 0 4px rgba(252, 225, 52, 0.2);
 }
 
 .border-slate {
     border-color: #E2E8F0;
 }
 
-/* Mobile Responsiveness & Drawer Animations */
 @media (max-width: 767px) {
     .mobile-menu-active {
         overflow: hidden;
@@ -45,5 +60,20 @@ body {
 .admin-sidebar-overlay {
     background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(4px);
+}
+
+@keyframes fadeInZoom {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.animate-in {
+    animation: fadeInZoom 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 

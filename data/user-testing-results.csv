@@ -1,6 +1,10 @@
 Tester_ID,Tester_Type,Task_ID,Task_Description,Completed,Completion_Time_Min,Confusion_Point,Feedback_Score_1_5,Comment,Related_Requirement
-U01,Student user,T01,Understand homepage purpose,Yes,1.2,None,5,Clear problem statement,FR-01
-U01,Student user,T02,Submit lost item report,Partial,3.5,Did not know required photo field was optional,3,Form labels need clearer guidance,FR-03/FR-10
-U02,Student user,T03,Search for item by category,Yes,2.0,None,4,Search works but category names should be simpler,FR-05/FR-06
-U03,Admin role,T04,Update item status,Yes,1.8,None,4,Status labels are understandable,FR-08/FR-09
-U04,Student user,T05,Read dashboard summary,Partial,2.7,Unsure what unresolved means,3,Dashboard metric needs explanation,FR-12
+U01,Student user,T01,Understand homepage purpose,Yes,1.2,None,5,Clear problem statement and hero call-to-action buttons,FR-01
+U01,Student user,T02,Submit lost item report,Partial,3.5,Did not know required photo field was optional,3,Form labels need clearer guidance on optional photo upload,FR-03/FR-10
+U02,Student user,T03,Search for item by category,Yes,2.0,None,4,Search works fast but category filter dropdown names should be simpler,FR-05/FR-06
+U02,Student user,T02,Submit lost item report on small phone screen,No,4.1,Submit button cut off below fold on 375px mobile screen,2,Submit button should remain visible above the fold on mobile,FR-14
+U03,Admin role,T04,Update item status in admin portal,Yes,1.8,None,4,Admin management status update works smoothly,FR-08/FR-09
+U04,Student user,T05,Read dashboard summary metrics,Partial,2.7,Unsure what unresolved item status means,3,Dashboard metric labels and visual status badges need legend,FR-12
+U05,Student user,T06,View item details and claim item,Yes,2.2,None,4,Detail view clearly masks reporter contact email for privacy,FR-07/FR-15
+U06,Student user,T03,Filter records by campus building,Yes,1.5,None,5,Building filter dropdown makes finding items at Main Library easy,FR-06
+

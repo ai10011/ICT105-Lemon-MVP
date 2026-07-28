@@ -2,15 +2,16 @@ document.addEventListener('DOMContentLoaded', async function () {
     const records = await LemonData.getRecords();
 
     const total = records.length;
-    const found = records.filter(r => (r.reportType || '').toLowerCase().includes('found')).length;
-    const rate = total > 0 ? Math.round((found / total) * 100) : 0;
+    const resolved = records.filter(r => (r.reportType || '').toLowerCase().includes('completed') || (r.reportType || '').toLowerCase().includes('found')).length;
+    const pendingClaims = records.filter(r => r.claimStatus === 'Pending').length;
+    const rate = total > 0 ? Math.round((resolved / total) * 100) : 0;
 
     const totalEl = document.getElementById('admin-total-secured');
     const pendingEl = document.getElementById('admin-pending-claims');
     const rateEl = document.getElementById('admin-success-rate');
 
     if (totalEl) totalEl.textContent = total;
-    if (pendingEl) pendingEl.textContent = total - found;
+    if (pendingEl) pendingEl.textContent = pendingClaims;
     if (rateEl) rateEl.textContent = `${rate}%`;
 
     const rateBar = document.getElementById('admin-rate-bar');
@@ -29,10 +30,28 @@ document.addEventListener('DOMContentLoaded', async function () {
     }
 
     tbody.innerHTML = records.map(rec => {
-        const isFound = (rec.reportType || '').toLowerCase().includes('found');
-        const statusBg = isFound ? 'bg-tertiary-container text-on-tertiary-container border-tertiary/20' : 'bg-error-container text-on-error-container border-error/20';
-        const statusIcon = isFound ? 'check_circle' : 'warning';
-        const statusLabel = isFound ? 'Found' : 'Lost - Active';
+        const typeLower = (rec.reportType || '').toLowerCase();
+        const isCompleted = typeLower.includes('completed');
+        const isFound = typeLower.includes('found');
+        const isClaimPending = rec.claimStatus === 'Pending';
+
+        let statusBg = 'bg-error-container text-on-error-container border-error/20';
+        let statusIcon = 'warning';
+        let statusLabel = 'Lost - Active';
+
+        if (isCompleted) {
+            statusBg = 'bg-emerald-100 text-emerald-800 border-emerald-300';
+            statusIcon = 'verified';
+            statusLabel = 'Completed / Resolved';
+        } else if (isClaimPending) {
+            statusBg = 'bg-amber-100 text-amber-900 border-amber-300';
+            statusIcon = 'hourglass_top';
+            statusLabel = 'Claim Pending';
+        } else if (isFound) {
+            statusBg = 'bg-tertiary-container text-on-tertiary-container border-tertiary/20';
+            statusIcon = 'check_circle';
+            statusLabel = 'Found';
+        }
 
         const photoSrc = rec.photoPath || rec.photoData || null;
         let iconHtml = `<span class="material-symbols-outlined text-secondary">inventory_2</span>`;
@@ -70,7 +89,6 @@ document.addEventListener('DOMContentLoaded', async function () {
             </tr>
         `;
     }).join('');
-    // Admin Mobile Sidebar Drawer Handlers
     const adminMenuBtn = document.getElementById('admin-mobile-menu-btn');
     const closeAdminBtn = document.getElementById('close-admin-sidebar-btn');
     const adminSidebar = document.getElementById('admin-sidebar');
@@ -99,5 +117,16 @@ document.addEventListener('DOMContentLoaded', async function () {
     if (adminMenuBtn) adminMenuBtn.addEventListener('click', openAdminSidebar);
     if (closeAdminBtn) closeAdminBtn.addEventListener('click', closeAdminSidebar);
     if (adminOverlay) adminOverlay.addEventListener('click', closeAdminSidebar);
+
+    const logoutBtn = document.getElementById('admin-logout-btn');
+    if (logoutBtn) {
+        logoutBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            localStorage.removeItem('lemon_current_user');
+            sessionStorage.removeItem('lemon_current_user');
+            document.cookie = "lemon_logged_in=; path=/; max-age=0";
+            window.location.href = 'login.html';
+        });
+    }
 });
 

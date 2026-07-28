@@ -46,16 +46,20 @@ document.addEventListener('DOMContentLoaded', function () {
             const jsonString = JSON.stringify(users, null, 2);
             localStorage.setItem('lemon_users', jsonString);
 
-            fetch('http://localhost:3000/api/signup', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(newUser)
-            }).then(() => {
-                window.location.href = 'login.html';
-            }).catch(err => {
-                console.log('Server fetch fallback:', err);
-                window.location.href = 'login.html';
-            });
+            const userJson = JSON.stringify(newUser);
+            localStorage.setItem('lemon_current_user', userJson);
+            sessionStorage.setItem('lemon_current_user', userJson);
+            document.cookie = "lemon_logged_in=true; path=/; max-age=86400";
+
+            if (window.location.protocol === 'http:' || window.location.protocol === 'https:') {
+                fetch('/api/signup', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(newUser)
+                }).catch(err => console.log('Server fetch fallback:', err));
+            }
+
+            window.location.href = 'dashboard.html';
         });
     }
 });

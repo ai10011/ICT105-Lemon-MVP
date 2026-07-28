@@ -17,11 +17,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     async function authenticateUser(emailInput, passwordInput) {
         const defaultUsers = [
-            { id: "usr_1784092843224", full_name: "Phollapat Rodchue", email: "phollapat.r68@rsu.ac.th", password: "ice11898" }
+            { id: "usr_1784092843224", full_name: "Phollapat Rodchue", email: "phollapat.r68@rsu.ac.th", password: "ice11898" },
+            { id: "usr_admin_001", full_name: "Campus Security Admin", email: "admin@campus.edu", password: "admin123", role: "admin" }
         ];
 
         let jsonUsers = [];
-        const urlsToTry = ['data/users.json', '/data/users.json', 'http://localhost:3000/data/users.json'];
+        const urlsToTry = ['data/users.json', '/data/users.json'];
 
         for (const url of urlsToTry) {
             try {
@@ -43,12 +44,26 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         const allUsers = [...defaultUsers, ...storedUsers, ...(Array.isArray(jsonUsers) ? jsonUsers : [])];
-
         const cleanEmail = emailInput.trim().toLowerCase();
-        return allUsers.find(u =>
-            u && u.email && u.email.trim().toLowerCase() === cleanEmail &&
-            u.password === passwordInput
-        );
+        const existingUser = allUsers.find(u => u && u.email && u.email.trim().toLowerCase() === cleanEmail);
+
+        if (existingUser) {
+            if (existingUser.password === passwordInput) {
+                return { user: existingUser, error: null };
+            } else {
+                return { user: null, error: 'Incorrect password. Please check your credentials and try again.' };
+            }
+        }
+
+        return {
+            user: {
+                id: 'usr_' + Date.now(),
+                full_name: emailInput.split('@')[0] || 'Campus User',
+                email: emailInput,
+                created_at: new Date().toISOString()
+            },
+            error: null
+        };
     }
 
     const loginForm = document.getElementById('login-form');
@@ -62,21 +77,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
             if (errorBox) errorBox.classList.add('hidden');
 
-            const matchedUser = await authenticateUser(emailInput, passwordInput);
+            const { user: activeUser, error } = await authenticateUser(emailInput, passwordInput);
 
-            const activeUser = matchedUser || {
-                id: 'usr_' + Date.now(),
-                full_name: emailInput.split('@')[0] || 'Campus User',
-                email: emailInput,
-                created_at: new Date().toISOString()
-            };
+            if (error) {
+                if (errorMsg) errorMsg.textContent = error;
+                if (errorBox) errorBox.classList.remove('hidden');
+                return;
+            }
 
             const userJson = JSON.stringify(activeUser);
             localStorage.setItem('lemon_current_user', userJson);
             sessionStorage.setItem('lemon_current_user', userJson);
             document.cookie = "lemon_logged_in=true; path=/; max-age=86400";
 
-            window.location.href = 'dashboard.html';
+            if (activeUser && activeUser.role === 'admin') {
+                window.location.href = 'admin.html';
+            } else {
+                window.location.href = 'dashboard.html';
+            }
         });
     }
 });

@@ -59,12 +59,11 @@ window.LemonData = {
             map.set(id, { ...rec, id });
         });
 
-        if (!fetchedFromFile) {
-            localRecords.forEach((rec, idx) => {
-                const id = rec.id || `rec_local_${idx}`;
-                map.set(id, { ...rec, id });
-            });
-        }
+        localRecords.forEach((rec, idx) => {
+            const id = rec.id || `rec_local_${idx}`;
+            const existing = map.get(id) || {};
+            map.set(id, { ...existing, ...rec, id });
+        });
 
         const records = Array.from(map.values());
         records.sort((a, b) => {
@@ -296,12 +295,11 @@ window.LemonData = {
             if (urlParams.get('auth_required') === '1') {
                 const target = urlParams.get('target') || 'protected page';
                 showAuthModal(target);
+                window.history.replaceState({}, document.title, window.location.pathname);
             } else if (PROTECTED_PAGES.includes(pageName)) {
-
                 window.location.href = `records.html?auth_required=1&target=${encodeURIComponent(pageName)}`;
             }
         } else {
-
             if (urlParams.get('auth_required') === '1') {
                 const cleanUrl = window.location.pathname;
                 window.history.replaceState({}, document.title, cleanUrl);
@@ -356,7 +354,6 @@ window.LemonData = {
                     </button>
                 </div>
             </div>
-            <!-- Responsive Mobile Drawer Menu -->
             <div id="mobile-nav-menu" class="hidden md:hidden border-t border-outline-variant mt-md pt-md pb-xs flex-col gap-xs max-w-max-width mx-auto">
                 <a class="mobile-nav-link px-md py-2.5 rounded-lg font-body-bold text-on-surface hover:bg-surface-container-low transition-colors flex items-center gap-md" data-page="records.html" href="records.html">
                     <span class="material-symbols-outlined text-primary text-xl">search</span> Browse Items
@@ -401,7 +398,6 @@ window.LemonData = {
                 window.location.href = 'index.html';
             });
 
-            // Mobile menu toggle logic
             const toggleBtn = document.getElementById('mobile-menu-toggle');
             const menuDrawer = document.getElementById('mobile-nav-menu');
             const icon = document.getElementById('mobile-menu-icon');
