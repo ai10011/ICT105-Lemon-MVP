@@ -46,16 +46,17 @@ Specifically, the plan evaluates whether:
 
 To ensure balanced feedback across primary user segments, testing cohorts are divided into two distinct profiles:
 
-```mermaid
-flowchart TD
-    ROOT["Test User Pool (N = 20)"] --> STUDENTS["Target Users: Students<br/>(n = 15; 75%)"]
-    ROOT --> STAFF["Admin / Campus Staff<br/>(n = 5; 25%)"]
+### 3.1 Tester Cohort Distribution Summary
 
-    STUDENTS --> UG["Undergrad Daily Users<br/>(n = 10)"]
-    STUDENTS --> LAB["Commuters / Lab Users<br/>(n = 5)"]
+| Total Pool ($N=20$) | User Category | Sub-Group Breakdown | Sample Count |
+| --- | --- | --- | --- |
+| **Primary Cohort** | Target Users (Students) | Undergraduate Daily Users | $n = 10$ |
+| | Target Users (Students) | Commuters / Lab Users | $n = 5$ |
+| **Administrative Cohort** | Admin / Campus Staff | Security Officers | $n = 3$ |
+| | Admin / Campus Staff | Facility Desk Clerks | $n = 2$ |
 
-    STAFF --> SEC["Security Officers<br/>(n = 3)"]
-    STAFF --> CLERK["Facility Desk Clerks<br/>(n = 2)"]
+### 3.2 Detailed User Profile Specifications
+
 | Profile Attribute | Target User Segment (Students) | Admin / Staff Segment |
 | --- | --- | --- |
 | **Sample Size ($N$)** | 15 Testers | 5 Testers |
