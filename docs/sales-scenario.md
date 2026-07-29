@@ -2,36 +2,56 @@
 
 ## 1. Project Title
 
+**Smart Campus Lost-and-Found System**
+
 ## 2. Target User / Customer
-- Primary user:
-- Secondary user:
-- Decision-maker or admin role, if any:
+
+- **Primary user:** Students who lose or find items on campus
+- **Secondary user:** Campus security and administrative staff
+- **Decision-maker or admin role:** Campus administrator or security office staff
 
 ## 3. Situation / Context
-Describe a realistic situation where the target user experiences the problem.
+
+A student loses a personal item on campus but does not know where to report it or check whether someone has found it. Information is shared across chat groups, social media, and word of mouth, making the search process slow and confusing.
 
 ## 4. Pain Point
-What difficulty, inefficiency, risk, delay, confusion, or cost does the user experience?
+
+- No centralized platform for reporting lost or found items.
+- Information is scattered across multiple communication channels.
+- Searching for lost items is time-consuming.
+- Users are unsure where to report or check the latest status.
 
 ## 5. Product Introduction
-Explain how the product is introduced to the user.
+
+LostLink is introduced as a web-based Smart Campus Lost-and-Found System that allows students and staff to report, search, and track lost or found items in one centralized platform.
 
 ## 6. Value Message
-Use this sentence structure:
 
-For [target user] who experience [problem], our [system/app/platform] helps them [main benefit] by [key feature or workflow].
+**For students who experience difficulty finding lost items because information is scattered across multiple channels, our LostLink platform helps them quickly report, search, and track lost or found items by providing a centralized reporting and search system.**
 
 ## 7. Sales Conversation / Pitch Moment
-Write a short scenario of how the team would explain the product to a user, customer, or stakeholder.
+
+"Our campus currently relies on chat groups and informal communication to report lost items, causing many reports to be missed. LostLink provides one centralized platform where students and staff can report lost or found items, search existing records, and check item status. This makes the recovery process faster, easier, and more organized."
 
 ## 8. Expected User Action
-What should the user do after hearing or seeing the product?
+
 - Try the demo
-- Submit a request
-- Search records
-- Sign up
+- Submit a lost or found item report
+- Search existing records
 - Give feedback
-- Share with other users
+- Share the platform with other students
 
 ## 9. Related Requirements
-List requirement IDs from system-requirements.md that support this scenario.
+
+- FR-01
+- FR-02
+- FR-03
+- FR-05
+- FR-06
+- FR-07
+- FR-08
+- FR-09
+- FR-10
+- FR-11
+- FR-12
+- FR-16
