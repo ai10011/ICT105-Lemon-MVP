@@ -45,3 +45,164 @@ Specifically, the plan evaluates whether:
 ## 3. Test User Profiles & Demographics
 
 To ensure balanced feedback across primary user segments, testing cohorts are divided into two distinct profiles:
+┌─────────────────────────────────────────┐
+                      │         Test User Pool (N = 20)         │
+                      └────────────────────┬────────────────────┘
+                                           │
+                   ┌───────────────────────┴───────────────────────┐
+                   ▼                                               ▼
+      ┌─────────────────────────┐                     ┌─────────────────────────┐
+      │ Target Users: Students  │                     │ Admin / Campus Staff    │
+      │      (n = 15; 75%)      │                     │       (n = 5; 25%)      │
+      └────────────┬────────────┘                     └────────────┬────────────┘
+                   │                                               │
+     ┌─────────────┴─────────────┐                   ┌─────────────┴─────────────┐
+     ▼                           ▼                   ▼                           ▼
+┌──────────────┐            ┌──────────────┐    ┌──────────────┐            ┌──────────────┐
+│ Undergrad    │            │ Commuters /  │    │ Security     │            │ Facility     │
+│ Daily Users  │            │ Lab Users    │    │ Officers     │            │ Desk Clerks  │
+│   (n = 10)   │            │   (n = 5)    │    │   (n = 3)    │            │   (n = 2)    │
+└──────────────┘            └──────────────┘    └──────────────┘            └──────────────┘
+
+
+| Profile Attribute | Target User Segment (Students) | Admin / Staff Segment |
+| --- | --- | --- |
+| **Sample Size (N)** | 15 Testers | 5 Testers |
+| **Role / Background** | Undergraduate students across various faculties (IT, Business, Engineering, Arts). | Campus security personnel, facility managers, student union desk officers. |
+| **Primary Use Cases** | Reporting lost personal items, searching catalog, submitting claim requests. | Cataloging handed-in physical items, verifying claims, closing resolved cases. |
+| **Device Usage** | 80% Mobile (375px - 430px), 20% Desktop. | 70% Desktop (1440px), 30% Tablet (768px). |
+| **Inclusion Criteria** | Has lost or found an item on campus within the past 12 months. | Operates or interacts with the physical campus lost-and-found desk. |
+
+---
+
+## 4. Test Environment & Technical Setup
+
+Testing must be conducted under controlled, standardized technical environments to eliminate hardware-induced variance:
+
+* **Hardware Viewports Tested:**
+  * Mobile: iPhone 13/14/15 (390 x 844px), Samsung Galaxy S22 (360 x 800px).
+  * Tablet: iPad Air / mini (768 x 1024px).
+  * Desktop: Full HD Monitor (1920 x 1080px) and MacBook Air (1440 x 900px).
+* **Supported Browsers:** Google Chrome (v120+), Apple Safari (v17+), Mozilla Firefox (v121+), Microsoft Edge (v120+).
+* **Local Hosting Setup:** Served via local Web Server (e.g., Live Server extension or GitHub Pages deployment).
+
+---
+
+## 5. Master Test Cases Matrix (T01 – T12)
+
+The testing suite contains **12 structured test cases** covering core workflows, edge cases, responsiveness, state persistence, and security sanitization, mapped directly to baseline System Requirements (FR-01 through FR-16).
+
+| Test ID | User Flow / Feature | Test Steps | Expected Result | Traceability |
+| --- | --- | --- | --- | --- |
+| **T01** | Landing Page Orientation | Open `index.html`. Read hero section and problem summary. | User identifies system purpose, key stats, and core CTAs within 10 seconds. | FR-01, FR-02 |
+| **T02** | Report Submission Flow | Open `form.html`. Fill out required fields (title, category, location, date) and submit. | Form validates input, displays success notification modal, and redirects to records list. | FR-03, FR-10 |
+| **T03** | File / Image Upload & Preview | Upload an image file (< 2MB) or provide an image URL on `form.html`. | Thumbnail preview generates correctly without overflowing container layout. | FR-04, FR-11 |
+| **T04** | Catalog Search & Filtering | Open `records.html`. Search keyword "Student ID" and select building filter "Main Library". | Catalog grid filters instantly; displays matching records dynamically. | FR-05, FR-06 |
+| **T05** | Global Filter Reset | Click the "Clear All Filters" button on `records.html` after active filtering. | Query fields clear, dropdowns reset to default, and full catalog re-renders. | FR-06, FR-11 |
+| **T06** | Item Detail & Privacy Masking | Click on a card in `records.html` to open `detail.html`. | Full metadata loads; email/phone contact fields are partially masked (`65XXXXX@au.edu`). | FR-07, FR-15 |
+| **T07** | Claim Verification Submission | On `detail.html`, click "Claim Item", fill out verification proof modal, and submit. | System logs claim request, toggles state to `Pending Review`, and notifies user. | FR-08, FR-13 |
+| **T08** | Admin Status Management | Access `admin.html`. Locate claim request and change status to "Claimed". | Status badge updates visually to green (`Claimed`); timestamp logs resolution. | FR-08, FR-09 |
+| **T09** | Analytics Dashboard Sync | Open `dashboard.html` after updating item statuses in `admin.html`. | Metric counters (Total Items, Claimed Rate %, Pending Queue) recalculate dynamically via `localStorage`. | FR-12, FR-16 |
+| **T10** | Mobile Drawer Navigation | Resize viewport to < 768px. Tap mobile menu hamburger icon in navbar. | Drawer smoothly slides out with responsive backdrop blur; links navigate cleanly. | FR-01, FR-14 |
+| **T11** | Input Sanitization & XSS Check | Enter HTML/script tags (`<script>alert('xss')</script>`) into form description fields. | Script input is escaped cleanly; rendered on detail page as plain text string. | FR-10, FR-15 |
+| **T12** | Local Storage Persistence | Submit a new report, refresh browser completely or open new tab. | Newly created report remains accessible in catalog grid without data loss. | FR-03, FR-16 |
+
+---
+
+## 6. Testing Procedure & Protocol
+
+Testing sessions must strictly follow a 5-step standardized evaluation protocol:
+
+1. **Pre-Test Briefing & Consent (5 Mins):**
+   * Welcome participant, outline session purpose, and state that the *software* is being tested, *not* the participant's intelligence.
+   * Provide the anonymized consent disclosure form.
+2. **Scenario-Based Execution (20 Mins):**
+   * Provide task instruction sheets sequentially without demonstrating how to perform actions.
+   * Instruct participant to utilize the **Think-Aloud Protocol** (verbalizing what they look for, expect, or find confusing).
+3. **Observation & Silent Recording:**
+   * Evaluator records task completion metrics, time on task, misclicks, and verbalized frustrations without intervening.
+   * *Intervention Rule:* Evaluator assists only if a user experiences total workflow blockage exceeding **120 seconds**.
+4. **Post-Task Quantitative Scoring (5 Mins):**
+   * Administer Single Ease Question (SEQ) after each task and System Usability Scale (SUS) survey upon session completion.
+5. **Debriefing & Qualitative Exit Interview (5 Mins):**
+   * Ask open-ended questions regarding confusion points, missing features, and visual hierarchy clarity.
+
+---
+
+## 7. Metrics & Key Performance Indicators (KPIs)
+
+To evaluate system performance objectively, collected data is measured against the following usability benchmarks:
+
+### 7.1 Quantitative Benchmark Targets
+
+| Metric | Measurement Method | Target SLA / Success Threshold |
+| --- | --- | --- |
+| **Task Completion Rate (TCR)** | (Successfully Completed Tasks / Total Attempted Tasks) × 100 | ≥ 85% across all test cases |
+| **Average Time on Task (ToT)** | Total duration from task start to successful completion. | ≤ 45s (Simple), ≤ 90s (Complex forms) |
+| **Error Rate Per Task** | Count of wrong clicks, validation errors, or navigational missteps. | ≤ 1.5 errors per task session |
+| **System Usability Scale (SUS)** | Standardized 10-item post-test questionnaire score (0–100). | ≥ 75.0 (Grade A - Above Average Usability) |
+| **Task Ease Score (SEQ)** | Single 7-point Likert scale rating after each task completion. | ≥ 5.5 / 7.0 average score |
+
+### 7.2 Bug Severity Classification Matrix
+
+Observed issues during testing are categorized according to severity to prioritize developer remediation:
+
+| Severity Level | Definition | SLA for Resolution |
+| --- | --- | --- |
+| **P1 - Critical** | System crash, data loss, total block of core workflow (e.g., cannot submit form, claim button broken). | Immediate fix (Must fix prior to demo) |
+| **P2 - High** | Feature functions incorrectly, missing required field, data privacy exposure, layout broken on mobile. | 24 Hours |
+| **P3 - Medium** | Minor functional flaw, confusing UI alignment, slow filter response, missing clear confirmation feedback. | 48 Hours |
+| **P4 - Low** | Cosmetic flaw, typo in copy, minor hover color inconsistency, non-critical padding issue. | Backlog / Enhancement |
+
+---
+
+## 8. Post-Test Evaluation Questionnaire Framework
+
+Upon completion of all scenario tasks, participants complete this standardized evaluation form:
+
+### Part A: System Usability Scale (SUS) Assessment
+*(1 = Strongly Disagree, 5 = Strongly Agree)*
+
+1. I think that I would like to use this lost-and-found system frequently if I lost an item on campus.
+2. I found the system unnecessarily complex or overwhelming to navigate.
+3. I thought the system was very easy to use and intuitive.
+4. I think that I would need the support of a technical person to be able to use this system.
+5. I found the various functions in this system (searching, reporting, claiming) were well integrated.
+6. I thought there was too much inconsistency in this system.
+7. I would imagine that most students would learn to use this system very quickly.
+8. I found the system cumbersome or awkward to use on mobile devices.
+9. I felt very confident using the system and managing item claims.
+10. I needed to learn a lot of things before I could get going with this system.
+
+### Part B: Qualitative Feedback Prompts
+* *What was the single most confusing step during your test session?*
+* *How confident did you feel regarding the privacy masking of your contact information?*
+* *What feature or search filter would you add to make finding lost items faster?*
+
+---
+
+## 9. Defect Logging & Observation Template
+
+Below is the standardized Markdown template used by evaluators to log findings during future testing sessions:
+
+### 9.1 Test Execution Log Template
+```markdown
+### Session ID: TS-2026-001
+- **Tester Type:** Target User (Student)
+- **Device / Browser:** Mobile (iPhone 14) / Apple Safari
+- **Overall SUS Score:** 82.5 / 100
+
+| Task ID | Status | Time Taken | Errors | Key Observations & Qualitative Feedback |
+| --- | --- | --- | --- | --- |
+| **T01** | Pass | 8s | 0 | Understood purpose immediately from hero title. |
+| **T02** | Pass | 42s | 1 | Tried to submit without selecting building; error popup was clear. |
+| **T03** | Pass | 18s | 0 | Image uploaded fast; thumbnail rendered cleanly inside box. |
+| **T04** | Pass | 25s | 0 | Search filter responsive; building dropdown narrowed results well. |
+| **T05** | Pass | 10s | 0 | Reset button cleared all active query fields instantly. |
+| **T06** | Pass | 15s | 0 | Noticed masked email (`65XXXXX@au.edu`); felt personal data was safe. |
+| **T07** | Pass | 35s | 0 | Claim modal popped up smoothly; requested proof clearly. |
+| **T08** | Pass | 20s | 0 | Admin toggle changed status badge color to green (`Claimed`). |
+| **T09** | Pass | 12s | 0 | Dashboard metrics updated counters without manual refresh. |
+| **T10** | Pass | 8s | 0 | Mobile hamburger menu drawer opened smoothly with visual blur. |
+| **T11** | Pass | 14s | 0 | Script tag text displayed safely as plain text string without executing. |
+| **T12** | Pass | 10s | 0 | New report persisted in catalog after browser tab refresh. |
