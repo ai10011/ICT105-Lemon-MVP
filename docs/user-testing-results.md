@@ -58,6 +58,7 @@ I felt very confident using the system:                      [ 4.05 ]  ★★★
 
 Needed to learn a lot before getting started:               [ 1.35 ]  ★☆☆☆☆
 ──────────────────────────────────────────────────────────────────────────────────
+
 Calculated SUS Final Composite Score:                           79.25 / 100.0 (Grade A-)
 
 ---
