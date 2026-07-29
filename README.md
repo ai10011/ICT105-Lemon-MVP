@@ -417,17 +417,17 @@ The landing page directly supports **FR-01** (Homepage displaying platform value
 We prepared the final demo scenario, demo script, user testing plan, testing results, and final improvement list before Lab 14.
 
 ### Files Completed
-- [ ] /docs/sales-scenario.md
-- [ ] /docs/demo-script.md
-- [ ] /docs/user-testing-plan.md
-- [ ] /docs/user-testing-results.md
-- [ ] /docs/final-improvement-list.md
-- [ ] /docs/weekly-logbook.md
-- [ ] /screenshots/demo-flow.png
-- [ ] /screenshots/user-testing-evidence.png
+- [x] [/docs/sales-scenario.md](docs/sales-scenario.md)
+- [x] [/docs/demo-script.md](docs/demo-script.md)
+- [x] [/docs/user-testing-plan.md](docs/user-testing-plan.md)
+- [x] [/docs/user-testing-results.md](docs/user-testing-results.md)
+- [x] [/docs/final-improvement-list.md](docs/final-improvement-list.md)
+- [x] [/docs/weekly-logbook.md](docs/weekly-logbook.md)
+- [x] [/screenshots/demo-flow.png](screenshots/demo-flow.png)
+- [x] [/screenshots/user-testing-evidence.png](screenshots/user-testing-evidence.png)
 
 ### Prototype / Demo Link
-Paste your prototype/demo link here.
+[Lemon MVP Live Prototype](https://ai10011.github.io/ICT105-Lemon-MVP/prototype/project/) (`prototype/project/`)
 
 ### Final Preparation Status
-Summarize whether the prototype is ready for Lab 14 or still needs improvement.
+**Ready for Lab 14 Final Presentation.** The prototype has achieved an 80.00% task completion rate across 20 test users, 100% test case pass rate across requirements `FR-01` through `FR-16`, and resolved all identified usability defects (`IMP-01` through `IMP-09`).

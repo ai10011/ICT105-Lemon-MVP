@@ -492,31 +492,44 @@ Established a quantitative acquisition metrics framework (`M-01` to `M-05`) in `
 # Weekly Logbook - Lab 13
 
 ## Group Name
+Lemon
 
 ## Project Title
+Lemon - Smart Campus Lost-and-Found System (LostLink)
 
 ## Date
+2026-07-29
 
 ## Members and Contributions
-| Member | Contribution This Lab | GitHub Evidence |
+| Member Name | Contribution This Lab | GitHub Evidence |
 | --- | --- | --- |
-| | | |
+| **Kyaw Ye Lin** (Product Lead) | Authored [`docs/sales-scenario.md`](sales-scenario.md) and [`docs/demo-script.md`](demo-script.md), established sales pitch value proposition, and structured demo presentation flow. | Issue `#65` |
+| **Tin May Lin (Mei)** (UX/UI Lead) | Authored [`docs/user-testing-plan.md`](user-testing-plan.md) and [`docs/user-testing-results.md`](user-testing-results.md), conducted user testing sessions, and compiled task completion analytics. | Issue `#62` |
+| **Phollapat Rodchue** (Technical Lead) | Authored [`docs/final-improvement-list.md`](final-improvement-list.md), updated prototype codebase (`prototype/project/`), and generated screenshot evidence (`screenshots/demo-flow.png`, `screenshots/user-testing-evidence.png`). | Issue `#63` |
+| **Phoochit Jantakam** (Documentation Lead) | Updated root repository [`README.md`](../README.md) and maintained weekly progress logbook ([`docs/weekly-logbook.md`](weekly-logbook.md)). | Issue `#64` |
 
 ## Work Completed
-- Sales scenario:
-- Demo script:
-- User testing plan:
-- User testing results:
-- Final improvement list:
-- Screenshots:
+- **Sales Scenario:** Documented complete sales context, target buyer personas, student pain points (65% search abandonment within 24 hours), pitch moment conversation, and expected user actions in [`docs/sales-scenario.md`](sales-scenario.md) (Kyaw).
+- **Demo Script:** Formulated step-by-step presentation narrative, team presenter roles, dialogue scripts, screen flows (`index.html` → `form.html` → `records.html` → `detail.html` → `admin.html` → `dashboard.html`), and value mapping in [`docs/demo-script.md`](demo-script.md) (Kyaw).
+- **User Testing Plan:** Customized user testing plan without template placeholders in [`docs/user-testing-plan.md`](user-testing-plan.md), defining target user profiles (15 students, 5 campus staff), 6 core tasks (T01–T06), observation metrics, and privacy guidelines (Mei).
+- **User Testing Results:** Documented empirical user testing findings from 20 test participants in [`docs/user-testing-results.md`](user-testing-results.md), recording an 80.00% task completion rate, 3.55/5.0 usability score, user feedback, and resolution status for 9 identified UI defects (Mei).
+- **Final Improvement List & Prototype Update:** Consolidated completed improvements (`IMP-01` to `IMP-09`) and updated prototype web application in [`docs/final-improvement-list.md`](final-improvement-list.md) and `prototype/project/` (Phollapat).
+- **Visual Evidence Screenshots:** Captured visual records in [`screenshots/demo-flow.png`](../screenshots/demo-flow.png) and [`screenshots/user-testing-evidence.png`](../screenshots/user-testing-evidence.png) (Phollapat).
+- **Root Overview & Logbook:** Updated repository documentation in [`README.md`](../README.md) and [`docs/weekly-logbook.md`](weekly-logbook.md) (Phoochit).
 
 ## Key Decisions
+- **Selected MVP Decision:** **Ready for Lab 14 Final Presentation**. Validated by 80.00% task completion rate across 20 testers and 100% test pass rate across requirements `FR-01` through `FR-16`.
+- **Privacy & Status Badges:** Standardized student PII contact masking (`65XXXXX@au.edu`) and color-coded visual badges (`Pending Review`, `Available`, `Claimed`, `Closed`) across all user flows.
 
 ## Problems Encountered
+- **Mobile Filter & Sidebar Drawer Accessibility:** Filter panel occupied 100% vertical viewport on mobile and admin sidebar was hidden on phone screens. Resolved by building a collapsible filter accordion (`#mobile-filter-toggle`) in `js/records.js` and slide-out mobile admin drawer (`#admin-sidebar-overlay`) in `js/admin.js`.
+- **Form Field Clarity:** Testers were initially unsure whether photo uploads were mandatory. Resolved by adding explicit inline "(Optional)" labels on form input fields (`IMP-07`).
 
 ## Next Actions Before Lab 14
+- Finalize presentation slide deck and rehearse live demo script execution.
+- Record demo video walkthrough for final submission archive.
 
 ## Requirement Traceability Notes
-Which requirements need final checking before Lab 14?
+- Verified 100% functional requirement coverage (`FR-01` through `FR-16`) across prototype screens in `prototype/project/`. All core MVP features are fully implemented, tested, and validated.
 
 
