@@ -45,24 +45,17 @@ Specifically, the plan evaluates whether:
 ## 3. Test User Profiles & Demographics
 
 To ensure balanced feedback across primary user segments, testing cohorts are divided into two distinct profiles:
-┌─────────────────────────────────────────┐
-                      │         Test User Pool (N = 20)         │
-                      └────────────────────┬────────────────────┘
-                                           │
-                   ┌───────────────────────┴───────────────────────┐
-                   ▼                                               ▼
-      ┌─────────────────────────┐                     ┌─────────────────────────┐
-      │ Target Users: Students  │                     │ Admin / Campus Staff    │
-      │      (n = 15; 75%)      │                     │       (n = 5; 25%)      │
-      └────────────┬────────────┘                     └────────────┬────────────┘
-                   │                                               │
-     ┌─────────────┴─────────────┐                   ┌─────────────┴─────────────┐
-     ▼                           ▼                   ▼                           ▼
-┌──────────────┐            ┌──────────────┐    ┌──────────────┐            ┌──────────────┐
-│ Undergrad    │            │ Commuters /  │    │ Security     │            │ Facility     │
-│ Daily Users  │            │ Lab Users    │    │ Officers     │            │ Desk Clerks  │
-│   (n = 10)   │            │   (n = 5)    │    │   (n = 3)    │            │   (n = 2)    │
-└──────────────┘            └──────────────┘    └──────────────┘            └──────────────┘
+
+```mermaid
+flowchart TD
+    ROOT["Test User Pool (N = 20)"] --> STUDENTS["Target Users: Students<br/>(n = 15; 75%)"]
+    ROOT --> STAFF["Admin / Campus Staff<br/>(n = 5; 25%)"]
+
+    STUDENTS --> UG["Undergrad Daily Users<br/>(n = 10)"]
+    STUDENTS --> LAB["Commuters / Lab Users<br/>(n = 5)"]
+
+    STAFF --> SEC["Security Officers<br/>(n = 3)"]
+    STAFF --> CLERK["Facility Desk Clerks<br/>(n = 2)"]
 
 
 | Profile Attribute | Target User Segment (Students) | Admin / Staff Segment |
