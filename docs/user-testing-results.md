@@ -1,5 +1,9 @@
 # User Testing Results
 
+> [!NOTE]
+> **Mock-up Data & Testing Disclaimer:**  
+> User testing evidence and testing forms were **not collected or conducted** for this prototype phase. All metrics, task completion numbers, user responses, and test data provided in this document are **mock-up data** used as analytical baseline projections for demonstration purposes.
+
 ## 1. Testing Summary
 
 - **Date:** July 25, 2026 (Lab 11 QA & Lab 13 Final User Testing Sprint)

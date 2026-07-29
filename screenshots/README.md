@@ -9,7 +9,7 @@ This directory contains the complete visual screenshot evidence for **Lemon - Sm
 - **Item Report Submission Form:** [`input-form.png`](input-form.png) – Mandatory field validation, campus building selector, optional photo upload, and PII consent.
 - **Lost & Found Records Directory:** [`record-list.png`](record-list.png) – Real-time keyword search, campus building filters, category badges, and mobile filter accordion.
 - **Record Detail View:** [`detail-view.png`](detail-view.png) – Item metadata, privacy-masked contact email (`65XXXXX@au.edu`), color-coded status badges, and claim button.
-- **Admin Management Portal:** [`admin.html`](admin-view.png) – Campus security staff view for inspecting claims, verifying ownership proof, and updating item status.
+- **Admin Management Portal:** [`admin-view.png`](admin-view.png) – Campus security staff view for inspecting claims, verifying ownership proof, and updating item status.
 - **Personal User Dashboard:** [`dashboard.png`](dashboard.png) – Overview of user submitted reports and status progress.
 - **User Authentication Login:** [`login.png`](login.png) – Login page interface.
 - **User Registration Account:** [`registration.png`](registration.png) – Registration page interface.
@@ -24,3 +24,10 @@ This directory contains the complete visual screenshot evidence for **Lemon - Sm
 
 - **Responsible IT & Security Architecture:** [`privacy-security-review.png`](privacy-security-review.png) – Lab 09 responsible design diagram detailing PII data minimization and security risk controls.
 - **Interactive Demo Verification:** [`prototype-link-or-demo-screen.png`](prototype-link-or-demo-screen.png) – Interactive prototype demonstration screen and live deployment URL verification.
+
+## User Testing & Form Evidence Status
+
+> [!NOTE]
+> **User Testing & Mock-up Data Disclaimer:**  
+> - **User Testing Evidence & Feedback Forms:** **N/A (Not Conducted)** – Formal user testing sessions and testing forms were **not conducted** for this prototype.
+> - **Mock-up Data:** All data displayed in the screenshots (including item listings, user emails, acquisition numbers, Power BI analytics, and dashboard metrics) is **mock-up data** generated for demonstration and prototype evaluation.

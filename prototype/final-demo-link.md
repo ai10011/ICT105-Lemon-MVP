@@ -18,8 +18,8 @@ The application runs directly in any standard web browser (Chrome, Safari, Firef
 - **Admin / Staff Management Portal:** Accessible via header navigation or direct link ([`admin.html`](project/admin.html)). Staff can review pending report claims, verify ownership proofs, and update status badges (`Pending Review`, `Available`, `Claimed`, `Closed`).
 - **Analytics Dashboard:** Publicly viewable statistics dashboard ([`dashboard.html`](project/dashboard.html)) displaying live report counters, resolution rates, and category distribution.
 
-### 3. Pre-Populated Sample Data
-The prototype comes pre-loaded with sample campus item records (Student IDs, calculators, access keys, headphones across campus buildings) to allow immediate testing of multi-criteria search, building filters, detail views, and administrative status updates.
+### 3. Pre-Populated Mock-up Data
+The prototype comes pre-loaded with mock-up campus item records (Student IDs, calculators, access keys, headphones across campus buildings) to allow immediate demonstration of multi-criteria search, building filters, detail views, and administrative status updates. All records and contact information are fictional mock-up data created for testing purposes.
 
 ### 4. Responsive Design
 All pages support responsive viewports, including touch navigation drawers, stacked hero search inputs, mobile filter accordions, and slide-out admin drawers for phone viewports (< 768px).

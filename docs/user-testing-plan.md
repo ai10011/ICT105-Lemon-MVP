@@ -1,5 +1,8 @@
 # User Testing Plan
 
+> [!NOTE]
+> **Status Note:** Formal user testing sessions and testing forms were **not conducted** for this prototype phase. This document serves as a theoretical testing framework and specification for future evaluation.
+
 ## 1. Testing Objective
 
 The objective of this user testing plan is to evaluate the usability, user flow efficiency, task completion rate, and feature clarity of **Lemon - Smart Campus Lost-and-Found System (LostLink)** prior to the final Lab 14 presentation. Specifically, testing aims to verify whether students and campus staff can seamlessly report lost items, search the catalog, verify item details, protect personal data privacy, and manage administrative claim statuses without confusion.

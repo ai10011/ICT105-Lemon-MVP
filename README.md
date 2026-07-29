@@ -19,6 +19,10 @@ Lemon
 | Tin May Lin | UX/UI Lead  | Design interface |
 | Phoochit Jantakam | Documentation Lead | Maintain documentation |
 
+> [!NOTE]
+> **Prototype Data Disclaimer:**  
+> All data provided in this project (including item catalog records, user accounts, analytics metrics, acquisition numbers, and testing data) is **mock-up data** created strictly for demonstration, visual presentation, and prototype evaluation.
+
 ## Initial Problem Area
 Our team is focusing on resolving operational friction points within student logistics and campus tracking infrastructure. We are specifically targeting the fragmented nature of lost item reporting within high-density student facilities.
 
@@ -423,11 +427,11 @@ We prepared the final demo scenario, demo script, user testing plan, testing res
 - [x] [/docs/user-testing-results.md](docs/user-testing-results.md)
 - [x] [/docs/final-improvement-list.md](docs/final-improvement-list.md)
 - [x] [/docs/weekly-logbook.md](docs/weekly-logbook.md)
-- [x] [/screenshots/demo-flow.png](screenshots/demo-flow.png)
-- [x] [/screenshots/user-testing-evidence.png](screenshots/user-testing-evidence.png)
+- [x] [/screenshots/prototype-link-or-demo-screen.png](screenshots/prototype-link-or-demo-screen.png)
+- [ ] `/screenshots/user-testing-evidence.png` *(N/A – Formal user testing sessions and testing forms were not conducted for this prototype)*
 
 ### Prototype / Demo Link
 [Lemon MVP Live Prototype](https://ai10011.github.io/ICT105-Lemon-MVP/prototype/project/) (`prototype/project/`)
 
 ### Final Preparation Status
-**Ready for Lab 14 Final Presentation.** The prototype has achieved an 80.00% task completion rate across 20 test users, 100% test case pass rate across requirements `FR-01` through `FR-16`, and resolved all identified usability defects (`IMP-01` through `IMP-09`).
+**Ready for Lab 14 Final Presentation.** Visual interface flows, responsive styling, and feature requirements (`FR-01` through `FR-16`) are fully implemented in `prototype/project/`. Note that formal user testing sessions and user testing feedback forms were not conducted for this prototype phase.
