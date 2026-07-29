@@ -1,40 +1,47 @@
-# User Testing Plan
+# User Testing Plan & Specification
 
 > [!NOTE]
-> **Status Note:** Formal user testing sessions and testing forms were **not conducted** for this prototype phase. This document serves as a theoretical testing framework and specification for future evaluation.
+> **Status Note:** Formal user testing sessions and testing forms were **not conducted** for this prototype phase. This document serves as a theoretical testing framework, evaluation protocol, and specification for future validation iterations.
 
-## 1. Testing Objective
+---
 
-The objective of this user testing plan is to evaluate the usability, user flow efficiency, task completion rate, and feature clarity of **Lemon - Smart Campus Lost-and-Found System (LostLink)** prior to the final Lab 14 presentation. Specifically, testing aims to verify whether students and campus staff can seamlessly report lost items, search the catalog, verify item details, protect personal data privacy, and manage administrative claim statuses without confusion.
+## 1. Document Overview & Metadata
 
-## 2. Test User Profile
+| Field | Details |
+| --- | --- |
+| **Project Title** | Lemon - Smart Campus Lost-and-Found System (LostLink) |
+| **Repository** | `meirosemary/ICT105-Lemon-MVP` |
+| **Course Code** | ICT 105 Fundamental Technology Entrepreneurship |
+| **Target Prototype Version** | v1.0.0-MVP (HTML5 / Tailwind CSS / Vanilla JS) |
+| **Document Purpose** | Comprehensive Usability & Functional Evaluation Specification |
 
-| User Type | Number of Testers | Why This User Type Matters |
-| --- | --- | --- |
-| Target User (Students) | 15 Testers | Undergraduate university students who frequently commute across high-density facilities (libraries, computer labs, lecture halls) and experience lost/found item friction. |
-| Admin / Manager Role (Campus Staff) | 5 Testers | Campus security officers and facility desk clerks responsible for logging physical inventory items, verifying ownership claims, and updating case statuses. |
+---
 
-## 3. Testing Tasks
+## 2. Testing Objectives & Scope
 
-| Task ID | User Task | Related Requirement | Success Criteria | Observation Focus |
-| --- | --- | --- | --- | --- |
-| **T01** | Open the landing page (`index.html`) and explain the system purpose. | FR-01, FR-02 | User correctly identifies the central lost-and-found portal value message within 10 seconds. | Hero headline clarity, call-to-action button visibility, and problem context comprehension. |
-| **T02** | Submit a new lost/found item report via `form.html`. | FR-03, FR-10, FR-11 | User completes mandatory fields (category, campus building, date) and submits report without external help. | Form label clarity, required vs. optional indicators (photo upload), and validation error feedback. |
-| **T03** | Search catalog and filter items by category and campus building (`records.html`). | FR-05, FR-06, FR-14 | User successfully locates a target item (e.g., ID card or calculator at Main Library) using filter dropdowns. | Multi-criteria search speed, filter accordion behavior on mobile screens, and card grid clarity. |
-| **T04** | Inspect item detail view and verify contact masking & claim button (`detail.html`). | FR-07, FR-08, FR-15 | User understands item metadata, notices privacy masking (`65XXXXX@au.edu`), and clicks claim item button. | Visual status badge comprehension (`Pending Review`, `Available`, `Claimed`), contact masking clarity, and claim flow. |
-| **T05** | Access admin portal (`admin.html`) and update item status to "Claimed". | FR-08, FR-09, FR-14 | Staff tester locates admin management view, verifies ownership claim, and updates report status. | Administrative navigation accessibility, mobile sidebar drawer usability, and status update confirmation. |
-| **T06** | Review analytics dashboard summary (`dashboard.html`). | FR-12 | User correctly interprets key metrics (Total Reports, Pending Queue, Resolution Rate %). | Dashboard navigation access from header, card clarity, and metric usefulness. |
+### 2.1 Core Objectives
+The primary goal of this testing framework is to evaluate the usability, user flow efficiency, task success rates, data privacy protections, and administrative workflow clarity of the **Lemon LostLink** prototype prior to final evaluation.
 
-## 4. Testing Procedure
+Specifically, the plan evaluates whether:
+1. **Students** can independently submit detailed lost/found item reports and search existing records within 60 seconds without instruction.
+2. **Campus Security / Admin Staff** can seamlessly verify ownership claims and update item lifecycle statuses (`Pending Review` → `Available` → `Claimed`).
+3. **Data Protection Mechanisms** effectively mask sensitive contact details (student emails/phone numbers) across public catalog views.
+4. **Responsive UI Elements** (drawers, filter accordions, data tables) render without layout breakage on mobile devices (< 768px).
 
-1. **Orientation & Context Setup:** Welcome the participant, explain that we are testing the application prototype interface (not the participant), and briefly explain the campus lost-and-found scenario.
-2. **Scenario-Based Execution:** Present tasks T01 through T06 sequentially. Instruct the tester to think aloud while navigating.
-3. **Non-Intrusive Observation:** Observe user interactions silently without offering assistance unless the tester is blocked for over 2 minutes.
-4. **Data & Issue Recording:** Log task completion status (Completed / Partial / Failed), completion time, exact confusion points, and visual UI bugs.
-5. **Post-Test Exit Interview:** Administer standardized feedback scoring (1–5 scale for ease of use and usefulness) and gather open-ended improvement suggestions.
+### 2.2 In-Scope vs. Out-of-Scope
 
-## 5. Ethical & Responsible Data Protection
+* **In-Scope:**
+  * Client-side form validation, file input previews, and XSS sanitization checks.
+  * Search, category filtering, campus building filtering, and global search reset behavior.
+  * Cross-component state synchronization via browser `localStorage`.
+  * Responsive layout behavior across Mobile (375px), Tablet (768px), and Desktop (1440px) viewports.
+* **Out-of-Scope:**
+  * Backend server database persistence (SQL/NoSQL database benchmarking).
+  * SMS/Email gateway delivery integrations (mock notifications are used).
+  * Real-time physical IoT smart locker hardware integration.
 
-- **Data Minimization:** No actual personal passwords, national ID numbers, or real contact numbers will be collected during testing.
-- **Privacy Disclosure:** All student email addresses shown in test cases are masked (`65XXXXX@au.edu`).
-- **Consent & Usage:** Participants are informed that testing data is collected strictly for ICT105 coursework evaluation and prototype refinement.
+---
+
+## 3. Test User Profiles & Demographics
+
+To ensure balanced feedback across primary user segments, testing cohorts are divided into two distinct profiles:
