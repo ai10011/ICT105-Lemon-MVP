@@ -10,7 +10,7 @@
 | Attribute | Session Specification Details |
 | --- | --- |
 | **Project Name** | Lemon - Smart Campus Lost-and-Found System (LostLink) |
-| **Repository URL** | `https://github.com/meirosemary/ICT105-Lemon-MVP` |
+| **Repository URL** | `https://github.com/ai10011/ICT105-Lemon-MVP` |
 | **Live Prototype URL** | `https://ai10011.github.io/ICT105-Lemon-MVP/prototype/project/` |
 | **Course & Milestone** | ICT 105 Fundamental Technology Entrepreneurship (Lab 11 QA & Lab 13 Final Sprint) |
 | **Test Execution Date** | July 25, 2026 |
