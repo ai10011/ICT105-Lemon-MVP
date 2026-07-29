@@ -427,7 +427,7 @@ We prepared the final demo scenario, demo script, user testing plan, testing res
 - [x] [/docs/user-testing-results.md](docs/user-testing-results.md)
 - [x] [/docs/final-improvement-list.md](docs/final-improvement-list.md)
 - [x] [/docs/weekly-logbook.md](docs/weekly-logbook.md)
-- [x] [/screenshots/prototype-link-or-demo-screen.png](screenshots/prototype-link-or-demo-screen.png)
+- [x] [/screenshots/demo-flow.png](screenshots/demo-flow.png)
 - [ ] `/screenshots/user-testing-evidence.png` *(N/A – Formal user testing sessions and testing forms were not conducted for this prototype)*
 
 ### Prototype / Demo Link

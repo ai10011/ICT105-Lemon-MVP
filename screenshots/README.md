@@ -24,10 +24,12 @@ This directory contains the complete visual screenshot evidence for **Lemon - Sm
 
 - **Responsible IT & Security Architecture:** [`privacy-security-review.png`](privacy-security-review.png) – Lab 09 responsible design diagram detailing PII data minimization and security risk controls.
 - **Interactive Demo Verification:** [`prototype-link-or-demo-screen.png`](prototype-link-or-demo-screen.png) – Interactive prototype demonstration screen and live deployment URL verification.
+- **Demo Flow Verification:** [`demo-flow.png`](demo-flow.png) – Interactive prototype demonstration flow screen.
+- **User Testing Evidence (`user-testing-evidence.png`):** **N/A (Not Included)** – Formal user testing sessions and testing forms were not conducted for this prototype phase.
 
 ## User Testing & Form Evidence Status
 
 > [!NOTE]
 > **User Testing & Mock-up Data Disclaimer:**  
-> - **User Testing Evidence & Feedback Forms:** **N/A (Not Conducted)** – Formal user testing sessions and testing forms were **not conducted** for this prototype.
+> - **User Testing Evidence (`user-testing-evidence.png`) & Feedback Forms:** **N/A (Not Conducted / Not Included)** – Formal user testing sessions and testing forms were **not conducted** for this prototype.
 > - **Mock-up Data:** All data displayed in the screenshots (including item listings, user emails, acquisition numbers, Power BI analytics, and dashboard metrics) is **mock-up data** generated for demonstration and prototype evaluation.
