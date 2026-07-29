@@ -1,25 +1,26 @@
 # Prototype Screenshots Registry
 
-This directory contains the visual screenshot evidence for **Lemon - Smart Campus Lost-and-Found System** (Lab 10 & Lab 11 Sprint 2).
+This directory contains the complete visual screenshot evidence for **Lemon - Smart Campus Lost-and-Found System** spanning Lab 08 through Lab 13.
 
-> **Note on Lab 11 UI State:** The core prototype UI layout remained stable from Lab 10 to Lab 11, with Lab 11 focusing specifically on **mobile responsive enhancements** (implementing a mobile menu drawer, stacked mobile search inputs, collapsible search filters, and touch-optimized controls). Therefore, the baseline screenshots below represent the primary application screens across both Lab 10 and Lab 11.
+## Prototype Application Screenshots
 
-## Active Baseline Screenshots
+- **Homepage / Landing Gateway:** [`homepage.png`](homepage.png) – Hero headline, quick search bar, and platform value proposition.
+- **Hero Call-To-Action Buttons:** [`call-to-action.png`](call-to-action.png) – Primary navigation CTAs (*Try Demo / Search Lost Items* and *Submit Test Report*).
+- **Item Report Submission Form:** [`input-form.png`](input-form.png) – Mandatory field validation, campus building selector, optional photo upload, and PII consent.
+- **Lost & Found Records Directory:** [`record-list.png`](record-list.png) – Real-time keyword search, campus building filters, category badges, and mobile filter accordion.
+- **Record Detail View:** [`detail-view.png`](detail-view.png) – Item metadata, privacy-masked contact email (`65XXXXX@au.edu`), color-coded status badges, and claim button.
+- **Admin Management Portal:** [`admin.html`](admin-view.png) – Campus security staff view for inspecting claims, verifying ownership proof, and updating item status.
+- **Personal User Dashboard:** [`dashboard.png`](dashboard.png) – Overview of user submitted reports and status progress.
+- **User Authentication Login:** [`login.png`](login.png) – Login page interface.
+- **User Registration Account:** [`registration.png`](registration.png) – Registration page interface.
 
-- **Homepage / Landing Screen:** [homepage.png](homepage.png)
-- **User Login Screen:** [login.png](login.png)
-- **User Registration Screen:** [registration.png](registration.png)
-- **Item Report Submission Form:** [input-form.png](input-form.png)
-- **Lost & Found Directory / Records List:** [record-list.png](record-list.png)
-- **Record Detail View:** [detail-view.png](detail-view.png)
-- **Admin Management Portal:** [admin-view.png](admin-view.png)
-- **Personal User Analytics Dashboard:** [dashboard.png](dashboard.png)
-- **Responsible IT & Security Review Diagram:** [privacy-security-review.png](privacy-security-review.png)
+## Analytics & Go-to-Market Screenshots
 
-## Additional Mobile Responsive Screenshots (Optional)
+- **Acquisition Metrics Summary:** [`acquisition-metrics-table.png`](acquisition-metrics-table.png) – Lab 12 digital acquisition metrics (M-01 to M-05) tracking 365 page views, 151 CTA clicks, 99 demo attempts, and 48 active testers.
+- **Power BI Analytics Dashboard:** [`lab11-powerbi-dashboard.png`](lab11-powerbi-dashboard.png) – Power BI operational dashboard tracking case resolution rates and category distribution.
+- **Project Operations Dashboard:** [`project-dashboard.png`](project-dashboard.png) – Lab 08 / Lab 10 summary dashboard validation record.
 
-If new mobile viewport screen captures are recorded, save them using the following naming conventions:
-- `updated-mobile-homepage.png`
-- `updated-mobile-filter.png`
-- `updated-mobile-drawer.png`
-- `updated-mobile-admin.png`
+## Security, Privacy & Demo Flow Evidence
+
+- **Responsible IT & Security Architecture:** [`privacy-security-review.png`](privacy-security-review.png) – Lab 09 responsible design diagram detailing PII data minimization and security risk controls.
+- **Interactive Demo Verification:** [`prototype-link-or-demo-screen.png`](prototype-link-or-demo-screen.png) – Interactive prototype demonstration screen and live deployment URL verification.
