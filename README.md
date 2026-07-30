@@ -435,3 +435,44 @@ We prepared the final demo scenario, demo script, user testing plan, testing res
 
 ### Final Preparation Status
 **Ready for Lab 14 Final Presentation.** Visual interface flows, responsive styling, and feature requirements (`FR-01` through `FR-16`) are fully implemented in `prototype/project/`. Note that formal user testing sessions and user testing feedback forms were not conducted for this prototype phase.
+
+# README Update Template for Lab 14
+
+## Project Title
+
+## Group Members
+| Name | Role | Main Contribution |
+|---|---|---|
+| | | |
+
+## Project Overview
+
+## Target Users
+
+## Problem Solved
+
+## Final Prototype
+- Prototype folder/link:
+- Landing page link:
+- Final demo link:
+
+## Final Documentation
+- System requirements: `/docs/system-requirements.md`
+- User stories: `/docs/user-stories.md`
+- MVP feature list: `/docs/mvp-feature-list.md`
+- Feature implementation status: `/docs/feature-implementation-status.md`
+- Final prototype report: `/docs/final-prototype-report.md`
+- Final demo script: `/docs/final-demo-script.md`
+- Final reflection: `/docs/final-reflection.md`
+
+## Screenshots
+List final screenshots here.
+
+## Pitch
+- Final pitch slides or outline: `/pitch/`
+
+## Data and Diagrams
+- Final sample data: `/data/`
+- Final diagrams: `/diagrams/`
+
+## Final Submission Notes

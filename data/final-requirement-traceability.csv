@@ -1,0 +1,5 @@
+requirement_id,feature_or_screen,user_story_id,evidence_source,final_status,screenshot_file,notes
+FR-01,Homepage,US-01,Lab03 E01,Completed,final-homepage.png,
+FR-03,Report item form,US-02,Lab03 E02,Completed,final-input-form.png,
+FR-06,Search/filter list,US-03,Lab08 validation,Completed,final-record-list.png,
+FR-09,Admin status update,US-05,Lab09 security check,Partial,final-admin-view.png,Requires clearer admin separation

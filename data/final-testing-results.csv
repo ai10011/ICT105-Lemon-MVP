@@ -1,0 +1,5 @@
+tester_id,target_user_type,task,completed,time_minutes,confusion_point,feedback_score_1_5,comment,improvement_needed
+T01,Student,Report a lost item,Yes,3,No major issue,5,The form was clear,No
+T02,Student,Search for an item,Yes,2,Filter label unclear,4,Search worked but category could be clearer,Yes
+T03,Admin,Update item status,Partial,4,Admin button not obvious,3,Need clearer admin navigation,Yes
+T04,Student,View item details,Yes,2,None,5,Details page was useful,No

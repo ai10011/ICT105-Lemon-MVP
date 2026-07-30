@@ -1,0 +1,6 @@
+record_id,record_type,title,category,location,date_reported,status,submitted_by_role,last_updated,notes
+LF-001,Lost,Blue water bottle,Personal item,Library,2026-02-10,Pending,Student,2026-02-11,Need confirmation from finder
+LF-002,Found,Black umbrella,Personal item,Cafeteria,2026-02-11,Available,Staff,2026-02-11,Stored at information desk
+LF-003,Lost,Student ID card,Document,Building 6,2026-02-12,Claimed,Student,2026-02-13,Claimed after verification
+LF-004,Found,USB drive,Electronics,Computer Lab,2026-02-13,Pending,Student,2026-02-14,Requires careful claim verification
+LF-005,Lost,Notebook,Study item,Classroom,2026-02-14,Resolved,Student,2026-02-15,Returned by classmate
