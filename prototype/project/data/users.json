@@ -1,17 +1,27 @@
 [
   {
-    "id": "usr_1784092843224",
-    "full_name": "Phollapat Rodchue",
-    "email": "phollapat.r68@rsu.ac.th",
-    "password": "ice11898",
-    "created_at": "2026-07-15T05:20:43.224Z"
+    "id": "usr_student_001",
+    "full_name": "Alice Smith",
+    "email": "alice@campus.edu",
+    "password": "password123",
+    "role": "user",
+    "created_at": "2026-07-31T00:00:00.000Z"
   },
   {
-    "id": "usr_1784445778923",
-    "full_name": "Alex Morgan",
-    "email": "alex.m@campus.edu",
-    "password": "password1",
-    "created_at": "2026-07-19T07:22:58.923Z"
+    "id": "usr_student_002",
+    "full_name": "Bob Jones",
+    "email": "bob@campus.edu",
+    "password": "password123",
+    "role": "user",
+    "created_at": "2026-07-31T00:00:00.000Z"
+  },
+  {
+    "id": "usr_student_003",
+    "full_name": "Charlie Brown",
+    "email": "charlie@campus.edu",
+    "password": "password123",
+    "role": "user",
+    "created_at": "2026-07-31T00:00:00.000Z"
   },
   {
     "id": "usr_admin_001",
@@ -19,6 +29,6 @@
     "email": "admin@campus.edu",
     "password": "admin123",
     "role": "admin",
-    "created_at": "2026-07-28T10:00:00.000Z"
+    "created_at": "2026-07-31T00:00:00.000Z"
   }
 ]

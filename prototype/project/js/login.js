@@ -17,7 +17,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     async function authenticateUser(emailInput, passwordInput) {
         const defaultUsers = [
-            { id: "usr_1784092843224", full_name: "Phollapat Rodchue", email: "phollapat.r68@rsu.ac.th", password: "ice11898" },
+            { id: "usr_student_001", full_name: "Alice Smith", email: "alice@campus.edu", password: "password123", role: "user" },
+            { id: "usr_student_002", full_name: "Bob Jones", email: "bob@campus.edu", password: "password123", role: "user" },
+            { id: "usr_student_003", full_name: "Charlie Brown", email: "charlie@campus.edu", password: "password123", role: "user" },
             { id: "usr_admin_001", full_name: "Campus Security Admin", email: "admin@campus.edu", password: "admin123", role: "admin" }
         ];
 

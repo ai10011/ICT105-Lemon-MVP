@@ -19,53 +19,19 @@ window.LemonData = {
             } catch (e) { }
         }
 
-        if (!fetchedFromFile && fileRecords.length === 0) {
-            const DEFAULT_RECORDS = [
-                {
-                    "id": "rec_default_1",
-                    "reportType": "I Lost Something",
-                    "itemName": "Test Hydro Flask",
-                    "category": "Personal",
-                    "date": "2026-07-15",
-                    "description": "Blue water bottle",
-                    "location": "Main Library",
-                    "photoName": "flask.png",
-                    "photoPath": ""
-                },
-                {
-                    "id": "rec_1784092215649",
-                    "reportType": "I Lost Something",
-                    "itemName": "Macbook",
-                    "category": "Electronics",
-                    "date": "2026-07-14",
-                    "description": "Black laptop",
-                    "location": "Science Building",
-                    "created_at": "2026-07-15T05:10:15.649Z",
-                    "photoPath": ""
-                }
-            ];
-            fileRecords = DEFAULT_RECORDS;
+        let records = [];
+        if (fetchedFromFile) {
+            records = fileRecords;
+            try {
+                localStorage.setItem('lemon_records', JSON.stringify(fileRecords));
+            } catch (e) { }
+        } else {
+            try {
+                const saved = localStorage.getItem('lemon_records');
+                if (saved) records = JSON.parse(saved);
+            } catch (e) { }
         }
 
-        let localRecords = [];
-        try {
-            const saved = localStorage.getItem('lemon_records');
-            if (saved) localRecords = JSON.parse(saved);
-        } catch (e) { }
-
-        const map = new Map();
-        fileRecords.forEach((rec, idx) => {
-            const id = rec.id || `rec_file_${idx}`;
-            map.set(id, { ...rec, id });
-        });
-
-        localRecords.forEach((rec, idx) => {
-            const id = rec.id || `rec_local_${idx}`;
-            const existing = map.get(id) || {};
-            map.set(id, { ...existing, ...rec, id });
-        });
-
-        const records = Array.from(map.values());
         records.sort((a, b) => {
             const dateA = a.created_at || a.date || '';
             const dateB = b.created_at || b.date || '';
