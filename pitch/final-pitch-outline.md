@@ -3,7 +3,6 @@
 **Course:** ICT105 Fundamental Technology Entrepreneurship  
 **Instructor:** Dr. Herison Surbakti  
 **Team Name:** Lemon  
-**Recommended Pitch Length:** 7–10 Minutes  
 **Live Prototype URL:** [Lemon MVP Live Prototype](https://ai10011.github.io/ICT105-Lemon-MVP/prototype/project/)
 
 ---
@@ -18,8 +17,6 @@
   - **Tin May Lin** — *UX/UI Lead*: Designed wireframes, visual style guide, customer validation metrics, and responsible IT frameworks.
   - **Phoochit Jantakam** — *Documentation Lead*: Maintained project documentation, weekly logbooks, requirements matrix, and risk registers.
 - **Visual / Layout Recommendation:** Team portrait grid with member roles, GitHub handles, and project branding header.
-- **Speaker Notes (approx. 45s):**
-  > "Good day Dr. Herison and fellow evaluators. We are Team Lemon, and today we are excited to present our semester project: **Lemon**, a Smart Campus Lost-and-Found System built for ICT105 Fundamental Technology Entrepreneurship. Our team brings together product vision, software engineering, UI design, and rigorous documentation to solve a persistent friction point in student campus life."
 
 ---
 
@@ -33,8 +30,6 @@
   1. **Primary Users (Students):** Undergraduate university students who frequently commute across high-density campus facilities (Main Library, Lecture Halls, ICT Computer Labs) and lose essential daily items (Student IDs, scientific calculators, USB drives, access cards).
   2. **Secondary Users (Campus Security & Facility Clerks):** Administrative staff burdened by manual paper logbooks, unorganized storage shelves, and repetitive student inquiries.
 - **Visual / Layout Recommendation:** Split-screen graphic showing "Before" (scattered chat notifications & lost item post clutter) vs "Target Personas" (Student Justin & Security Officer).
-- **Speaker Notes (approx. 1 min):**
-  > "Every semester, hundreds of valuable items go missing across campus. Currently, if a student loses their Student ID or scientific calculator in the library, they have to scroll through dozens of noisy LINE groups, check social media posts, or physically walk to the security desk. Because this information is completely unorganized, 65% of students give up searching within a single day. On the flip side, campus security staff spend hours manually recording incoming items in physical notebooks without any easy way to notify the owners."
 
 ---
 
@@ -52,8 +47,6 @@
   - **Usability Feedback:** Rated **4.35 / 5.0** for platform usefulness and **3.80 / 5.0** for user interest.
   - *Key Iteration:* Replaced confusing text status labels with color-coded visual status badges (`Pending Review`, `Available`, `Claimed`, `Closed`).
 - **Visual / Layout Recommendation:** Key metric callout cards (80% Task Completion Rate, 4.35/5 Usefulness) alongside interview quote callouts.
-- **Speaker Notes (approx. 1 min):**
-  > "We didn't just guess what features to build; we built Lemon based on hard empirical evidence. In Lab 03, we interviewed 15 campus users and discovered that students wanted a centralized portal but were deeply concerned about privacy. Later, during customer validation in Lab 08, 20 test users evaluated our working prototype. We achieved an 80% task completion rate and refined the interface based on their feedback—adding visual status badges and mobile filter drawers to eliminate navigation friction."
 
 ---
 
@@ -67,8 +60,6 @@
   3. **Streamlined Admin Workflow:** Color-coded status lifecycle tracking (`Pending Review` → `Available` → `Claimed` → `Closed`) that reduces administrative processing time (FR-08, FR-09).
   4. **Zero-Hardware Deployment:** Fully functional on standard mobile and desktop web browsers without requiring physical IoT sensors or expensive hardware infrastructure.
 - **Visual / Layout Recommendation:** Product mockup showcasing the desktop and mobile interface highlights (Hero Search, Category Badges, Masked Detail View).
-- **Speaker Notes (approx. 1 min):**
-  > "Lemon brings order to campus lost-and-found. With Lemon, any student can submit a report in under 60 seconds or search through catalog records filtered by campus building and item category. Most importantly, Lemon protects student privacy by masking contact emails and Student IDs publicly, ensuring that ownership verification happens safely through official administrative channels."
 
 ---
 
@@ -82,8 +73,6 @@
   4. **Item Detail & Ownership Claim (`detail.html`):** Comprehensive item view with masked contact protection (`65XXXXX@au.edu`) and interactive ownership claim request submission.
   5. **Admin Desk Portal & Analytics (`admin.html` & `dashboard.html`):** Simulated staff role-checked management console to review pending claims, update status (`Pending Review` → `Claimed`), and inspect real-time resolution metrics.
 - **Visual / Layout Recommendation:** Step-by-step UI flowchart mapping screen transitions with embedded screenshots (`homepage.png`, `input-form.png`, `record-list.png`, `detail-view.png`, `admin-view.png`, `dashboard.png`).
-- **Speaker Notes (approx. 2 min):**
-  > "Now, let us walk you through our live working prototype. [Navigate through prototype]. First, on our landing page, users choose to either search existing records or report an item. When submitting a report on `form.html`, mandatory fields like campus building and date ensure quality data entry. On `records.html`, students can search by keywords or filter by location—with a mobile drawer built specifically for small screens. On `detail.html`, contact info is safely masked, allowing students to click 'Claim Item'. Finally, desk staff log into `admin.html` to verify proof of ownership and mark the item as 'Claimed', instantly updating our live analytics dashboard on `dashboard.html`."
 
 ---
 
@@ -99,8 +88,6 @@
   - **Key Partners:** University Administration, Campus Security Office, Student Affairs, and Student Body.
   - **Sustainability & Cost Structure:** Non-commercial university service model. Delivers high operational ROI by cutting administrative labor hours and reducing discarded campus lost property waste.
 - **Visual / Layout Recommendation:** Clean 9-box Business Model Canvas grid graphic highlighting key operational pillars.
-- **Speaker Notes (approx. 1 min):**
-  > "From a venture perspective, Lemon operates as a non-commercial, university-integrated digital service. Our Business Model Canvas focuses on creating maximum value for the university community. By partnering with Campus Security and Student Affairs, Lemon replaces manual overhead with automated web indexing. It requires minimal maintenance costs while significantly raising campus operational efficiency and student satisfaction."
 
 ---
 
@@ -117,8 +104,6 @@
   - **System Usefulness Score:** **4.35 / 5.0** average score.
   - **Target Resolution Rate:** Maintained a **> 70% case resolution target** for verified item claims.
 - **Visual / Layout Recommendation:** Bar charts showing acquisition funnel (Views $\rightarrow$ CTA Clicks $\rightarrow$ Active Testers) alongside usability score breakdown.
-- **Speaker Notes (approx. 1 min):**
-  > "To validate market demand, we ran a digital Go-to-Market pilot in Lab 12. Lemon's landing page generated 365 total page views with an outstanding 41.37% CTA click-through rate and 48 active testers. Combined with our 80% task completion rate and 4.35 out of 5 usefulness rating, these numbers prove that students and staff actively want and can easily use this system."
 
 ---
 
@@ -135,8 +120,6 @@
   - **Role-Based Access Control (FR-09):** Restricted record editing and status updates (`Pending Review` $\rightarrow$ `Claimed`) to authorized staff on `admin.html`.
   - **Open-Source Compliance:** 100% compliant with MIT (Tailwind), SIL OFL (Google Fonts), and Apache 2.0 (Express.js) licenses.
 - **Visual / Layout Recommendation:** Architecture block diagram (`system-architecture.mmd`) showing client browser $\leftrightarrow$ Express REST API $\leftrightarrow$ JSON/localStorage data layer, with privacy shield icons.
-- **Speaker Notes (approx. 1 min):**
-  > "Architecturally, Lemon combines HTML5, Tailwind CSS, and Vanilla JavaScript with a lightweight Express REST API backend and JSON `localStorage` persistence. Under our Lab 09 Responsible IT audit, we ensured strict privacy compliance: sensitive personal data like phone numbers are never collected, student IDs are masked publicly, and administrative status changes are protected behind role checks."
 
 ---
 
@@ -152,8 +135,6 @@
   - **IMP-11 (In-App Anonymized Chat):** Implement real-time WebSocket student-to-finder messaging without sharing private phone numbers (US-08, NFR-01).
   - **AI-Powered Photo Matching:** Integrate computer vision image comparison to match lost item upload photos with found inventory items automatically.
 - **Visual / Layout Recommendation:** Two-column matrix: "Completed Improvements (Sprint 1 & 2)" vs "Future Development Pipeline".
-- **Speaker Notes (approx. 45s):**
-  > "Throughout our development sprints, we continuously refined Lemon based on user testing—fixing mobile viewport layout bugs, adding collapsible search accordions, and replacing text labels with clear status badges. Looking beyond ICT105, our post-course roadmap includes migrating to a production PostgreSQL database, adding anonymized WebSocket chat, and introducing AI image matching."
 
 ---
 
@@ -172,5 +153,3 @@
 - **Q&A Invitation:**
   > *"Thank you Dr. Herison Surbakti and evaluators for your time and guidance. We welcome any questions, feedback, or suggestions!"*
 - **Visual / Layout Recommendation:** QR code linking to the live prototype alongside team contact email and closing logo graphic.
-- **Speaker Notes (approx. 30s):**
-  > "In summary, Lemon delivers a validated, privacy-first, and zero-hardware solution to a real problem faced by university students every day. Our prototype is live and ready for evaluation. Thank you Dr. Herison and panel members for your attention—we are now open for any questions and feedback."
