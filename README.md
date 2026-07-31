@@ -262,6 +262,14 @@ Evaluated core usability, task completion, and interest for key user flows (repo
 - `docs/weekly-logbook.md`
 - `screenshots/project-dashboard.png`
 
+### Group Contribution
+| Member | Role | Contribution | GitHub Evidence |
+|---|---|---|---|
+| **Kyaw Ye Lin** (`kyawyel68-Crystal`) | Product Lead | Authored customer validation summary and structured MVP decision framework. | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=kyawyel68-Crystal) |
+| **Phollapat Rodchue** (`ai10011`) | Technical Lead | Processed `validation-results.csv` testing records and exported Power BI analytics dashboard screenshots. | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=ai10011) |
+| **Tin May Lin** (`meirosemary`) | UX/UI Lead | Analyzed user testing task completion rates, ease-of-use scores, and authored `analytics-insights.md`. | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=meirosemary) |
+| **Phoochit Jantakam** (`Bilal112344`) | Documentation Lead | Maintained `lab08_data_dictionary.csv`, logged test user notes in `test-user-notes.md`, and updated repository `README.md`. | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=Bilal112344) |
+
 ## Lab 09 - Responsible IT Check
 
 ### Responsible Design Summary
@@ -295,12 +303,12 @@ Core system requirements (`FR-01` through `FR-16` in `docs/system-requirements.m
 - **FR-10**: Enforced mandatory field validation (category, location, date) with visual inline feedback (Issue `#62` & Issue `#64`).
 
 ### Team Contributions
-| Member Name | Role | Contribution | GitHub Evidence |
+| Member | Role | Contribution | GitHub Evidence |
 |---|---|---|---|
-| **Tin May Lin** (`meirosemary`) | UX/UI Lead | Authored `docs/legal-ethical-checklist.md`, `docs/privacy-and-data-protection.md`, and `docs/security-risk-check.md` | Issue `#62` ([#62](https://github.com/ai10011/ICT105-Lemon-MVP/issues/62)) |
-| **Phollapat Rodchue** (`ai10011`) | Technical Lead | Prepared `data/data-inventory.csv`, `data/risk-register.csv`, `data/third-party-assets-register.csv`, and diagrams | Issue `#63` ([#63](https://github.com/ai10011/ICT105-Lemon-MVP/issues/63)) |
-| **Phoochit Jantakam** (`Bilal112344`) | Documentation Lead | Authored `docs/risk-register.md`, `docs/updated-requirements-note.md`, and `docs/user-consent-statement.md` | Issue `#64` ([#64](https://github.com/ai10011/ICT105-Lemon-MVP/issues/64)) |
-| **Kyaw Ye Lin** (`kyawyel68-Crystal`) | Product Lead | Authored `docs/data-handling-policy.md`, `docs/ip-and-third-party-assets.md`, updated `docs/weekly-logbook.md`, and `README.md` | Issue `#65` ([#65](https://github.com/ai10011/ICT105-Lemon-MVP/issues/65)) |
+| **Tin May Lin** (`meirosemary`) | UX/UI Lead | Authored `docs/legal-ethical-checklist.md`, `docs/privacy-and-data-protection.md`, and `docs/security-risk-check.md` | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=meirosemary) |
+| **Phollapat Rodchue** (`ai10011`) | Technical Lead | Prepared `data/data-inventory.csv`, `data/risk-register.csv`, `data/third-party-assets-register.csv`, and diagrams | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=ai10011) |
+| **Phoochit Jantakam** (`Bilal112344`) | Documentation Lead | Authored `docs/risk-register.md`, `docs/updated-requirements-note.md`, and `docs/user-consent-statement.md` | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=Bilal112344) |
+| **Kyaw Ye Lin** (`kyawyel68-Crystal`) | Product Lead | Authored `docs/data-handling-policy.md`, `docs/ip-and-third-party-assets.md`, updated `docs/weekly-logbook.md`, and `README.md` | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=kyawyel68-Crystal) |
 
 ## Lab 10 - MVP Implementation Sprint 1
 
@@ -339,12 +347,12 @@ Lab 10 focused on developing the first functional version of the MVP prototype u
 
 ### Team Contribution
 
-| Member | Role | Evidence |
-|---|---|---|
-| **Kyaw Ye Lin** | Product Lead | Standardized the sample datasets and category files (`data/lost-found-sample-records.csv`, `data/lost-found-status-categories.csv`) |
-| **Tin May Lin** | UX/UI Lead | Prepared the feature implementation status, implementation plan, and implementation flow diagram (`docs/feature-implementation-status.md`, `docs/implementation-plan.md`, `diagrams/implementation-flow.mmd`) |
-| **Phollapat Rodchue** | Technical Lead | Developed and integrated the complete web prototype under `prototype/project/` |
-| **Phoochit Jantakam** | Documentation Lead | Maintained the project documentation and weekly logbook (`docs/weekly-logbook.md`, `README.md`) |
+| Member | Role | Contribution | GitHub Evidence |
+|---|---|---|---|
+| **Kyaw Ye Lin** (`kyawyel68-Crystal`) | Product Lead | Standardized the sample datasets and category files (`data/lost-found-sample-records.csv`, `data/lost-found-status-categories.csv`) | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=kyawyel68-Crystal) |
+| **Tin May Lin** (`meirosemary`) | UX/UI Lead | Prepared the feature implementation status, implementation plan, and implementation flow diagram (`docs/feature-implementation-status.md`, `docs/implementation-plan.md`, `diagrams/implementation-flow.mmd`) | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=meirosemary) |
+| **Phollapat Rodchue** (`ai10011`) | Technical Lead | Developed and integrated the complete web prototype under `prototype/project/` | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=ai10011) |
+| **Phoochit Jantakam** (`Bilal112344`) | Documentation Lead | Maintained the project documentation and weekly logbook (`docs/weekly-logbook.md`, `README.md`) | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=Bilal112344) |
 
 ## Lab 11: MVP Implementation Sprint 2 and Startup Metrics
 
@@ -371,12 +379,12 @@ Documented 8 core startup & product metrics in [docs/startup-metrics.md](docs/st
 - Baseline UI screenshots registered in [screenshots/README.md](screenshots/README.md) (`homepage.png`, `input-form.png`, `record-list.png`, `detail-view.png`, `admin-view.png`, `dashboard.png`).
 
 ### Member Contributions
-| Member | Role | Sprint 2 Contribution |
-|---|---|---|
-| **Kyaw Ye Lin** | Product Lead | Integrated Power BI dashboard analytics and business metrics model. |
-| **Tin May Lin** | UX/UI Lead | Authored Lab 11 documentation artifacts ([feature-implementation-status.md](docs/feature-implementation-status.md), [startup-metrics.md](docs/startup-metrics.md), and [prototype-testing-notes.md](docs/prototype-testing-notes.md)). |
-| **Phollapat Rodchue** | Technical Lead | Updated web prototype application and added mobile responsiveness across all screens (`prototype/project/`). |
-| **Phoochit Jantakam** | Documentation Lead | Maintained weekly logbook ([docs/weekly-logbook.md](docs/weekly-logbook.md)) and root repository overview ([README.md](README.md)). |
+| Member | Role | Contribution | GitHub Evidence |
+|---|---|---|---|
+| **Kyaw Ye Lin** (`kyawyel68-Crystal`) | Product Lead | Integrated Power BI dashboard analytics and business metrics model. | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=kyawyel68-Crystal) |
+| **Tin May Lin** (`meirosemary`) | UX/UI Lead | Authored Lab 11 documentation artifacts ([feature-implementation-status.md](docs/feature-implementation-status.md), [startup-metrics.md](docs/startup-metrics.md), and [prototype-testing-notes.md](docs/prototype-testing-notes.md)). | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=meirosemary) |
+| **Phollapat Rodchue** (`ai10011`) | Technical Lead | Updated web prototype application and added mobile responsiveness across all screens (`prototype/project/`). | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=ai10011) |
+| **Phoochit Jantakam** (`Bilal112344`) | Documentation Lead | Maintained weekly logbook ([docs/weekly-logbook.md](docs/weekly-logbook.md)) and root repository overview ([README.md](README.md)). | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=Bilal112344) |
 
 ### Remaining Work
 - Final backend relational database integration.
@@ -408,12 +416,12 @@ Documented 8 core startup & product metrics in [docs/startup-metrics.md](docs/st
 The landing page directly supports **FR-01** (Homepage displaying platform value proposition, hero quick search, and reporting action button). The CTAs lead users directly to **FR-03** (Lost/Found Item Reporting Form) and **FR-06** (Campus catalog search and filtering), ensuring alignment with the core system requirements in [`docs/system-requirements.md`](docs/system-requirements.md).
 
 ### Member Contributions
-| Member Name | Role | Contribution | File / Feature Evidence |
-| --- | --- | --- | --- |
-| **Phollapat Rodchue** | Technical Lead | Developed the landing page gateway, CSS styling, JavaScript functionality, linkage notes, and content specifications | `prototype/project/index.html`, `css/styles.css`, `js/main.js`, `prototype/landing-page-link.md`, `docs/landing-page-content.md` |
-| **Kyaw Ye Lin** | Product Lead | Prepared the Digital Go-to-Market strategy and channel-specific marketing messages | `docs/go-to-market-plan.md`, `docs/marketing-message.md` |
-| **Tin May Lin (Mei)** | UX/UI Lead | Designed the acquisition metrics framework and completed the GTM dataset | `docs/acquisition-metrics.md`, `data/acquisition-metrics.csv` |
-| **Phoochit Jantakam** | Documentation Lead | Updated the Lab 12 weekly logbook and maintained the root repository documentation | `docs/weekly-logbook.md`, `README.md` |
+| Member | Role | Contribution | GitHub Evidence |
+|---|---|---|---|
+| **Phollapat Rodchue** (`ai10011`) | Technical Lead | Developed the landing page gateway, CSS styling, JavaScript functionality, linkage notes, and content specifications | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=ai10011) |
+| **Kyaw Ye Lin** (`kyawyel68-Crystal`) | Product Lead | Prepared the Digital Go-to-Market strategy and channel-specific marketing messages | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=kyawyel68-Crystal) |
+| **Tin May Lin** (`meirosemary`) | UX/UI Lead | Designed the acquisition metrics framework and completed the GTM dataset | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=meirosemary) |
+| **Phoochit Jantakam** (`Bilal112344`) | Documentation Lead | Updated the Lab 12 weekly logbook and maintained the root repository documentation | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=Bilal112344) |
 
 ## Lab 13: Sales Scenario, Demo Script, and User Testing
 

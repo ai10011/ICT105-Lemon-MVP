@@ -102,12 +102,12 @@ In Lab 04, the team will synthesize the collected empirical evidence to systemat
 * **Date:** 24/06/2026
 
 ### 1. Work Completed Today
-| Member Name | Contribution | GitHub Evidence (Commit/Issue/PR Link) |
+| Member Name | Contribution | GitHub Evidence |
 | :--- | :--- | :--- |
-| **Kyaw Ye Lin** | Created the user persona and wrote the user stories. | `https://github.com/ai10011/ICT105-Lemon-MVP/commits/main/` |
-| **Phollapat Rodchue** | Prioritized the MVP feature list, defined system requirements, updated the weekly logbook, and updated the README. | `https://github.com/ai10011/ICT105-Lemon-MVP/commits/main/` |
-| **Tin May Lin** | Designed the user flow and use case diagrams based on the system requirements. | `https://github.com/ai10011/ICT105-Lemon-MVP/commits/main/` |
-| **Phoochit Jantakam** |  |  |
+| **Kyaw Ye Lin** | Created the user persona and wrote the user stories. | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=kyawyel68-Crystal) |
+| **Phollapat Rodchue** | Prioritized the MVP feature list, defined system requirements, updated the weekly logbook, and updated the README. | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=ai10011) |
+| **Tin May Lin** | Designed the user flow and use case diagrams based on the system requirements. | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=meirosemary) |
+| **Phoochit Jantakam** | Maintained documentation, weekly logbook, and repository records. | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=Bilal112344) |
 
 ### 2. Main Decisions
 * **Primary target user:** University students who frequently lose or find personal items on campus.
@@ -146,12 +146,12 @@ In Lab 04, the team will synthesize the collected empirical evidence to systemat
 - [x] Updated GitHub repository
 
 ## Member Contributions
-| Member Name | Contribution | Evidence / Commit Link |
+| Member Name | Contribution | GitHub Evidence |
 |---|---|---|
-| **Kyaw Ye Lin** | Worked on `/docs/product-concept.md` and `/docs/feature-requirement-mapping.md` | [product-concept.md Link](../docs/product-concept.md) |
-| **Phollapat Rodchue** | Worked on Wireframes and dataset mapping structures | [wireframes/ Link](../wireframes/) |
-| **Tin May Lin** | Worked on `/docs/weekly-logbook.md` and primary root `README.md` updates | [weekly-logbook.md Link](../docs/weekly-logbook.md) |
-| **Phoochit Jantakam** | Worked on `/docs/wireframe-specification.md` and `/docs/wireframe-usability-checklist.md` | [wireframe-specification.md Link](../docs/wireframe-specification.md) |
+| **Kyaw Ye Lin** | Worked on `/docs/product-concept.md` and `/docs/feature-requirement-mapping.md` | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=kyawyel68-Crystal) |
+| **Phollapat Rodchue** | Worked on Wireframes and dataset mapping structures | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=ai10011) |
+| **Tin May Lin** | Worked on `/docs/weekly-logbook.md` and primary root `README.md` updates | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=meirosemary) |
+| **Phoochit Jantakam** | Worked on `/docs/wireframe-specification.md` and `/docs/wireframe-usability-checklist.md` | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=Bilal112344) |
 
 ## Decisions Made
 | Decision | Reason | Related Requirement |
@@ -185,12 +185,12 @@ Smart Campus Lost-and-Found System
 
 ## Member Contributions
 
-| Member Name | Contribution | Evidence / Commit Link |
+| Member Name | Contribution | GitHub Evidence |
 |---|---|---|
-| **Kyaw Ye Lin** | Worked on `/docs/business-model-canvas.md` and `/docs/feature-value-mapping.md` | `https://github.com/ai10011/ICT105-Lemon-MVP/commits/main/` |
-| **Phollapat Rodchue** | Worked on `/docs/weekly-logbook.md` and `README.md` | `https://github.com/ai10011/ICT105-Lemon-MVP/commits/main/` |
-| **Tin May Lin** | Worked on `/diagrams/system-architecture.png` (and/or `.mmd`) and `/diagrams/data-flow.png` (and/or `.mmd`) | `https://github.com/ai10011/ICT105-Lemon-MVP/commits/main/` |
-| **Phoochit Jantakam** | Worked on `/docs/technical-architecture.md` and `/docs/data-structure.md` | `https://github.com/ai10011/ICT105-Lemon-MVP/commits/main/` |
+| **Kyaw Ye Lin** | Worked on `/docs/business-model-canvas.md` and `/docs/feature-value-mapping.md` | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=kyawyel68-Crystal) |
+| **Phollapat Rodchue** | Worked on `/docs/weekly-logbook.md` and `README.md` | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=ai10011) |
+| **Tin May Lin** | Worked on `/diagrams/system-architecture.png` (and/or `.mmd`) and `/diagrams/data-flow.png` (and/or `.mmd`) | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=meirosemary) |
+| **Phoochit Jantakam** | Worked on `/docs/technical-architecture.md` and `/docs/data-structure.md` | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=Bilal112344) |
 
 ## Decisions Made Today
 
@@ -229,12 +229,12 @@ Smart Campus Lost-and-Found System
 - [x] Updated GitHub repository and README
 
 ## Member Contributions
-| Member Name | Contribution | Evidence/Commit/Issue Link |
+| Member Name | Contribution | GitHub Evidence |
 |---|---|---|
-| **Tin May Lin** | Added initial MVP experiment plan files and updated `mvp-demo-link.md` | `https://github.com/ai10011/ICT105-Lemon-MVP/commits/main/` |
-| **Phollapat Rodchue** | Updated `docs/success-metrics.md` and `docs/critical-assumptions.md` with staff/admin metrics | `https://github.com/ai10011/ICT105-Lemon-MVP/commits/main/` |
-| **Kyaw Ye Lin** | Completed `docs/experiment-script.md` with observations and feedback data | `https://github.com/ai10011/ICT105-Lemon-MVP/commits/main/` |
-| **Phoochit Jantakam** | Linked HTML prototype navigation pages and updated `mvp-demo-link.md` instructions | `https://github.com/ai10011/ICT105-Lemon-MVP/commits/main/` |
+| **Tin May Lin** | Added initial MVP experiment plan files and updated `mvp-demo-link.md` | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=meirosemary) |
+| **Phollapat Rodchue** | Updated `docs/success-metrics.md` and `docs/critical-assumptions.md` with staff/admin metrics | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=ai10011) |
+| **Kyaw Ye Lin** | Completed `docs/experiment-script.md` with observations and feedback data | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=kyawyel68-Crystal) |
+| **Phoochit Jantakam** | Linked HTML prototype navigation pages and updated `mvp-demo-link.md` instructions | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=Bilal112344) |
 
 ## Key Decisions
 | Decision | Reason | Evidence/Requirement Link |
@@ -270,10 +270,10 @@ Smart Campus Lost-and-Found System
 ## Member Contributions
 | Member Name | Contribution | GitHub Evidence |
 |---|---|---|
-| **Tin May Lin** | Prepared validation dataset (`data/validation-results.csv`) and created GitHub issues for prototype improvements | `https://github.com/ai10011/ICT105-Lemon-MVP/commits/main/` |
-| **Phollapat Rodchue** | Calculated usability metrics and authored `docs/analytics-insights.md` | `https://github.com/ai10011/ICT105-Lemon-MVP/commits/main/` |
-| **Kyaw Ye Lin** | Authored `docs/customer-validation-summary.md` and synthesized qualitative user feedback | `https://github.com/ai10011/ICT105-Lemon-MVP/commits/main/` |
-| **Phoochit Jantakam** | Formulated decision rationale in `docs/mvp-decision.md` and updated `README.md` | `https://github.com/ai10011/ICT105-Lemon-MVP/commits/main/` |
+| **Tin May Lin** | Prepared validation dataset (`data/validation-results.csv`) and created GitHub issues for prototype improvements | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=meirosemary) |
+| **Phollapat Rodchue** | Calculated usability metrics and authored `docs/analytics-insights.md` | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=ai10011) |
+| **Kyaw Ye Lin** | Authored `docs/customer-validation-summary.md` and synthesized qualitative user feedback | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=kyawyel68-Crystal) |
+| **Phoochit Jantakam** | Formulated decision rationale in `docs/mvp-decision.md` and updated `README.md` | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=Bilal112344) |
 
 ## Problems Found
 - **Dashboard Navigation**: Testers struggled to locate the summary dashboard link (`FR-12`) during tasks.
@@ -318,10 +318,10 @@ Lemon
 
 | Member Name | Contribution | GitHub Evidence |
 |---|---|---|
-| **Tin May Lin** (`meirosemary`) | Authored `docs/legal-ethical-checklist.md`, `docs/privacy-and-data-protection.md`, and `docs/security-risk-check.md`. | Issue `#62` (`https://github.com/ai10011/ICT105-Lemon-MVP/issues/62`) |
-| **Phollapat Rodchue** (`ai10011`) | Prepared `data/data-inventory.csv`, `data/risk-register.csv`, `data/third-party-assets-register.csv`, and created `diagrams/privacy-security-review.png` and `screenshots/privacy-security-review.png`. | Issue `#63` (`https://github.com/ai10011/ICT105-Lemon-MVP/issues/63`) |
-| **Phoochit Jantakam** (`Bilal112344`) | Authored `docs/risk-register.md`, `docs/updated-requirements-note.md`, and `docs/user-consent-statement.md`. | Issue `#64` (`https://github.com/ai10011/ICT105-Lemon-MVP/issues/64`) |
-| **Kyaw Ye Lin** (`kyawyel68-Crystal`) | Authored `docs/data-handling-policy.md`, `docs/ip-and-third-party-assets.md`, updated `docs/weekly-logbook.md`, and `README.md`. | Issue `#65` (`https://github.com/ai10011/ICT105-Lemon-MVP/issues/65`) |
+| **Tin May Lin** (`meirosemary`) | Authored `docs/legal-ethical-checklist.md`, `docs/privacy-and-data-protection.md`, and `docs/security-risk-check.md`. | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=meirosemary) |
+| **Phollapat Rodchue** (`ai10011`) | Prepared `data/data-inventory.csv`, `data/risk-register.csv`, `data/third-party-assets-register.csv`, and created `diagrams/privacy-security-review.png` and `screenshots/privacy-security-review.png`. | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=ai10011) |
+| **Phoochit Jantakam** (`Bilal112344`) | Authored `docs/risk-register.md`, `docs/updated-requirements-note.md`, and `docs/user-consent-statement.md`. | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=Bilal112344) |
+| **Kyaw Ye Lin** (`kyawyel68-Crystal`) | Authored `docs/data-handling-policy.md`, `docs/ip-and-third-party-assets.md`, updated `docs/weekly-logbook.md`, and `README.md`. | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=kyawyel68-Crystal) |
 
 ## Decisions Made
 
@@ -378,12 +378,12 @@ MVP Implementation Sprint 1
 
 ## Contribution by Members
 
-| Member | Contribution | Evidence |
+| Member Name | Contribution | GitHub Evidence |
 |---|---|---|
-| **Kyaw Ye Lin** | Standardized the sample datasets and category files | `data/lost-found-sample-records.csv`, `data/lost-found-status-categories.csv` |
-| **Tin May Lin** | Prepared the Feature Implementation Status, Implementation Plan, and Implementation Flow diagram | `docs/feature-implementation-status.md`, `docs/implementation-plan.md`, `diagrams/implementation-flow.mmd` |
-| **Phollapat Rodchue** | Built and integrated the project web prototype | `prototype/project/` (`index.html`, `form.html`, `records.html`, `detail.html`, `admin.html`, `dashboard.html`, `server.js`) |
-| **Phoochit Jantakam** | Maintained the project documentation and weekly progress logbook | `docs/weekly-logbook.md`, `README.md` |
+| **Kyaw Ye Lin** | Standardized the sample datasets and category files | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=kyawyel68-Crystal) |
+| **Tin May Lin** | Prepared the Feature Implementation Status, Implementation Plan, and Implementation Flow diagram | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=meirosemary) |
+| **Phollapat Rodchue** | Built and integrated the project web prototype | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=ai10011) |
+| **Phoochit Jantakam** | Maintained the project documentation and weekly progress logbook | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=Bilal112344) |
 
 ## Screenshots Added
 - `screenshots/homepage.png`
@@ -417,10 +417,10 @@ Lemon - Smart Campus Lost-and-Found System
 ## Member Contributions
 | Member Name | Contribution | File/Feature Updated | GitHub Evidence |
 |---|---|---|---|
-| **Kyaw Ye Lin** | Integrated Power BI dashboard analytics and business metrics model | Power BI Model & Data Integration | Issue / Commit |
-| **Tin May Lin** | Authored Lab 11 documentation artifacts | `docs/feature-implementation-status.md`, `docs/startup-metrics.md`, `docs/prototype-testing-notes.md` | Issue / Commit |
-| **Phollapat Rodchue** | Updated web prototype application and added mobile responsiveness | `prototype/project/` (`components.js`, `records.js`, `admin.js`, `form.html`, `styles.css`) | Issue / Commit |
-| **Phoochit Jantakam** | Maintained weekly logbook and root repository documentation | `docs/weekly-logbook.md`, `README.md` | Issue / Commit |
+| **Kyaw Ye Lin** | Integrated Power BI dashboard analytics and business metrics model | Power BI Model & Data Integration | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=kyawyel68-Crystal) |
+| **Tin May Lin** | Authored Lab 11 documentation artifacts | `docs/feature-implementation-status.md`, `docs/startup-metrics.md`, `docs/prototype-testing-notes.md` | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=meirosemary) |
+| **Phollapat Rodchue** | Updated web prototype application and added mobile responsiveness | `prototype/project/` (`components.js`, `records.js`, `admin.js`, `form.html`, `styles.css`) | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=ai10011) |
+| **Phoochit Jantakam** | Maintained weekly logbook and root repository documentation | `docs/weekly-logbook.md`, `README.md` | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=Bilal112344) |
 
 ## Requirements Addressed
 - **FR-03 (Report Form Submission):** Responsive radio option cards (`flex-col sm:flex-row`), mobile touch padding, photo preview, and privacy consent.
@@ -466,12 +466,12 @@ Lemon - Smart Campus Lost-and-Found System
 - Updated the main project documentation in [`README.md`](../README.md) and completed the weekly progress record in [`docs/weekly-logbook.md`](weekly-logbook.md).
 
 ## Member Contributions
-| Member Name | Contribution | File/Feature Updated |
-| --- | --- | --- |
-| **Phollapat Rodchue** | Developed the landing page gateway, page styling, interactive components, and supporting navigation documentation | `prototype/project/index.html`, `css/styles.css`, `js/main.js`, `prototype/landing-page-link.md`, `docs/landing-page-content.md` |
-| **Kyaw Ye Lin** | Prepared the Digital Go-to-Market strategy and channel-specific marketing content | `docs/go-to-market-plan.md`, `docs/marketing-message.md` |
-| **Tin May Lin (Mei)** | Designed the acquisition metrics framework and completed the GTM campaign dataset | `docs/acquisition-metrics.md`, `data/acquisition-metrics.csv` |
-| **Phoochit Jantakam** | Updated the Lab 12 weekly logbook and maintained the root repository documentation | `docs/weekly-logbook.md`, `README.md` |
+| Member Name | Contribution | File/Feature Updated | GitHub Evidence |
+| --- | --- | --- | --- |
+| **Phollapat Rodchue** | Developed the landing page gateway, page styling, interactive components, and supporting navigation documentation | `prototype/project/index.html`, `css/styles.css`, `js/main.js`, `prototype/landing-page-link.md`, `docs/landing-page-content.md` | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=ai10011) |
+| **Kyaw Ye Lin** | Prepared the Digital Go-to-Market strategy and channel-specific marketing content | `docs/go-to-market-plan.md`, `docs/marketing-message.md` | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=kyawyel68-Crystal) |
+| **Tin May Lin (Mei)** | Designed the acquisition metrics framework and completed the GTM campaign dataset | `docs/acquisition-metrics.md`, `data/acquisition-metrics.csv` | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=meirosemary) |
+| **Phoochit Jantakam** | Updated the Lab 12 weekly logbook and maintained the root repository documentation | `docs/weekly-logbook.md`, `README.md` | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=Bilal112344) |
 
 ## Landing Page Progress
 The landing page was implemented as the main entry point for the Lemon MVP system (`prototype/project/index.html`). It includes a hero headline (*"Recover lost campus items faster with one central platform"*), highlights key benefits for students, provides a quick-search feature, and offers two primary call-to-action buttons (*Try Demo / Search Lost Items* and *Submit Test Report*).
@@ -503,10 +503,10 @@ Lemon - Smart Campus Lost-and-Found System (LostLink)
 ## Members and Contributions
 | Member Name | Contribution This Lab | GitHub Evidence |
 | --- | --- | --- |
-| **Kyaw Ye Lin** (Product Lead) | Authored [`docs/sales-scenario.md`](sales-scenario.md) and [`docs/demo-script.md`](demo-script.md), established sales pitch value proposition, and structured demo presentation flow. | Issue `#65` |
-| **Tin May Lin (Mei)** (UX/UI Lead) | Authored [`docs/user-testing-plan.md`](user-testing-plan.md) and [`docs/user-testing-results.md`](user-testing-results.md), conducted user testing sessions, and compiled task completion analytics. | Issue `#62` |
-| **Phollapat Rodchue** (Technical Lead) | Authored [`docs/final-improvement-list.md`](final-improvement-list.md), updated prototype codebase (`prototype/project/`), and generated screenshot evidence (`screenshots/demo-flow.png`, `screenshots/user-testing-evidence.png`). | Issue `#63` |
-| **Phoochit Jantakam** (Documentation Lead) | Updated root repository [`README.md`](../README.md) and maintained weekly progress logbook ([`docs/weekly-logbook.md`](weekly-logbook.md)). | Issue `#64` |
+| **Kyaw Ye Lin** (Product Lead) | Authored [`docs/sales-scenario.md`](sales-scenario.md) and [`docs/demo-script.md`](demo-script.md), established sales pitch value proposition, and structured demo presentation flow. | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=kyawyel68-Crystal) |
+| **Tin May Lin (Mei)** (UX/UI Lead) | Authored [`docs/user-testing-plan.md`](user-testing-plan.md) and [`docs/user-testing-results.md`](user-testing-results.md), conducted user testing sessions, and compiled task completion analytics. | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=meirosemary) |
+| **Phollapat Rodchue** (Technical Lead) | Authored [`docs/final-improvement-list.md`](final-improvement-list.md), updated prototype codebase (`prototype/project/`), and generated screenshot evidence (`screenshots/demo-flow.png`, `screenshots/user-testing-evidence.png`). | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=ai10011) |
+| **Phoochit Jantakam** (Documentation Lead) | Updated root repository [`README.md`](../README.md) and maintained weekly progress logbook ([`docs/weekly-logbook.md`](weekly-logbook.md)). | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=Bilal112344) |
 
 ## Work Completed
 - **Sales Scenario:** Documented comprehensive sales context, target buyer personas, student pain points (65% search abandonment within 24 hours), pitch moment conversation, and expected user interactions in [`docs/sales-scenario.md`](sales-scenario.md) (Kyaw).
