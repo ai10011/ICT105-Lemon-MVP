@@ -436,43 +436,60 @@ We prepared the final demo scenario, demo script, user testing plan, testing res
 ### Final Preparation Status
 **Ready for Lab 14 Final Presentation.** Visual interface flows, responsive styling, and feature requirements (`FR-01` through `FR-16`) are fully implemented in `prototype/project/`. Note that formal user testing sessions and user testing feedback forms were not conducted for this prototype phase.
 
-# README Update Template for Lab 14
+# Lab 14: Final Prototype Submission & Presentation
 
 ## Project Title
+**Lemon - Smart Campus Lost-and-Found System**
 
 ## Group Members
-| Name | Role | Main Contribution |
-|---|---|---|
-| | | |
+| Name | Role | Main Contribution | GitHub Evidence |
+|---|---|---|---|
+| **Kyaw Ye Lin** (`kyawyel68-Crystal`) | Product Lead | Co-authored pitch slides, uploaded final pitch presentation slides (`/pitch/`), GTM strategy, Business Model Canvas, and metrics model. | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=kyawyel68-Crystal) |
+| **Phollapat Rodchue** (`ai10011`) | Technical Lead | Co-authored pitch slides, uploaded final prototype screenshots (`/screenshots/`), developed web prototype (`prototype/project/`), and authored `docs/feature-implementation-status.md` and `docs/final-prototype-report.md`. | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=ai10011) |
+| **Tin May Lin** (`meirosemary`) | UX/UI Lead | Co-authored pitch slides, designed UI wireframes, authored `docs/final-reflection.md` and `docs/final-submission-checklist.md`, acquisition metrics framework, and responsible IT privacy guidelines. | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=meirosemary) |
+| **Phoochit Jantakam** (`Bilal112344`) | Documentation Lead | Co-authored pitch slides, maintained weekly logbook (`docs/weekly-logbook.md`), root repository `README.md` maintenance, risk registers, and system requirements notes. | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=Bilal112344) |
 
 ## Project Overview
+Lemon is an automated web-based indexing and discovery portal for campus lost-and-found items. It replaces fragmented LINE/Discord chat groups and manual security desk logs with a single search catalog featuring location tagging, visual status tracking, and privacy-masked student contact details.
 
 ## Target Users
+- **Undergraduate University Students:** Quickly report lost/found items and search catalog by category, campus building, and date.
+- **Campus Security & Facility Staff:** Manage reported items, verify claims, update item status (`Pending Review`, `Available`, `Claimed`, `Closed`), and view campus resolution analytics.
 
 ## Problem Solved
+Over 65% of students abandon their search for lost belongings within 24 hours because current methods are scattered across unindexed chat groups. Lemon provides a centralized digital index that reduces recovery time from days to minutes without physical IoT hardware complexity.
 
-## Final Prototype
-- Prototype folder/link:
-- Landing page link:
-- Final demo link:
+## Final Prototype Links
+- **Prototype folder/link:** [`prototype/project/`](prototype/project/) (`index.html`, `form.html`, `records.html`, `detail.html`, `admin.html`, `dashboard.html`)
+- **Landing page link:** [`prototype/project/index.html`](prototype/project/index.html)
+- **Live Demo Link:** [Lemon MVP Live Prototype](https://ai10011.github.io/ICT105-Lemon-MVP/prototype/project/)
 
 ## Final Documentation
-- System requirements: `/docs/system-requirements.md`
-- User stories: `/docs/user-stories.md`
-- MVP feature list: `/docs/mvp-feature-list.md`
-- Feature implementation status: `/docs/feature-implementation-status.md`
-- Final prototype report: `/docs/final-prototype-report.md`
-- Final demo script: `/docs/final-demo-script.md`
-- Final reflection: `/docs/final-reflection.md`
+- System requirements: [`/docs/system-requirements.md`](docs/system-requirements.md)
+- User stories: [`/docs/user-stories.md`](docs/user-stories.md)
+- MVP feature list: [`/docs/mvp-feature-list.md`](docs/mvp-feature-list.md)
+- Feature implementation status: [`/docs/feature-implementation-status.md`](docs/feature-implementation-status.md)
+- Final prototype report: [`/docs/final-prototype-report.md`](docs/final-prototype-report.md)
+- Final demo script: [`/docs/final-demo-script.md`](docs/final-demo-script.md)
+- Final reflection: [`/docs/final-reflection.md`](docs/final-reflection.md)
+- Final submission checklist: [`/docs/final-submission-checklist.md`](docs/final-submission-checklist.md)
 
 ## Screenshots
-List final screenshots here.
+- Landing Page – [`screenshots/homepage.png`](screenshots/homepage.png)
+- Report Input Form – [`screenshots/input-form.png`](screenshots/input-form.png)
+- Records List – [`screenshots/record-list.png`](screenshots/record-list.png)
+- Detail View – [`screenshots/detail-view.png`](screenshots/detail-view.png)
+- Admin Management View – [`screenshots/admin-view.png`](screenshots/admin-view.png)
+- Dashboard View – [`screenshots/dashboard.png`](screenshots/dashboard.png)
+- Power BI Dashboard – [`screenshots/lab11-powerbi-dashboard.png`](screenshots/lab11-powerbi-dashboard.png)
 
 ## Pitch
-- Final pitch slides or outline: `/pitch/`
+- Final pitch slides & outline: [`/pitch/final-pitch-outline.md`](pitch/final-pitch-outline.md)
+- Demo outline: [`/pitch/demo-outline.md`](pitch/demo-outline.md)
 
 ## Data and Diagrams
-- Final sample data: `/data/`
-- Final diagrams: `/diagrams/`
+- Final sample data: [`/data/lost_found_sample_records.csv`](data/lost_found_sample_records.csv), [`/data/validation-results.csv`](data/validation-results.csv)
+- Final diagrams: [`/diagrams/system-architecture.mmd`](diagrams/system-architecture.mmd), [`/diagrams/data-flow.mmd`](diagrams/data-flow.mmd), [`/diagrams/implementation-flow.mmd`](diagrams/implementation-flow.mmd)
 
 ## Final Submission Notes
+The final prototype has achieved 100% implementation status across all 16 minimum system requirements (`FR-01` to `FR-16`). All code, documentation, analytics metrics, and pitch materials are finalized and ready for Lab 14 evaluation.

@@ -1,43 +1,44 @@
 # Lab 04 - MVP Feature List
 
-### **MVP Decision Rule**
-The Minimum Viable Product (MVP) will only include features strictly necessary to allow users to report, find, and update the status of lost or found items on campus. 
+## MVP Decision Rule
+The Minimum Viable Product (MVP) for **Lemon - Smart Campus Lost-and-Found System** strictly includes features required to enable university students and campus security staff to report, discover, filter, and track lost or found belongings on campus without physical hardware or IoT sensor overhead.
 
 ---
 
-### **MoSCoW Prioritization**
+## MoSCoW Feature Prioritization & Traceability Matrix
 
-| Feature ID | Feature Name | Description | Priority |
-| :--- | :--- | :--- | :--- |
-| **F01** | Report Lost Item | Users can submit a detailed form (item name, description, date, location) for an item they have lost. | Must-Have |
-| **F02** | Report Found Item | Users can submit a detailed form for an item they have found. | Must-Have |
-| **F03** | Search and Filter | Users can search the database by keywords, categories (e.g., electronics, clothing), or specific campus buildings. | Must-Have |
-| **F04** | Item Status Updates | Creators can update the status of their post (e.g., Open, Claimed, Resolved). | Must-Have |
-| **F05** | Image Uploads | Users can attach a photo of the lost or found item to their report. | Should-Have |
-| **F06** | User Authentication | A login system ensuring only verified students and staff can post or claim items. | Should-Have |
-| **F07** | In-App Messaging | Secure, direct communication between the person who found the item and the person claiming it. | Could-Have |
-| **F08** | Automated Notifications | Email or push notifications when a newly found item matches a user's lost item report. | Could-Have |
-| **F09** | AI Image Matching | Using image recognition to automatically pair lost and found posts. | Not in MVP |
-| **F10** | Reward System | A gamified system or monetary reward integration for returning items. | Not in MVP |
+| Feature ID | Feature Name | Description | Priority | Related Requirement ID | Related User Story | Final Prototype Status |
+|---|---|---|---|---|---|---|
+| **F01** | Report Lost Item | Users can submit a structured form (item name, category, campus building, date, description) for an item they lost. | Must-Have | `FR-03`, `FR-04`, `FR-10` | `US-01` | **Fully Implemented** ([form.html](../prototype/project/form.html)) |
+| **F02** | Report Found Item | Users can submit a detailed form for an item they found on campus. | Must-Have | `FR-03`, `FR-04`, `FR-10` | `US-02` | **Fully Implemented** ([form.html](../prototype/project/form.html)) |
+| **F03** | Search and Filter | Users can search the catalog using text keywords, report type pills, category multi-select, and campus building dropdowns. | Must-Have | `FR-05`, `FR-06`, `FR-14` | `US-03` | **Fully Implemented** ([records.html](../prototype/project/records.html)) |
+| **F04** | Item Status Updates | Security staff and reporters can track and update item statuses using visual color-coded badges (`Pending Review`, `Available`, `Claimed`, `Closed`). | Must-Have | `FR-07`, `FR-08`, `FR-09` | `US-05`, `US-06` | **Fully Implemented** ([admin.html](../prototype/project/admin.html)) |
+| **F05** | Image Uploads | Users can attach item photos adhering to face privacy guidelines (no human faces). | Should-Have | `FR-03`, `FR-07`, `FR-15` | `US-04` | **Fully Implemented** ([form.html](../prototype/project/form.html)) |
+| **F06** | User Authentication | User login and registration simulation protecting admin management access. | Should-Have | `FR-09`, `FR-10` | `US-06` | **Simulated / Client-Side** ([login.html](../prototype/project/login.html)) |
+| **F07** | In-App Messaging | Direct anonymous communication between the person who found the item and the claimant. | Could-Have | `FR-15` | `US-08` | **Postponed** (Future Scope) |
+| **F08** | Automated Notifications | Email or push notifications when a newly found item matches a lost report. | Could-Have | `FR-08` | `US-07` | **Postponed** (Future Scope) |
+| **F09** | AI Image Matching | Automated computer vision image recognition to match lost and found item photos. | Out of Scope | N/A | N/A | **Excluded from MVP** |
+| **F10** | Reward System | Gamified points or monetary reward system for returning lost items. | Out of Scope | N/A | N/A | **Excluded from MVP** |
 
 ---
 
-### **Must-Have (Core MVP)**
-These are the critical features required to demonstrate problem-solution fit. Without these, the application cannot function as a lost-and-found platform.
-*   **F01 & F02 (Reporting):** The primary database inputs. 
-*   **F03 (Search):** The primary way users will navigate the data to find matches.
-*   **F04 (Status Updates):** Essential for keeping the database clean and preventing users from pursuing items that are already resolved.
+## Scope Breakdown & Rationale
 
-### **Should-Have (High Priority)**
-These features add significant value and security but are not strictly required for the very first functional test. 
-*   **F05 (Image Uploads):** Highly recommended to reduce miscommunication and false claims, but text descriptions can suffice for a bare-bones test.
-*   **F06 (Authentication):** Important for accountability, though the MVP could technically launch as an open, anonymous board for initial validation.
+### 1. Must-Have (Core MVP Scope)
+These features are essential to establish core problem-solution fit. Without them, the platform cannot function as a centralized campus lost-and-found portal:
+- **F01 & F02 (Reporting Forms):** Primary data entry channels (`FR-03`, `FR-04`).
+- **F03 (Catalog Search & Filters):** Solves information fragmentation across scattered LINE/Discord chat groups (`FR-05`, `FR-06`).
+- **F04 (Status Tracking & Management):** Prevents duplicate inquiries and keeps campus security inventory updated (`FR-08`, `FR-09`).
 
-### **Could-Have (Future Enhancements)**
-These are "nice-to-have" features that improve the user experience but require additional development time (like setting up WebSockets for chat).
-*   **F07 (In-App Messaging):** Users can temporarily rely on sharing external contact info (like line IDs or emails) in the item descriptions until this is built.
-*   **F08 (Notifications):** Users will need to manually check the app for updates in the initial release.
+### 2. Should-Have (High Value Improvements)
+Features that significantly enhance user trust, data quality, and privacy:
+- **F05 (Image Uploads):** Speeds up visual item identification while enforcing responsible privacy rules (no human faces in photos) (`FR-15`).
+- **F06 (User Authentication Simulation):** Restricts administrative status update controls to staff roles (`FR-09`).
 
-### **Not in MVP (Out of Scope)**
-These features are too complex or outside the immediate scope of validating the core problem.
-*   **F09 (AI Matching) & F10 (Rewards):** These introduce unnecessary technical overhead and scope creep for this stage of the project.
+### 3. Could-Have (Postponed Enhancements)
+Features that add value but require complex backend infrastructure beyond the MVP timeframe:
+- **F07 (In-App Messaging):** Users currently utilize privacy-masked student contact details (`65XXXXX@au.edu`) to arrange item recovery (`US-08`).
+- **F08 (Automated Notifications):** Users currently check real-time catalog status badges directly on the portal (`US-07`).
+
+### 4. Out of Scope (Excluded from MVP)
+- **F09 (AI Image Matching) & F10 (Reward System):** Excluded to prevent scope creep and eliminate unnecessary technical complexity during prototype validation.

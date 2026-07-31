@@ -533,4 +533,34 @@ Lemon - Smart Campus Lost-and-Found System (LostLink)
 ## Requirement Traceability Notes
 - Verified 100% functional requirement coverage (`FR-01` through `FR-16`) across prototype screens in `prototype/project/`. All core MVP features are fully implemented, tested, and validated.
 
+# Weekly Logbook - Lab 14
+
+## Group Name
+Lemon
+
+## Project Title
+Lemon - Smart Campus Lost-and-Found System
+
+## Date
+2026-07-31
+
+## Members and Contributions
+| Member Name | Role | Contribution This Lab | GitHub Evidence |
+| --- | --- | --- | --- |
+| **Kyaw Ye Lin** | Product Lead | Co-authored pitch slides, uploaded final pitch presentation slides (`/pitch/`), GTM strategy, Business Model Canvas, and metrics model. | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=kyawyel68-Crystal) |
+| **Phollapat Rodchue** | Technical Lead | Co-authored pitch slides, uploaded final prototype screenshots (`/screenshots/`), developed web prototype (`prototype/project/`), and authored `docs/feature-implementation-status.md` and `docs/final-prototype-report.md`. | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=ai10011) |
+| **Tin May Lin (Mei)** | UX/UI Lead | Co-authored pitch slides, designed UI wireframes, authored `docs/final-reflection.md` and `docs/final-submission-checklist.md`, acquisition metrics framework, and responsible IT privacy guidelines. | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=meirosemary) |
+| **Phoochit Jantakam** | Documentation Lead | Co-authored pitch slides, maintained weekly logbook (`docs/weekly-logbook.md`), root repository `README.md` maintenance, risk registers, and system requirements notes. | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=Bilal112344) |
+
+## Work Completed
+- **Pitch Slides & Deck:** Co-authored and finalized presentation slide deck in `/pitch/` (`final-pitch-outline.md`, `demo-outline.md`) (All members & Kyaw).
+- **Prototype Screenshots & Implementation Status:** Captured and uploaded final application screenshots in `/screenshots/` and authored feature implementation status in `docs/feature-implementation-status.md` and final report in `docs/final-prototype-report.md` (Phollapat).
+- **Final Reflection & Submission Checklist:** Authored final reflection in `docs/final-reflection.md` and completed final submission checklist in `docs/final-submission-checklist.md` (Tin May Lin).
+- **Logbook & Root Overview Maintenance:** Updated weekly logbook (`docs/weekly-logbook.md`) and root repository `README.md` (Phoochit).
+
+## Key Decisions
+- **Final Prototype Completion:** Achieved 100% completion across all 16 minimum prototype system requirements (`FR-01` through `FR-16`).
+- **Submission Readiness:** Verified repository links, relative markdown paths, image assets, slide outlines, and demo scripts for final Lab 14 presentation.
+
+
 
