@@ -59,8 +59,17 @@ function compressPhoto(file, callback) {
 
 document.addEventListener('DOMContentLoaded', function () {
     const dateInput = document.getElementById('date');
-    if (dateInput && !dateInput.value) {
-        dateInput.value = new Date().toISOString().split('T')[0];
+    if (dateInput) {
+        if (!dateInput.value) {
+            dateInput.value = new Date().toISOString().split('T')[0];
+        }
+        dateInput.addEventListener('click', function () {
+            if (typeof this.showPicker === 'function') {
+                try {
+                    this.showPicker();
+                } catch (err) { }
+            }
+        });
     }
 
     const reportForm = document.getElementById('report-form');
