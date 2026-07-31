@@ -1,1 +1,80 @@
-[]
+[
+    {
+        "id": "rec_1001",
+        "userId": "usr_student_001",
+        "reportType": "Lost",
+        "itemName": "Midnight Blue Hydro Flask",
+        "category": "Personal",
+        "date": "2026-07-28",
+        "description": "Blue stainless steel water bottle left on a study desk at Main Library.",
+        "location": "Main Library",
+        "photoName": "hydro_flask.png",
+        "photoPath": "data/uploads/hydro_flask.png",
+        "created_at": "2026-07-28T14:30:00.000Z"
+    },
+    {
+        "id": "rec_1002",
+        "userId": "usr_student_001",
+        "reportType": "Found",
+        "itemName": "Sony Wireless Noise-Canceling Headphones",
+        "category": "Electronics",
+        "date": "2026-07-29",
+        "description": "Black over-ear wireless headphones found on a table in the lounge.",
+        "location": "Student Union",
+        "photoName": "wireless_headphones.png",
+        "photoPath": "data/uploads/wireless_headphones.png",
+        "created_at": "2026-07-29T10:15:00.000Z"
+    },
+    {
+        "id": "rec_1003",
+        "userId": "usr_student_002",
+        "reportType": "Lost",
+        "itemName": "Brown Leather Bi-Fold Wallet",
+        "category": "Personal",
+        "date": "2026-07-27",
+        "description": "Classic brown leather wallet containing campus library card.",
+        "location": "Science Building",
+        "photoName": "leather_wallet.png",
+        "photoPath": "data/uploads/leather_wallet.png",
+        "created_at": "2026-07-27T16:45:00.000Z"
+    },
+    {
+        "id": "rec_1004",
+        "userId": "usr_student_002",
+        "reportType": "Found",
+        "itemName": "Casio Scientific Calculator FX-991EX",
+        "category": "Electronics",
+        "date": "2026-07-30",
+        "description": "Black scientific calculator found after calculus class in room 204.",
+        "location": "Engineering Block",
+        "photoName": "scientific_calculator.png",
+        "photoPath": "data/uploads/scientific_calculator.png",
+        "created_at": "2026-07-30T09:00:00.000Z"
+    },
+    {
+        "id": "rec_1005",
+        "userId": "usr_student_003",
+        "reportType": "Lost",
+        "itemName": "Vintage Light Wash Denim Jacket",
+        "category": "Clothing",
+        "date": "2026-07-26",
+        "description": "Light wash blue denim jacket, size M, forgotten on a chair.",
+        "location": "Cafeteria",
+        "photoName": "denim_jacket.png",
+        "photoPath": "data/uploads/denim_jacket.png",
+        "created_at": "2026-07-26T12:20:00.000Z"
+    },
+    {
+        "id": "rec_1006",
+        "userId": "usr_student_003",
+        "reportType": "Found",
+        "itemName": "Black Canvas Student Backpack",
+        "category": "Personal",
+        "date": "2026-07-30",
+        "description": "Durable black canvas backpack containing notebook and pens.",
+        "location": "Main Library",
+        "photoName": "black_backpack.png",
+        "photoPath": "data/uploads/black_backpack.png",
+        "created_at": "2026-07-30T15:10:00.000Z"
+    }
+]
