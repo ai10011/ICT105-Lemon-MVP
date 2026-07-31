@@ -1,0 +1,19 @@
+Column,Meaning,Data Type,Example,Why Students Need It
+TestID,Unique ID for each test session,Text,T001,Used to count tests and identify each validation record.
+TestDate,Date when validation was conducted,Date,2026-07-20,Used for trend or timeline charts.
+TestUserID,Anonymous tester ID,Text,U001,Used instead of real names for privacy.
+UserRole,Type of tester,Text,Student,Used as slicer to compare groups.
+DeviceType,Device used for test,Text,Mobile,Used to check if mobile/laptop users behave differently.
+PrototypeVersion,Version of MVP tested,Text,v1,Useful if later versions are compared.
+TaskName,Task the tester attempted,Text,Search found item,Used to compare performance by task.
+TaskCompleted,Whether tester completed task,Text,Yes,Used for task success rate.
+CompletionTimeSeconds,Time to complete or attempt task,Whole Number,95,Used to measure speed and difficulty.
+EaseOfUseScore,Ease score from 1 to 5,Whole Number,4,Used for average usability score.
+UsefulnessScore,Usefulness score from 1 to 5,Whole Number,5,Used for average perceived value.
+ConfusionPoint,Where user got confused,Text,Status wording,Used to identify what to improve.
+MostUsefulFeature,Feature tester valued most,Text,Search/filter,Used to identify valuable MVP features.
+WouldUseAgain,Tester interest indicator,Text,Yes,Used for interest rate.
+InterestLevel,Interest score from 1 to 5,Whole Number,5,Used to measure willingness to use.
+RequirementID,Requirement connected to the task,Text,FR-06,Used for requirement traceability.
+MVPDecisionSignal,Validation decision,Text,Validated,Used to decide validated/partial/revise.
+Notes,Short observation note,Text,Search was useful,Used for qualitative interpretation.
