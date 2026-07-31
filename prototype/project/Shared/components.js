@@ -89,9 +89,16 @@ window.LemonData = {
             const item = localStorage.getItem('lemon_current_user') || sessionStorage.getItem('lemon_current_user');
             if (item) {
                 const u = JSON.parse(item);
-                if (u && (u.email || u.id || u.full_name)) return true;
+                const validEmails = ['alice@campus.edu', 'bob@campus.edu', 'charlie@campus.edu', 'admin@campus.edu'];
+                if (u && u.email && validEmails.includes(u.email.toLowerCase())) {
+                    return true;
+                } else {
+                    localStorage.removeItem('lemon_current_user');
+                    sessionStorage.removeItem('lemon_current_user');
+                    document.cookie = "lemon_logged_in=; path=/; max-age=0";
+                    return false;
+                }
             }
-            if (document.cookie.includes('lemon_logged_in=true')) return true;
             return false;
         } catch (e) {
             return false;
@@ -99,6 +106,7 @@ window.LemonData = {
     }
 
     function getCurrentUser() {
+        if (!isLoggedIn()) return null;
         try {
             const item = localStorage.getItem('lemon_current_user') || sessionStorage.getItem('lemon_current_user');
             if (item) return JSON.parse(item);
