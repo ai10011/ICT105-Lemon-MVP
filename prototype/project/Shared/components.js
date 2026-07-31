@@ -1,9 +1,32 @@
 
 
+function getDataUrl(filename) {
+    try {
+        let href = window.location.href.split('?')[0].split('#')[0];
+        if (href.endsWith('.html')) {
+            href = href.substring(0, href.lastIndexOf('/'));
+        }
+        if (!href.endsWith('/')) {
+            href += '/';
+        }
+        return new URL('data/' + filename, href).href;
+    } catch (e) {
+        return 'data/' + filename;
+    }
+}
+
 window.LemonData = {
     async getRecords() {
         let fileRecords = [];
-        const urls = ['data/record-data.json', '/data/record-data.json', 'http://localhost:3000/data/record-data.json'];
+        const dynamicUrl = getDataUrl('record-data.json');
+        const urls = [
+            dynamicUrl,
+            'data/record-data.json',
+            './data/record-data.json',
+            '/ICT105-Lemon-MVP/prototype/project/data/record-data.json',
+            '/prototype/project/data/record-data.json',
+            'http://localhost:3000/data/record-data.json'
+        ];
         let fetchedFromFile = false;
         for (const url of urls) {
             try {
@@ -61,7 +84,15 @@ window.LemonData = {
     },
 
     async getUsers() {
-        const urls = ['data/users.json', '/data/users.json', 'http://localhost:3000/data/users.json'];
+        const dynamicUrl = getDataUrl('users.json');
+        const urls = [
+            dynamicUrl,
+            'data/users.json',
+            './data/users.json',
+            '/ICT105-Lemon-MVP/prototype/project/data/users.json',
+            '/prototype/project/data/users.json',
+            'http://localhost:3000/data/users.json'
+        ];
         for (const url of urls) {
             try {
                 const res = await fetch(url);

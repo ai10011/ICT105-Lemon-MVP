@@ -24,7 +24,21 @@ document.addEventListener('DOMContentLoaded', function () {
         ];
 
         let jsonUsers = [];
-        const urlsToTry = ['data/users.json', '/data/users.json'];
+        let dynamicUserUrl = 'data/users.json';
+        try {
+            let href = window.location.href.split('?')[0].split('#')[0];
+            if (href.endsWith('.html')) href = href.substring(0, href.lastIndexOf('/'));
+            if (!href.endsWith('/')) href += '/';
+            dynamicUserUrl = new URL('data/users.json', href).href;
+        } catch (e) { }
+        const urlsToTry = [
+            dynamicUserUrl,
+            'data/users.json',
+            './data/users.json',
+            '/ICT105-Lemon-MVP/prototype/project/data/users.json',
+            '/prototype/project/data/users.json',
+            '/data/users.json'
+        ];
 
         for (const url of urlsToTry) {
             try {
