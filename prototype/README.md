@@ -19,3 +19,11 @@ Files included in the web prototype (`prototype/project/`):
 Access and Prototype Links:
 - Prototype Link File: [prototype-link.md](prototype-link.md)
 - Live GitHub Demo: [Launch Lemon Prototype](https://ai10011.github.io/ICT105-Lemon-MVP/prototype/project/index.html)
+
+### Demo Accounts for Testing
+| Account Type | Full Name | Email / Username | Password | Access / Role |
+| :--- | :--- | :--- | :--- | :--- |
+| **Student 1** | Alice Smith | `alice@campus.edu` | `password123` | Regular Student |
+| **Student 2** | Bob Jones | `bob@campus.edu` | `password123` | Regular Student |
+| **Student 3** | Charlie Brown | `charlie@campus.edu` | `password123` | Regular Student |
+| **Admin** | Campus Security Admin | `admin@campus.edu` | `admin123` | Security Office Admin |

@@ -472,6 +472,14 @@ Over 65% of students abandon their search for lost belongings within 24 hours be
 - **Landing page link:** [`prototype/project/index.html`](prototype/project/index.html)
 - **Live Demo Link:** [Lemon MVP Live Prototype](https://ai10011.github.io/ICT105-Lemon-MVP/prototype/project/)
 
+### Demo Accounts for Testing
+| Account Type | Full Name | Email / Username | Password | Access / Role |
+| :--- | :--- | :--- | :--- | :--- |
+| **Student 1** | Alice Smith | `alice@campus.edu` | `password123` | Regular Student |
+| **Student 2** | Bob Jones | `bob@campus.edu` | `password123` | Regular Student |
+| **Student 3** | Charlie Brown | `charlie@campus.edu` | `password123` | Regular Student |
+| **Admin** | Campus Security Admin | `admin@campus.edu` | `admin123` | Security Office Admin |
+
 ## Final Documentation
 - System requirements: [`/docs/system-requirements.md`](docs/system-requirements.md)
 - User stories: [`/docs/user-stories.md`](docs/user-stories.md)
