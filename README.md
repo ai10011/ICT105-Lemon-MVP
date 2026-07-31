@@ -447,32 +447,38 @@ We prepared the final demo scenario, demo script, user testing plan, testing res
 # Lab 14: Final Prototype Submission & Presentation
 
 ## Project Title
-**Lemon - Smart Campus Lost-and-Found System**
+**Lemon – Smart Campus Lost & Found Management System**
 
 ## Group Members
+
 | Name | Role | Main Contribution | GitHub Evidence |
 |---|---|---|---|
-| **Kyaw Ye Lin** (`kyawyel68-Crystal`) | Product Lead | Co-authored pitch slides, uploaded final pitch presentation slides (`/pitch/`), GTM strategy, Business Model Canvas, and metrics model. | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=kyawyel68-Crystal) |
-| **Phollapat Rodchue** (`ai10011`) | Technical Lead | Co-authored pitch slides, uploaded final prototype screenshots (`/screenshots/`), developed web prototype (`prototype/project/`), and authored `docs/feature-implementation-status.md` and `docs/final-prototype-report.md`. | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=ai10011) |
-| **Tin May Lin** (`meirosemary`) | UX/UI Lead | Co-authored pitch slides, designed UI wireframes, authored `docs/final-reflection.md` and `docs/final-submission-checklist.md`, acquisition metrics framework, and responsible IT privacy guidelines. | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=meirosemary) |
-| **Phoochit Jantakam** (`Bilal112344`) | Documentation Lead | Co-authored pitch slides, maintained weekly logbook (`docs/weekly-logbook.md`), root repository `README.md` maintenance, risk registers, and system requirements notes. | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=Bilal112344) |
+| **Kyaw Ye Lin** (`kyawyel68-Crystal`) | Product Lead | Co-developed the final pitch presentation, uploaded presentation files in `/pitch/`, prepared the Go-to-Market (GTM) strategy, Business Model Canvas, and project metrics framework. | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=kyawyel68-Crystal) |
+| **Phollapat Rodchue** (`ai10011`) | Technical Lead | Co-developed the final pitch presentation, uploaded prototype screenshots in `/screenshots/`, implemented the web prototype in `prototype/project/`, and authored `docs/feature-implementation-status.md` and `docs/final-prototype-report.md`. | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=ai10011) |
+| **Tin May Lin** (`meirosemary`) | UX/UI Lead | Co-developed the final pitch presentation, created the UI wireframes, authored `docs/final-reflection.md` and `docs/final-submission-checklist.md`, designed the acquisition metrics framework, and prepared responsible IT privacy guidelines. | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=meirosemary) |
+| **Phoochit Jantakam** (`Bilal112344`) | Documentation Lead | Co-developed the final pitch presentation, maintained the weekly logbook (`docs/weekly-logbook.md`), updated the repository `README.md`, and documented the project risk register and system requirements. | [Commits](https://github.com/ai10011/ICT105-Lemon-MVP/commits?author=Bilal112344) |
 
 ## Project Overview
-Lemon is an automated web-based indexing and discovery portal for campus lost-and-found items. It replaces fragmented LINE/Discord chat groups and manual security desk logs with a single search catalog featuring location tagging, visual status tracking, and privacy-masked student contact details.
+
+Lemon is a web-based campus lost-and-found platform that centralizes the reporting, tracking, and searching of lost belongings. Instead of relying on scattered LINE or Discord messages and handwritten security logs, the system provides a searchable catalog with location tagging, item status updates, and privacy-protected contact information.
 
 ## Target Users
-- **Undergraduate University Students:** Quickly report lost/found items and search catalog by category, campus building, and date.
-- **Campus Security & Facility Staff:** Manage reported items, verify claims, update item status (`Pending Review`, `Available`, `Claimed`, `Closed`), and view campus resolution analytics.
 
-## Problem Solved
-Over 65% of students abandon their search for lost belongings within 24 hours because current methods are scattered across unindexed chat groups. Lemon provides a centralized digital index that reduces recovery time from days to minutes without physical IoT hardware complexity.
+- **Undergraduate University Students:** Report lost or found items, browse the catalog, and search using categories, campus locations, and reporting dates.
+- **Campus Security & Facility Staff:** Review submissions, verify ownership claims, manage item status (`Pending Review`, `Available`, `Claimed`, `Closed`), and monitor recovery statistics through the dashboard.
+
+## Problem Statement
+
+More than 65% of students stop searching for lost belongings within the first 24 hours because existing reporting methods are fragmented and difficult to search. Lemon addresses this issue by providing a centralized digital platform that significantly shortens the recovery process without requiring additional IoT hardware.
 
 ## Final Prototype Links
+
 - **Prototype folder/link:** [`prototype/project/`](prototype/project/) (`index.html`, `form.html`, `records.html`, `detail.html`, `admin.html`, `dashboard.html`)
-- **Landing page link:** [`prototype/project/index.html`](prototype/project/index.html)
-- **Live Demo Link:** [Lemon MVP Live Prototype](https://ai10011.github.io/ICT105-Lemon-MVP/prototype/project/)
+- **Landing page:** [`prototype/project/index.html`](prototype/project/index.html)
+- **Live Demo:** [Lemon MVP Live Prototype](https://ai10011.github.io/ICT105-Lemon-MVP/prototype/project/)
 
 ### Demo Accounts for Testing
+
 | Account Type | Full Name | Email / Username | Password | Access / Role |
 | :--- | :--- | :--- | :--- | :--- |
 | **Student 1** | Alice Smith | `alice@campus.edu` | `password123` | Regular Student |
@@ -481,6 +487,7 @@ Over 65% of students abandon their search for lost belongings within 24 hours be
 | **Admin** | Campus Security Admin | `admin@campus.edu` | `admin123` | Security Office Admin |
 
 ## Final Documentation
+
 - System requirements: [`/docs/system-requirements.md`](docs/system-requirements.md)
 - User stories: [`/docs/user-stories.md`](docs/user-stories.md)
 - MVP feature list: [`/docs/mvp-feature-list.md`](docs/mvp-feature-list.md)
@@ -491,21 +498,28 @@ Over 65% of students abandon their search for lost belongings within 24 hours be
 - Final submission checklist: [`/docs/final-submission-checklist.md`](docs/final-submission-checklist.md)
 
 ## Screenshots
+
 - Landing Page – [`screenshots/homepage.png`](screenshots/homepage.png)
-- Report Input Form – [`screenshots/input-form.png`](screenshots/input-form.png)
+- Report Form – [`screenshots/input-form.png`](screenshots/input-form.png)
 - Records List – [`screenshots/record-list.png`](screenshots/record-list.png)
-- Detail View – [`screenshots/detail-view.png`](screenshots/detail-view.png)
-- Admin Management View – [`screenshots/admin-view.png`](screenshots/admin-view.png)
-- Dashboard View – [`screenshots/dashboard.png`](screenshots/dashboard.png)
+- Item Detail View – [`screenshots/detail-view.png`](screenshots/detail-view.png)
+- Admin Panel – [`screenshots/admin-view.png`](screenshots/admin-view.png)
+- Dashboard – [`screenshots/dashboard.png`](screenshots/dashboard.png)
 - Power BI Dashboard – [`screenshots/lab11-powerbi-dashboard.png`](screenshots/lab11-powerbi-dashboard.png)
 
-## Pitch
+## Pitch Materials
+
 - Final pitch slides & outline: [`/pitch/final-pitch-outline.md`](pitch/final-pitch-outline.md)
 - Demo outline: [`/pitch/demo-outline.md`](pitch/demo-outline.md)
 
 ## Data and Diagrams
+
 - Final sample data: [`/data/lost_found_sample_records.csv`](data/lost_found_sample_records.csv), [`/data/validation-results.csv`](data/validation-results.csv)
-- Final diagrams: [`/diagrams/system-architecture.mmd`](diagrams/system-architecture.mmd), [`/diagrams/data-flow.mmd`](diagrams/data-flow.mmd), [`/diagrams/implementation-flow.mmd`](diagrams/implementation-flow.mmd)
+- Final diagrams:
+  - [`/diagrams/system-architecture.mmd`](diagrams/system-architecture.mmd)
+  - [`/diagrams/data-flow.mmd`](diagrams/data-flow.mmd)
+  - [`/diagrams/implementation-flow.mmd`](diagrams/implementation-flow.mmd)
 
 ## Final Submission Notes
-The final prototype has achieved 100% implementation status across all 16 minimum system requirements (`FR-01` to `FR-16`). All code, documentation, analytics metrics, and pitch materials are finalized and ready for Lab 14 evaluation.
+
+The project successfully meets all **16 functional requirements (FR-01 to FR-16)**, achieving **100% implementation completion**. The source code, documentation, prototype, analytics, screenshots, and presentation materials have all been finalized and prepared for **Lab 14 assessment**.
