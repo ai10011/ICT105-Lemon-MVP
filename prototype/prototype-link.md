@@ -7,7 +7,6 @@
 - Last updated: 2026-07-21
 
 ## Access Notes
-Explain whether the lecturer needs permission or login.
 - Public hosted web app: No login or special permission required for public access.
 - GitHub repository source files: [prototype/project](https://github.com/ai10011/ICT105-Lemon-MVP/tree/main/prototype/project)
 
@@ -20,7 +19,6 @@ Explain whether the lecturer needs permission or login.
 - Admin/manager view (`admin.html`)
 
 ## Requirements Demonstrated
-List requirement IDs shown in the prototype.
 - **FR-01**: Homepage displaying overview, quick search, and action button (`index.html`)
 - **FR-03**: Lost/Found Item Report Form (`form.html`)
 - **FR-05**: Interactive item directory listing (`records.html`)
